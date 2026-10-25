@@ -2,31 +2,37 @@
  "11140-1197": {
   "q": "\"한양I-Class\" 아파트 중구",
   "why": "down",
-  "at": "2026-10-18",
+  "at": "2026-10-25",
   "items": []
  },
  "11140-1226": {
   "q": "\"청계천두산위브더제니스\" 아파트 중구",
   "why": "down",
-  "at": "2026-10-18",
+  "at": "2026-10-25",
   "items": []
  },
  "11140-1520": {
   "q": "\"세운푸르지오헤리시티\" 아파트 중구",
   "why": "down",
-  "at": "2026-10-18",
+  "at": "2026-10-25",
   "items": [
+   {
+    "t": "전국 상가 임대료는 하락인데, 서울만 상승세…이유는?",
+    "o": "이데일리",
+    "d": "2026-10-21",
+    "u": "https://www.edaily.co.kr/News/Read?newsId=04792086645615216&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+   },
+   {
+    "t": "'전국 하락세 역행' 서울 상가 임대료 9분기 연속 상승…핵심 요인은?",
+    "o": "동아일보",
+    "d": "2026-10-21",
+    "u": "https://edu.donga.com/news/articleView.html?idxno=113041"
+   },
    {
     "t": "을지로·명동 출퇴근 5분 …풀옵션 투룸 최소 4주부터 단기 계약",
     "o": "조선일보",
     "d": "2026-08-26",
     "u": "https://realty.chosun.com/site/data/html_dir/2026/08/26/2026082602719.html"
-   },
-   {
-    "t": "대출 조이니 풍선효과? 노원구 13평 7.8억…무주택자 '비명'",
-    "o": "한국경제",
-    "d": "2026-07-14",
-    "u": "https://www.hankyung.com/article/202607143778H"
    }
   ]
  }
