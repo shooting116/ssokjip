@@ -222,8 +222,8 @@ function compute() {
     trades: (a, b) => b.c.n6 - a.c.n6 || b.c.n36 - a.c.n36,
     new: (a, b) => (b.c.b ?? 0) - (a.c.b ?? 0),
     units: (a, b) => (b.c.u ?? 0) - (a.c.u ?? 0),
-    // 갭 낮은 순: 전세가율 90% 이하(HUG 전세보증 가입 기준선)를 갭 낮은 순으로 먼저 → 90% 초과 → 갭 0 이하(전세가 ≥ 매매가) → 전세 표본 없음
-    gapAsc: (a, b) => gapRank(a) - gapRank(b) || (gapOf(a) ?? 0) - (gapOf(b) ?? 0) || b.c.n6 - a.c.n6,
+    // 갭 낮은 순: 순수 오름차순(전세가 ≥ 매매가도 그대로 앞에 옴 — 순서를 바꾸지 않고 빨간 글씨로 표시). 전세 표본이 없어 갭이 없는 단지만 뒤로
+    gapAsc: (a, b) => (gapOf(a) ?? Infinity) - (gapOf(b) ?? Infinity) || b.c.n6 - a.c.n6,
   };
   fitted.sort(by[s.sort]);
 }
@@ -235,7 +235,6 @@ function gapOf(f: { c: Slim; fitKey: number | null }): number | null {
 }
 
 const ratioOf = (f: { c: Slim; fitKey: number | null }): number | null => f.c.t.find((x) => x[0] === f.fitKey)?.[7] ?? null;
-const gapRank = (f: { c: Slim; fitKey: number | null }): number => { const g = gapOf(f); if (g == null) return 3; if (g <= 0) return 2; return (ratioOf(f) ?? 0) > 90 ? 1 : 0; };
 
 // ---------- 화면 ----------
 function chip(field: keyof State, v: State[keyof State], label: string) {
@@ -324,7 +323,7 @@ function renderFilters() {
 // 갭 정렬일 때 목록 위에 붙는 기준 설명 — 숫자의 뜻과 기준선만, 추천 아님
 function gapLegend(): string {
   if (s.sort !== 'gapAsc') return '';
-  return `<p class="sub gaplegend">갭 = 맞는 평형의 매매 시세 − 전세 중앙값(최근 6개월 신규 계약). 알약의 %는 전세가율. 순서는 <b>전세가율 90% 이하</b>(HUG 전세보증 가입 기준선)를 갭 낮은 순으로 먼저, 그다음 90% 초과(주황), 전세가 매매가 이상(빨강), 전세 표본 없음 순입니다. 규제지역은 전세를 안고 사는 데 제한이 있어요.</p>`;
+  return `<p class="sub gaplegend">갭 = 맞는 평형의 매매 시세 − 전세 중앙값(최근 6개월 신규 계약). 갭이 작을수록 전세가율이 높습니다. <b>보증금이 주택가격의 90%를 넘으면 HUG 전세보증금반환보증에 가입할 수 없습니다</b>(신규 2023-05-01, 갱신 2024-01-01부터) — 90%를 넘는 단지는 빨간 글씨로 표시합니다. 전세가율은 쏙집 실거래 기준이라 HUG의 주택가격 산정과 다를 수 있고, 근저당이 있으면 90% 아래여도 가입이 안 될 수 있습니다. 전세 표본이 없는 단지는 맨 뒤. 규제지역은 전세를 안고 사는 데 제한이 있어요.</p>`;
 }
 function renderItem(f: typeof fitted[0]) {
   const c = f.c;
@@ -341,7 +340,7 @@ function renderItem(f: typeof fitted[0]) {
         <div class="it-sub sub">${f.fitKey}㎡ · ${pyeong(f.fitKey!)}평형 · ${basis}${t && t[3] ? ` · 6개월 ${t[3]}건` : ''}${yoy != null ? ` · <span class="${yoy >= 0 ? 'up' : 'down'}">1년 ${yoy > 0 ? '+' : ''}${yoy}%</span>` : ''}${t && t[7] != null ? ` · 전세가율 ${t[7]}%${gap != null ? ` · 갭 <b>${eok(gap)}</b>` : ''}` : ''}</div>
         ${pct != null ? `<div class="bar"><i style="width:${Math.min(100, pct)}%"></i></div>` : ''}
       </div>
-      <div class="it-price"><b>${eok(f.fitPrice, 2)}</b>${s.sort === 'gapAsc' && gap != null ? (gap <= 0 ? '<span class="pill p-bad">전세가 ≥ 매매가</span>' : `<span class="pill ${(t?.[7] ?? 0) > 90 ? 'p-hot' : 'p-soft'}" title="전세가율 ${t?.[7]}%${(t?.[7] ?? 0) > 90 ? ' — HUG 전세보증 가입 기준선(90%) 초과' : ''}">갭 ${eok(gap)} <i>${t?.[7]}%</i></span>`) : pct != null ? `<span class="pill ${fitCls}">예산의 ${pct}%</span>` : ''}</div>
+      <div class="it-price"><b>${eok(f.fitPrice, 2)}</b>${s.sort === 'gapAsc' && gap != null ? (gap <= 0 ? `<span class="pill p-bad">전세가 ≥ 매매가 · ${t?.[7]}%</span>` : `<span class="pill ${(t?.[7] ?? 0) > 90 ? 'p-bad' : 'p-soft'}" title="전세가율 ${t?.[7]}%${(t?.[7] ?? 0) > 90 ? ' — HUG 전세보증 기준선(90%) 초과' : ''}">갭 ${eok(gap)} <i>${t?.[7]}%</i></span>${(t?.[7] ?? 0) > 90 ? '<span class="gapwarn">HUG 보증선 90% 초과</span>' : ''}`) : pct != null ? `<span class="pill ${fitCls}">예산의 ${pct}%</span>` : ''}</div>
     </a>`;
 }
 // 0건일 때: 단계별로 몇 개가 남았는지 보여주고, 0으로 만든 조건을 짚어준다
