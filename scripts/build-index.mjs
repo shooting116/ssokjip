@@ -61,6 +61,8 @@ function loadRent(lawd, fromYm) {
 }
 /**
  * 전세 집계 (평형별): 최근 6개월 전세(월세 0원) 보증금 중앙값. 3건 이상이면 median6, 1~2건이면 ref.
+ * 갱신 계약은 갱신요구권 5% 한도 때문에 신규 계약보다 보증금이 낮은 경우가 많아, 신규 계약(계약구분 '신규')이 3건 이상이면 신규만 쓴다(incl 'new').
+ * 신규가 3건 미만이면 전체(갱신·구분 없음 포함)로 계산하고 incl 'all'로 표시한다.
  * 전세가율 = 전세 중앙값 ÷ 매매 시세 — 둘 다 median6일 때만 (표본이 얇으면 비율이 튀므로).
  */
 function summarizeRent(rentRows, types, asOfYm) {
@@ -71,13 +73,16 @@ function summarizeRent(rentRows, types, asOfYm) {
   let repOut = null;
   for (const t of types) {
     const rows = byType.get(t.key) ?? [];
-    const j6 = rows.filter((r) => r.rent === 0 && ym(r) >= from6), j12 = rows.filter((r) => r.rent === 0 && ym(r) >= from12);
+    const j6all = rows.filter((r) => r.rent === 0 && ym(r) >= from6), j12 = rows.filter((r) => r.rent === 0 && ym(r) >= from12);
+    const j6new = j6all.filter((r) => r.type === '신규');
+    const incl = j6new.length >= 3 || j6new.length === j6all.length ? 'new' : 'all';   // 갱신이 실제로 섞였을 때만 'all'
+    const j6 = incl === 'new' ? j6new : j6all;
     const w6 = rows.filter((r) => r.rent > 0 && ym(r) >= from6);
     let price = null, basis = null;
     if (j6.length >= 3) { price = median(j6.map((r) => r.deposit)); basis = 'median6'; }
     else if (j6.length) { price = median(j6.map((r) => r.deposit)); basis = 'ref'; }
     const ratio = price != null && basis === 'median6' && t.price && t.basis === 'median6' ? Math.round((price / t.price) * 100) : null;
-    t.jeonse = price != null ? { price, basis, n6: j6.length, n12: j12.length, wolse6: w6.length, ratio } : (w6.length || j12.length ? { price: null, basis: null, n6: 0, n12: j12.length, wolse6: w6.length, ratio: null } : null);
+    t.jeonse = price != null ? { price, basis, n6: j6.length, n6New: j6new.length, incl, n12: j12.length, wolse6: w6.length, ratio } : (w6.length || j12.length ? { price: null, basis: null, n6: 0, n6New: 0, incl, n12: j12.length, wolse6: w6.length, ratio: null } : null);
   }
   return repOut;
 }

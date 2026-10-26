@@ -8,7 +8,7 @@ export interface TypeStat {
   key: number; label: string; pyeong: number; areas: number[];
   nPrev6?: number;
   /** 전세: 최근 6개월 전세 보증금 중앙값(월세 제외). ratio = 전세가율(%) — 전세·매매 모두 median6일 때만 */
-  jeonse: { price: number | null; basis: 'median6' | 'ref' | null; n6: number; n12: number; wolse6: number; ratio: number | null } | null;
+  jeonse: { price: number | null; basis: 'median6' | 'ref' | null; n6: number; n6New?: number; incl?: 'new' | 'all'; n12: number; wolse6: number; ratio: number | null } | null;   // incl 'new' = 신규 계약만, 'all' = 신규 3건 미만이라 갱신 포함
   n36: number; n12: number; n6: number;
   price: number | null; basis: 'median6' | 'ref' | 'last' | null; priceN: number; priceDate: string | null;
   min6: number | null; max6: number | null; yoy: number | null;
