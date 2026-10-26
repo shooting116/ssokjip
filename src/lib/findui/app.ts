@@ -340,7 +340,7 @@ function renderItem(f: typeof fitted[0]) {
         <div class="it-sub sub">${f.fitKey}㎡ · ${pyeong(f.fitKey!)}평형 · ${basis}${t && t[3] ? ` · 6개월 ${t[3]}건` : ''}${yoy != null ? ` · <span class="${yoy >= 0 ? 'up' : 'down'}">1년 ${yoy > 0 ? '+' : ''}${yoy}%</span>` : ''}${t && t[7] != null ? ` · 전세가율 ${t[7]}%${gap != null ? ` · 갭 <b>${eok(gap)}</b>` : ''}` : ''}</div>
         ${pct != null ? `<div class="bar"><i style="width:${Math.min(100, pct)}%"></i></div>` : ''}
       </div>
-      <div class="it-price"><b>${eok(f.fitPrice, 2)}</b>${s.sort === 'gapAsc' && gap != null ? (gap <= 0 ? `<span class="pill p-bad">전세가 ≥ 매매가 · ${t?.[7]}%</span>` : `<span class="pill ${(t?.[7] ?? 0) > 90 ? 'p-bad' : 'p-soft'}" title="전세가율 ${t?.[7]}%${(t?.[7] ?? 0) > 90 ? ' — HUG 전세보증 기준선(90%) 초과' : ''}">갭 ${eok(gap)} <i>${t?.[7]}%</i></span>${(t?.[7] ?? 0) > 90 ? '<span class="gapwarn">HUG 보증선 90% 초과</span>' : ''}`) : pct != null ? `<span class="pill ${fitCls}">예산의 ${pct}%</span>` : ''}</div>
+      <div class="it-price"><b>${eok(f.fitPrice, 2)}</b>${s.sort === 'gapAsc' && gap != null ? `<span class="pill ${(t?.[7] ?? 0) > 90 ? 'p-bad' : 'p-soft'}" title="전세가율 ${t?.[7]}%${(t?.[7] ?? 0) > 90 ? ' — HUG 전세보증 기준선(90%) 초과' : ''}">갭 ${gap < 0 ? '−' : ''}${eok(Math.abs(gap))} <i>${t?.[7]}%</i></span>${(t?.[7] ?? 0) > 90 ? '<span class="gapwarn">HUG 보증선 90% 초과</span>' : ''}` : pct != null ? `<span class="pill ${fitCls}">예산의 ${pct}%</span>` : ''}</div>
     </a>`;
 }
 // 0건일 때: 단계별로 몇 개가 남았는지 보여주고, 0으로 만든 조건을 짚어준다
