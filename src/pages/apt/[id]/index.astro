@@ -113,8 +113,23 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
       <div class="big price">{eok(rep.price)}</div>
       <div class="sub2">{rep.basis ? basisLabel[rep.basis] : '거래 없음'}{rep.priceN ? ` · ${rep.priceN}건` : ''}{rep.yoy != null ? ` · 1년 전 대비 ` : ''}{rep.yoy != null && <b class={rep.yoy >= 0 ? 'up' : 'down'}>{pct(rep.yoy)}</b>}</div>
       {rep.price && <div class="sub" style="margin-top:4px">전용 평당 {eok(perPyeong(rep.price, areaOf(rep)))} <span style="opacity:.8">({areaOf(rep).toFixed(2).replace(/\.?0+$/, '')}㎡ 기준)</span></div>}
-      {rep.jeonse?.price && <div class="sub" style="margin-top:2px">전세 <b style="color:var(--fg2)">{eok(rep.jeonse.price)}</b> ({rep.jeonse.basis === 'median6' ? '6개월 중앙값' : '참고용'} · {rep.jeonse.n6}건){rep.jeonse.ratio != null && <> · 전세가율 <b style="color:var(--fg2)">{rep.jeonse.ratio}%</b></>}</div>}
       {rep.price && <div class="mybudget" data-price={rep.price} hidden></div>}
+      {rep.jeonse?.price && rep.price && (
+        <div class="gapbox" aria-label="전세 끼고 볼 때">
+          <div class="gaphead"><b>전세 끼고 보면</b> <span class="sub">{rep.label} · 최근 6개월 신규 전세 계약 {rep.jeonse.n6}건 기준</span></div>
+          <div class="gapgrid">
+            <div><span class="k">매매 시세</span><span class="v">{eok(rep.price)}</span></div>
+            <div><span class="k">전세 중앙값</span><span class="v">{eok(rep.jeonse.price)}</span></div>
+            <div><span class="k">전세가율</span><span class="v">{rep.jeonse.ratio != null ? `${rep.jeonse.ratio}%` : '—'}</span></div>
+            <div class="gap"><span class="k">갭(매매−전세)</span><span class="v">{eok(rep.price - rep.jeonse.price)}</span></div>
+          </div>
+          <p class="sub gapnote">
+            {sg.regulated
+              ? <><b class="warn">규제지역</b> — 전세를 안고 사는 경우 주택담보대출·전입 의무 등 제한이 있습니다(규칙표 2026-07 기준, <a href="/ref/">출처</a>). 갭은 집값에서 전세 보증금을 뺀 산술 값일 뿐, 실제 필요 자금은 대출 가능 여부·취득세·중개보수에 따라 다릅니다.</>
+              : <>갭은 집값에서 전세 보증금을 뺀 산술 값입니다. 실제 필요 자금은 취득세·중개보수를 더해야 하고, 전세가율이 높을수록 보증금 반환 부담이 큽니다(HUG 전세보증 가입 기준 전세가율 90% 이하). 추천이 아닙니다.</>}
+          </p>
+        </div>
+      )}
       <div class="actions">
         <a class="btn" href={`/find/?budget=${rep.price ?? ''}&lawd=${lawd}`}>이 가격대 다른 단지 보기</a>
         <button type="button" class="btn ghost cmp" data-cmp={c.id} data-name={c.name}>비교에 담기</button>
@@ -149,7 +164,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
             <div>
               <b>{t.label}</b> <span class="sub">{t.pyeong}평형 · {t.areas.map((a) => a.toFixed(2).replace(/\.?0+$/, '')).join('/')}㎡</span>
               <div class="sub">{t.basis ? basisLabel[t.basis] : '거래 없음'}{t.priceN ? ` · ${t.priceN}건` : ''}{t.min6 != null && t.max6 != null && t.n6 >= 2 ? ` · ${eok(t.min6)}~${eok(t.max6)}` : ''}</div>
-              {t.jeonse?.price && <div class="sub">전세 {eok(t.jeonse.price)} ({t.jeonse.basis === 'median6' ? '6개월 중앙값' : '참고용'} · {t.jeonse.n6}건){t.jeonse.ratio != null ? ` · 전세가율 ${t.jeonse.ratio}%` : ''}{t.jeonse.wolse6 ? ` · 월세 ${t.jeonse.wolse6}건` : ''}</div>}
+              {t.jeonse?.price && <div class="sub">전세 {eok(t.jeonse.price)} ({t.jeonse.basis === 'median6' ? '6개월 중앙값' : '참고용'} · {t.jeonse.n6}건){t.jeonse.ratio != null ? ` · 전세가율 ${t.jeonse.ratio}%` : ''}{t.jeonse.ratio != null && t.price ? <> · 갭 <b style="color:var(--fg2)">{eok(t.price - t.jeonse.price)}</b></> : ''}{t.jeonse.wolse6 ? ` · 월세 ${t.jeonse.wolse6}건` : ''}</div>}
             </div>
             <div class="tp">
               <b>{eok(t.price)}</b>
@@ -265,6 +280,15 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
   .card h2 .sub { font-weight: 500; margin-left: 6px; }
   .hero .price { font-size: 34px; margin: 2px 0; letter-spacing: -0.03em; }
   .hero .actions { margin-top: 14px; }
+  .gapbox { margin-top: 12px; padding: 12px 14px; background: var(--soft); border-radius: 14px; }
+  .gaphead b { font-size: 14px; } .gaphead .sub { margin-left: 4px; }
+  .gapgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 8px; }
+  .gapgrid > div { background: var(--card); border-radius: 10px; padding: 8px 10px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .gapgrid .k { font-size: 11.5px; color: var(--muted); white-space: nowrap; }
+  .gapgrid .v { font-size: 15px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .gapgrid .gap .v { color: var(--blue); }
+  .gapnote { margin: 8px 0 0; line-height: 1.5; } .gapnote .warn { color: var(--orange); }
+  @media (max-width: 420px) { .gapgrid { grid-template-columns: 1fr 1fr; } }
   .up { color: var(--red); } .down { color: var(--blue); }
   .types { display: flex; flex-direction: column; }
   .type { padding: 14px 0; border-bottom: 1px solid var(--soft); }
