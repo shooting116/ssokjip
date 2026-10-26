@@ -11,6 +11,7 @@ type Slim = {
   j: number | null; jr: number | null;   // 대표 평형 전세 중앙값 · 전세가율(%)
   l: [string, number, number] | null;
   sk: string[];              // 1.5km 안 호재 역 키 ("역·노선")
+  rg?: boolean;              // 규제지역(시군구 단위, 불러올 때 붙임)
 };
 type Station = { k: string; n: string; l: string; st: string; open: number | null; c: number; la: number | null; lo: number | null };
 type Regions = { asOf: string; sido: Record<string, { lawd: string; name: string; n: number; st: number; s?: Station[] }[]> };
@@ -28,7 +29,8 @@ interface State {
   mapOnly: boolean;
   hotOnly: boolean;             // 🔥 거래 활발(같은 시군구 회전율 상위 10%)만
   station: string;              // 역 기준 ("역·노선" 키). ''이면 없음. 그 역 1.5km 안 단지만
-  sort: 'fit' | 'priceAsc' | 'priceDesc' | 'trades' | 'new' | 'units';
+  noReg: boolean;               // 규제지역 제외
+  sort: 'fit' | 'priceAsc' | 'priceDesc' | 'trades' | 'new' | 'units' | 'gapAsc';
   view: 'both' | 'list';
 }
 const KEY = 'ssokjip-find-v1';
@@ -66,7 +68,7 @@ function pyeong(key: number) {
 const basisLabel: Record<string, string> = { median6: '6개월 중앙값', ref: '참고용', last: '마지막 거래가' };
 
 function load(): State {
-  const d: State = { budgetMan: 0, sido: '서울', lawd: 'all', types: [], built: 'all', units: 'all', fitOnly: false, mapOnly: false, hotOnly: false, station: '', sort: 'fit', view: 'both' };
+  const d: State = { budgetMan: 0, sido: '서울', lawd: 'all', types: [], built: 'all', units: 'all', fitOnly: false, mapOnly: false, hotOnly: false, noReg: false, station: '', sort: 'fit', view: 'both' };
   const parseTypes = (v: unknown): TypeKey[] => String(v ?? '').split(',').map((x) => (x === 'big' ? 'big' : Number(x))).filter((x): x is TypeKey => TYPE_KEYS.includes(x as TypeKey));
   try {
     const raw = localStorage.getItem(KEY);
@@ -85,6 +87,7 @@ function load(): State {
   if (q.get('units')) d.units = (num(q.get('units')) ?? 'all') as State['units'];
   if (q.has('fit')) d.fitOnly = q.get('fit') === '1';
   if (q.has('hot')) d.hotOnly = q.get('hot') === '1';
+  if (q.has('noreg')) d.noReg = q.get('noreg') === '1';
   if (q.get('sort')) d.sort = q.get('sort') as State['sort'];
   if (q.has('station')) d.station = q.get('station') ?? '';
   if (q.get('view') === 'list') d.view = 'list';
@@ -102,6 +105,7 @@ function syncUrl() {
   if (s.units !== 'all') q.set('units', String(s.units));
   if (s.fitOnly && s.budgetMan) q.set('fit', '1');
   if (s.hotOnly) q.set('hot', '1');
+  if (s.noReg) q.set('noreg', '1');
   if (s.station) q.set('station', s.station);
   if (s.sort !== 'fit') q.set('sort', s.sort);
   if (s.view === 'list') q.set('view', 'list');
@@ -140,7 +144,8 @@ async function loadRows(): Promise<void> {
   let i = 0;
   for (const lawd of lawds) {
     if (!cache.has(lawd)) {
-      const d = await fetchJson<{ c: Slim[] }>(`/data/complexes/${lawd}.json`);
+      const d = await fetchJson<{ c: Slim[]; rg?: boolean }>(`/data/complexes/${lawd}.json`);
+      for (const c of d.c) c.rg = !!d.rg;
       cache.set(lawd, d.c);
       if (lawds.length > 3) setStatus(`불러오는 중 ${++i}/${lawds.length}`);
     }
@@ -167,18 +172,19 @@ function unitsOk(u: number | null): boolean {
   return (u ?? 0) >= s.units;
 }
 // 결과가 0일 때 "어느 조건에서 몇 개가 빠졌는지" 보여주기 위한 단계별 집계
-type Funnel = { label: string; n: number; key?: 'built' | 'units' | 'station' | 'type' | 'budget' | 'fitOnly' | 'hotOnly' | 'mapOnly' }[];
+type Funnel = { label: string; n: number; key?: 'built' | 'units' | 'station' | 'type' | 'budget' | 'fitOnly' | 'hotOnly' | 'mapOnly' | 'noReg' }[];
 let funnel: Funnel = [];
 let noGeoDropped = 0;
 function compute() {
   const B = s.budgetMan;
   fitted = [];
-  const cnt = { built: 0, units: 0, station: 0, type: 0, budget: 0, fit: 0, hot: 0, map: 0 };
+  const cnt = { built: 0, units: 0, station: 0, type: 0, budget: 0, fit: 0, hot: 0, map: 0, reg: 0 };
   noGeoDropped = 0;
   for (const c of rows) {
     if (!builtOk(c.b)) continue; cnt.built++;
     if (!unitsOk(c.u)) continue; cnt.units++;
     if (s.station && !c.sk.includes(s.station)) continue; cnt.station++;
+    if (s.noReg && c.rg) continue; cnt.reg++;
     const types = c.t.filter((t) => t[1] != null && typeOk(t[0]));
     if (!types.length) continue; cnt.type++;
     let fitKey: number | null = null, fitPrice: number | null = null, ratio: number | null = null;
@@ -203,6 +209,7 @@ function compute() {
   if (s.built !== 'all') funnel.push({ label: '준공', n: cnt.built, key: 'built' });
   if (s.units !== 'all') funnel.push({ label: '세대수', n: cnt.units, key: 'units' });
   if (s.station) funnel.push({ label: `${s.station.split('·')[0]}역 1.5km 안`, n: cnt.station, key: 'station' });
+  if (s.noReg) funnel.push({ label: '규제지역 제외', n: cnt.reg, key: 'noReg' });
   if (s.types.length) funnel.push({ label: `평형 ${s.types.map((t) => (t === 'big' ? '125㎡+' : `${t}㎡`)).join('·')}`, n: cnt.type, key: 'type' });
   if (B > 0) funnel.push({ label: '예산 안', n: cnt.budget, key: 'budget' });
   if (B > 0 && s.fitOnly) funnel.push({ label: '쏙 들어오는 구간', n: cnt.fit, key: 'fitOnly' });
@@ -215,9 +222,19 @@ function compute() {
     trades: (a, b) => b.c.n6 - a.c.n6 || b.c.n36 - a.c.n36,
     new: (a, b) => (b.c.b ?? 0) - (a.c.b ?? 0),
     units: (a, b) => (b.c.u ?? 0) - (a.c.u ?? 0),
+    // 갭 낮은 순: 갭이 0 이하(전세가 ≥ 매매가)인 단지는 맨 뒤로 — 가장 '싸게' 보이지만 보증금 반환 위험이 가장 큰 경우라서. 갭 없는 단지는 그 뒤
+    gapAsc: (a, b) => gapRank(gapOf(a)) - gapRank(gapOf(b)) || (gapOf(a) ?? 0) - (gapOf(b) ?? 0) || b.c.n6 - a.c.n6,
   };
   fitted.sort(by[s.sort]);
 }
+
+// 갭(매매−전세) = 맞는 평형의 시세 − 전세 중앙값. 전세가율이 계산된 평형(둘 다 6개월 3건 이상)만
+function gapOf(f: { c: Slim; fitKey: number | null }): number | null {
+  const t = f.c.t.find((x) => x[0] === f.fitKey);
+  return t && t[1] != null && t[6] != null && t[7] != null ? (t[1] as number) - (t[6] as number) : null;
+}
+
+const gapRank = (g: number | null) => (g == null ? 2 : g <= 0 ? 1 : 0);
 
 // ---------- 화면 ----------
 function chip(field: keyof State, v: State[keyof State], label: string) {
@@ -263,6 +280,7 @@ function activeFilters(): string[] {
   if (s.station) out.push(`${s.station.split('·')[0]}역 1.5km`);
   if (s.fitOnly && s.budgetMan) out.push('쏙 구간만');
   if (s.hotOnly) out.push('거래 활발만');
+  if (s.noReg) out.push('규제지역 제외');
   if (s.mapOnly) out.push('지도 영역 안');
   return out;
 }
@@ -286,6 +304,7 @@ function renderFilters() {
           <option value="trades" ${s.sort === 'trades' ? 'selected' : ''}>최근 거래 많은 순</option>
           <option value="new" ${s.sort === 'new' ? 'selected' : ''}>신축 순</option>
           <option value="units" ${s.sort === 'units' ? 'selected' : ''}>세대수 많은 순</option>
+          <option value="gapAsc" ${s.sort === 'gapAsc' ? 'selected' : ''}>갭(매매−전세) 낮은 순</option>
         </select>
       </div>
       <div class="fpanel" ${filtersOpen ? '' : 'hidden'}>
@@ -295,10 +314,16 @@ function renderFilters() {
         <div class="frow"><span class="fl">보기</span><div class="chips">
           ${s.budgetMan ? `<button type="button" class="chip ${s.fitOnly ? 'on' : ''}" data-toggle="fitOnly">쏙 구간만 <span class="sub">예산의 85~100%</span></button>` : ''}
           <button type="button" class="chip ${s.hotOnly ? 'on' : ''}" data-toggle="hotOnly" title="같은 시군구 안에서 최근 6개월 거래 ÷ 세대수가 상위 10%인 단지">🔥 거래 활발만</button>
+          <button type="button" class="chip ${s.noReg ? 'on' : ''}" data-toggle="noReg" title="조정대상지역·투기과열지구 등 규제지역(시군구 단위)을 뺍니다">규제지역 제외</button>
           ${KAKAO_KEY ? `<button type="button" class="chip ${s.mapOnly ? 'on' : ''}" data-toggle="mapOnly">지도 영역 안만</button>` : ''}
         </div></div>
       </div>
     </div>`;
+}
+// 갭 정렬일 때 목록 위에 붙는 기준 설명 — 숫자의 뜻과 기준선만, 추천 아님
+function gapLegend(): string {
+  if (s.sort !== 'gapAsc') return '';
+  return `<p class="sub gaplegend">갭 = 맞는 평형의 매매 시세 − 전세 중앙값(최근 6개월 신규 계약). 알약의 %는 전세가율이고, <b>주황은 90% 초과</b>(HUG 전세보증 가입 기준선). 전세가 매매가 이상인 단지와 전세 표본이 없는 단지는 뒤로 보냅니다. 규제지역은 전세를 안고 사는 데 제한이 있어요.</p>`;
 }
 function renderItem(f: typeof fitted[0]) {
   const c = f.c;
@@ -307,14 +332,15 @@ function renderItem(f: typeof fitted[0]) {
   const pct = f.ratio != null ? Math.round(f.ratio * 100) : null;
   const fitCls = pct == null ? '' : pct >= 85 ? 'p-ok' : pct >= 60 ? 'p-soft' : 'p-soft';
   const basis = t?.[2] ? basisLabel[t[2]] ?? '' : '';
+  const gap = gapOf(f);
   return `
     <a class="item ${selected === c.id ? 'sel' : ''}" href="/apt/${esc(c.id)}/" data-id="${esc(c.id)}">
       <div class="it-main">
-        <div class="it-name">${esc(c.n)}${c.h ? ' <span class="pill p-hot">🔥 거래 활발</span>' : ''} <span class="sub">${esc(c.d)}${c.b ? ` · ${c.b}년` : ''}${c.u ? ` · ${c.u.toLocaleString()}세대` : ''}</span></div>
-        <div class="it-sub sub">${f.fitKey}㎡ · ${pyeong(f.fitKey!)}평형 · ${basis}${t && t[3] ? ` · 6개월 ${t[3]}건` : ''}${yoy != null ? ` · <span class="${yoy >= 0 ? 'up' : 'down'}">1년 ${yoy > 0 ? '+' : ''}${yoy}%</span>` : ''}${t && t[7] != null ? ` · 전세가율 ${t[7]}%` : ''}</div>
+        <div class="it-name">${esc(c.n)}${c.h ? ' <span class="pill p-hot">🔥 거래 활발</span>' : ''} <span class="sub">${esc(c.d)}${c.b ? ` · ${c.b}년` : ''}${c.u ? ` · ${c.u.toLocaleString()}세대` : ''}${c.rg ? ' · 규제지역' : ''}</span></div>
+        <div class="it-sub sub">${f.fitKey}㎡ · ${pyeong(f.fitKey!)}평형 · ${basis}${t && t[3] ? ` · 6개월 ${t[3]}건` : ''}${yoy != null ? ` · <span class="${yoy >= 0 ? 'up' : 'down'}">1년 ${yoy > 0 ? '+' : ''}${yoy}%</span>` : ''}${t && t[7] != null ? ` · 전세가율 ${t[7]}%${gap != null ? ` · 갭 <b>${eok(gap)}</b>` : ''}` : ''}</div>
         ${pct != null ? `<div class="bar"><i style="width:${Math.min(100, pct)}%"></i></div>` : ''}
       </div>
-      <div class="it-price"><b>${eok(f.fitPrice, 2)}</b>${pct != null ? `<span class="pill ${fitCls}">예산의 ${pct}%</span>` : ''}</div>
+      <div class="it-price"><b>${eok(f.fitPrice, 2)}</b>${s.sort === 'gapAsc' && gap != null ? (gap <= 0 ? '<span class="pill p-bad">전세가 ≥ 매매가</span>' : `<span class="pill ${(t?.[7] ?? 0) > 90 ? 'p-hot' : 'p-soft'}" title="전세가율 ${t?.[7]}%${(t?.[7] ?? 0) > 90 ? ' — HUG 전세보증 가입 기준선(90%) 초과' : ''}">갭 ${eok(gap)} <i>${t?.[7]}%</i></span>`) : pct != null ? `<span class="pill ${fitCls}">예산의 ${pct}%</span>` : ''}</div>
     </a>`;
 }
 // 0건일 때: 단계별로 몇 개가 남았는지 보여주고, 0으로 만든 조건을 짚어준다
@@ -324,7 +350,7 @@ function renderEmpty() {
   const prev = zero ? funnel[funnel.indexOf(zero) - 1]?.n ?? 0 : 0;
   const hint: Record<string, string> = {
     built: '준공 필터를 넓히면', units: '세대수 필터를 넓히면', station: '역 기준을 "없음"으로 하면', type: '평형을 더 켜거나 "평형 전체"로 하면',
-    budget: '예산을 올리거나 지역을 바꾸면', fitOnly: '"쏙 들어오는 구간만"을 끄면', hotOnly: '"거래 활발만"을 끄면', mapOnly: '지도를 옮기거나 "지도 영역 안만"을 끄면',
+    budget: '예산을 올리거나 지역을 바꾸면', fitOnly: '"쏙 들어오는 구간만"을 끄면', hotOnly: '"거래 활발만"을 끄면', noReg: '"규제지역 제외"를 끄면', mapOnly: '지도를 옮기거나 "지도 영역 안만"을 끄면',
   };
   const geo = zero?.key === 'mapOnly' && noGeoDropped ? ` 좌표가 없는 단지 ${noGeoDropped}개는 지도 필터에 잡히지 않아요.` : '';
   return `<div class="empty">
@@ -340,6 +366,7 @@ function renderList() {
     : `<b>${n.toLocaleString()}단지</b>`;
   return `
     <div class="count sub2" id="count"><span>${head}<span class="src"> · 실거래 기준 ${esc(regions.asOf)}</span></span><button type="button" class="linkbtn" data-action="copy" title="지금 보고 있는 예산·지역·필터 조건을 주소로 복사">🔗 조건 링크 복사</button></div>
+    ${gapLegend()}
     <div class="card list" id="list">
       ${fitted.length ? fitted.slice(0, shown).map(renderItem).join('') : renderEmpty()}
       ${fitted.length > shown ? `<button type="button" class="btn ghost more" data-action="more">${(fitted.length - shown).toLocaleString()}개 더 보기</button>` : ''}
@@ -487,7 +514,7 @@ function bind() {
       const fl = root.querySelector('.filters'); if (fl) fl.outerHTML = renderFilters();
       rerenderList(); syncMarkers();
     } else if (t.dataset.toggle) {
-      const k = t.dataset.toggle as 'fitOnly' | 'mapOnly' | 'hotOnly'; s[k] = !s[k];
+      const k = t.dataset.toggle as 'fitOnly' | 'mapOnly' | 'hotOnly' | 'noReg'; s[k] = !s[k];
       compute(); shown = PAGE; save();
       const fl = root.querySelector('.filters'); if (fl) fl.outerHTML = renderFilters();
       rerenderList(); syncMarkers();
