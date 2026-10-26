@@ -145,8 +145,10 @@
 {"lawd":"30110","umdNm":"판암동","jibun":"834","apt":"삼정그린코아포레스트(2단지)","area":59.89,"floor":13,"built":2018,"date":"2026-09-30","deposit":3000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"인동","jibun":"353","apt":"어진마을","area":59.44,"floor":10,"built":2007,"date":"2026-09-30","deposit":2000,"rent":70,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"인동","jibun":"353","apt":"어진마을","area":59.44,"floor":17,"built":2007,"date":"2026-09-30","deposit":18000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":17500,"preRent":0}
+{"lawd":"30110","umdNm":"용운동","jibun":"147","apt":"용운주공2단지","area":41.3,"floor":5,"built":1987,"date":"2026-09-30","deposit":1000,"rent":30,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"판암동","jibun":"178","apt":"주공1","area":45.77,"floor":4,"built":1990,"date":"2026-09-30","deposit":1000,"rent":40,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"판암동","jibun":"202","apt":"주공2","area":58.01,"floor":2,"built":1990,"date":"2026-09-30","deposit":1000,"rent":60,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":1000,"preRent":50}
+{"lawd":"30110","umdNm":"판암동","jibun":"233","apt":"주공6","area":44.94,"floor":2,"built":1992,"date":"2026-09-30","deposit":6500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"홍도동","jibun":"14-1","apt":"홍도","area":42.02,"floor":11,"built":1996,"date":"2026-09-30","deposit":9000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"홍도동","jibun":"14-1","apt":"홍도","area":42.02,"floor":11,"built":1996,"date":"2026-09-30","deposit":9000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"홍도동","jibun":"14-1","apt":"홍도","area":42.02,"floor":15,"built":1996,"date":"2026-09-30","deposit":9000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}

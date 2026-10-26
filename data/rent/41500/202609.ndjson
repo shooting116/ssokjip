@@ -205,6 +205,7 @@
 {"lawd":"41500","umdNm":"부발읍 응암리","jibun":"109","apt":"주은다솜","area":35.77,"floor":5,"built":2001,"date":"2026-09-18","deposit":500,"rent":45,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"창전동","jibun":"419","apt":"타미나홈스","area":52.77,"floor":6,"built":2012,"date":"2026-09-18","deposit":5000,"rent":55,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"송정동","jibun":"107-48","apt":"풍산","area":59.5,"floor":17,"built":1997,"date":"2026-09-18","deposit":13000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":15000,"preRent":0}
+{"lawd":"41500","umdNm":"대월면 사동리","jibun":"529","apt":"휴먼빌에듀파크시티","area":84.99,"floor":19,"built":2024,"date":"2026-09-18","deposit":32000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"대월면 사동리","jibun":"529","apt":"휴먼빌에듀파크시티","area":84.99,"floor":19,"built":2024,"date":"2026-09-18","deposit":32000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"부발읍 무촌리","jibun":"544","apt":"휴먼시아(임대)","area":59.94,"floor":11,"built":2009,"date":"2026-09-18","deposit":6348,"rent":12,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":6238,"preRent":11}
 {"lawd":"41500","umdNm":"증일동","jibun":"393","apt":"힐스테이트이천역1단지","area":84.81,"floor":3,"built":2026,"date":"2026-09-18","deposit":10000,"rent":85,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -244,6 +245,7 @@
 {"lawd":"41500","umdNm":"창전동","jibun":"1-2","apt":"현대2(201동,202동)","area":71.18,"floor":4,"built":1991,"date":"2026-09-21","deposit":10000,"rent":35,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"부발읍 아미리","jibun":"699-7","apt":"현대3","area":59.85,"floor":7,"built":1997,"date":"2026-09-21","deposit":1000,"rent":75,"term":"26.12~27.11","type":"갱신","rrr":null,"preDeposit":2000,"preRent":60}
 {"lawd":"41500","umdNm":"증일동","jibun":"393","apt":"힐스테이트이천역1단지","area":74.17,"floor":10,"built":2026,"date":"2026-09-21","deposit":2000,"rent":125,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41500","umdNm":"신둔면 수광리","jibun":"757","apt":"수광엘리시움","area":59.81,"floor":9,"built":2009,"date":"2026-09-22","deposit":14000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"증포동","jibun":"94-3","apt":"신한","area":84.97,"floor":15,"built":1997,"date":"2026-09-22","deposit":2000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"안흥동","jibun":"469","apt":"안흥주공","area":59.71,"floor":1,"built":1997,"date":"2026-09-22","deposit":2000,"rent":65,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"중리동","jibun":"213","apt":"이천라온팰리스","area":110.01,"floor":10,"built":2009,"date":"2026-09-22","deposit":1000,"rent":140,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -289,6 +291,7 @@
 {"lawd":"41500","umdNm":"안흥동","jibun":"300-1","apt":"일성","area":59.94,"floor":13,"built":1997,"date":"2026-09-29","deposit":1000,"rent":60,"term":"26.10~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"송정동","jibun":"454","apt":"증포지구대원칸타빌2차더테라스","area":84.99,"floor":19,"built":2021,"date":"2026-09-29","deposit":27000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"증일동","jibun":"393","apt":"힐스테이트이천역1단지","area":84.81,"floor":12,"built":2026,"date":"2026-09-29","deposit":31000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41500","umdNm":"증일동","jibun":"393","apt":"힐스테이트이천역1단지","area":84.93,"floor":9,"built":2026,"date":"2026-09-29","deposit":35000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"증일동","jibun":"394","apt":"힐스테이트이천역2단지","area":60.95,"floor":26,"built":2026,"date":"2026-09-29","deposit":25000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"안흥동","jibun":"469","apt":"안흥주공","area":59.71,"floor":11,"built":1997,"date":"2026-09-30","deposit":1000,"rent":75,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"송정동","jibun":"450","apt":"이천라온프라이빗","area":84.81,"floor":13,"built":2021,"date":"2026-09-30","deposit":30000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

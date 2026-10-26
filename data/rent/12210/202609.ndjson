@@ -64,6 +64,7 @@
 {"lawd":"12210","umdNm":"금남로5가","jibun":"154-1","apt":"AM-City하이클래스","area":15.17,"floor":10,"built":2014,"date":"2026-09-15","deposit":300,"rent":35,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12210","umdNm":"금남로5가","jibun":"154-1","apt":"AM-City하이클래스","area":15.17,"floor":11,"built":2014,"date":"2026-09-15","deposit":300,"rent":37,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12210","umdNm":"산수동","jibun":"723","apt":"무등산그린웰로제비앙","area":39.96,"floor":9,"built":2019,"date":"2026-09-16","deposit":16350,"rent":0,"term":"26.10~28.04","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"12210","umdNm":"학동","jibun":"1022","apt":"무등산아이파크","area":39.92,"floor":11,"built":2017,"date":"2026-09-16","deposit":2000,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12210","umdNm":"충장로4가","jibun":"14","apt":"충장아트원","area":18,"floor":5,"built":2014,"date":"2026-09-16","deposit":300,"rent":33,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12210","umdNm":"내남동","jibun":"904","apt":"내남지구2차진아리채","area":59.92,"floor":17,"built":2020,"date":"2026-09-17","deposit":17364,"rent":4,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12210","umdNm":"학동","jibun":"1022","apt":"무등산아이파크","area":59.91,"floor":3,"built":2017,"date":"2026-09-17","deposit":3000,"rent":115,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -111,3 +112,4 @@
 {"lawd":"12210","umdNm":"계림동","jibun":"1869","apt":"계림아이파크에스케이뷰","area":62.99,"floor":12,"built":2022,"date":"2026-09-30","deposit":30000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":25700,"preRent":0}
 {"lawd":"12210","umdNm":"용산동","jibun":"662","apt":"광주용산지구2BL계룡리슈빌더포레스트아파트","area":106.66,"floor":11,"built":2019,"date":"2026-09-30","deposit":3000,"rent":170,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12210","umdNm":"용산동","jibun":"747","apt":"무등산골드클래스2차","area":39.17,"floor":19,"built":2022,"date":"2026-09-30","deposit":7200,"rent":24,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"12210","umdNm":"학동","jibun":"721-5","apt":"자민맨션","area":76.05,"floor":1,"built":1984,"date":"2026-09-30","deposit":3000,"rent":48,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

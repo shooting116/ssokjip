@@ -110,6 +110,7 @@
 {"lawd":"41450","umdNm":"망월동","jibun":"907","apt":"미사강변도시14단지","area":36.95,"floor":15,"built":2018,"date":"2026-09-04","deposit":2374,"rent":24,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":2261,"preRent":23}
 {"lawd":"41450","umdNm":"망월동","jibun":"1044","apt":"미사강변도시17단지","area":33.81,"floor":13,"built":2016,"date":"2026-09-04","deposit":4205,"rent":11,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":4105,"preRent":11}
 {"lawd":"41450","umdNm":"풍산동","jibun":"471","apt":"미사강변센트럴풍경채","area":84.95,"floor":2,"built":2019,"date":"2026-09-04","deposit":69300,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":66000,"preRent":0}
+{"lawd":"41450","umdNm":"망월동","jibun":"956","apt":"미사강변스타힐스아파트","area":51.73,"floor":15,"built":2016,"date":"2026-09-04","deposit":10000,"rent":200,"term":"26.10~27.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41450","umdNm":"신장동","jibun":"528","apt":"백조현대","area":49.98,"floor":17,"built":1994,"date":"2026-09-04","deposit":34650,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":33000,"preRent":0}
 {"lawd":"41450","umdNm":"덕풍동","jibun":"695","apt":"벽산블루밍","area":59.91,"floor":1,"built":2007,"date":"2026-09-04","deposit":53000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41450","umdNm":"창우동","jibun":"518","apt":"부영","area":59.97,"floor":7,"built":1994,"date":"2026-09-04","deposit":55000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -354,6 +355,7 @@
 {"lawd":"41450","umdNm":"망월동","jibun":"1050","apt":"미사강변 센텀팰리스","area":84.67,"floor":2,"built":2016,"date":"2026-09-13","deposit":60000,"rent":60,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41450","umdNm":"감일동","jibun":"534","apt":"감일스윗시티8단지","area":29.09,"floor":19,"built":2020,"date":"2026-09-14","deposit":3607,"rent":8,"term":"26.12~28.11","type":"갱신","rrr":null,"preDeposit":1721,"preRent":16}
 {"lawd":"41450","umdNm":"창우동","jibun":"521","apt":"꿈동산신안","area":84.97,"floor":6,"built":1994,"date":"2026-09-14","deposit":29400,"rent":6,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":29400,"preRent":0}
+{"lawd":"41450","umdNm":"덕풍동","jibun":"537-1","apt":"덕풍쌍용","area":59.8,"floor":3,"built":1998,"date":"2026-09-14","deposit":42000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41450","umdNm":"선동","jibun":"441","apt":"리버스위트칸타빌","area":97.73,"floor":22,"built":2018,"date":"2026-09-14","deposit":85000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":65000,"preRent":0}
 {"lawd":"41450","umdNm":"망월동","jibun":"1162","apt":"미사강변 골든 센트로","area":84.62,"floor":21,"built":2014,"date":"2026-09-14","deposit":5000,"rent":295,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41450","umdNm":"선동","jibun":"436","apt":"미사강변 센트리버","area":84.89,"floor":11,"built":2016,"date":"2026-09-14","deposit":70000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":62000,"preRent":0}
@@ -469,6 +471,7 @@
 {"lawd":"41450","umdNm":"선동","jibun":"436","apt":"미사강변 센트리버","area":74.91,"floor":13,"built":2016,"date":"2026-09-19","deposit":64000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":55000,"preRent":0}
 {"lawd":"41450","umdNm":"선동","jibun":"436","apt":"미사강변 센트리버","area":84.89,"floor":3,"built":2016,"date":"2026-09-19","deposit":20000,"rent":240,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41450","umdNm":"선동","jibun":"436","apt":"미사강변 센트리버","area":84.93,"floor":13,"built":2016,"date":"2026-09-19","deposit":63000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":60000,"preRent":0}
+{"lawd":"41450","umdNm":"선동","jibun":"433","apt":"미사강변2차푸르지오","area":93.94,"floor":17,"built":2016,"date":"2026-09-19","deposit":75000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":70000,"preRent":0}
 {"lawd":"41450","umdNm":"선동","jibun":"427","apt":"미사강변더샵리버포레","area":98.69,"floor":8,"built":2016,"date":"2026-09-19","deposit":75600,"rent":0,"term":"26.11~27.11","type":"갱신","rrr":"사용","preDeposit":72000,"preRent":0}
 {"lawd":"41450","umdNm":"풍산동","jibun":"471","apt":"미사강변센트럴풍경채","area":97.28,"floor":15,"built":2019,"date":"2026-09-19","deposit":73000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":70000,"preRent":0}
 {"lawd":"41450","umdNm":"망월동","jibun":"1125","apt":"미사역파라곤","area":102.86,"floor":13,"built":2021,"date":"2026-09-19","deposit":10000,"rent":345,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":330}

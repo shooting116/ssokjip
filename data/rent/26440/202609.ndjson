@@ -69,6 +69,7 @@
 {"lawd":"26440","umdNm":"신호동","jibun":"298-1","apt":"부산신호사랑으로부영2차","area":84.36,"floor":19,"built":2014,"date":"2026-09-04","deposit":15267,"rent":0,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"신호동","jibun":"298-1","apt":"부산신호사랑으로부영2차","area":84.56,"floor":1,"built":2014,"date":"2026-09-04","deposit":14968,"rent":1,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"신호동","jibun":"298-1","apt":"부산신호사랑으로부영2차","area":84.68,"floor":19,"built":2014,"date":"2026-09-04","deposit":15267,"rent":0,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"신호동","jibun":"300-1","apt":"부산신호사랑으로부영3차","area":59.93,"floor":9,"built":2014,"date":"2026-09-04","deposit":12602,"rent":0,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"신호동","jibun":"300-1","apt":"부산신호사랑으로부영3차","area":84.36,"floor":3,"built":2014,"date":"2026-09-04","deposit":15230,"rent":0,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"신호동","jibun":"300-1","apt":"부산신호사랑으로부영3차","area":84.88,"floor":16,"built":2014,"date":"2026-09-04","deposit":15230,"rent":0,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"신호동","jibun":"300-1","apt":"부산신호사랑으로부영3차","area":84.88,"floor":19,"built":2014,"date":"2026-09-04","deposit":15230,"rent":0,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -243,6 +244,7 @@
 {"lawd":"26440","umdNm":"지사동","jibun":"1185-1","apt":"지사과학삼정그린코아","area":60,"floor":16,"built":2017,"date":"2026-09-17","deposit":12300,"rent":0,"term":"26.09~28.12","type":"갱신","rrr":"사용","preDeposit":12000,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3232","apt":"퀸덤1차아인슈타인타운","area":117.27,"floor":4,"built":2009,"date":"2026-09-17","deposit":3000,"rent":130,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"지사동","jibun":"1186","apt":"협성·DS엘리시안","area":59.96,"floor":11,"built":2015,"date":"2026-09-17","deposit":2000,"rent":60,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":13000,"preRent":0}
+{"lawd":"26440","umdNm":"명지동","jibun":"3594","apt":"더샵명지퍼스트월드2단지","area":80.79,"floor":8,"built":2020,"date":"2026-09-18","deposit":3000,"rent":130,"term":"26.10~27.10","type":"갱신","rrr":"사용","preDeposit":3000,"preRent":125}
 {"lawd":"26440","umdNm":"명지동","jibun":"3599-3","apt":"명지국제신도시삼정그린코아더베스트","area":84.91,"floor":24,"built":2019,"date":"2026-09-18","deposit":9500,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3399","apt":"명지더웨스턴","area":74.62,"floor":13,"built":2018,"date":"2026-09-18","deposit":2000,"rent":115,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3234","apt":"명지두산위브포세이돈","area":70.87,"floor":5,"built":2013,"date":"2026-09-18","deposit":23500,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":"사용","preDeposit":23000,"preRent":0}
@@ -279,6 +281,7 @@
 {"lawd":"26440","umdNm":"강동동","jibun":"가-","apt":"에코델타스마트시티수자인","area":102.02,"floor":9,"built":2024,"date":"2026-09-20","deposit":3000,"rent":110,"term":"26.10~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3232","apt":"퀸덤1차아인슈타인타운","area":84.85,"floor":10,"built":2009,"date":"2026-09-20","deposit":3000,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3404","apt":"더힐시그니처","area":135.8,"floor":18,"built":2019,"date":"2026-09-21","deposit":47000,"rent":0,"term":"26.09~27.09","type":"갱신","rrr":null,"preDeposit":44100,"preRent":0}
+{"lawd":"26440","umdNm":"명지동","jibun":"3417","apt":"명지대방노블랜드오션뷰2차","area":85,"floor":11,"built":2016,"date":"2026-09-21","deposit":35000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3399","apt":"명지더웨스턴","area":84.61,"floor":6,"built":2018,"date":"2026-09-21","deposit":21000,"rent":35,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":20000,"preRent":35}
 {"lawd":"26440","umdNm":"화전동","jibun":"558","apt":"명지화전우방아이유쉘","area":59.87,"floor":3,"built":2020,"date":"2026-09-21","deposit":14000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"화전동","jibun":"558","apt":"명지화전우방아이유쉘","area":59.87,"floor":13,"built":2020,"date":"2026-09-21","deposit":14000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -324,6 +327,7 @@
 {"lawd":"26440","umdNm":"강동동","jibun":"가-","apt":"에코델타시티푸르지오린","area":84.91,"floor":13,"built":2025,"date":"2026-09-23","deposit":3000,"rent":130,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"지사동","jibun":"1185-1","apt":"지사과학삼정그린코아","area":59.98,"floor":3,"built":2017,"date":"2026-09-23","deposit":1000,"rent":65,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"지사동","jibun":"1185-1","apt":"지사과학삼정그린코아","area":60,"floor":5,"built":2017,"date":"2026-09-23","deposit":12000,"rent":0,"term":"26.10~28.06","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"명지동","jibun":"3230-11","apt":"퀸덤1차에디슨타운","area":84.81,"floor":15,"built":2009,"date":"2026-09-23","deposit":1000,"rent":110,"term":"26.10~28.04","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3594","apt":"더샵명지퍼스트월드2단지","area":85,"floor":21,"built":2020,"date":"2026-09-24","deposit":3000,"rent":126,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":3000,"preRent":120}
 {"lawd":"26440","umdNm":"신호동","jibun":"298-1","apt":"부산신호사랑으로부영2차","area":84.36,"floor":1,"built":2014,"date":"2026-09-24","deposit":14968,"rent":0,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"신호동","jibun":"300-1","apt":"부산신호사랑으로부영3차","area":84.88,"floor":2,"built":2014,"date":"2026-09-24","deposit":15230,"rent":0,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -395,6 +399,7 @@
 {"lawd":"26440","umdNm":"화전동","jibun":"558","apt":"명지화전우방아이유쉘","area":59.87,"floor":3,"built":2020,"date":"2026-09-30","deposit":14000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"화전동","jibun":"558","apt":"명지화전우방아이유쉘","area":59.95,"floor":20,"built":2020,"date":"2026-09-30","deposit":14000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"화전동","jibun":"558","apt":"명지화전우방아이유쉘","area":59.98,"floor":13,"built":2020,"date":"2026-09-30","deposit":14000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"지사동","jibun":"1182-2","apt":"명진파크뷰","area":34.42,"floor":13,"built":2016,"date":"2026-09-30","deposit":500,"rent":45,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3350","apt":"부산명지중흥S-클래스에듀오션","area":67.63,"floor":8,"built":2018,"date":"2026-09-30","deposit":5000,"rent":50,"term":"26.10~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3350","apt":"부산명지중흥S-클래스에듀오션","area":75.96,"floor":1,"built":2018,"date":"2026-09-30","deposit":4000,"rent":100,"term":"26.10~27.07","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"신호동","jibun":"296-1","apt":"부산신호사랑으로부영1차","area":84.36,"floor":13,"built":2013,"date":"2026-09-30","deposit":14326,"rent":0,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

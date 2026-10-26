@@ -230,6 +230,7 @@
 {"lawd":"11230","umdNm":"이문동","jibun":"54","apt":"현대","area":59.92,"floor":25,"built":2000,"date":"2026-09-14","deposit":5000,"rent":140,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11230","umdNm":"휘경동","jibun":"57","apt":"휘경리오포레아파트(2단지)","area":39.97,"floor":8,"built":2001,"date":"2026-09-14","deposit":2000,"rent":95,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11230","umdNm":"휘경동","jibun":"375","apt":"휘경해모로프레스티지","area":59.77,"floor":4,"built":2021,"date":"2026-09-14","deposit":59300,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":56500,"preRent":0}
+{"lawd":"11230","umdNm":"답십리동","jibun":"42","apt":"동답한신","area":35.45,"floor":10,"built":1992,"date":"2026-09-15","deposit":2000,"rent":90,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11230","umdNm":"답십리동","jibun":"1013","apt":"래미안미드카운티","area":55.4,"floor":5,"built":2019,"date":"2026-09-15","deposit":6336,"rent":9,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":4080,"preRent":22}
 {"lawd":"11230","umdNm":"용두동","jibun":"796","apt":"래미안엘리니티","area":51.91,"floor":3,"built":2022,"date":"2026-09-15","deposit":66000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11230","umdNm":"용두동","jibun":"796","apt":"래미안엘리니티","area":51.91,"floor":3,"built":2022,"date":"2026-09-15","deposit":66000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":63000,"preRent":0}
@@ -283,6 +284,7 @@
 {"lawd":"11230","umdNm":"이문동","jibun":"311","apt":"래미안이문2차","area":59.79,"floor":19,"built":2004,"date":"2026-09-19","deposit":55650,"rent":0,"term":"26.11~27.08","type":"갱신","rrr":"사용","preDeposit":53100,"preRent":0}
 {"lawd":"11230","umdNm":"장안동","jibun":"354-2","apt":"래미안장안","area":84.77,"floor":17,"built":2003,"date":"2026-09-19","deposit":61000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":56000,"preRent":0}
 {"lawd":"11230","umdNm":"청량리동","jibun":"235-1","apt":"미주","area":101.65,"floor":11,"built":1978,"date":"2026-09-19","deposit":40950,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":39000,"preRent":0}
+{"lawd":"11230","umdNm":"답십리동","jibun":"530-4","apt":"보광타워","area":14.69,"floor":14,"built":2019,"date":"2026-09-19","deposit":500,"rent":65,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11230","umdNm":"신설동","jibun":"96-48","apt":"신설동역자이르네","area":43.85,"floor":14,"built":2024,"date":"2026-09-19","deposit":62000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11230","umdNm":"회기동","jibun":"65","apt":"신현대","area":84.96,"floor":2,"built":1989,"date":"2026-09-19","deposit":38000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":35000,"preRent":0}
 {"lawd":"11230","umdNm":"이문동","jibun":"149-8","apt":"이문아이파크자이","area":59.95,"floor":26,"built":2025,"date":"2026-09-19","deposit":50000,"rent":100,"term":"26.12~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -330,6 +332,7 @@
 {"lawd":"11230","umdNm":"장안동","jibun":"95-1","apt":"장안현대","area":95.45,"floor":8,"built":1984,"date":"2026-09-22","deposit":1000,"rent":50,"term":"26.10~27.07","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11230","umdNm":"전농동","jibun":"687","apt":"전농동신성미소지움","area":112.87,"floor":5,"built":2005,"date":"2026-09-22","deposit":20000,"rent":183,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":20000,"preRent":170}
 {"lawd":"11230","umdNm":"답십리동","jibun":"498-7","apt":"청계지웰에스테이트","area":18.59,"floor":14,"built":2012,"date":"2026-09-22","deposit":1000,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11230","umdNm":"휘경동","jibun":"192-1","apt":"휘경제이스카이시티(청년임대)","area":17.62,"floor":4,"built":2021,"date":"2026-09-22","deposit":9200,"rent":43,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":9200,"preRent":39}
 {"lawd":"11230","umdNm":"답십리동","jibun":"1009","apt":"힐스테이트청계","area":59.86,"floor":18,"built":2018,"date":"2026-09-22","deposit":68250,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":65000,"preRent":0}
 {"lawd":"11230","umdNm":"장안동","jibun":"586","apt":"U포그니2차","area":55.06,"floor":6,"built":2018,"date":"2026-09-22","deposit":45000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":40000,"preRent":0}
 {"lawd":"11230","umdNm":"답십리동","jibun":"1014","apt":"답십리파크자이","area":84.83,"floor":5,"built":2019,"date":"2026-09-23","deposit":80000,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

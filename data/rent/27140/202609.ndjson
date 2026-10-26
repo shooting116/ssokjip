@@ -125,6 +125,7 @@
 {"lawd":"27140","umdNm":"효목동","jibun":"1331","apt":"동대구푸르지오브리센트","area":78.21,"floor":4,"built":2024,"date":"2026-09-09","deposit":3000,"rent":110,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"효목동","jibun":"1331","apt":"동대구푸르지오브리센트","area":78.21,"floor":9,"built":2024,"date":"2026-09-09","deposit":26250,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":25000,"preRent":0}
 {"lawd":"27140","umdNm":"효목동","jibun":"1331","apt":"동대구푸르지오브리센트","area":84.97,"floor":9,"built":2024,"date":"2026-09-09","deposit":27000,"rent":0,"term":"26.09~28.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27140","umdNm":"입석동","jibun":"932-5","apt":"동촌화성타운","area":84.94,"floor":11,"built":1995,"date":"2026-09-09","deposit":10000,"rent":15,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"동호동","jibun":"362","apt":"상록아파트","area":59.72,"floor":9,"built":2004,"date":"2026-09-09","deposit":9296,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"동호동","jibun":"362","apt":"상록아파트","area":59.72,"floor":10,"built":2004,"date":"2026-09-09","deposit":2788,"rent":15,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":9786,"preRent":0}
 {"lawd":"27140","umdNm":"동호동","jibun":"362","apt":"상록아파트","area":59.72,"floor":12,"built":2004,"date":"2026-09-09","deposit":9296,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -308,6 +309,7 @@
 {"lawd":"27140","umdNm":"방촌동","jibun":"1084-30","apt":"우방강촌마을1","area":29.25,"floor":10,"built":1996,"date":"2026-09-22","deposit":500,"rent":35,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"신암동","jibun":"1833","apt":"이안동대구","area":84.92,"floor":4,"built":2018,"date":"2026-09-22","deposit":2000,"rent":120,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"지묘동","jibun":"824","apt":"팔공보성타운3","area":134.99,"floor":2,"built":2001,"date":"2026-09-22","deposit":25000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27140","umdNm":"신천동","jibun":"457","apt":"효신","area":61.95,"floor":4,"built":1981,"date":"2026-09-22","deposit":500,"rent":30,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"봉무동","jibun":"1524","apt":"대구이시아폴리스더샵1차","area":84.96,"floor":12,"built":2012,"date":"2026-09-23","deposit":2000,"rent":100,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"사복동","jibun":"838","apt":"대구혁신엘에이치이노힐즈","area":84.97,"floor":16,"built":2015,"date":"2026-09-23","deposit":2000,"rent":85,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"신암동","jibun":"1840","apt":"동대구이안센트럴D","area":84.99,"floor":10,"built":2021,"date":"2026-09-23","deposit":40000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -333,6 +335,7 @@
 {"lawd":"27140","umdNm":"동호동","jibun":"362","apt":"상록아파트","area":59.72,"floor":4,"built":2004,"date":"2026-09-28","deposit":1859,"rent":15,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":1957,"preRent":16}
 {"lawd":"27140","umdNm":"동호동","jibun":"362","apt":"상록아파트","area":59.72,"floor":4,"built":2004,"date":"2026-09-28","deposit":5577,"rent":9,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":2935,"preRent":16}
 {"lawd":"27140","umdNm":"동호동","jibun":"362","apt":"상록아파트","area":59.72,"floor":4,"built":2004,"date":"2026-09-28","deposit":6507,"rent":8,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":6850,"preRent":10}
+{"lawd":"27140","umdNm":"동호동","jibun":"362","apt":"상록아파트","area":59.72,"floor":5,"built":2004,"date":"2026-09-28","deposit":9296,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":9786,"preRent":0}
 {"lawd":"27140","umdNm":"동호동","jibun":"362","apt":"상록아파트","area":59.72,"floor":6,"built":2004,"date":"2026-09-28","deposit":2788,"rent":15,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":1957,"preRent":18}
 {"lawd":"27140","umdNm":"동호동","jibun":"362","apt":"상록아파트","area":59.72,"floor":6,"built":2004,"date":"2026-09-28","deposit":9296,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":9786,"preRent":0}
 {"lawd":"27140","umdNm":"동호동","jibun":"362","apt":"상록아파트","area":59.72,"floor":8,"built":2004,"date":"2026-09-28","deposit":5577,"rent":11,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":4893,"preRent":16}

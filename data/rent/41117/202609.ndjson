@@ -20,6 +20,7 @@
 {"lawd":"41117","umdNm":"이의동","jibun":"1339","apt":"자연앤자이3단지","area":101.67,"floor":9,"built":2012,"date":"2026-09-01","deposit":84000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":84000,"preRent":0}
 {"lawd":"41117","umdNm":"영통동","jibun":"1048-2","apt":"청명마을(주공)","area":59.99,"floor":12,"built":1997,"date":"2026-09-01","deposit":34650,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":33000,"preRent":0}
 {"lawd":"41117","umdNm":"망포동","jibun":"291","apt":"청와","area":39.87,"floor":1,"built":1988,"date":"2026-09-01","deposit":13000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":12000,"preRent":0}
+{"lawd":"41117","umdNm":"매탄동","jibun":"810-1","apt":"현대","area":125.25,"floor":12,"built":1989,"date":"2026-09-01","deposit":10000,"rent":180,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"매탄동","jibun":"176","apt":"현대힐스테이트","area":59.65,"floor":2,"built":2006,"date":"2026-09-01","deposit":30000,"rent":0,"term":"26.09~28.05","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"매탄동","jibun":"176","apt":"현대힐스테이트","area":84.98,"floor":3,"built":2006,"date":"2026-09-01","deposit":47000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"영통동","jibun":"955-1","apt":"황골마을주공1","area":49.76,"floor":11,"built":1997,"date":"2026-09-01","deposit":3000,"rent":130,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -333,6 +334,7 @@
 {"lawd":"41117","umdNm":"영통동","jibun":"958-3","apt":"영통하우스토리","area":163.73,"floor":8,"built":2008,"date":"2026-09-15","deposit":70000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"영통동","jibun":"958-3","apt":"영통하우스토리","area":163.89,"floor":20,"built":2008,"date":"2026-09-15","deposit":35000,"rent":160,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":35000,"preRent":150}
 {"lawd":"41117","umdNm":"원천동","jibun":"548","apt":"원천레이크파크","area":59.99,"floor":17,"built":1999,"date":"2026-09-15","deposit":29400,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":28000,"preRent":0}
+{"lawd":"41117","umdNm":"매탄동","jibun":"1162","apt":"임광","area":124.52,"floor":11,"built":1990,"date":"2026-09-15","deposit":6000,"rent":170,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"원천동","jibun":"35","apt":"주공","area":32.39,"floor":11,"built":1987,"date":"2026-09-15","deposit":1000,"rent":70,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"영통동","jibun":"1048-2","apt":"청명마을(주공)","area":59.99,"floor":13,"built":1997,"date":"2026-09-15","deposit":31500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":0}
 {"lawd":"41117","umdNm":"영통동","jibun":"1046-1","apt":"청명마을삼성","area":119.87,"floor":6,"built":2001,"date":"2026-09-15","deposit":52500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":50000,"preRent":0}
@@ -457,6 +459,7 @@
 {"lawd":"41117","umdNm":"매탄동","jibun":"176","apt":"현대힐스테이트","area":75.81,"floor":2,"built":2006,"date":"2026-09-19","deposit":35000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"영통동","jibun":"1052-2","apt":"황골마을(쌍용)","area":59.8,"floor":12,"built":1998,"date":"2026-09-19","deposit":36000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"영통동","jibun":"1054-3","apt":"황골마을신명","area":59.99,"floor":5,"built":1997,"date":"2026-09-19","deposit":30400,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":29000,"preRent":0}
+{"lawd":"41117","umdNm":"영통동","jibun":"955-1","apt":"황골마을주공1","area":49.76,"floor":8,"built":1997,"date":"2026-09-19","deposit":2000,"rent":95,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":2000,"preRent":90}
 {"lawd":"41117","umdNm":"영통동","jibun":"955-1","apt":"황골마을주공1","area":59.99,"floor":10,"built":1997,"date":"2026-09-19","deposit":39000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"영통동","jibun":"955-1","apt":"황골마을주공1","area":59.99,"floor":20,"built":1997,"date":"2026-09-19","deposit":29400,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":28000,"preRent":0}
 {"lawd":"41117","umdNm":"영통동","jibun":"1054-3","apt":"황골마을한국","area":59.95,"floor":7,"built":1998,"date":"2026-09-19","deposit":5000,"rent":145,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

@@ -497,6 +497,7 @@
 {"lawd":"28200","umdNm":"논현동","jibun":"635-1","apt":"논현휴먼시아하늘마을(3단지)","area":46.9,"floor":15,"built":2008,"date":"2026-09-30","deposit":2539,"rent":28,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":2418,"preRent":27}
 {"lawd":"28200","umdNm":"논현동","jibun":"635-1","apt":"논현휴먼시아하늘마을(3단지)","area":51.93,"floor":8,"built":2008,"date":"2026-09-30","deposit":1650,"rent":35,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":3381,"preRent":28}
 {"lawd":"28200","umdNm":"만수동","jibun":"5-397","apt":"대동(5-397)","area":56.56,"floor":4,"built":1989,"date":"2026-09-30","deposit":8000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28200","umdNm":"구월동","jibun":"1142-2","apt":"대명어반스테이","area":17.07,"floor":8,"built":2018,"date":"2026-09-30","deposit":500,"rent":50,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"구월동","jibun":"1133-8","apt":"더웰메이드","area":47.42,"floor":6,"built":2015,"date":"2026-09-30","deposit":2000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"서창동","jibun":"676","apt":"더포레스트","area":59.98,"floor":2,"built":2017,"date":"2026-09-30","deposit":4916,"rent":53,"term":"26.10~28.02","type":"갱신","rrr":null,"preDeposit":4682,"preRent":51}
 {"lawd":"28200","umdNm":"구월동","jibun":"24","apt":"롯데캐슬골드","area":115.67,"floor":6,"built":2007,"date":"2026-09-30","deposit":42000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

@@ -369,6 +369,7 @@
 {"lawd":"41370","umdNm":"세교동","jibun":"622","apt":"세마역 트루엘 더퍼스트","area":84.61,"floor":22,"built":2013,"date":"2026-09-30","deposit":6000,"rent":130,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"내삼미동","jibun":"897","apt":"오산세교삼미마을16단지","area":41.64,"floor":9,"built":2013,"date":"2026-09-30","deposit":5143,"rent":11,"term":"26.10~28.09","type":"갱신","rrr":"사용","preDeposit":5008,"preRent":10}
 {"lawd":"41370","umdNm":"원동","jibun":"805-2","apt":"원동두산","area":84.73,"floor":10,"built":1999,"date":"2026-09-30","deposit":2000,"rent":100,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41370","umdNm":"누읍동","jibun":"561-1","apt":"이림","area":37.47,"floor":2,"built":2000,"date":"2026-09-30","deposit":500,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"부산동","jibun":"778-1","apt":"주공1","area":59.94,"floor":14,"built":2000,"date":"2026-09-30","deposit":1000,"rent":79,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":1000,"preRent":75}
 {"lawd":"41370","umdNm":"부산동","jibun":"778-1","apt":"주공1","area":59.99,"floor":19,"built":2000,"date":"2026-09-30","deposit":10500,"rent":23,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"부산동","jibun":"778-1","apt":"주공1","area":59.99,"floor":19,"built":2000,"date":"2026-09-30","deposit":10500,"rent":23,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
