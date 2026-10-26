@@ -30,7 +30,7 @@ interface State {
   hotOnly: boolean;             // 🔥 거래 활발(같은 시군구 회전율 상위 10%)만
   station: string;              // 역 기준 ("역·노선" 키). ''이면 없음. 그 역 1.5km 안 단지만
   noReg: boolean;               // 규제지역 제외
-  mode: 'live' | 'gap';         // live = 입주해서 살 집(기본), gap = 전세 끼고 살 집(갭 기준)
+  mode: 'live' | 'gap';         // live = 실거주할 집(기본), gap = 전세 끼고 살 집(갭 기준)
   gapMan: number;               // 갭(내 돈) 상한, 만 원. 0이면 없음. gap 모드에서만
   sort: 'fit' | 'priceAsc' | 'priceDesc' | 'trades' | 'new' | 'units' | 'gapAsc';
   view: 'both' | 'list';
@@ -270,7 +270,7 @@ function renderBudget() {
   return `
     <div class="card tight find-top">
       <div class="modeseg" role="tablist" aria-label="보는 방식">
-        <button type="button" role="tab" class="${s.mode === 'live' ? 'on' : ''}" data-mode="live" aria-selected="${s.mode === 'live'}">입주해서 살 집</button>
+        <button type="button" role="tab" class="${s.mode === 'live' ? 'on' : ''}" data-mode="live" aria-selected="${s.mode === 'live'}">실거주할 집</button>
         <button type="button" role="tab" class="${s.mode === 'gap' ? 'on' : ''}" data-mode="gap" aria-selected="${s.mode === 'gap'}">전세 끼고 살 집</button>
       </div>
       ${s.mode === 'gap' ? `
