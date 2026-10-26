@@ -24,6 +24,11 @@ const sm = loadSummary();
   .find .card { margin: 0; }
   .find .card.tight { padding: 14px 16px; }
   .find .row { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .find .modeseg { display: flex; background: var(--soft); border-radius: 12px; padding: 3px; margin-bottom: 12px; }
+  .find .modeseg button { flex: 1; border: 0; background: transparent; font: inherit; font-size: 13.5px; font-weight: 600; color: var(--fg2); padding: 8px 6px; border-radius: 10px; cursor: pointer; }
+  .find .modeseg button.on { background: var(--card); color: var(--fg); box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+  .find .budget .hint { font-weight: 500; color: var(--muted); margin-left: 4px; }
+  .find .budget.small { flex: 0 1 150px; min-width: 130px; } .find .budget.small .bval input { font-size: 20px; }
   .find .budget { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 200px; }
   .find .bval { display: flex; align-items: baseline; gap: 6px; border-bottom: 2px solid var(--line); padding-bottom: 4px; }
   .find .bval:focus-within { border-bottom-color: var(--blue); }
@@ -76,6 +81,9 @@ const sm = loadSummary();
   .find .it-name .pill { font-size: 10.5px; padding: 2px 7px; margin-left: 2px; vertical-align: 1px; }
   .find .it-sub { margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .find .it-sub .up { color: var(--red); } .find .it-sub .down { color: var(--blue); }
+  .find .it-price .pill i { font-style: normal; font-weight: 600; opacity: .8; margin-left: 2px; }
+  .find .gaplegend { margin: 0 4px 8px; line-height: 1.5; } .find .gaplegend b { color: var(--red); }
+  .find .it-price .gapwarn { display: block; font-size: 11px; font-weight: 700; color: var(--red); margin-top: 3px; white-space: nowrap; }
   .find .bar { height: 5px; border-radius: 999px; background: var(--soft); overflow: hidden; margin-top: 7px; max-width: 220px; }
   .find .bar i { display: block; height: 100%; background: var(--blue); border-radius: 999px; }
   .find .it-price { text-align: right; flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }

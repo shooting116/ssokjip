@@ -123,6 +123,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
             <div><span class="k">전세가율</span><span class="v">{rep.jeonse.ratio != null ? `${rep.jeonse.ratio}%` : '—'}</span></div>
             <div class="gap"><span class="k">갭(매매−전세)</span><span class="v">{eok(rep.price - rep.jeonse.price)}</span></div>
           </div>
+          <a class="btn ghost gapbtn" href={`/find/?mode=gap&gap=${rep.price - rep.jeonse.price}&lawd=${lawd}`}>이 갭으로 다른 단지 보기</a>
           <p class="sub gapnote">
             {sg.regulated
               ? <><b class="warn">규제지역</b> — 전세를 안고 사는 경우 주택담보대출·전입 의무 등 제한이 있습니다(규칙표 2026-07 기준, <a href="/ref/">출처</a>). 갭은 집값에서 전세 보증금을 뺀 산술 값일 뿐, 실제 필요 자금은 대출 가능 여부·취득세·중개보수에 따라 다릅니다.</>
@@ -288,6 +289,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
   .gapgrid .v { font-size: 15px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
   .gapgrid .gap .v { color: var(--blue); }
   .gapnote { margin: 8px 0 0; line-height: 1.5; } .gapnote .warn { color: var(--orange); }
+  .gapbtn { margin-top: 10px; padding: 10px; font-size: 14px; }
   @media (max-width: 420px) { .gapgrid { grid-template-columns: 1fr 1fr; } }
   .up { color: var(--red); } .down { color: var(--blue); }
   .types { display: flex; flex-direction: column; }

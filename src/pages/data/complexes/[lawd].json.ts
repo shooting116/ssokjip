@@ -7,6 +7,6 @@ export const getStaticPaths: GetStaticPaths = () => loadSummary().sigungu.map((s
 export const GET: APIRoute = ({ params }) => {
   const d = loadSigungu(params.lawd!);
   if (!d) return new Response('{}', { status: 404 });
-  const body = { lawd: d.lawd, sido: d.sido, sigungu: d.sigungu, asOf: d.asOf, c: d.complexes.map(slim) };
+  const body = { lawd: d.lawd, sido: d.sido, sigungu: d.sigungu, rg: d.regulated, asOf: d.asOf, c: d.complexes.map(slim) };   // rg: 규제지역(시군구 단위)
   return new Response(JSON.stringify(body), { headers: { 'content-type': 'application/json; charset=utf-8' } });
 };
