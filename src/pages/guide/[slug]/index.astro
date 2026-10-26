@@ -67,7 +67,10 @@ const jsonLd = { '@context': 'https://schema.org', '@type': 'Article', headline:
   .g .body table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 14px; line-height: 1.5; font-variant-numeric: tabular-nums; margin: 0; }
   .g .body table:has(th:nth-child(4)) { min-width: 560px; }   /* 4열 이상은 줄여 넣지 않고 옆으로 넘긴다 */
   .g .body th { text-align: left; background: var(--soft); color: var(--muted); font-weight: 600; font-size: 12.5px; padding: 9px 12px; white-space: nowrap; }
-  .g .body td { padding: 10px 12px; border-top: 1px solid var(--line); vertical-align: top; color: var(--fg2); word-break: normal; overflow-wrap: anywhere; }
+  .g .body td { padding: 10px 12px; border-top: 1px solid var(--line); vertical-align: top; color: var(--fg2); word-break: keep-all; overflow-wrap: break-word; }
+  /* 첫 열(행 이름)은 단어 단위로만 꺾이고 최소 폭을 갖는다 — overflow-wrap:anywhere 였을 때 사파리가 첫 열을 한 글자 폭으로 눌렀음 */
+  .g .body th:first-child, .g .body td:first-child { width: 26%; min-width: 84px; }
+  .g .body table:has(th:nth-child(3):last-child) th:nth-child(2) { width: 46%; }   /* 3열 표는 가운데(내용) 열을 가장 넓게 */
   /* 옆으로 넘기는 표: 양끝 그림자 + 안내 문구(스크롤 끝에 닿으면 그림자 사라짐) */
   .g .body .tbl:has(th:nth-child(4)) { background:
       linear-gradient(90deg, var(--card) 40%, rgba(255,255,255,0)) left / 36px 100% no-repeat local,
