@@ -222,8 +222,8 @@ function compute() {
     trades: (a, b) => b.c.n6 - a.c.n6 || b.c.n36 - a.c.n36,
     new: (a, b) => (b.c.b ?? 0) - (a.c.b ?? 0),
     units: (a, b) => (b.c.u ?? 0) - (a.c.u ?? 0),
-    // 갭 낮은 순: 갭이 0 이하(전세가 ≥ 매매가)인 단지는 맨 뒤로 — 가장 '싸게' 보이지만 보증금 반환 위험이 가장 큰 경우라서. 갭 없는 단지는 그 뒤
-    gapAsc: (a, b) => gapRank(gapOf(a)) - gapRank(gapOf(b)) || (gapOf(a) ?? 0) - (gapOf(b) ?? 0) || b.c.n6 - a.c.n6,
+    // 갭 낮은 순: 전세가율 90% 이하(HUG 전세보증 가입 기준선)를 갭 낮은 순으로 먼저 → 90% 초과 → 갭 0 이하(전세가 ≥ 매매가) → 전세 표본 없음
+    gapAsc: (a, b) => gapRank(a) - gapRank(b) || (gapOf(a) ?? 0) - (gapOf(b) ?? 0) || b.c.n6 - a.c.n6,
   };
   fitted.sort(by[s.sort]);
 }
@@ -234,7 +234,8 @@ function gapOf(f: { c: Slim; fitKey: number | null }): number | null {
   return t && t[1] != null && t[6] != null && t[7] != null ? (t[1] as number) - (t[6] as number) : null;
 }
 
-const gapRank = (g: number | null) => (g == null ? 2 : g <= 0 ? 1 : 0);
+const ratioOf = (f: { c: Slim; fitKey: number | null }): number | null => f.c.t.find((x) => x[0] === f.fitKey)?.[7] ?? null;
+const gapRank = (f: { c: Slim; fitKey: number | null }): number => { const g = gapOf(f); if (g == null) return 3; if (g <= 0) return 2; return (ratioOf(f) ?? 0) > 90 ? 1 : 0; };
 
 // ---------- 화면 ----------
 function chip(field: keyof State, v: State[keyof State], label: string) {
@@ -323,7 +324,7 @@ function renderFilters() {
 // 갭 정렬일 때 목록 위에 붙는 기준 설명 — 숫자의 뜻과 기준선만, 추천 아님
 function gapLegend(): string {
   if (s.sort !== 'gapAsc') return '';
-  return `<p class="sub gaplegend">갭 = 맞는 평형의 매매 시세 − 전세 중앙값(최근 6개월 신규 계약). 알약의 %는 전세가율이고, <b>주황은 90% 초과</b>(HUG 전세보증 가입 기준선). 전세가 매매가 이상인 단지와 전세 표본이 없는 단지는 뒤로 보냅니다. 규제지역은 전세를 안고 사는 데 제한이 있어요.</p>`;
+  return `<p class="sub gaplegend">갭 = 맞는 평형의 매매 시세 − 전세 중앙값(최근 6개월 신규 계약). 알약의 %는 전세가율. 순서는 <b>전세가율 90% 이하</b>(HUG 전세보증 가입 기준선)를 갭 낮은 순으로 먼저, 그다음 90% 초과(주황), 전세가 매매가 이상(빨강), 전세 표본 없음 순입니다. 규제지역은 전세를 안고 사는 데 제한이 있어요.</p>`;
 }
 function renderItem(f: typeof fitted[0]) {
   const c = f.c;
