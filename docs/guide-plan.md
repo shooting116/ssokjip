@@ -14,7 +14,7 @@
 | 2026-10-25 | 29 | 가계약금 — 법적 효력, 돌려받을 수 있는 경우 | provisional-deposit | situation | none | 완료(provisional-deposit) |
 | 2026-10-26 | 30 | 매매계약서 특약 체크리스트 — 대출 불가 시 해제, 하자, 잔금일 변경 | contract-clauses | situation | none | 완료(contract-clauses) |
 | 2026-10-27 | 31 | 잔금일 당일 순서 — 대출 실행 → 등기 → 전입·관리비 정산 | closing-day | situation | none | 완료(closing-day) |
-| 2026-10-28 | 32 | 세입자 있는 집 사기 — 전세 끼고 매수할 때 계약 승계와 만기 | buying-with-tenant | situation | find | |
+| 2026-10-28 | 32 | 세입자 있는 집 사기 — 전세 끼고 매수할 때 계약 승계와 만기 | buying-with-tenant | situation | find | 완료(buying-with-tenant) |
 | 2026-10-29 | 33 | 아파트 관리비 읽는 법 — K-apt로 단지별 비교 | maintenance-fee | price | find | |
 | 2026-10-30 | 34 | 보유세 기초 — 재산세·종합부동산세, 공시가격과 실거래가 차이 | holding-tax | tax | none | |
 | 2026-10-31 | 35 | 1주택 양도세 비과세 — 12억·보유·거주 요건 | capital-gains-exempt | tax | none | |
