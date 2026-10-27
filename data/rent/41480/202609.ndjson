@@ -361,6 +361,7 @@
 {"lawd":"41480","umdNm":"동패동","jibun":"2305","apt":"운정중앙역동문디이스트","area":74.19,"floor":14,"built":2026,"date":"2026-09-10","deposit":3000,"rent":160,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41480","umdNm":"문산읍 문산리","jibun":"145","apt":"일신건영휴먼빌","area":69.94,"floor":1,"built":2006,"date":"2026-09-10","deposit":15000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41480","umdNm":"문산읍 문산리","jibun":"145","apt":"일신건영휴먼빌","area":84.87,"floor":19,"built":2006,"date":"2026-09-10","deposit":2000,"rent":110,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41480","umdNm":"동패동","jibun":"1708","apt":"책향기마을15단지상록데시앙","area":84.99,"floor":11,"built":2007,"date":"2026-09-10","deposit":26000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":24000,"preRent":0}
 {"lawd":"41480","umdNm":"금촌동","jibun":"52-45","apt":"천년가골든뷰","area":17.65,"floor":6,"built":2021,"date":"2026-09-10","deposit":500,"rent":50,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41480","umdNm":"동패동","jibun":"2129","apt":"초롱꽃마을12단지e편한세상운정어반프라임","area":59.97,"floor":14,"built":2021,"date":"2026-09-10","deposit":34000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41480","umdNm":"동패동","jibun":"2076","apt":"초롱꽃마을8단지중흥S클래스","area":59.33,"floor":7,"built":2022,"date":"2026-09-10","deposit":34000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -928,6 +929,7 @@
 {"lawd":"41480","umdNm":"목동동","jibun":"1149","apt":"산내마을9단지힐스테이트운정","area":60.02,"floor":28,"built":2018,"date":"2026-09-29","deposit":32000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41480","umdNm":"목동동","jibun":"1149","apt":"산내마을9단지힐스테이트운정","area":72.74,"floor":22,"built":2018,"date":"2026-09-29","deposit":31000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":29000,"preRent":0}
 {"lawd":"41480","umdNm":"금촌동","jibun":"984","apt":"새꽃마을3단지주공(임대)","area":36.63,"floor":15,"built":2004,"date":"2026-09-29","deposit":1470,"rent":19,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":1404,"preRent":18}
+{"lawd":"41480","umdNm":"검산동","jibun":"130-8","apt":"성원포레스타운(130-8)","area":84.75,"floor":9,"built":2000,"date":"2026-09-29","deposit":1000,"rent":75,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":2000,"preRent":90}
 {"lawd":"41480","umdNm":"금촌동","jibun":"1003","apt":"쇠재마을5단지뜨란채주공","area":59.94,"floor":6,"built":2004,"date":"2026-09-29","deposit":15000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41480","umdNm":"야당동","jibun":"1031","apt":"운정아모리움","area":59.67,"floor":9,"built":2011,"date":"2026-09-29","deposit":28500,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":27700,"preRent":0}
 {"lawd":"41480","umdNm":"동패동","jibun":"2279","apt":"운정중앙역제일풍경채","area":84.94,"floor":2,"built":2026,"date":"2026-09-29","deposit":39000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -942,6 +944,7 @@
 {"lawd":"41480","umdNm":"문산읍 선유리","jibun":"1420","apt":"파주문산역2차동문디이스트","area":84.98,"floor":8,"built":2024,"date":"2026-09-29","deposit":33000,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41480","umdNm":"다율동","jibun":"1009","apt":"파주운정신도시디에트르에듀타운","area":85,"floor":12,"built":2024,"date":"2026-09-29","deposit":17000,"rent":30,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41480","umdNm":"신촌동","jibun":"729-7","apt":"파주출판문화엘에이치1단지(행복주택)","area":16.47,"floor":8,"built":2017,"date":"2026-09-29","deposit":287,"rent":10,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":1387,"preRent":6}
+{"lawd":"41480","umdNm":"동패동","jibun":"1781","apt":"한울마을1단지운정신도시IPARK","area":59,"floor":8,"built":2020,"date":"2026-09-29","deposit":3000,"rent":145,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41480","umdNm":"문산읍 문산리","jibun":"17-29","apt":"한진","area":76.68,"floor":8,"built":1992,"date":"2026-09-29","deposit":2000,"rent":70,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41480","umdNm":"목동동","jibun":"640","apt":"해솔마을11단지(국민임대)","area":59.64,"floor":4,"built":2009,"date":"2026-09-29","deposit":4814,"rent":32,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":4585,"preRent":31}
 {"lawd":"41480","umdNm":"다율동","jibun":"1039","apt":"해오름마을12단지휴아림(공공임대)","area":59.93,"floor":19,"built":2020,"date":"2026-09-29","deposit":1497,"rent":60,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":5497,"preRent":48}

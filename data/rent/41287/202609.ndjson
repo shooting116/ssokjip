@@ -403,6 +403,7 @@
 {"lawd":"41287","umdNm":"일산동","jibun":"587-2","apt":"일산중앙가든","area":45.45,"floor":5,"built":1989,"date":"2026-09-28","deposit":1000,"rent":45,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41287","umdNm":"일산동","jibun":"1655","apt":"일신휴먼빌(1655)","area":70.98,"floor":3,"built":2003,"date":"2026-09-28","deposit":29000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":29000,"preRent":0}
 {"lawd":"41287","umdNm":"대화동","jibun":"2228","apt":"장성마을(동부)","area":52.06,"floor":1,"built":1995,"date":"2026-09-28","deposit":1000,"rent":120,"term":"26.10~26.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41287","umdNm":"탄현동","jibun":"121","apt":"큰마을대림,현대아파트","area":59,"floor":7,"built":2001,"date":"2026-09-28","deposit":23000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41287","umdNm":"탄현동","jibun":"121","apt":"큰마을대림,현대아파트","area":59.82,"floor":10,"built":2001,"date":"2026-09-28","deposit":20000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":19400,"preRent":0}
 {"lawd":"41287","umdNm":"탄현동","jibun":"1485","apt":"탄현마을(진로)","area":101.86,"floor":1,"built":1995,"date":"2026-09-28","deposit":20000,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41287","umdNm":"탄현동","jibun":"1479","apt":"탄현마을(한신)","area":84.24,"floor":12,"built":1994,"date":"2026-09-28","deposit":26500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -426,6 +427,7 @@
 {"lawd":"41287","umdNm":"덕이동","jibun":"1540","apt":"하이파크시티일산아이파크5단지","area":84.99,"floor":9,"built":2011,"date":"2026-09-29","deposit":37000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41287","umdNm":"일산동","jibun":"1046","apt":"후곡마을(동양)","area":53.82,"floor":6,"built":1995,"date":"2026-09-29","deposit":3000,"rent":105,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41287","umdNm":"일산동","jibun":"1103","apt":"후곡마을(주공)","area":59.31,"floor":1,"built":1995,"date":"2026-09-29","deposit":18000,"rent":10,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41287","umdNm":"일산동","jibun":"1103","apt":"후곡마을(주공)","area":68.13,"floor":5,"built":1995,"date":"2026-09-29","deposit":20400,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":19500,"preRent":0}
 {"lawd":"41287","umdNm":"일산동","jibun":"1093","apt":"후곡마을(태영13)","area":83.77,"floor":15,"built":1994,"date":"2026-09-29","deposit":42000,"rent":0,"term":"26.10~27.01","type":"갱신","rrr":null,"preDeposit":42000,"preRent":0}
 {"lawd":"41287","umdNm":"가좌동","jibun":"1089","apt":"가좌마을2단지대우","area":73.86,"floor":8,"built":2005,"date":"2026-09-30","deposit":24000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":23100,"preRent":0}
 {"lawd":"41287","umdNm":"주엽동","jibun":"86","apt":"강선마을16단지동문","area":57.92,"floor":2,"built":1993,"date":"2026-09-30","deposit":25000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

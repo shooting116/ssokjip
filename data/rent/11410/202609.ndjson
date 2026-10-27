@@ -51,6 +51,7 @@
 {"lawd":"11410","umdNm":"남가좌동","jibun":"390","apt":"래미안루센티아","area":84.95,"floor":15,"built":2020,"date":"2026-09-04","deposit":1000,"rent":90,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"홍제동","jibun":"478","apt":"서대문푸르지오센트럴파크","area":59.94,"floor":11,"built":2023,"date":"2026-09-04","deposit":66000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"홍제동","jibun":"478","apt":"서대문푸르지오센트럴파크","area":59.94,"floor":15,"built":2023,"date":"2026-09-04","deposit":30000,"rent":111,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":100}
+{"lawd":"11410","umdNm":"연희동","jibun":"740","apt":"성원","area":84,"floor":20,"built":2001,"date":"2026-09-04","deposit":65000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"연희동","jibun":"740","apt":"성원","area":84.95,"floor":3,"built":2001,"date":"2026-09-04","deposit":30000,"rent":56,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"대현동","jibun":"145","apt":"예스에이피엠","area":38.72,"floor":13,"built":2007,"date":"2026-09-04","deposit":5000,"rent":110,"term":"26.09~28.08","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"천연동","jibun":"145","apt":"천연뜨란채","area":57.78,"floor":14,"built":2006,"date":"2026-09-04","deposit":10000,"rent":110,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":100}
@@ -253,6 +254,7 @@
 {"lawd":"11410","umdNm":"북아현동","jibun":"1-50","apt":"우민A","area":84.9,"floor":4,"built":2001,"date":"2026-09-18","deposit":49500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"북가좌동","jibun":"371-1","apt":"월드컵현대","area":59.76,"floor":8,"built":1998,"date":"2026-09-18","deposit":46500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"천연동","jibun":"145","apt":"천연뜨란채","area":57.78,"floor":5,"built":2006,"date":"2026-09-18","deposit":4000,"rent":200,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11410","umdNm":"홍제동","jibun":"331","apt":"홍제현대","area":75,"floor":2,"built":1992,"date":"2026-09-18","deposit":53000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"북아현동","jibun":"1017","apt":"힐스테이트신촌","area":84.6,"floor":3,"built":2023,"date":"2026-09-18","deposit":88000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":80500,"preRent":0}
 {"lawd":"11410","umdNm":"북아현동","jibun":"1017","apt":"힐스테이트신촌","area":84.6,"floor":14,"built":2023,"date":"2026-09-18","deposit":10000,"rent":315,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":300}
 {"lawd":"11410","umdNm":"남가좌동","jibun":"396","apt":"DMC금호리첸시아","area":84.99,"floor":12,"built":2024,"date":"2026-09-18","deposit":55000,"rent":50,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":55000,"preRent":40}

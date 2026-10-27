@@ -55,6 +55,7 @@
 {"lawd":"11590","umdNm":"흑석동","jibun":"10","apt":"명수대현대","area":84.33,"floor":1,"built":1988,"date":"2026-09-04","deposit":68000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":55566,"preRent":0}
 {"lawd":"11590","umdNm":"신대방동","jibun":"724","apt":"보라매자이더포레스트","area":59.88,"floor":30,"built":2021,"date":"2026-09-04","deposit":83000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"상도동","jibun":"408","apt":"상도동삼호아파트","area":114.63,"floor":12,"built":1994,"date":"2026-09-04","deposit":57000,"rent":10,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":57000,"preRent":0}
+{"lawd":"11590","umdNm":"상도동","jibun":"900","apt":"상도파크자이","area":71.25,"floor":1,"built":2016,"date":"2026-09-04","deposit":95000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"상도동","jibun":"900","apt":"상도파크자이","area":71.25,"floor":1,"built":2016,"date":"2026-09-04","deposit":95000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"상도동","jibun":"906","apt":"상도푸르지오클라베뉴","area":84.62,"floor":1,"built":2024,"date":"2026-09-04","deposit":70000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":68000,"preRent":0}
 {"lawd":"11590","umdNm":"본동","jibun":"481","apt":"신동아","area":59.89,"floor":8,"built":1993,"date":"2026-09-04","deposit":15000,"rent":80,"term":"26.11~27.05","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -370,10 +371,12 @@
 {"lawd":"11590","umdNm":"노량진동","jibun":"39-20","apt":"한강더퍼스트타워","area":18.28,"floor":19,"built":2026,"date":"2026-09-17","deposit":7300,"rent":66,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"노량진동","jibun":"39-20","apt":"한강더퍼스트타워","area":18.28,"floor":19,"built":2026,"date":"2026-09-17","deposit":9700,"rent":56,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"노량진동","jibun":"39-20","apt":"한강더퍼스트타워","area":18.28,"floor":20,"built":2026,"date":"2026-09-17","deposit":8500,"rent":61,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11590","umdNm":"노량진동","jibun":"39-20","apt":"한강더퍼스트타워","area":18.28,"floor":20,"built":2026,"date":"2026-09-17","deposit":9700,"rent":56,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"노량진동","jibun":"39-20","apt":"한강더퍼스트타워","area":18.28,"floor":20,"built":2026,"date":"2026-09-17","deposit":9700,"rent":56,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"노량진동","jibun":"39-20","apt":"한강더퍼스트타워","area":18.28,"floor":22,"built":2026,"date":"2026-09-17","deposit":8500,"rent":61,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"노량진동","jibun":"39-20","apt":"한강더퍼스트타워","area":18.28,"floor":23,"built":2026,"date":"2026-09-17","deposit":7300,"rent":66,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"노량진동","jibun":"39-20","apt":"한강더퍼스트타워","area":18.28,"floor":23,"built":2026,"date":"2026-09-17","deposit":9700,"rent":56,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11590","umdNm":"본동","jibun":"150","apt":"한강쌍용","area":59.64,"floor":12,"built":1999,"date":"2026-09-17","deposit":5000,"rent":250,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"흑석동","jibun":"335","apt":"흑석한강센트레빌","area":114.95,"floor":2,"built":2011,"date":"2026-09-17","deposit":105000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"흑석동","jibun":"339","apt":"흑석한강센트레빌Ⅱ","area":84.98,"floor":11,"built":2012,"date":"2026-09-17","deposit":92500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"상도동","jibun":"531","apt":"힐스테이트 상도 센트럴파크","area":59.77,"floor":5,"built":2012,"date":"2026-09-17","deposit":40000,"rent":155,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
