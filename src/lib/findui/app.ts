@@ -12,6 +12,9 @@ type Slim = {
   l: [string, number, number] | null;
   sk: string[];              // 1.5km 안 호재 역 키 ("역·노선")
   rg?: boolean;              // 규제지역(시군구 단위, 불러올 때 붙임)
+  es: [string, number] | null;          // 가장 가까운 초등학교 [이름, 직선거리 m]
+  sw: [string, string, number][];       // 1.5km 안 도시철도역 [역, 노선, m] 가까운 순
+  k: { park: number | null; elev: number | null; sub: string | null; subw: string | null; dongs: number | null; top: number | null; heat: string | null; used: string | null } | null;
 };
 type Station = { k: string; n: string; l: string; st: string; open: number | null; c: number; la: number | null; lo: number | null };
 type Regions = { asOf: string; sido: Record<string, { lawd: string; name: string; n: number; st: number; s?: Station[] }[]> };
@@ -30,6 +33,9 @@ interface State {
   hotOnly: boolean;             // 🔥 거래 활발(같은 시군구 회전율 상위 10%)만
   station: string;              // 역 기준 ("역·노선" 키). ''이면 없음. 그 역 1.5km 안 단지만
   noReg: boolean;               // 규제지역 제외
+  school: 'all' | 300 | 500;    // 초등학교 직선거리 안
+  subway: 'all' | 500 | 1000;   // 도시철도역(전 노선) 직선거리 안
+  park: 'all' | 1 | 1.3;        // 세대당 주차대수 이상
   mode: 'live' | 'gap';         // live = 실거주할 집(기본), gap = 전세 끼고 살 집(갭 기준)
   gapMan: number;               // 갭(내 돈) 상한, 만 원. 0이면 없음. gap 모드에서만
   sort: 'fit' | 'priceAsc' | 'priceDesc' | 'trades' | 'new' | 'units' | 'gapAsc';
@@ -70,7 +76,7 @@ function pyeong(key: number) {
 const basisLabel: Record<string, string> = { median6: '6개월 중앙값', ref: '참고용', last: '마지막 거래가' };
 
 function load(): State {
-  const d: State = { budgetMan: 0, sido: '서울', lawd: 'all', types: [], built: 'all', units: 'all', fitOnly: false, mapOnly: false, hotOnly: false, noReg: false, mode: 'live', gapMan: 0, station: '', sort: 'fit', view: 'both' };
+  const d: State = { budgetMan: 0, sido: '서울', lawd: 'all', types: [], built: 'all', units: 'all', fitOnly: false, mapOnly: false, hotOnly: false, noReg: false, school: 'all', subway: 'all', park: 'all', mode: 'live', gapMan: 0, station: '', sort: 'fit', view: 'both' };
   const parseTypes = (v: unknown): TypeKey[] => String(v ?? '').split(',').map((x) => (x === 'big' ? 'big' : Number(x))).filter((x): x is TypeKey => TYPE_KEYS.includes(x as TypeKey));
   try {
     const raw = localStorage.getItem(KEY);
@@ -90,6 +96,9 @@ function load(): State {
   if (q.has('fit')) d.fitOnly = q.get('fit') === '1';
   if (q.has('hot')) d.hotOnly = q.get('hot') === '1';
   if (q.has('noreg')) d.noReg = q.get('noreg') === '1';
+  if (q.get('school') && [300, 500].includes(Number(q.get('school')))) d.school = Number(q.get('school')) as State['school'];
+  if (q.get('subway') && [500, 1000].includes(Number(q.get('subway')))) d.subway = Number(q.get('subway')) as State['subway'];
+  if (q.get('park') && [1, 1.3].includes(Number(q.get('park')))) d.park = Number(q.get('park')) as State['park'];
   if (q.get('mode') === 'gap') { d.mode = 'gap'; if (!q.get('sort')) d.sort = 'gapAsc'; if (!q.has('noreg')) d.noReg = true; }
   if (q.get('gap') != null) d.gapMan = num(q.get('gap')) ?? 0;
   if (q.get('sort')) d.sort = q.get('sort') as State['sort'];
@@ -110,6 +119,9 @@ function syncUrl() {
   if (s.fitOnly && s.budgetMan) q.set('fit', '1');
   if (s.hotOnly) q.set('hot', '1');
   if (s.noReg) q.set('noreg', '1');
+  if (s.school !== 'all') q.set('school', String(s.school));
+  if (s.subway !== 'all') q.set('subway', String(s.subway));
+  if (s.park !== 'all') q.set('park', String(s.park));
   if (s.mode === 'gap') { q.set('mode', 'gap'); if (s.gapMan) q.set('gap', String(s.gapMan)); }
   if (s.station) q.set('station', s.station);
   if (s.sort !== 'fit') q.set('sort', s.sort);
@@ -177,20 +189,23 @@ function unitsOk(u: number | null): boolean {
   return (u ?? 0) >= s.units;
 }
 // 결과가 0일 때 "어느 조건에서 몇 개가 빠졌는지" 보여주기 위한 단계별 집계
-type Funnel = { label: string; n: number; key?: 'built' | 'units' | 'station' | 'type' | 'budget' | 'fitOnly' | 'hotOnly' | 'mapOnly' | 'noReg' | 'jeonse' | 'gap' }[];
+type Funnel = { label: string; n: number; key?: 'built' | 'units' | 'station' | 'type' | 'budget' | 'fitOnly' | 'hotOnly' | 'mapOnly' | 'noReg' | 'jeonse' | 'gap' | 'school' | 'subway' | 'park' }[];
 let funnel: Funnel = [];
 let noGeoDropped = 0;
 let noJeonseDropped = 0;
 function compute() {
   const B = s.budgetMan;
   fitted = [];
-  const cnt = { built: 0, units: 0, station: 0, type: 0, budget: 0, fit: 0, hot: 0, map: 0, reg: 0, jeonse: 0, gap: 0 };
+  const cnt = { built: 0, units: 0, station: 0, type: 0, budget: 0, fit: 0, hot: 0, map: 0, reg: 0, jeonse: 0, gap: 0, school: 0, subway: 0, park: 0 };
   noJeonseDropped = 0;
   noGeoDropped = 0;
   for (const c of rows) {
     if (!builtOk(c.b)) continue; cnt.built++;
     if (!unitsOk(c.u)) continue; cnt.units++;
     if (s.station && !c.sk.includes(s.station)) continue; cnt.station++;
+    if (s.school !== 'all' && !(c.es && c.es[1] <= s.school)) continue; cnt.school++;
+    if (s.subway !== 'all' && !(c.sw?.length && c.sw[0][2] <= s.subway)) continue; cnt.subway++;
+    if (s.park !== 'all' && !(parkPer(c) != null && (parkPer(c) as number) >= s.park)) continue; cnt.park++;
     if (s.noReg && c.rg) continue; cnt.reg++;
     const types = c.t.filter((t) => t[1] != null && typeOk(t[0]));
     if (!types.length) continue; cnt.type++;
@@ -232,6 +247,9 @@ function compute() {
   if (s.built !== 'all') funnel.push({ label: '준공', n: cnt.built, key: 'built' });
   if (s.units !== 'all') funnel.push({ label: '세대수', n: cnt.units, key: 'units' });
   if (s.station) funnel.push({ label: `${s.station.split('·')[0]}역 1.5km 안`, n: cnt.station, key: 'station' });
+  if (s.school !== 'all') funnel.push({ label: `초등학교 ${s.school}m 안`, n: cnt.school, key: 'school' });
+  if (s.subway !== 'all') funnel.push({ label: `지하철 ${s.subway === 1000 ? '1km' : '500m'} 안`, n: cnt.subway, key: 'subway' });
+  if (s.park !== 'all') funnel.push({ label: `세대당 주차 ${s.park}대+`, n: cnt.park, key: 'park' });
   if (s.noReg) funnel.push({ label: '규제지역 제외', n: cnt.reg, key: 'noReg' });
   if (s.mode === 'gap') funnel.push({ label: '전세 표본 있음', n: cnt.jeonse, key: 'jeonse' });
   if (s.types.length) funnel.push({ label: `평형 ${s.types.map((t) => (t === 'big' ? '125㎡+' : `${t}㎡`)).join('·')}`, n: cnt.type, key: 'type' });
@@ -260,6 +278,10 @@ function gapOf(f: { c: Slim; fitKey: number | null }): number | null {
 }
 
 const ratioOf = (f: { c: Slim; fitKey: number | null }): number | null => f.c.t.find((x) => x[0] === f.fitKey)?.[7] ?? null;
+
+// 세대당 주차대수(K-apt 등록 주차대수 ÷ 세대수). 둘 다 있을 때만
+const parkPer = (c: Slim): number | null => (c.k?.park && c.u ? Math.round((c.k.park / c.u) * 100) / 100 : null);
+const fmtM = (m: number) => (m >= 1000 ? `${(m / 1000).toFixed(1)}km` : `${m}m`);
 
 // ---------- 화면 ----------
 function chip(field: keyof State, v: State[keyof State], label: string) {
@@ -304,8 +326,8 @@ function renderStation() {
   const sts = stationsFor();
   if (!sts.length) return '';
   return `
-      <div class="frow"><span class="fl">역 기준</span>
-        <select data-select="station" aria-label="역 기준">
+      <div class="frow"><span class="fl">호재 역</span>
+        <select data-select="station" aria-label="호재 역 기준">
           <option value="">선택 안 함 · GTX·신설 노선 역 ${sts.length}개</option>
           ${sts.map((x) => `<option value="${esc(x.k)}" ${x.k === s.station ? 'selected' : ''}>${esc(stationLabel(x))} · 1.5km 안 ${x.c}단지</option>`).join('')}
         </select>
@@ -321,6 +343,9 @@ function activeFilters(): string[] {
   if (s.fitOnly && s.budgetMan) out.push('쏙 구간만');
   if (s.hotOnly) out.push('거래 활발만');
   if (s.noReg) out.push('규제지역 제외');
+  if (s.school !== 'all') out.push(`초등 ${s.school}m`);
+  if (s.subway !== 'all') out.push(`지하철 ${s.subway === 1000 ? '1km' : '500m'}`);
+  if (s.park !== 'all') out.push(`주차 ${s.park}대+`);
   if (s.mapOnly) out.push('지도 영역 안');
   return out;
 }
@@ -350,6 +375,9 @@ function renderFilters() {
       <div class="fpanel" ${filtersOpen ? '' : 'hidden'}>
         <div class="frow"><span class="fl">준공</span><div class="chips">${chip('built', 'all', '전체')}${chip('built', 10, '10년 이내')}${chip('built', 20, '20년 이내')}${chip('built', 'old', '20년 초과')}</div></div>
         <div class="frow"><span class="fl">세대수</span><div class="chips">${chip('units', 'all', '전체')}${chip('units', 300, '300+')}${chip('units', 500, '500+')}${chip('units', 1000, '1,000+')}</div></div>
+        <div class="frow"><span class="fl">초등학교</span><div class="chips">${chip('school', 'all', '전체')}${chip('school', 300, '300m 안')}${chip('school', 500, '500m 안')}<span class="fnote sub">직선거리</span></div></div>
+        <div class="frow"><span class="fl">지하철</span><div class="chips">${chip('subway', 'all', '전체')}${chip('subway', 500, '500m 안')}${chip('subway', 1000, '1km 안')}<span class="fnote sub">전 노선 역</span></div></div>
+        <div class="frow"><span class="fl">주차</span><div class="chips">${chip('park', 'all', '전체')}${chip('park', 1, '세대당 1대+')}${chip('park', 1.3, '1.3대+')}</div></div>
         ${renderStation()}
         <div class="frow"><span class="fl">보기</span><div class="chips">
           ${s.mode === 'live' && s.budgetMan ? `<button type="button" class="chip ${s.fitOnly ? 'on' : ''}" data-toggle="fitOnly">쏙 구간만 <span class="sub">예산의 85~100%</span></button>` : ''}
@@ -378,6 +406,7 @@ function renderItem(f: typeof fitted[0]) {
       <div class="it-main">
         <div class="it-name">${esc(c.n)}${c.h ? ' <span class="pill p-hot">🔥 거래 활발</span>' : ''} <span class="sub">${esc(c.d)}${c.b ? ` · ${c.b}년` : ''}${c.u ? ` · ${c.u.toLocaleString()}세대` : ''}${s.mode === 'gap' && c.rg ? ' · 규제지역' : ''}</span></div>
         <div class="it-sub sub">${f.fitKey}㎡ · ${pyeong(f.fitKey!)}평형 · ${basis}${t && t[3] ? ` · 6개월 ${t[3]}건` : ''}${yoy != null ? ` · <span class="${yoy >= 0 ? 'up' : 'down'}">1년 ${yoy > 0 ? '+' : ''}${yoy}%</span>` : ''}${t && t[7] != null ? ` · 전세가율 ${t[7]}%${gap != null ? ` · 갭 <b>${eok(gap)}</b>` : ''}` : ''}</div>
+        ${(c.es || c.sw?.length || parkPer(c) != null) ? `<div class="it-near sub">${[c.es ? `🏫 ${esc(c.es[0])} ${fmtM(c.es[1])}` : '', c.sw?.length ? `🚇 ${esc(c.sw[0][0])} ${esc(c.sw[0][1])} ${fmtM(c.sw[0][2])}` : '', parkPer(c) != null ? `🅿 세대당 ${parkPer(c)}대` : ''].filter(Boolean).join(' · ')}</div>` : ''}
         ${pct != null ? `<div class="bar"><i style="width:${Math.min(100, pct)}%"></i></div>` : ''}
       </div>
       <div class="it-price"><b>${eok(f.fitPrice, 2)}</b>${s.mode === 'gap' && gap != null ? `<span class="pill ${(t?.[7] ?? 0) > 90 ? 'p-bad' : 'p-soft'}" title="전세가율 ${t?.[7]}%${(t?.[7] ?? 0) > 90 ? ' — HUG 전세보증 기준선(90%) 초과' : ''}">갭 ${gap < 0 ? '−' : ''}${eok(Math.abs(gap))} <i>${t?.[7]}%</i></span>${(t?.[7] ?? 0) > 90 ? '<span class="gapwarn">HUG 보증선 90% 초과</span>' : ''}` : pct != null ? `<span class="pill ${fitCls}">예산의 ${pct}%</span>` : ''}</div>
@@ -390,7 +419,7 @@ function renderEmpty() {
   const prev = zero ? funnel[funnel.indexOf(zero) - 1]?.n ?? 0 : 0;
   const hint: Record<string, string> = {
     built: '준공 필터를 넓히면', units: '세대수 필터를 넓히면', station: '역 기준을 "없음"으로 하면', type: '평형을 더 켜거나 "평형 전체"로 하면',
-    budget: '예산을 올리거나 지역을 바꾸면', fitOnly: '"쏙 들어오는 구간만"을 끄면', hotOnly: '"거래 활발만"을 끄면', noReg: '"규제지역 제외"를 끄면', jeonse: '지역을 넓히면(전세 표본이 있는 단지만 보여요)', gap: '갭 상한을 올리면', mapOnly: '지도를 옮기거나 "지도 영역 안만"을 끄면',
+    budget: '예산을 올리거나 지역을 바꾸면', fitOnly: '"쏙 들어오는 구간만"을 끄면', hotOnly: '"거래 활발만"을 끄면', noReg: '"규제지역 제외"를 끄면', jeonse: '지역을 넓히면(전세 표본이 있는 단지만 보여요)', gap: '갭 상한을 올리면', school: '초등학교 거리를 넓히면', subway: '지하철 거리를 넓히면', park: '주차 조건을 낮추면(K-apt에 주차대수가 등록된 단지만 잡혀요)', mapOnly: '지도를 옮기거나 "지도 영역 안만"을 끄면',
   };
   const geo = zero?.key === 'mapOnly' && noGeoDropped ? ` 좌표가 없는 단지 ${noGeoDropped}개는 지도 필터에 잡히지 않아요.` : '';
   return `<div class="empty">
@@ -422,7 +451,7 @@ function renderAll() {
     ${KAKAO_KEY ? `<div class="mapwrap ${s.view === 'list' ? 'hide' : ''}"><div id="map"></div><div class="maptip sub" id="maptip"></div></div>` : `<div class="card tight sub2">지도 키가 설정되지 않아 목록만 보여드려요.</div>`}
     <div id="status" class="sub"></div>
     <div id="listwrap">${renderList()}</div>
-    <p class="src">시세 = 최근 6개월 실거래 중앙값(해제·직거래 제외). 6개월 거래가 3건 미만이면 참고용, 없으면 마지막 거래가. 출처: 국토교통부 실거래가. 특정 단지를 추천하지 않으며 판단은 이용자 몫입니다.</p>`;
+    <p class="src">시세 = 최근 6개월 실거래 중앙값(해제·직거래 제외). 6개월 거래가 3건 미만이면 참고용, 없으면 마지막 거래가. 출처: 국토교통부 실거래가. 🏫 초등학교·🚇 지하철은 단지 좌표에서 가장 가까운 곳까지의 <b>직선거리</b>(출처: 교육부 전국초중등학교위치표준데이터, 국가철도공단 도시철도역사정보 2026-06). 🅿 주차는 K-apt 등록 주차대수 ÷ 세대수. 특정 단지를 추천하지 않으며 판단은 이용자 몫입니다.</p>`;
   initMap();
   syncMarkers();
 }
@@ -556,7 +585,7 @@ function bind() {
       rerenderList(); syncMarkers();
     } else if (t.dataset.set) {
       const k = t.dataset.set as keyof State; const raw = t.dataset.value!;
-      (s as any)[k] = /^\d+$/.test(raw) ? Number(raw) : raw;
+      (s as any)[k] = /^\d+(\.\d+)?$/.test(raw) ? Number(raw) : raw;
       compute(); shown = PAGE; save();
       const fl = root.querySelector('.filters'); if (fl) fl.outerHTML = renderFilters();
       rerenderList(); syncMarkers();

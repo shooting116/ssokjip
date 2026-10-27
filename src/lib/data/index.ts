@@ -30,6 +30,8 @@ export interface Complex {
   n36: number; n12: number; n6: number; cancel36: number;
   last: { date: string; amt: number; area: number; floor: number | null } | null;
   transit: { line: string; type: string; station: string; status: string; open: number | null; dist: number; approx?: boolean; lat?: number; lng?: number }[];
+  school?: { name: string; m: number } | null;            // 가장 가까운 초등학교(직선거리 m, 2km 안)
+  subway?: { n: string; l: string[]; m: number }[];      // 1.5km 안 도시철도역(전 노선), 가까운 순 3개
   redev: { program: string; zone: string; type: string; stage: string; stageDate: string | null; planned: number | null; existing: number | null; source: string; sourceDate: string | null; by: string }[] | null;
   news: { t: string; o: string; d: string; u: string }[];
   /** 거래 활발: 같은 시군구 안 회전율(6개월 거래÷세대수) 상위 10% (세대수 모르면 건수 상위 10%). 기준값 포함 */
@@ -51,6 +53,7 @@ export interface Summary {
   /** 시도별 시 단위 묶음 ("성남시 분당구"+"수정구"+"중원구" → 성남시). merged=false면 시군구 하나 그대로 */
   cities?: Record<string, { name: string; lawds: string[]; merged: boolean; chg: RegionChange }[]>;
   total: { complexes: number; static: number; trades36: number };
+  poi?: { schools: { n: number; asOf: string | null } | null; stations: { n: number; asOf: string | null } | null };
   /** aptSeq 앞 5자리 → 실제 시군구 코드 목록 (앞자리와 다른 경우만. 2026 행정구역 개편 지역) */
   idPrefix: Record<string, string[]>;
 }
@@ -110,6 +113,8 @@ export function slim(c: Complex) {
     k: c.kapt ? { park: c.kapt.park, elev: c.kapt.elev, sub: c.kapt.subway, subw: c.kapt.subwayWalk, dongs: c.kapt.dongs, top: c.kapt.topFloor, heat: c.kapt.heat, used: c.kapt.used } : null,
     tr: c.transit.slice(0, 2).map((x) => `${x.line} ${x.station}${x.status === '운행중' ? '' : x.open ? ` ${x.open}예정` : ' 예정'}`),
     sk: c.transit.map((x) => `${x.station}·${x.line}`),
+    es: c.school ? [c.school.name, c.school.m] as [string, number] : null,
+    sw: (c.subway ?? []).slice(0, 2).map((x) => [x.n, x.l.join('·'), x.m] as [string, string, number]),
     rd: c.redev ? `${c.redev[0].type.replace(/\(.*\)/, '')} · ${c.redev[0].stage.split(/\s*→\s*/).pop()!.slice(0, 20)}` : null,
   };
 }

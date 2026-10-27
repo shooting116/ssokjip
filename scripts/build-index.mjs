@@ -145,6 +145,38 @@ function nearbyStations(lat, lng, stations, radius) {
   return [...best.values()].sort((a, b) => a.dist - b.dist);
 }
 
+/** 좌표 격자 색인 — 초등학교(약 6천)·도시철도역(약 1.1천)을 단지 2.6만 개와 대조할 때 전수 비교를 피한다. 셀 ≈ 1.1km */
+function gridIndex(points) {
+  const g = new Map();
+  const key = (lat, lng) => `${Math.floor(lat / 0.01)}:${Math.floor(lng / 0.0125)}`;
+  for (const p of points) { const k = key(p.lat, p.lng); (g.get(k) ?? g.set(k, []).get(k)).push(p); }
+  return (lat, lng, cells = 2) => {
+    const out = [];
+    const a = Math.floor(lat / 0.01), b = Math.floor(lng / 0.0125);
+    for (let i = -cells; i <= cells; i++) for (let j = -cells; j <= cells; j++) { const arr = g.get(`${a + i}:${b + j}`); if (arr) out.push(...arr); }
+    return out;
+  };
+}
+/** 가장 가까운 초등학교(직선거리, 2km 안). 분교는 본교와 같이 후보에 둔다 */
+function nearestSchool(lat, lng, near) {
+  if (lat == null || lng == null) return null;
+  let best = null;
+  for (const p of near(lat, lng)) { const d = distM(lat, lng, p.lat, p.lng); if (d <= 2000 && (!best || d < best.m)) best = { name: p.name, m: Math.round(d) }; }
+  return best;
+}
+/** 1.5km 안 도시철도역 — 같은 역 이름은 노선을 묶어 하나로, 가까운 순 3개 */
+function nearbySubway(lat, lng, near) {
+  if (lat == null || lng == null) return [];
+  const by = new Map();
+  for (const p of near(lat, lng)) {
+    const d = distM(lat, lng, p.lat, p.lng); if (d > 1500) continue;
+    const cur = by.get(p.n);
+    if (!cur) by.set(p.n, { n: p.n, l: [p.l], m: Math.round(d) });
+    else { if (!cur.l.includes(p.l)) cur.l.push(p.l); if (d < cur.m) cur.m = Math.round(d); }
+  }
+  return [...by.values()].sort((a, b) => a.m - b.m).slice(0, 3);
+}
+
 /** K-apt가 없는 단지: 건축물대장(건축HUB) 총괄표제부·표제부로 세대수·동수·최고층·사용승인일만 채운다. 주차대수는 옛 대장이 부정확해 쓰지 않는다 */
 function bldgOf(b) {
   if (!b || !b.units) return null;
@@ -197,6 +229,10 @@ function main() {
   const transit = loadJson(join(ROOT, 'data', 'transit', 'stations.json'), { radius_m: 1500, stations: [] });
   const stations = transit.stations.filter((s) => s.lat != null);
   const RADIUS = transit.radius_m ?? 1500;
+  const poiSchools = loadJson(join(ROOT, 'data', 'poi', 'schools.json'), { schools: [] });
+  const poiStations = loadJson(join(ROOT, 'data', 'poi', 'stations.json'), { stations: [] });
+  const nearSchool = gridIndex(poiSchools.schools.filter((p) => p.lat != null));
+  const nearSubway = gridIndex(poiStations.stations.filter((p) => p.lat != null));
   mkdirSync(join(OUT, 'complexes'), { recursive: true });
   const summary = { asOf, months: MONTHS, staticMin: STATIC_MIN, sido: {}, sigungu: [], idPrefix: {} };
   let total = 0, totalStatic = 0, totalTrades = 0;
@@ -246,12 +282,14 @@ function main() {
       const g = geo[c.id];
       const kapt = kaptOf(match[c.id] ? info[match[c.id].kaptCode] : null) ?? bldgOf(bldg[c.id]);
       const tr = nearbyStations(g?.lat ?? null, g?.lng ?? null, stations, RADIUS);
+      const school = nearestSchool(g?.lat ?? null, g?.lng ?? null, nearSchool);
+      const subway = nearbySubway(g?.lat ?? null, g?.lng ?? null, nearSubway);
       const rd = redev[c.id] ?? null;
       const nw = newsSkip[c.id] ? [] : (news[c.id]?.items ?? []);
       complexes.push({
         id: c.id, name, aliases: [...c.names.keys()].filter((n) => n !== name), sido: r.sido, sigungu: r.sigungu, lawd: r.lawd, umd: c.umdNm, bjd: `${c.lawd}${c.umd}`, jibun: c.jibun || null, road: c.road || null,
         built: c.built || null, lat: g?.lat ?? null, lng: g?.lng ?? null, kapt, static: c.rows.length >= STATIC_MIN, ...s,
-        transit: tr, redev: rd, news: nw,
+        transit: tr, school, subway, redev: rd, news: nw,
       });
     }
     complexes.sort((a, b) => b.n36 - a.n36 || a.name.localeCompare(b.name, 'ko'));
@@ -347,6 +385,7 @@ function main() {
     summary.cities[sido] = [...byCity.entries()].map(([name, gs]) => ({ name, lawds: gs.map((g) => g.lawd), merged: gs.length > 1, chg: chgOf(gs.map((g) => yoyPool.get(g.lawd))) }));
   }
   summary.jeonse = summary.sigungu.reduce((a, g) => a + (g.jeonse ?? 0), 0);
+  summary.poi = { schools: poiSchools.schools.length ? { n: poiSchools.schools.length, asOf: poiSchools.asOf ?? null } : null, stations: poiStations.stations.length ? { n: poiStations.stations.length, asOf: poiStations.asOf ?? null } : null };
   writeFileSync(join(OUT, 'summary.json'), JSON.stringify(summary, null, 1) + '\n');
   console.log(`[build-index] 시군구 ${regions.length} · 단지 ${total} (정적 ${totalStatic}, 상한 ${STATIC_MAX}, 커트 36개월 ${staticCut}건) · 거래 ${totalTrades} · 전세 ${summary.jeonse} · 중복 aptSeq ${nDup} · 앞자리≠코드 ${Object.keys(summary.idPrefix).length} · ${((Date.now() - t0) / 1000).toFixed(1)}s`);
 }
