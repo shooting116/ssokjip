@@ -26,6 +26,24 @@
   "units135": 70,
   "units136": 0,
   "zip": "23121",
-  "url": null
+  "url": null,
+  "parkGround": 300,
+  "parkUnder": 0,
+  "elevators": 6,
+  "cctv": 58,
+  "subwayLine": null,
+  "subwayStation": null,
+  "subwayWalk": null,
+  "busWalk": "5분이내",
+  "edu": "초등학교(영흥초) 중학교() 고등학교(영흥고등학교)",
+  "conv": "관공서(영흥면사무소) 병원(영흥보건지소) 기타(용담이해수욕장)",
+  "welfare": "관리사무소, 보육시설, 주민공동시설, 어린이놀이터, 휴게시설, 커뮤니티공간, 자전거보관소",
+  "security": "자치관리(직영)",
+  "guardCnt": 0,
+  "cleanCnt": 1,
+  "fire": "R형",
+  "water": "부스타방식",
+  "evGround": 0,
+  "evUnder": 0
  }
 }
