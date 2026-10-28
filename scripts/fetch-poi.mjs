@@ -80,8 +80,9 @@ async function fetchAll(id, uddi, api) {
     const j = await getJson(url);
     let data, total;
     if (api) {
-      const body = j.response?.body ?? {};
-      if (j.response?.header && j.response.header.resultCode && j.response.header.resultCode !== '00') throw new Error(`${j.response.header.resultCode} ${j.response.header.resultMsg ?? ''}`);
+      const res = j.response ?? j;                       // 어떤 API는 response 포장 없이 {header, body}로 온다
+      const body = res.body ?? {};
+      if (res.header?.resultCode && res.header.resultCode !== '00') throw new Error(`${res.header.resultCode} ${res.header.resultMsg ?? ''}`);
       data = Array.isArray(body.items) ? body.items : (body.items?.item ?? []);
       total = Number(body.totalCount ?? NaN);
     } else { data = j.data ?? []; total = Number(j.totalCount ?? NaN); }
@@ -118,8 +119,8 @@ async function schools() {
     if (status && !status.includes('운영')) continue;             // 폐교·휴교 제외
     const lat = num(pick(r, ['위도', 'latitude'])), lng = num(pick(r, ['경도', 'longitude']));
     if (lat == null || lng == null || lat < 33 || lat > 39 || lng < 124 || lng > 132) continue;
-    const branch = pick(r, ['본교분교구분', 'mainbrSe', 'mainBranchSe']) ?? '';
-    out.push({ id: pick(r, ['학교ID', 'schoolId']), name: pick(r, ['학교명', 'schoolNm', 'schoolName']), lat, lng, addr: pick(r, ['소재지도로명주소', 'rdnmadr', '소재지지번주소', 'lnmadr']), edu: pick(r, ['시도교육청명', 'sidoEduOfficeNm']), branch: branch.includes('분교') ? '분교' : null });
+    const branch = pick(r, ['본교분교구분', 'bnhhSe', 'mainbrSe', 'mainBranchSe']) ?? '';
+    out.push({ id: pick(r, ['학교ID', 'schoolId']), name: pick(r, ['학교명', 'schoolNm', 'schoolName']), lat, lng, addr: pick(r, ['소재지도로명주소', 'rdnmadr', '소재지지번주소', 'lnmadr']), edu: pick(r, ['시도교육청명', 'cddcNm', 'sidoEduOfficeNm']), branch: branch.includes('분교') ? '분교' : null });
   }
   out.sort((a, b) => a.name.localeCompare(b.name, 'ko'));
   mkdirSync(OUT, { recursive: true });
