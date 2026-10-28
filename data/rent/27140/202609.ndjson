@@ -379,6 +379,7 @@
 {"lawd":"27140","umdNm":"동호동","jibun":"362","apt":"상록아파트","area":59.72,"floor":11,"built":2004,"date":"2026-09-30","deposit":9296,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":9786,"preRent":0}
 {"lawd":"27140","umdNm":"신암동","jibun":"461-1","apt":"신암그린타운","area":59.95,"floor":6,"built":2003,"date":"2026-09-30","deposit":2000,"rent":65,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"신천동","jibun":"487","apt":"신천보성","area":57.55,"floor":3,"built":1982,"date":"2026-09-30","deposit":1000,"rent":55,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27140","umdNm":"신천동","jibun":"556-1","apt":"신천LH","area":60,"floor":8,"built":1989,"date":"2026-09-30","deposit":1000,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"율암동","jibun":"1294","apt":"안심청아람더영(theyoung)","area":29.79,"floor":1,"built":2024,"date":"2026-09-30","deposit":5400,"rent":8,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"율암동","jibun":"1294","apt":"안심청아람더영(theyoung)","area":29.79,"floor":8,"built":2024,"date":"2026-09-30","deposit":5400,"rent":8,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"율암동","jibun":"1294","apt":"안심청아람더영(theyoung)","area":29.79,"floor":14,"built":2024,"date":"2026-09-30","deposit":5400,"rent":8,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

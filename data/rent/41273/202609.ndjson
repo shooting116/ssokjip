@@ -50,6 +50,7 @@
 {"lawd":"41273","umdNm":"선부동","jibun":"1003","apt":"안산중흥S클래스더퍼스트","area":59.88,"floor":3,"built":2024,"date":"2026-09-04","deposit":18710,"rent":0,"term":"26.12~28.11","type":"갱신","rrr":null,"preDeposit":18060,"preRent":0}
 {"lawd":"41273","umdNm":"선부동","jibun":"1003","apt":"안산중흥S클래스더퍼스트","area":59.88,"floor":9,"built":2024,"date":"2026-09-04","deposit":18710,"rent":0,"term":"26.12~28.11","type":"갱신","rrr":null,"preDeposit":18060,"preRent":0}
 {"lawd":"41273","umdNm":"원곡동","jibun":"1003","apt":"안산푸르지오브리파크","area":49.75,"floor":20,"built":2023,"date":"2026-09-04","deposit":30900,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":29500,"preRent":0}
+{"lawd":"41273","umdNm":"원곡동","jibun":"1003","apt":"안산푸르지오브리파크","area":72.76,"floor":20,"built":2023,"date":"2026-09-04","deposit":23000,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41273","umdNm":"원곡동","jibun":"1003","apt":"안산푸르지오브리파크","area":84.61,"floor":25,"built":2023,"date":"2026-09-04","deposit":40000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41273","umdNm":"초지동","jibun":"724","apt":"주공그린빌13단지","area":51.89,"floor":9,"built":2002,"date":"2026-09-04","deposit":18000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41273","umdNm":"초지동","jibun":"802","apt":"초지역메이저타운푸르지오파크단지","area":59.98,"floor":6,"built":2019,"date":"2026-09-04","deposit":35000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -110,6 +111,7 @@
 {"lawd":"41273","umdNm":"고잔동","jibun":"782","apt":"안산레이크타운푸르지오","area":84.67,"floor":29,"built":2016,"date":"2026-09-08","deposit":55000,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41273","umdNm":"선부동","jibun":"1003","apt":"안산중흥S클래스더퍼스트","area":59.88,"floor":1,"built":2024,"date":"2026-09-08","deposit":18710,"rent":0,"term":"26.12~28.11","type":"갱신","rrr":null,"preDeposit":18060,"preRent":0}
 {"lawd":"41273","umdNm":"원곡동","jibun":"1003","apt":"안산푸르지오브리파크","area":59.97,"floor":4,"built":2023,"date":"2026-09-08","deposit":3000,"rent":126,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":3000,"preRent":120}
+{"lawd":"41273","umdNm":"선부동","jibun":"1189","apt":"이편한세상선부역어반스퀘어","area":59.93,"floor":8,"built":2020,"date":"2026-09-08","deposit":3000,"rent":116,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":3000,"preRent":110}
 {"lawd":"41273","umdNm":"고잔동","jibun":"672","apt":"주공(9단지)","area":66.56,"floor":2,"built":1986,"date":"2026-09-08","deposit":24000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41273","umdNm":"선부동","jibun":"1186","apt":"e편한세상선부파크플레이스1차","area":84.98,"floor":17,"built":2018,"date":"2026-09-08","deposit":3150,"rent":157,"term":"26.10~27.10","type":"갱신","rrr":"사용","preDeposit":3000,"preRent":150}
 {"lawd":"41273","umdNm":"원곡동","jibun":"1002","apt":"e편한세상초지역센트럴포레","area":59.97,"floor":26,"built":2021,"date":"2026-09-08","deposit":40000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -171,6 +173,7 @@
 {"lawd":"41273","umdNm":"고잔동","jibun":"851","apt":"센트럴푸르지오","area":84.95,"floor":20,"built":2018,"date":"2026-09-12","deposit":10000,"rent":147,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":140}
 {"lawd":"41273","umdNm":"고잔동","jibun":"851","apt":"센트럴푸르지오","area":84.95,"floor":24,"built":2018,"date":"2026-09-12","deposit":52500,"rent":0,"term":"26.10~28.09","type":"갱신","rrr":"사용","preDeposit":50000,"preRent":0}
 {"lawd":"41273","umdNm":"원곡동","jibun":"937","apt":"안산8차푸르지오","area":84.99,"floor":2,"built":2006,"date":"2026-09-12","deposit":32000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41273","umdNm":"원곡동","jibun":"1003","apt":"안산푸르지오브리파크","area":49.75,"floor":31,"built":2023,"date":"2026-09-12","deposit":3000,"rent":135,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41273","umdNm":"고잔동","jibun":"672","apt":"주공(9단지)","area":54.9,"floor":2,"built":1986,"date":"2026-09-12","deposit":2000,"rent":75,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41273","umdNm":"고잔동","jibun":"670","apt":"주공7","area":61.52,"floor":9,"built":1987,"date":"2026-09-12","deposit":2000,"rent":75,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41273","umdNm":"고잔동","jibun":"671","apt":"주공8","area":61.52,"floor":8,"built":1987,"date":"2026-09-12","deposit":18000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -321,6 +324,7 @@
 {"lawd":"41273","umdNm":"선부동","jibun":"1078","apt":"군자주공12","area":38.64,"floor":3,"built":1991,"date":"2026-09-29","deposit":8400,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":8000,"preRent":0}
 {"lawd":"41273","umdNm":"고잔동","jibun":"767","apt":"네오빌6단지","area":75.51,"floor":4,"built":2000,"date":"2026-09-29","deposit":39000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":37500,"preRent":0}
 {"lawd":"41273","umdNm":"고잔동","jibun":"851","apt":"센트럴푸르지오","area":84.95,"floor":12,"built":2018,"date":"2026-09-29","deposit":52000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":50000,"preRent":0}
+{"lawd":"41273","umdNm":"선부동","jibun":"1086","apt":"수정한양","area":49.98,"floor":5,"built":1991,"date":"2026-09-29","deposit":15000,"rent":27,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41273","umdNm":"선부동","jibun":"1086","apt":"수정한양","area":49.98,"floor":5,"built":1991,"date":"2026-09-29","deposit":15000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41273","umdNm":"선부동","jibun":"1177","apt":"안산메트로타운푸르지오힐스테이트","area":84.51,"floor":25,"built":2018,"date":"2026-09-29","deposit":34500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41273","umdNm":"선부동","jibun":"1177","apt":"안산메트로타운푸르지오힐스테이트","area":84.91,"floor":15,"built":2018,"date":"2026-09-29","deposit":22000,"rent":60,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -343,6 +347,7 @@
 {"lawd":"41273","umdNm":"고잔동","jibun":"782","apt":"안산레이크타운푸르지오","area":84.71,"floor":24,"built":2016,"date":"2026-09-30","deposit":25000,"rent":115,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":20000,"preRent":105}
 {"lawd":"41273","umdNm":"선부동","jibun":"1177","apt":"안산메트로타운푸르지오힐스테이트","area":59.82,"floor":7,"built":2018,"date":"2026-09-30","deposit":3000,"rent":105,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41273","umdNm":"선부동","jibun":"1177","apt":"안산메트로타운푸르지오힐스테이트","area":59.82,"floor":29,"built":2018,"date":"2026-09-30","deposit":6000,"rent":100,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41273","umdNm":"선부동","jibun":"1189","apt":"이편한세상선부역어반스퀘어","area":84.99,"floor":22,"built":2020,"date":"2026-09-30","deposit":300,"rent":100,"term":"26.09~27.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41273","umdNm":"고잔동","jibun":"672","apt":"주공(9단지)","area":61.52,"floor":5,"built":1986,"date":"2026-09-30","deposit":1000,"rent":85,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":1000,"preRent":70}
 {"lawd":"41273","umdNm":"고잔동","jibun":"676-2","apt":"주공6","area":46.74,"floor":4,"built":1986,"date":"2026-09-30","deposit":12000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41273","umdNm":"고잔동","jibun":"670","apt":"주공7","area":64.62,"floor":9,"built":1987,"date":"2026-09-30","deposit":23000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

@@ -364,6 +364,7 @@
 {"lawd":"26230","umdNm":"양정동","jibun":"531","apt":"양정포레힐즈스위첸1단지","area":73.96,"floor":23,"built":2024,"date":"2026-09-20","deposit":5000,"rent":150,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26230","umdNm":"초읍동","jibun":"681","apt":"초읍하늘채포레스원","area":29.95,"floor":7,"built":2025,"date":"2026-09-20","deposit":13000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":13000,"preRent":0}
 {"lawd":"26230","umdNm":"당감동","jibun":"123","apt":"태화현대2","area":59.72,"floor":5,"built":1996,"date":"2026-09-20","deposit":12000,"rent":40,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26230","umdNm":"전포동","jibun":"927","apt":"e편한세상시민공원1단지","area":59,"floor":20,"built":2023,"date":"2026-09-20","deposit":5000,"rent":135,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26230","umdNm":"전포동","jibun":"927","apt":"e편한세상시민공원1단지","area":59.99,"floor":20,"built":2023,"date":"2026-09-20","deposit":5000,"rent":135,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26230","umdNm":"전포동","jibun":"927","apt":"e편한세상시민공원1단지","area":84.7,"floor":3,"built":2023,"date":"2026-09-20","deposit":47000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":36000,"preRent":0}
 {"lawd":"26230","umdNm":"개금동","jibun":"53","apt":"개금주공2","area":41.3,"floor":11,"built":1988,"date":"2026-09-21","deposit":10000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -458,6 +459,7 @@
 {"lawd":"26230","umdNm":"범전동","jibun":"450","apt":"삼한골든뷰센트럴파크","area":84.99,"floor":34,"built":2019,"date":"2026-09-29","deposit":39000,"rent":8,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":39000,"preRent":0}
 {"lawd":"26230","umdNm":"전포동","jibun":"892-21","apt":"서면노르웨이아침","area":30.49,"floor":11,"built":2004,"date":"2026-09-29","deposit":500,"rent":40,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26230","umdNm":"전포동","jibun":"181-1","apt":"서면대우디오빌2","area":28.58,"floor":20,"built":2005,"date":"2026-09-29","deposit":300,"rent":45,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26230","umdNm":"범천동","jibun":"879-2","apt":"서면베르빌2","area":23.88,"floor":14,"built":2004,"date":"2026-09-29","deposit":300,"rent":32,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26230","umdNm":"당감동","jibun":"99-1","apt":"서면봄여름가을겨울","area":63.27,"floor":10,"built":2015,"date":"2026-09-29","deposit":25600,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":24500,"preRent":0}
 {"lawd":"26230","umdNm":"전포동","jibun":"683-11","apt":"서면쌍용플래티넘","area":29.78,"floor":9,"built":2004,"date":"2026-09-29","deposit":1000,"rent":40,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26230","umdNm":"전포동","jibun":"908","apt":"서면아이파크1단지","area":52.61,"floor":19,"built":2021,"date":"2026-09-29","deposit":32000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -486,10 +488,12 @@
 {"lawd":"26230","umdNm":"전포동","jibun":"33-9","apt":"서면한신","area":59.84,"floor":18,"built":1997,"date":"2026-09-30","deposit":17000,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26230","umdNm":"양정동","jibun":"271-9","apt":"양정퀸즈더블유에디션","area":49.6,"floor":15,"built":2019,"date":"2026-09-30","deposit":2000,"rent":85,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26230","umdNm":"부전동","jibun":"536-18","apt":"이랜드PEER서면","area":29.98,"floor":19,"built":2022,"date":"2026-09-30","deposit":4500,"rent":29,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26230","umdNm":"연지동","jibun":"1","apt":"청구","area":59.82,"floor":8,"built":2000,"date":"2026-09-30","deposit":10000,"rent":30,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26230","umdNm":"전포동","jibun":"643","apt":"토포필리아","area":39.82,"floor":13,"built":2011,"date":"2026-09-30","deposit":7000,"rent":10,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":7000,"preRent":10}
 {"lawd":"26230","umdNm":"초읍동","jibun":"676","apt":"포레나부산초읍","area":84.95,"floor":28,"built":2020,"date":"2026-09-30","deposit":41500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26230","umdNm":"양정동","jibun":"458-5","apt":"현대1차","area":42.63,"floor":5,"built":1997,"date":"2026-09-30","deposit":15000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26230","umdNm":"초읍동","jibun":"671","apt":"혜도인파크에비뉴연지","area":84.83,"floor":7,"built":2018,"date":"2026-09-30","deposit":30000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26230","umdNm":"범천동","jibun":"1652","apt":"e편한세상서면더센트럴","area":84,"floor":17,"built":2022,"date":"2026-09-30","deposit":3000,"rent":150,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26230","umdNm":"범천동","jibun":"1652","apt":"e편한세상서면더센트럴","area":84.96,"floor":3,"built":2022,"date":"2026-09-30","deposit":29400,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":28000,"preRent":0}
+{"lawd":"26230","umdNm":"범천동","jibun":"1652","apt":"e편한세상서면더센트럴","area":84.96,"floor":17,"built":2022,"date":"2026-09-30","deposit":3000,"rent":150,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26230","umdNm":"전포동","jibun":"927","apt":"e편한세상시민공원1단지","area":59.99,"floor":23,"built":2023,"date":"2026-09-30","deposit":30000,"rent":20,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":0}

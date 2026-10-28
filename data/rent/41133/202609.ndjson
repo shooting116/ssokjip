@@ -117,6 +117,7 @@
 {"lawd":"41133","umdNm":"중앙동","jibun":"3007","apt":"신흥역하늘채랜더스원3단지","area":59.88,"floor":9,"built":2022,"date":"2026-09-11","deposit":52500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41133","umdNm":"금광동","jibun":"2600","apt":"한양수자인성남마크뷰","area":50.37,"floor":21,"built":2021,"date":"2026-09-11","deposit":45000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":43000,"preRent":0}
 {"lawd":"41133","umdNm":"금광동","jibun":"1020","apt":"e편한세상금빛그랑메종5단지","area":59.98,"floor":4,"built":2023,"date":"2026-09-11","deposit":52000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":37800,"preRent":0}
+{"lawd":"41133","umdNm":"도촌동","jibun":"702","apt":"동분당포레스트","area":84.95,"floor":9,"built":2007,"date":"2026-09-12","deposit":56100,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":53500,"preRent":0}
 {"lawd":"41133","umdNm":"중앙동","jibun":"710","apt":"롯데캐슬","area":59.94,"floor":7,"built":2012,"date":"2026-09-12","deposit":57000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41133","umdNm":"중앙동","jibun":"710","apt":"롯데캐슬","area":84.94,"floor":10,"built":2012,"date":"2026-09-12","deposit":68250,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":65000,"preRent":0}
 {"lawd":"41133","umdNm":"상대원동","jibun":"279-1","apt":"선경2차","area":49.98,"floor":15,"built":1994,"date":"2026-09-12","deposit":27825,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":26500,"preRent":0}

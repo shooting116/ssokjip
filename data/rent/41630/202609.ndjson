@@ -487,6 +487,7 @@
 {"lawd":"41630","umdNm":"회정동","jibun":"911","apt":"e편한세상덕정역더스카이","area":75.05,"floor":13,"built":2023,"date":"2026-09-23","deposit":3000,"rent":120,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"옥정동","jibun":"936","apt":"e편한세상옥정더퍼스트","area":84.98,"floor":5,"built":2019,"date":"2026-09-23","deposit":30000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"옥정동","jibun":"1095","apt":"e편한세상옥정메트로포레","area":74.99,"floor":14,"built":2020,"date":"2026-09-23","deposit":28000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41630","umdNm":"옥정동","jibun":"945","apt":"양주옥정LH엘리프","area":51.98,"floor":22,"built":2023,"date":"2026-09-24","deposit":17850,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":17000,"preRent":0}
 {"lawd":"41630","umdNm":"덕계동","jibun":"947","apt":"양주회천한양수자인","area":59.99,"floor":12,"built":2022,"date":"2026-09-24","deposit":5000,"rent":100,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"옥정동","jibun":"946","apt":"양주옥정신도시디에트르프레스티지","area":84.98,"floor":32,"built":2022,"date":"2026-09-27","deposit":35000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":22050,"preRent":0}
 {"lawd":"41630","umdNm":"옥정동","jibun":"936","apt":"e편한세상옥정더퍼스트","area":66.96,"floor":14,"built":2019,"date":"2026-09-27","deposit":24000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -633,6 +634,7 @@
 {"lawd":"41630","umdNm":"만송동","jibun":"700","apt":"은빛마을휴먼시아(8단지)","area":49.7,"floor":14,"built":2010,"date":"2026-09-30","deposit":2683,"rent":18,"term":"26.12~28.11","type":"갱신","rrr":null,"preDeposit":2555,"preRent":17}
 {"lawd":"41630","umdNm":"고암동","jibun":"121-2","apt":"주원마을(주공2단지)","area":59.42,"floor":19,"built":2000,"date":"2026-09-30","deposit":15750,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":15000,"preRent":0}
 {"lawd":"41630","umdNm":"덕정동","jibun":"221-1","apt":"한국(105.106.107동)","area":53.77,"floor":6,"built":1990,"date":"2026-09-30","deposit":11000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41630","umdNm":"광사동","jibun":"713","apt":"해동마을신도브래뉴","area":84.87,"floor":5,"built":2009,"date":"2026-09-30","deposit":2000,"rent":120,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"광사동","jibun":"712","apt":"해동마을한양수자인","area":84.99,"floor":5,"built":2010,"date":"2026-09-30","deposit":22000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":21000,"preRent":0}
 {"lawd":"41630","umdNm":"덕계동","jibun":"903","apt":"회천대광로제비앙더센트럴","area":84.99,"floor":28,"built":2023,"date":"2026-09-30","deposit":3000,"rent":115,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":3000,"preRent":110}
 {"lawd":"41630","umdNm":"회정동","jibun":"911","apt":"e편한세상덕정역더스카이","area":59.9,"floor":27,"built":2023,"date":"2026-09-30","deposit":20000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":20000,"preRent":0}

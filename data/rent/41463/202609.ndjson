@@ -320,6 +320,7 @@
 {"lawd":"41463","umdNm":"중동","jibun":"874","apt":"백현마을동일하이빌","area":84.42,"floor":12,"built":2006,"date":"2026-09-14","deposit":40950,"rent":0,"term":"26.09~28.08","type":"갱신","rrr":null,"preDeposit":39000,"preRent":0}
 {"lawd":"41463","umdNm":"중동","jibun":"874","apt":"백현마을동일하이빌","area":115.05,"floor":17,"built":2006,"date":"2026-09-14","deposit":20000,"rent":200,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41463","umdNm":"마북동","jibun":"524-8","apt":"블루밍구성더센트럴","area":84.82,"floor":9,"built":2000,"date":"2026-09-14","deposit":15000,"rent":160,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41463","umdNm":"신갈동","jibun":"691","apt":"산양마을푸르지오","area":101.81,"floor":11,"built":2004,"date":"2026-09-14","deposit":4000,"rent":158,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":4000,"preRent":150}
 {"lawd":"41463","umdNm":"중동","jibun":"1096","apt":"신동백롯데캐슬에코1단지","area":84.91,"floor":4,"built":2013,"date":"2026-09-14","deposit":25000,"rent":120,"term":"26.12~27.12","type":"갱신","rrr":null,"preDeposit":25000,"preRent":80}
 {"lawd":"41463","umdNm":"구갈동","jibun":"384-2","apt":"신명","area":62.17,"floor":1,"built":1993,"date":"2026-09-14","deposit":2000,"rent":73,"term":"26.10~27.10","type":"갱신","rrr":null,"preDeposit":2000,"preRent":70}
 {"lawd":"41463","umdNm":"신갈동","jibun":"736","apt":"신흥덕롯데캐슬레이시티","area":59.98,"floor":9,"built":2019,"date":"2026-09-14","deposit":39900,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":38000,"preRent":0}

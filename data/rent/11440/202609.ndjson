@@ -361,6 +361,7 @@
 {"lawd":"11440","umdNm":"아현동","jibun":"800","apt":"공덕자이","area":84.99,"floor":5,"built":2015,"date":"2026-09-13","deposit":40000,"rent":232,"term":"26.10~27.10","type":"갱신","rrr":null,"preDeposit":40000,"preRent":165}
 {"lawd":"11440","umdNm":"아현동","jibun":"800","apt":"공덕자이","area":59.99,"floor":1,"built":2015,"date":"2026-09-14","deposit":81000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11440","umdNm":"서교동","jibun":"487","apt":"대우미래사랑","area":34.29,"floor":7,"built":2005,"date":"2026-09-14","deposit":1000,"rent":95,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":1000,"preRent":90}
+{"lawd":"11440","umdNm":"신수동","jibun":"453","apt":"대원칸타빌","area":84.87,"floor":6,"built":2004,"date":"2026-09-14","deposit":50000,"rent":120,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11440","umdNm":"공덕동","jibun":"469","apt":"래미안공덕5차","area":84.85,"floor":17,"built":2011,"date":"2026-09-14","deposit":10000,"rent":400,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11440","umdNm":"아현동","jibun":"777","apt":"마포래미안푸르지오3단지","area":84.89,"floor":19,"built":2014,"date":"2026-09-14","deposit":60000,"rent":179,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":60000,"preRent":160}
 {"lawd":"11440","umdNm":"신수동","jibun":"462","apt":"마포아이파크포레","area":59.38,"floor":11,"built":2019,"date":"2026-09-14","deposit":18180,"rent":26,"term":"26.10~27.07","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
