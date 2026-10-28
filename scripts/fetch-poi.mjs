@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // 공공데이터포털 표준데이터 → 초등학교·도시철도역 좌표 (data/poi/*.json)
 //   node scripts/fetch-poi.mjs --mode probe                 표준데이터 페이지에서 odcloud API 주소(uddi)를 찾아 출력
-//   node scripts/fetch-poi.mjs --mode schools [--uddi …]    전국초중등학교위치표준데이터(15021148) → data/poi/schools.json (초등학교만)
+//   node scripts/fetch-poi.mjs --mode schools [--api tn_pubr_public_elesch_mskul_lc_api]   전국초중등학교위치표준데이터 → data/poi/schools.json (초등학교만). --odcloud true 면 옛 odcloud 주소
 //   node scripts/fetch-poi.mjs --mode stations [--uddi …]   전국도시철도역사정보표준데이터 → data/poi/stations.json
 // 키는 DATA_GO_KR_KEY(공공데이터포털 공통 키). 로그에 키를 찍지 않는다. 컨테이너에서는 포털에 못 닿으므로 Actions(data-run)에서 돌린다.
 import { mkdirSync, writeFileSync, existsSync, readFileSync } from 'node:fs';
@@ -67,17 +67,27 @@ async function probe() {
   }
 }
 
-/** odcloud 표준데이터 API를 page 단위로 전부 읽는다 */
-async function fetchAll(id, uddi) {
+/** 표준데이터 API를 page 단위로 전부 읽는다.
+ *  (a) api.data.go.kr/openapi/{api} — 활용신청 화면의 End Point 형식 (pageNo/numOfRows/type=json, response.body.items)
+ *  (b) api.odcloud.kr/api/{id}/v1/{uddi} — 옛 형식 (page/perPage, data[]) */
+async function fetchAll(id, uddi, api) {
   const key = serviceKey();
   const rows = [];
   for (let page = 1; page <= 200; page++) {
-    const url = `https://api.odcloud.kr/api/${id}/v1/${uddi}?page=${page}&perPage=1000&returnType=JSON&serviceKey=${key}`;
+    const url = api
+      ? `https://api.data.go.kr/openapi/${api}?serviceKey=${key}&pageNo=${page}&numOfRows=1000&type=json`
+      : `https://api.odcloud.kr/api/${id}/v1/${uddi}?page=${page}&perPage=1000&returnType=JSON&serviceKey=${key}`;
     const j = await getJson(url);
-    const data = j.data ?? [];
+    let data, total;
+    if (api) {
+      const body = j.response?.body ?? {};
+      if (j.response?.header && j.response.header.resultCode && j.response.header.resultCode !== '00') throw new Error(`${j.response.header.resultCode} ${j.response.header.resultMsg ?? ''}`);
+      data = Array.isArray(body.items) ? body.items : (body.items?.item ?? []);
+      total = Number(body.totalCount ?? NaN);
+    } else { data = j.data ?? []; total = Number(j.totalCount ?? NaN); }
     rows.push(...data);
-    if (page === 1) note(`총 ${j.totalCount ?? '?'}건 · 열: ${Object.keys(data[0] ?? {}).join(', ').slice(0, 300)}`);
-    if (!data.length || rows.length >= (j.totalCount ?? Infinity)) break;
+    if (page === 1) note(`총 ${Number.isFinite(total) ? total : '?'}건 · 열: ${Object.keys(data[0] ?? {}).join(', ').slice(0, 400)}`);
+    if (!data.length || (Number.isFinite(total) && rows.length >= total)) break;
   }
   return rows;
 }
@@ -96,24 +106,26 @@ function saveUddi(k, uddi) {
 }
 
 async function schools() {
-  let uddi; try { uddi = resolveUddi('schools'); } catch { const u = await findUddi(SETS.schools.id); if (!u.length) throw new Error('schools uddi 없음'); uddi = u[0]; }
-  const rows = await fetchAll(SETS.schools.id, uddi);
+  const api = args.api ?? 'tn_pubr_public_elesch_mskul_lc_api';   // 활용신청 화면의 End Point 끝부분
+  let uddi = null;
+  if (args.odcloud === 'true') { try { uddi = resolveUddi('schools'); } catch { const u = await findUddi(SETS.schools.id); if (!u.length) throw new Error('schools uddi 없음'); uddi = u[0]; } }
+  const rows = await fetchAll(SETS.schools.id, uddi, uddi ? null : api);
   const out = [];
   for (const r of rows) {
-    const level = pick(r, ['학교급구분', 'schoolKindName']) ?? '';
+    const level = pick(r, ['학교급구분', 'schoolSe', 'schoolKindName', 'schulKndScNm']) ?? '';
     if (!level.includes('초등')) continue;
-    const status = pick(r, ['운영상태']) ?? '';
+    const status = pick(r, ['운영상태', 'operSttus', 'operationStatus']) ?? '';
     if (status && !status.includes('운영')) continue;             // 폐교·휴교 제외
     const lat = num(pick(r, ['위도', 'latitude'])), lng = num(pick(r, ['경도', 'longitude']));
     if (lat == null || lng == null || lat < 33 || lat > 39 || lng < 124 || lng > 132) continue;
-    const branch = pick(r, ['본교분교구분']) ?? '';
-    out.push({ id: pick(r, ['학교ID']), name: pick(r, ['학교명']), lat, lng, addr: pick(r, ['소재지도로명주소', '소재지지번주소']), edu: pick(r, ['시도교육청명']), branch: branch.includes('분교') ? '분교' : null });
+    const branch = pick(r, ['본교분교구분', 'mainbrSe', 'mainBranchSe']) ?? '';
+    out.push({ id: pick(r, ['학교ID', 'schoolId']), name: pick(r, ['학교명', 'schoolNm', 'schoolName']), lat, lng, addr: pick(r, ['소재지도로명주소', 'rdnmadr', '소재지지번주소', 'lnmadr']), edu: pick(r, ['시도교육청명', 'sidoEduOfficeNm']), branch: branch.includes('분교') ? '분교' : null });
   }
   out.sort((a, b) => a.name.localeCompare(b.name, 'ko'));
   mkdirSync(OUT, { recursive: true });
-  const asOf = pick(rows[0] ?? {}, ['데이터기준일자']) ?? new Date().toISOString().slice(0, 10);
+  const asOf = pick(rows[0] ?? {}, ['데이터기준일자', 'referenceDate', 'dataStdDe']) ?? new Date().toISOString().slice(0, 10);
   writeFileSync(join(OUT, 'schools.json'), JSON.stringify({ source: `공공데이터포털 ${SETS.schools.name}(한국교육시설안전원)`, id: SETS.schools.id, asOf, updated: new Date().toISOString().slice(0, 10), n: out.length, schools: out }) + '\n');
-  saveUddi('schools', uddi);
+  if (uddi) saveUddi('schools', uddi);
   note(`초등학교 ${out.length}개 저장 (원본 ${rows.length}행, 기준일 ${asOf})`);
 }
 
