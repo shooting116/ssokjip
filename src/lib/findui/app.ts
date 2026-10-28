@@ -351,6 +351,13 @@ function activeFilters(): string[] {
   if (s.mapOnly) out.push('지도 영역 안');
   return out;
 }
+// 필터만 되돌린다 — 예산·지역·모드·갭 상한·정렬은 "질문"이라 그대로 둔다
+function hasAnyFilter(): boolean { return activeFilters().length > 0 || s.types.length > 0; }
+function resetFilters() {
+  s.types = []; s.built = 'all'; s.units = 'all'; s.station = '';
+  s.fitOnly = false; s.hotOnly = false; s.mapOnly = false; s.noReg = false;
+  s.school = 'all'; s.subway = 'all'; s.park = 'all';
+}
 // 평형 칩: 여러 개 켤 수 있다. "평형 전체"는 모두 끄기
 function typeChip(v: TypeKey | null, label: string) {
   const on = v === null ? !s.types.length : s.types.includes(v);
@@ -364,6 +371,7 @@ function renderFilters() {
       <div class="fbar">
         <button type="button" class="chip fbtn ${filtersOpen || act.length ? 'on' : ''}" data-action="filters" aria-expanded="${filtersOpen}">필터${act.length ? ` <b>${act.length}</b>` : ''} <i class="${filtersOpen ? 'up' : ''}">⌄</i></button>
         <span class="fsum sub">${filtersOpen ? '' : esc(act.join(' · '))}</span>
+        ${hasAnyFilter() ? '<button type="button" class="linkbtn freset" data-action="reset" title="평형·준공·세대수·초등학교·지하철·주차·호재 역·보기 조건을 모두 끕니다 (예산·지역은 유지)">초기화</button>' : ''}
         <select class="sortsel" data-select="sort" aria-label="정렬">
           <option value="fit" ${s.sort === 'fit' ? 'selected' : ''}>예산에 가까운 순</option>
           <option value="priceAsc" ${s.sort === 'priceAsc' ? 'selected' : ''}>가격 낮은 순</option>
@@ -428,6 +436,7 @@ function renderEmpty() {
     <p class="sub2" style="margin:8px 0 6px">조건에 맞는 단지가 없어요.</p>
     <p class="sub" style="margin:0">${path}</p>
     ${zero ? `<p class="sub2" style="margin:8px 0 6px">"<b>${esc(zero.label)}</b>" 조건에서 0이 됐어요. ${hint[zero.key!]} <b>${prev.toLocaleString()}</b>개가 보여요.${geo}</p>` : `<p class="sub2" style="margin:8px 0 6px">이 지역에는 아직 거래 데이터가 없어요.</p>`}
+    ${hasAnyFilter() ? '<button type="button" class="btn ghost reset" data-action="reset">필터 모두 지우기</button>' : ''}
   </div>`;
 }
 function renderList() {
@@ -599,6 +608,10 @@ function bind() {
     } else if (t.dataset.action === 'filters') {
       filtersOpen = !filtersOpen;
       const fl = root.querySelector('.filters'); if (fl) fl.outerHTML = renderFilters();
+    } else if (t.dataset.action === 'reset') {
+      resetFilters(); compute(); shown = PAGE; save();
+      const fl = root.querySelector('.filters'); if (fl) fl.outerHTML = renderFilters();
+      rerenderList(); syncMarkers(); showStation();
     } else if (t.dataset.action === 'more') {
       shown += PAGE; rerenderList();
     } else if (t.dataset.action === 'copy') {
