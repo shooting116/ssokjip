@@ -147,8 +147,23 @@ async function stations() {
   note(`도시철도역 ${out.length}개 · 노선 ${lines.size}개 저장 (원본 ${rows.length}행, 기준일 ${asOf})`);
 }
 
+/** API 응답 원문을 앞부분만 보여준다(키는 가림) — 응답 모양을 모를 때 */
+async function probeApi() {
+  const api = args.api ?? 'tn_pubr_public_elesch_mskul_lc_api';
+  const key = serviceKey();
+  for (const q of [`pageNo=1&numOfRows=3&type=json`, `pageNo=1&numOfRows=3`]) {
+    const url = `https://api.data.go.kr/openapi/${api}?serviceKey=${key}&${q}`;
+    try {
+      const r = await fetch(url, { signal: AbortSignal.timeout(60_000) });
+      const t = await r.text();
+      note(`[${q}] HTTP ${r.status} ${r.headers.get('content-type') ?? ''} → ${t.replace(/\s+/g, ' ').slice(0, 700)}`);
+    } catch (e) { note(`[${q}] 실패: ${redact(e.message)}`); }
+  }
+}
+
 async function main() {
   if (mode === 'probe') await probe();
+  else if (mode === 'probe-api') await probeApi();
   else if (mode === 'schools') await schools();
   else if (mode === 'stations') await stations();
   else throw new Error(`알 수 없는 모드 ${mode}`);
