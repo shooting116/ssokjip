@@ -216,6 +216,17 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
     </section>
   )}
 
+  {(c.school || (c.subway && c.subway.length > 0)) && (
+    <section class="card">
+      <h2>주변 <span class="sub">단지 좌표 기준 직선거리</span></h2>
+      <dl class="kv">
+        {c.school && <><dt>초등학교</dt><dd>{c.school.name} <b>{c.school.m >= 1000 ? `${(c.school.m / 1000).toFixed(1)}km` : `${c.school.m}m`}</b></dd></>}
+        {c.subway && c.subway.length > 0 && <><dt>지하철</dt><dd>{c.subway.map((x, i) => <span class="swl">{i > 0 ? ' · ' : ''}{x.n} <span class="sub">{x.l.join('·')}</span> <b>{x.m >= 1000 ? `${(x.m / 1000).toFixed(1)}km` : `${x.m}m`}</b></span>)}</dd></>}
+      </dl>
+      <p class="src">초등학교는 가장 가까운 학교 한 곳(2km 안), 지하철은 1.5km 안 전 노선 역(가까운 순 3개)입니다. 도로·횡단보도를 따지지 않은 직선거리라 실제 걷는 거리는 더 깁니다. 통학구역(학구)은 별도 확인이 필요합니다. 출처: 교육부 전국초중등학교위치표준데이터, 국가철도공단 전국도시철도역사정보(2026-06 기준).</p>
+    </section>
+  )}
+
   {k && (
     <section class="card">
       <h2>단지 정보</h2>
@@ -230,7 +241,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
         {k.hall && <><dt>복도 유형</dt><dd>{k.hall}</dd></>}
         {k.sale && <><dt>분양 형태</dt><dd>{k.sale}</dd></>}
         {k.builder && <><dt>시공사</dt><dd>{k.builder}</dd></>}
-        {k.subway && <><dt>지하철</dt><dd>{k.subway}{k.subwayWalk ? ` · 도보 ${k.subwayWalk}` : ''}</dd></>}
+        {k.subway && <><dt>지하철(K-apt 등록)</dt><dd>{k.subway}{k.subwayWalk ? ` · 도보 ${k.subwayWalk}` : ''}</dd></>}
         {k.busWalk && <><dt>버스</dt><dd>도보 {k.busWalk}</dd></>}
         {k.road && <><dt>도로명</dt><dd>{k.road}</dd></>}
       </dl>
