@@ -26,6 +26,24 @@
   "units135": 0,
   "units136": 0,
   "zip": "43118",
-  "url": null
+  "url": null,
+  "parkGround": 181,
+  "parkUnder": 58,
+  "elevators": 7,
+  "cctv": 32,
+  "subwayLine": null,
+  "subwayStation": null,
+  "subwayWalk": null,
+  "busWalk": "5분이내",
+  "edu": "초등학교(군위초등학교) 중학교(군위중.고등학교) 고등학교(군위중.고등학교)",
+  "conv": "관공서() 병원() 공원()",
+  "welfare": "관리사무소, 노인정, 보육시설, 문고, 주민공동시설, 어린이놀이터, 휴게시설, 커뮤니티공간, 자전거보관소",
+  "security": "위탁관리",
+  "guardCnt": 0,
+  "cleanCnt": 4,
+  "fire": "R형",
+  "water": "부스타방식",
+  "evGround": 5,
+  "evUnder": 0
  }
 }
