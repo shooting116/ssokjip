@@ -282,6 +282,8 @@ const ratioOf = (f: { c: Slim; fitKey: number | null }): number | null => f.c.t.
 // 세대당 주차대수(K-apt 등록 주차대수 ÷ 세대수). 둘 다 있을 때만
 const parkPer = (c: Slim): number | null => (c.k?.park && c.u ? Math.round((c.k.park / c.u) * 100) / 100 : null);
 const fmtM = (m: number) => (m >= 1000 ? `${(m / 1000).toFixed(1)}km` : `${m}m`);
+// 목록 한 줄용: 노선이 여럿이면 첫 노선 + '외 N'
+const shortLines = (l: string) => { const a = l.split('·'); return a.length > 1 ? `${a[0]} 외 ${a.length - 1}` : l; };
 
 // ---------- 화면 ----------
 function chip(field: keyof State, v: State[keyof State], label: string) {
@@ -406,7 +408,7 @@ function renderItem(f: typeof fitted[0]) {
       <div class="it-main">
         <div class="it-name">${esc(c.n)}${c.h ? ' <span class="pill p-hot">🔥 거래 활발</span>' : ''} <span class="sub">${esc(c.d)}${c.b ? ` · ${c.b}년` : ''}${c.u ? ` · ${c.u.toLocaleString()}세대` : ''}${s.mode === 'gap' && c.rg ? ' · 규제지역' : ''}</span></div>
         <div class="it-sub sub">${f.fitKey}㎡ · ${pyeong(f.fitKey!)}평형 · ${basis}${t && t[3] ? ` · 6개월 ${t[3]}건` : ''}${yoy != null ? ` · <span class="${yoy >= 0 ? 'up' : 'down'}">1년 ${yoy > 0 ? '+' : ''}${yoy}%</span>` : ''}${t && t[7] != null ? ` · 전세가율 ${t[7]}%${gap != null ? ` · 갭 <b>${eok(gap)}</b>` : ''}` : ''}</div>
-        ${(c.es || c.sw?.length || parkPer(c) != null) ? `<div class="it-near sub">${[c.es ? `🏫 ${esc(c.es[0])} ${fmtM(c.es[1])}` : '', c.sw?.length ? `🚇 ${esc(c.sw[0][0])} ${esc(c.sw[0][1])} ${fmtM(c.sw[0][2])}` : '', parkPer(c) != null ? `🅿 세대당 ${parkPer(c)}대` : ''].filter(Boolean).join(' · ')}</div>` : ''}
+        ${(c.es || c.sw?.length || parkPer(c) != null) ? `<div class="it-near sub">${[c.es ? `🏫 ${esc(c.es[0])} ${fmtM(c.es[1])}` : '', c.sw?.length ? `🚇 ${esc(c.sw[0][0])} ${esc(shortLines(c.sw[0][1]))} ${fmtM(c.sw[0][2])}` : '', parkPer(c) != null ? `🅿 세대당 ${parkPer(c)}대` : ''].filter(Boolean).join(' · ')}</div>` : ''}
         ${pct != null ? `<div class="bar"><i style="width:${Math.min(100, pct)}%"></i></div>` : ''}
       </div>
       <div class="it-price"><b>${eok(f.fitPrice, 2)}</b>${s.mode === 'gap' && gap != null ? `<span class="pill ${(t?.[7] ?? 0) > 90 ? 'p-bad' : 'p-soft'}" title="전세가율 ${t?.[7]}%${(t?.[7] ?? 0) > 90 ? ' — HUG 전세보증 기준선(90%) 초과' : ''}">갭 ${gap < 0 ? '−' : ''}${eok(Math.abs(gap))} <i>${t?.[7]}%</i></span>${(t?.[7] ?? 0) > 90 ? '<span class="gapwarn">HUG 보증선 90% 초과</span>' : ''}` : pct != null ? `<span class="pill ${fitCls}">예산의 ${pct}%</span>` : ''}</div>
