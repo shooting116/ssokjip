@@ -13,6 +13,7 @@
 {"lawd":"11110","umdNm":"무악동","jibun":"82","apt":"현대","area":84.92,"floor":8,"built":2000,"date":"2026-10-04","deposit":70000,"rent":10,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":70000,"preRent":0}
 {"lawd":"11110","umdNm":"무악동","jibun":"82","apt":"현대","area":84.92,"floor":12,"built":2000,"date":"2026-10-05","deposit":65800,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":62700,"preRent":0}
 {"lawd":"11110","umdNm":"인의동","jibun":"48-2","apt":"효성쥬얼리시티","area":106.81,"floor":15,"built":2006,"date":"2026-10-05","deposit":85000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":85000,"preRent":0}
+{"lawd":"11110","umdNm":"홍파동","jibun":"199","apt":"경희궁자이(2단지)","area":84.84,"floor":9,"built":2017,"date":"2026-10-06","deposit":60000,"rent":307,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":60000,"preRent":280}
 {"lawd":"11110","umdNm":"평동","jibun":"233","apt":"경희궁자이(3단지)","area":84.84,"floor":13,"built":2017,"date":"2026-10-06","deposit":122800,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":117000,"preRent":0}
 {"lawd":"11110","umdNm":"무악동","jibun":"60","apt":"인왕산아이파크","area":84.86,"floor":14,"built":2008,"date":"2026-10-06","deposit":84000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":80000,"preRent":0}
 {"lawd":"11110","umdNm":"교북동","jibun":"126","apt":"경희궁자이(4단지)","area":45.88,"floor":13,"built":2017,"date":"2026-10-07","deposit":5000,"rent":295,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":280}
@@ -66,6 +67,7 @@
 {"lawd":"11110","umdNm":"숭인동","jibun":"1421-1","apt":"종로동광모닝스카이","area":15.86,"floor":13,"built":2013,"date":"2026-10-20","deposit":4000,"rent":50,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11110","umdNm":"숭인동","jibun":"1392-1","apt":"종로아인스빌","area":12.15,"floor":10,"built":2013,"date":"2026-10-20","deposit":500,"rent":65,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":500,"preRent":60}
 {"lawd":"11110","umdNm":"평동","jibun":"233","apt":"경희궁자이(3단지)","area":59.85,"floor":7,"built":2017,"date":"2026-10-21","deposit":60000,"rent":180,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11110","umdNm":"사직동","jibun":"9","apt":"광화문스페이스본(101동~105동)","area":94.28,"floor":2,"built":2008,"date":"2026-10-21","deposit":94500,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":90000,"preRent":0}
 {"lawd":"11110","umdNm":"숭인동","jibun":"569","apt":"숭인모범101동","area":59.7,"floor":6,"built":2000,"date":"2026-10-21","deposit":24000,"rent":10,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":24000,"preRent":0}
 {"lawd":"11110","umdNm":"숭인동","jibun":"1421-2","apt":"숭인한양LEEPS","area":12.78,"floor":9,"built":2014,"date":"2026-10-21","deposit":500,"rent":65,"term":"26.11~27.11","type":"갱신","rrr":null,"preDeposit":500,"preRent":60}
 {"lawd":"11110","umdNm":"숭인동","jibun":"201-11","apt":"종로유케이201","area":12.08,"floor":8,"built":2013,"date":"2026-10-21","deposit":500,"rent":55,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -79,6 +81,10 @@
 {"lawd":"11110","umdNm":"숭인동","jibun":"202-10","apt":"블루버드숭인","area":28.21,"floor":15,"built":2023,"date":"2026-10-23","deposit":30000,"rent":20,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11110","umdNm":"평창동","jibun":"145-5","apt":"일성빌라트","area":59.82,"floor":1,"built":1996,"date":"2026-10-23","deposit":20000,"rent":120,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11110","umdNm":"교북동","jibun":"101","apt":"동아","area":84.28,"floor":4,"built":1995,"date":"2026-10-26","deposit":50000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11110","umdNm":"내수동","jibun":"167","apt":"세종로대우","area":66.96,"floor":12,"built":1994,"date":"2026-10-26","deposit":54600,"rent":0,"term":"26.12~27.01","type":"갱신","rrr":null,"preDeposit":54600,"preRent":0}
 {"lawd":"11110","umdNm":"명륜2가","jibun":"4","apt":"아남1","area":84.9,"floor":7,"built":1995,"date":"2026-10-26","deposit":83000,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":70000,"preRent":0}
 {"lawd":"11110","umdNm":"평동","jibun":"233","apt":"경희궁자이(3단지)","area":77.65,"floor":7,"built":2017,"date":"2026-10-27","deposit":70000,"rent":166,"term":"27.02~29.02","type":"갱신","rrr":null,"preDeposit":50000,"preRent":150}
+{"lawd":"11110","umdNm":"교북동","jibun":"126","apt":"경희궁자이(4단지)","area":37.26,"floor":9,"built":2017,"date":"2026-10-28","deposit":61450,"rent":0,"term":"26.12~29.01","type":"갱신","rrr":null,"preDeposit":51450,"preRent":0}
 {"lawd":"11110","umdNm":"효제동","jibun":"126-2","apt":"이지마루종로","area":26.33,"floor":15,"built":2021,"date":"2026-10-28","deposit":1000,"rent":157,"term":"27.02~28.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11110","umdNm":"평동","jibun":"233","apt":"경희궁자이(3단지)","area":84.84,"floor":13,"built":2017,"date":"2026-10-29","deposit":75900,"rent":200,"term":"27.02~29.02","type":"갱신","rrr":null,"preDeposit":70000,"preRent":200}
+{"lawd":"11110","umdNm":"숭인동","jibun":"1421-2","apt":"숭인한양LEEPS","area":12.78,"floor":9,"built":2014,"date":"2026-10-29","deposit":1000,"rent":65,"term":"26.12~27.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

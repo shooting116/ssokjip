@@ -187,6 +187,7 @@
 {"lawd":"28200","umdNm":"논현동","jibun":"111-7","apt":"이안논현오션파크","area":64.98,"floor":29,"built":2024,"date":"2026-09-09","deposit":27300,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":26000,"preRent":0}
 {"lawd":"28200","umdNm":"논현동","jibun":"588-2","apt":"인천논현엘에이치16단지","area":25.77,"floor":4,"built":2022,"date":"2026-09-09","deposit":4756,"rent":9,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":3581,"preRent":15}
 {"lawd":"28200","umdNm":"서창동","jibun":"744","apt":"인천서창엘에에치14단지","area":26.8,"floor":15,"built":2020,"date":"2026-09-09","deposit":4208,"rent":6,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":2808,"preRent":15}
+{"lawd":"28200","umdNm":"간석동","jibun":"944","apt":"인천시청역힐스테이트","area":39.95,"floor":9,"built":2024,"date":"2026-09-09","deposit":18000,"rent":12,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"간석동","jibun":"944","apt":"인천시청역힐스테이트","area":39.96,"floor":10,"built":2024,"date":"2026-09-09","deposit":21000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":20000,"preRent":0}
 {"lawd":"28200","umdNm":"논현동","jibun":"599-1","apt":"주공14단지(등대마을)","area":46.81,"floor":8,"built":2006,"date":"2026-09-09","deposit":950,"rent":33,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":2334,"preRent":27}
 {"lawd":"28200","umdNm":"만수동","jibun":"1005","apt":"주공8단지","area":38.64,"floor":8,"built":1989,"date":"2026-09-09","deposit":11000,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

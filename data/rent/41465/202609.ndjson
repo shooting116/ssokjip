@@ -391,6 +391,7 @@
 {"lawd":"41465","umdNm":"상현동","jibun":"1","apt":"성복역리버파크","area":59.76,"floor":6,"built":1998,"date":"2026-09-17","deposit":4000,"rent":150,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"상현동","jibun":"857","apt":"성복역아이파크","area":116.73,"floor":12,"built":2002,"date":"2026-09-17","deposit":58000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"신봉동","jibun":"1034","apt":"수지스카이뷰푸르지오","area":84.08,"floor":24,"built":2022,"date":"2026-09-17","deposit":20000,"rent":145,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":20000,"preRent":130}
+{"lawd":"41465","umdNm":"신봉동","jibun":"871","apt":"신봉마을엘지빌리지5차(B)","area":134.31,"floor":12,"built":2002,"date":"2026-09-17","deposit":72000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"풍덕천동","jibun":"1060","apt":"신정7단지(상록)공무원","area":59.41,"floor":19,"built":2000,"date":"2026-09-17","deposit":40000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"성복동","jibun":"731","apt":"엘지빌리지6","area":134.73,"floor":7,"built":2003,"date":"2026-09-17","deposit":74000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"풍덕천동","jibun":"1104","apt":"용인수지신정마을9단지","area":49.26,"floor":10,"built":2000,"date":"2026-09-17","deposit":10000,"rent":107,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":100}

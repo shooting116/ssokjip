@@ -119,6 +119,7 @@
 {"lawd":"27260","umdNm":"신매동","jibun":"570","apt":"시지삼주한라협화","area":59.88,"floor":5,"built":1994,"date":"2026-09-07","deposit":13000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"지산동","jibun":"1275","apt":"지산한라타운","area":59.85,"floor":3,"built":1991,"date":"2026-09-07","deposit":1000,"rent":58,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"지산동","jibun":"1275","apt":"지산한라타운","area":59.85,"floor":6,"built":1991,"date":"2026-09-07","deposit":15000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27260","umdNm":"범어동","jibun":"2240","apt":"e편한세상범어","area":84.96,"floor":24,"built":2015,"date":"2026-09-07","deposit":38000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"범어동","jibun":"300","apt":"가든하이츠1","area":84.95,"floor":4,"built":1985,"date":"2026-09-08","deposit":3000,"rent":140,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"시지동","jibun":"600","apt":"고산역화성파크드림","area":84.83,"floor":19,"built":2019,"date":"2026-09-08","deposit":36000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"범어동","jibun":"371","apt":"궁전맨션","area":84.96,"floor":13,"built":1988,"date":"2026-09-08","deposit":24000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":22000,"preRent":0}
@@ -128,6 +129,7 @@
 {"lawd":"27260","umdNm":"범물동","jibun":"1328","apt":"서한화성타운","area":84.58,"floor":17,"built":1992,"date":"2026-09-08","deposit":16000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":16000,"preRent":0}
 {"lawd":"27260","umdNm":"범물동","jibun":"1397","apt":"수성하늘채르레브","area":77.65,"floor":19,"built":2020,"date":"2026-09-08","deposit":30000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":28000,"preRent":0}
 {"lawd":"27260","umdNm":"수성동1가","jibun":"613","apt":"신세계타운","area":134.79,"floor":2,"built":1989,"date":"2026-09-08","deposit":3000,"rent":110,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27260","umdNm":"만촌동","jibun":"860","apt":"우방금탑","area":67.15,"floor":8,"built":1986,"date":"2026-09-08","deposit":2000,"rent":65,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"신매동","jibun":"579","apt":"천마타운","area":84.99,"floor":4,"built":1994,"date":"2026-09-08","deposit":24000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"범어동","jibun":"320","apt":"경남타운","area":115.64,"floor":3,"built":1982,"date":"2026-09-09","deposit":3000,"rent":150,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"만촌동","jibun":"816","apt":"만촌우방타운1단지","area":84.92,"floor":4,"built":1997,"date":"2026-09-09","deposit":27800,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":26500,"preRent":0}
@@ -356,6 +358,7 @@
 {"lawd":"27260","umdNm":"지산동","jibun":"1234-1","apt":"지산2단지","area":59.56,"floor":13,"built":1991,"date":"2026-09-22","deposit":2000,"rent":55,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"범물동","jibun":"1281","apt":"청구타운","area":84.93,"floor":4,"built":1992,"date":"2026-09-22","deposit":19000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"황금동","jibun":"986","apt":"힐스테이트황금엘포레","area":84.97,"floor":9,"built":2022,"date":"2026-09-22","deposit":36750,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":35000,"preRent":0}
+{"lawd":"27260","umdNm":"범어동","jibun":"2240","apt":"e편한세상범어","area":84.79,"floor":12,"built":2015,"date":"2026-09-22","deposit":32000,"rent":0,"term":"26.11~27.05","type":"갱신","rrr":null,"preDeposit":32000,"preRent":0}
 {"lawd":"27260","umdNm":"지산동","jibun":"1766","apt":"더샵수성라크에르","area":84.94,"floor":12,"built":2024,"date":"2026-09-23","deposit":40000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"만촌동","jibun":"1479","apt":"만촌3차화성파크드림","area":84.99,"floor":9,"built":2016,"date":"2026-09-23","deposit":45000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":42000,"preRent":0}
 {"lawd":"27260","umdNm":"만촌동","jibun":"1483","apt":"만촌삼정그린코아에듀파크","area":75.99,"floor":3,"built":2019,"date":"2026-09-23","deposit":20000,"rent":150,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

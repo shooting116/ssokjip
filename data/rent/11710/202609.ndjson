@@ -700,6 +700,7 @@
 {"lawd":"11710","umdNm":"잠실동","jibun":"44","apt":"레이크팰리스","area":84.82,"floor":1,"built":2006,"date":"2026-09-18","deposit":115500,"rent":0,"term":"26.11~27.11","type":"갱신","rrr":"사용","preDeposit":110000,"preRent":0}
 {"lawd":"11710","umdNm":"잠실동","jibun":"22","apt":"리센츠","area":84.99,"floor":11,"built":2008,"date":"2026-09-18","deposit":80000,"rent":320,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11710","umdNm":"잠실동","jibun":"22","apt":"리센츠","area":84.99,"floor":20,"built":2008,"date":"2026-09-18","deposit":20000,"rent":540,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11710","umdNm":"잠실동","jibun":"22","apt":"리센츠","area":98.55,"floor":4,"built":2008,"date":"2026-09-18","deposit":30000,"rent":550,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11710","umdNm":"문정동","jibun":"145","apt":"문정시영","area":39.69,"floor":6,"built":1989,"date":"2026-09-18","deposit":28000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11710","umdNm":"문정동","jibun":"96-12","apt":"삼형아파트","area":99.63,"floor":3,"built":2002,"date":"2026-09-18","deposit":25000,"rent":120,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11710","umdNm":"오금동","jibun":"165","apt":"상아2차아파트","area":45.77,"floor":6,"built":1988,"date":"2026-09-18","deposit":29400,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":28000,"preRent":0}
@@ -913,6 +914,7 @@
 {"lawd":"11710","umdNm":"풍납동","jibun":"391","apt":"극동","area":79.94,"floor":10,"built":1987,"date":"2026-09-26","deposit":68000,"rent":0,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":54000,"preRent":0}
 {"lawd":"11710","umdNm":"가락동","jibun":"165","apt":"래미안파크팰리스","area":84.89,"floor":6,"built":2007,"date":"2026-09-26","deposit":95000,"rent":40,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11710","umdNm":"오금동","jibun":"617","apt":"송파레미니스2단지","area":84.82,"floor":9,"built":2018,"date":"2026-09-26","deposit":95000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11710","umdNm":"문정동","jibun":"145","apt":"문정시영","area":46.26,"floor":9,"built":1989,"date":"2026-09-27","deposit":13200,"rent":43,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":12200,"preRent":43}
 {"lawd":"11710","umdNm":"거여동","jibun":"697","apt":"송파시그니처롯데캐슬","area":41.96,"floor":4,"built":2021,"date":"2026-09-27","deposit":5243,"rent":7,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":3481,"preRent":17}
 {"lawd":"11710","umdNm":"가락동","jibun":"78-1","apt":"한화오벨리스크","area":30.25,"floor":16,"built":2004,"date":"2026-09-27","deposit":2000,"rent":78,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":2000,"preRent":70}
 {"lawd":"11710","umdNm":"문정동","jibun":"656","apt":"힐스테이트e편한세상문정","area":59.94,"floor":14,"built":2024,"date":"2026-09-27","deposit":30000,"rent":120,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":110}
@@ -972,6 +974,7 @@
 {"lawd":"11710","umdNm":"오금동","jibun":"617","apt":"송파레미니스2단지","area":59.87,"floor":17,"built":2018,"date":"2026-09-29","deposit":10808,"rent":16,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":6883,"preRent":38}
 {"lawd":"11710","umdNm":"거여동","jibun":"607","apt":"송파레이크파크호반써밋Ⅱ","area":108.81,"floor":12,"built":2022,"date":"2026-09-29","deposit":92000,"rent":0,"term":"26.12~28.01","type":"갱신","rrr":null,"preDeposit":92000,"preRent":0}
 {"lawd":"11710","umdNm":"거여동","jibun":"697","apt":"송파시그니처롯데캐슬","area":39.9,"floor":7,"built":2021,"date":"2026-09-29","deposit":11505,"rent":55,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":13692,"preRent":47}
+{"lawd":"11710","umdNm":"거여동","jibun":"697","apt":"송파시그니처롯데캐슬","area":59.98,"floor":27,"built":2021,"date":"2026-09-29","deposit":4000,"rent":294,"term":"26.10~27.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11710","umdNm":"장지동","jibun":"856","apt":"송파파인타운10단지","area":59.95,"floor":12,"built":2007,"date":"2026-09-29","deposit":63000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":60000,"preRent":0}
 {"lawd":"11710","umdNm":"장지동","jibun":"844","apt":"송파파인타운7단지","area":49.93,"floor":11,"built":2007,"date":"2026-09-29","deposit":8518,"rent":27,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":8518,"preRent":0}
 {"lawd":"11710","umdNm":"오금동","jibun":"619","apt":"송파호반베르디움더퍼스트","area":101.46,"floor":11,"built":2018,"date":"2026-09-29","deposit":63000,"rent":210,"term":"26.10~27.01","type":"갱신","rrr":"사용","preDeposit":63000,"preRent":55}

@@ -62,6 +62,7 @@
 {"lawd":"41113","umdNm":"권선동","jibun":"1274","apt":"대원신동아","area":59.88,"floor":11,"built":1996,"date":"2026-09-05","deposit":15000,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"고색동","jibun":"368-1","apt":"대한","area":120.56,"floor":15,"built":1998,"date":"2026-09-05","deposit":37000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"금곡동","jibun":"79","apt":"삼익3","area":59.34,"floor":6,"built":1998,"date":"2026-09-05","deposit":25000,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41113","umdNm":"구운동","jibun":"462","apt":"삼환","area":54.66,"floor":13,"built":1991,"date":"2026-09-05","deposit":2000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"구운동","jibun":"462","apt":"삼환","area":73.62,"floor":5,"built":1991,"date":"2026-09-05","deposit":21500,"rent":0,"term":"26.10~29.04","type":"갱신","rrr":null,"preDeposit":20000,"preRent":0}
 {"lawd":"41113","umdNm":"서둔동","jibun":"371","apt":"센트라우스","area":84.99,"floor":6,"built":2005,"date":"2026-09-05","deposit":40000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"권선동","jibun":"1018-3","apt":"수원시청역마크타워","area":14.04,"floor":9,"built":2020,"date":"2026-09-05","deposit":500,"rent":53,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -125,6 +126,7 @@
 {"lawd":"41113","umdNm":"서둔동","jibun":"371","apt":"센트라우스","area":84.99,"floor":1,"built":2005,"date":"2026-09-09","deposit":35000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"서둔동","jibun":"371","apt":"센트라우스","area":84.99,"floor":6,"built":2005,"date":"2026-09-09","deposit":40000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"오목천동","jibun":"1180","apt":"수원권선꿈에그린아파트","area":74.5,"floor":10,"built":2018,"date":"2026-09-09","deposit":8600,"rent":58,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":8600,"preRent":58}
+{"lawd":"41113","umdNm":"세류동","jibun":"1270","apt":"수원역센트럴타운","area":39.91,"floor":4,"built":2015,"date":"2026-09-09","deposit":2000,"rent":117,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"곡반정동","jibun":"654","apt":"수원하늘채더퍼스트2단지","area":74.88,"floor":13,"built":2022,"date":"2026-09-09","deposit":50000,"rent":0,"term":"26.11~29.04","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"당수동","jibun":"745","apt":"쌍용스윗닷홈1단지","area":84.94,"floor":4,"built":2005,"date":"2026-09-09","deposit":3000,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"호매실동","jibun":"1408","apt":"호매실스타힐스","area":59.98,"floor":1,"built":2018,"date":"2026-09-09","deposit":2000,"rent":145,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -460,6 +462,7 @@
 {"lawd":"41113","umdNm":"세류동","jibun":"1260","apt":"수원역해모로아파트(수원센트럴타운1단지)","area":84.98,"floor":4,"built":2015,"date":"2026-09-29","deposit":10000,"rent":145,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":10000,"preRent":100}
 {"lawd":"41113","umdNm":"세류동","jibun":"1260","apt":"수원역해모로아파트(수원센트럴타운1단지)","area":84.98,"floor":12,"built":2015,"date":"2026-09-29","deposit":5000,"rent":165,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"호매실동","jibun":"1389","apt":"수원호매실휴먼시아16단지","area":59.42,"floor":14,"built":2012,"date":"2026-09-29","deposit":5731,"rent":38,"term":"26.10~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41113","umdNm":"호매실동","jibun":"1389","apt":"수원호매실휴먼시아16단지","area":59.42,"floor":20,"built":2012,"date":"2026-09-29","deposit":1631,"rent":50,"term":"26.10~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"금곡동","jibun":"1072","apt":"수원호매실휴먼시아4단지아파트","area":26.58,"floor":3,"built":2011,"date":"2026-09-29","deposit":955,"rent":13,"term":"26.09~26.10","type":"갱신","rrr":null,"preDeposit":550,"preRent":14}
 {"lawd":"41113","umdNm":"금곡동","jibun":"1072","apt":"수원호매실휴먼시아4단지아파트","area":36.63,"floor":2,"built":2011,"date":"2026-09-29","deposit":2004,"rent":16,"term":"26.10~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"금곡동","jibun":"1072","apt":"수원호매실휴먼시아4단지아파트","area":36.63,"floor":15,"built":2011,"date":"2026-09-29","deposit":2004,"rent":16,"term":"26.10~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

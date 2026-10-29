@@ -394,6 +394,7 @@
 {"lawd":"12300","umdNm":"용봉동","jibun":"973-1","apt":"삼성","area":59.76,"floor":14,"built":1993,"date":"2026-09-18","deposit":8000,"rent":13,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12300","umdNm":"연제동","jibun":"1111","apt":"연제동고운하이플러스아파트","area":73.46,"floor":12,"built":2017,"date":"2026-09-18","deposit":2000,"rent":85,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12300","umdNm":"연제동","jibun":"583-6","apt":"연제첨단광신프로그레스","area":84.89,"floor":1,"built":2025,"date":"2026-09-18","deposit":13380,"rent":40,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"12300","umdNm":"연제동","jibun":"583-6","apt":"연제첨단광신프로그레스","area":84.89,"floor":3,"built":2025,"date":"2026-09-18","deposit":13830,"rent":40,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12300","umdNm":"용봉동","jibun":"1488","apt":"용봉동지에이그린웰아파트","area":84.38,"floor":4,"built":2020,"date":"2026-09-18","deposit":26820,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":26820,"preRent":0}
 {"lawd":"12300","umdNm":"용봉동","jibun":"1488","apt":"용봉동지에이그린웰아파트","area":84.38,"floor":22,"built":2020,"date":"2026-09-18","deposit":26820,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":26820,"preRent":0}
 {"lawd":"12300","umdNm":"양산동","jibun":"209-8","apt":"우미","area":49.77,"floor":13,"built":1992,"date":"2026-09-18","deposit":1000,"rent":50,"term":"26.10~28.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -415,6 +416,7 @@
 {"lawd":"12300","umdNm":"본촌동","jibun":"3077","apt":"부영사랑으로","area":84.99,"floor":19,"built":2007,"date":"2026-09-19","deposit":20000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12300","umdNm":"양산동","jibun":"1155","apt":"양산명지써밋주상복합","area":82.17,"floor":8,"built":2024,"date":"2026-09-19","deposit":25000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":25000,"preRent":0}
 {"lawd":"12300","umdNm":"연제동","jibun":"1111","apt":"연제동고운하이플러스아파트","area":84.95,"floor":6,"built":2017,"date":"2026-09-19","deposit":3000,"rent":100,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"12300","umdNm":"연제동","jibun":"583-6","apt":"연제첨단광신프로그레스","area":84.89,"floor":1,"built":2025,"date":"2026-09-19","deposit":13380,"rent":40,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12300","umdNm":"신용동","jibun":"643-1","apt":"용두주공","area":49.29,"floor":7,"built":1998,"date":"2026-09-19","deposit":1000,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12300","umdNm":"신용동","jibun":"643-1","apt":"용두주공","area":59.99,"floor":12,"built":1998,"date":"2026-09-19","deposit":2000,"rent":55,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12300","umdNm":"용봉동","jibun":"1488","apt":"용봉동지에이그린웰아파트","area":84.38,"floor":21,"built":2020,"date":"2026-09-19","deposit":26820,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}

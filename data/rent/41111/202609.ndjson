@@ -115,6 +115,7 @@
 {"lawd":"41111","umdNm":"정자동","jibun":"887-1","apt":"화서역 우방 센트럴파크","area":59.98,"floor":19,"built":1999,"date":"2026-09-12","deposit":34120,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":32500,"preRent":0}
 {"lawd":"41111","umdNm":"정자동","jibun":"313-1","apt":"동신2단지","area":84.98,"floor":5,"built":1988,"date":"2026-09-13","deposit":24150,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":23000,"preRent":0}
 {"lawd":"41111","umdNm":"정자동","jibun":"870-1","apt":"백설마을현대코오롱아파트","area":59.79,"floor":3,"built":1999,"date":"2026-09-13","deposit":13600,"rent":50,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":13600,"preRent":40}
+{"lawd":"41111","umdNm":"정자동","jibun":"313-1","apt":"동신2단지","area":43.02,"floor":15,"built":1988,"date":"2026-09-14","deposit":3000,"rent":65,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41111","umdNm":"정자동","jibun":"9-2","apt":"벽산그랜드코아","area":72.55,"floor":8,"built":1994,"date":"2026-09-14","deposit":20000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41111","umdNm":"천천동","jibun":"511","apt":"비단마을베스트타운","area":85,"floor":1,"built":2001,"date":"2026-09-14","deposit":42000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":40000,"preRent":0}
 {"lawd":"41111","umdNm":"천천동","jibun":"482","apt":"비단마을신명","area":60,"floor":20,"built":2001,"date":"2026-09-14","deposit":5000,"rent":130,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
