@@ -164,6 +164,7 @@
 {"lawd":"41287","umdNm":"주엽동","jibun":"135","apt":"문촌마을15단지부영","area":49.72,"floor":12,"built":1993,"date":"2026-09-11","deposit":3000,"rent":75,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":2000,"preRent":75}
 {"lawd":"41287","umdNm":"주엽동","jibun":"5","apt":"문촌마을2단지라이프","area":127.14,"floor":13,"built":1994,"date":"2026-09-11","deposit":47500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":45500,"preRent":0}
 {"lawd":"41287","umdNm":"주엽동","jibun":"29","apt":"문촌마을4단지삼익","area":130.38,"floor":13,"built":1994,"date":"2026-09-11","deposit":25000,"rent":120,"term":"26.10~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41287","umdNm":"일산동","jibun":"1978","apt":"미주7","area":80.01,"floor":5,"built":1990,"date":"2026-09-11","deposit":3000,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41287","umdNm":"일산동","jibun":"955-2","apt":"일산동양(955-2)","area":84.97,"floor":3,"built":2004,"date":"2026-09-11","deposit":30000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":28660,"preRent":0}
 {"lawd":"41287","umdNm":"탄현동","jibun":"1640","apt":"일산두산위브더제니스","area":95.5,"floor":49,"built":2013,"date":"2026-09-11","deposit":50000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":50000,"preRent":0}
 {"lawd":"41287","umdNm":"탄현동","jibun":"1640","apt":"일산두산위브더제니스","area":145.92,"floor":43,"built":2013,"date":"2026-09-11","deposit":60000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":60000,"preRent":0}

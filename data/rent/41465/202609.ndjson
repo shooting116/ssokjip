@@ -1,5 +1,6 @@
 {"lawd":"41465","umdNm":"상현동","jibun":"866","apt":"광교상떼빌파크뷰","area":134.44,"floor":4,"built":2002,"date":"2026-09-01","deposit":75000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"동천동","jibun":"858","apt":"동문굿모닝힐3차","area":84.72,"floor":23,"built":2001,"date":"2026-09-01","deposit":3000,"rent":150,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":3000,"preRent":130}
+{"lawd":"41465","umdNm":"풍덕천동","jibun":"691","apt":"동부","area":59.61,"floor":4,"built":1995,"date":"2026-09-01","deposit":5000,"rent":75,"term":"26.10~27.04","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"동천동","jibun":"BL-","apt":"동천센트럴자이","area":77.73,"floor":22,"built":2019,"date":"2026-09-01","deposit":25000,"rent":210,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"상현동","jibun":"869","apt":"만현마을9단지엘지자이","area":84.78,"floor":13,"built":2003,"date":"2026-09-01","deposit":59000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"상현동","jibun":"869","apt":"만현마을9단지엘지자이","area":109.78,"floor":7,"built":2003,"date":"2026-09-01","deposit":59000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -480,6 +481,7 @@
 {"lawd":"41465","umdNm":"상현동","jibun":"168-1","apt":"광교현대프레미오","area":121.51,"floor":9,"built":2001,"date":"2026-09-21","deposit":45000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"죽전동","jibun":"1182","apt":"내대지마을건영캐스빌","area":84.58,"floor":18,"built":2004,"date":"2026-09-21","deposit":42500,"rent":50,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"죽전동","jibun":"454","apt":"더리버하임","area":59.94,"floor":18,"built":1999,"date":"2026-09-21","deposit":5000,"rent":140,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41465","umdNm":"죽전동","jibun":"1261","apt":"도담마을우미린","area":59.99,"floor":10,"built":2004,"date":"2026-09-21","deposit":10000,"rent":150,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"동천동","jibun":"862","apt":"동천마을현대홈타운2차","area":84.98,"floor":1,"built":2002,"date":"2026-09-21","deposit":40000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"죽전동","jibun":"1165","apt":"새터마을죽전힐스테이트","area":85,"floor":9,"built":2004,"date":"2026-09-21","deposit":52500,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"상현동","jibun":"860","apt":"서원마을3단지아이파크","area":84.94,"floor":6,"built":2002,"date":"2026-09-21","deposit":5000,"rent":200,"term":"26.11~26.12","type":"갱신","rrr":null,"preDeposit":58000,"preRent":0}
@@ -551,6 +553,7 @@
 {"lawd":"41465","umdNm":"동천동","jibun":"가-","apt":"동천자이","area":84.96,"floor":11,"built":2018,"date":"2026-09-29","deposit":72000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"풍덕천동","jibun":"910","apt":"라펠리스","area":13.97,"floor":5,"built":2012,"date":"2026-09-29","deposit":7000,"rent":12,"term":"26.10~27.10","type":"갱신","rrr":null,"preDeposit":7000,"preRent":10}
 {"lawd":"41465","umdNm":"풍덕천동","jibun":"910","apt":"라펠리스","area":13.98,"floor":4,"built":2012,"date":"2026-09-29","deposit":5000,"rent":29,"term":"26.10~27.10","type":"갱신","rrr":null,"preDeposit":5000,"preRent":27}
+{"lawd":"41465","umdNm":"풍덕천동","jibun":"1198","apt":"래미안수지이스트파크","area":84.88,"floor":9,"built":2015,"date":"2026-09-29","deposit":70000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"성복동","jibun":"754","apt":"버들치마을경남아너스빌2차","area":150.85,"floor":15,"built":2010,"date":"2026-09-29","deposit":21000,"rent":168,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":20000,"preRent":160}
 {"lawd":"41465","umdNm":"상현동","jibun":"832","apt":"상현마을금호베스트빌2단지","area":175.19,"floor":1,"built":2001,"date":"2026-09-29","deposit":55650,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":"사용","preDeposit":53000,"preRent":0}
 {"lawd":"41465","umdNm":"상현동","jibun":"842","apt":"상현마을수지센트럴아이파크","area":101.98,"floor":18,"built":2006,"date":"2026-09-29","deposit":74000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -591,6 +594,7 @@
 {"lawd":"41465","umdNm":"풍덕천동","jibun":"693","apt":"삼성1","area":99.9,"floor":6,"built":1994,"date":"2026-09-30","deposit":40000,"rent":100,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"죽전동","jibun":"1165","apt":"새터마을죽전힐스테이트","area":85,"floor":11,"built":2004,"date":"2026-09-30","deposit":59000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"죽전동","jibun":"1165","apt":"새터마을죽전힐스테이트","area":85,"floor":14,"built":2004,"date":"2026-09-30","deposit":50400,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":48000,"preRent":0}
+{"lawd":"41465","umdNm":"성복동","jibun":"84","apt":"성동마을강남","area":84.96,"floor":15,"built":2001,"date":"2026-09-30","deposit":15000,"rent":240,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"성복동","jibun":"155","apt":"성동마을엘지빌리지1차","area":244.66,"floor":4,"built":2001,"date":"2026-09-30","deposit":20000,"rent":300,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41465","umdNm":"죽전동","jibun":"1329","apt":"성현마을우미이노스빌2차","area":59.95,"floor":6,"built":2004,"date":"2026-09-30","deposit":24099,"rent":30,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":22951,"preRent":28}
 {"lawd":"41465","umdNm":"죽전동","jibun":"1329","apt":"성현마을우미이노스빌2차","area":59.95,"floor":9,"built":2004,"date":"2026-09-30","deposit":0,"rent":305,"term":"26.10~26.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

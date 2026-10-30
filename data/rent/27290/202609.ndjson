@@ -108,6 +108,7 @@
 {"lawd":"27290","umdNm":"본동","jibun":"247","apt":"그린맨션2차","area":58.41,"floor":2,"built":1986,"date":"2026-09-09","deposit":13000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"대곡동","jibun":"2-1","apt":"대곡우방타운","area":84.92,"floor":9,"built":1994,"date":"2026-09-09","deposit":16000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"본리동","jibun":"1234","apt":"두산위브더제니스센트럴달서","area":84.99,"floor":12,"built":2024,"date":"2026-09-09","deposit":2500,"rent":120,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"상인동","jibun":"42","apt":"보성은하","area":59.88,"floor":5,"built":1994,"date":"2026-09-09","deposit":5000,"rent":38,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1596","apt":"상인화성파크드림2단지","area":84.98,"floor":9,"built":2010,"date":"2026-09-09","deposit":16415,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":16415,"preRent":9}
 {"lawd":"27290","umdNm":"상인동","jibun":"1596","apt":"상인화성파크드림2단지","area":84.99,"floor":2,"built":2010,"date":"2026-09-09","deposit":4103,"rent":38,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":4103,"preRent":38}
 {"lawd":"27290","umdNm":"이곡동","jibun":"1189-2","apt":"성서동서서한","area":49.26,"floor":5,"built":1994,"date":"2026-09-09","deposit":1000,"rent":40,"term":"26.10~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

@@ -59,6 +59,7 @@
 {"lawd":"41171","umdNm":"안양동","jibun":"90-1","apt":"삼성래미안","area":79.32,"floor":1,"built":2002,"date":"2026-09-08","deposit":49000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41171","umdNm":"석수동","jibun":"168-4","apt":"석수경남아너스빌","area":55.77,"floor":3,"built":2002,"date":"2026-09-08","deposit":41000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41171","umdNm":"안양동","jibun":"1380","apt":"주공뜨란채(아)","area":59.92,"floor":10,"built":2004,"date":"2026-09-08","deposit":37000,"rent":0,"term":"26.09~26.12","type":"갱신","rrr":"사용","preDeposit":37000,"preRent":0}
+{"lawd":"41171","umdNm":"안양동","jibun":"88-4","apt":"헤븐리치더퍼스트294","area":13.05,"floor":8,"built":2018,"date":"2026-09-08","deposit":7500,"rent":15,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41171","umdNm":"안양동","jibun":"1393","apt":"래미안안양메가트리아","area":59.75,"floor":4,"built":2016,"date":"2026-09-09","deposit":43000,"rent":9,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":43000,"preRent":0}
 {"lawd":"41171","umdNm":"안양동","jibun":"1393","apt":"래미안안양메가트리아","area":84.7,"floor":7,"built":2016,"date":"2026-09-09","deposit":50000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":50000,"preRent":0}
 {"lawd":"41171","umdNm":"안양동","jibun":"391-32","apt":"아이원팰리스","area":65.02,"floor":11,"built":2020,"date":"2026-09-09","deposit":22904,"rent":25,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":21813,"preRent":23}
@@ -94,6 +95,7 @@
 {"lawd":"41171","umdNm":"안양동","jibun":"90-1","apt":"삼성래미안","area":55.17,"floor":17,"built":2002,"date":"2026-09-12","deposit":45000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41171","umdNm":"안양동","jibun":"90-1","apt":"삼성래미안","area":55.17,"floor":17,"built":2002,"date":"2026-09-12","deposit":45000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41171","umdNm":"안양동","jibun":"90-1","apt":"삼성래미안","area":55.27,"floor":9,"built":2002,"date":"2026-09-12","deposit":5000,"rent":170,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41171","umdNm":"안양동","jibun":"90-1","apt":"삼성래미안","area":79.29,"floor":16,"built":2002,"date":"2026-09-12","deposit":45000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":43000,"preRent":0}
 {"lawd":"41171","umdNm":"안양동","jibun":"90-1","apt":"삼성래미안","area":79.32,"floor":18,"built":2002,"date":"2026-09-12","deposit":55000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41171","umdNm":"안양동","jibun":"1429","apt":"안양광신프로그레스리버뷰","area":59.02,"floor":10,"built":2021,"date":"2026-09-12","deposit":25000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41171","umdNm":"안양동","jibun":"627-1","apt":"안양디오르나인1BL","area":74.9,"floor":5,"built":2024,"date":"2026-09-12","deposit":30000,"rent":100,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

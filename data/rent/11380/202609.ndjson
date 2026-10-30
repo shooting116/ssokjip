@@ -118,6 +118,7 @@
 {"lawd":"11380","umdNm":"불광동","jibun":"248","apt":"라이프미성","area":84.65,"floor":6,"built":1988,"date":"2026-09-07","deposit":35000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11380","umdNm":"불광동","jibun":"248","apt":"라이프미성","area":84.65,"floor":12,"built":1988,"date":"2026-09-07","deposit":39900,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":38000,"preRent":0}
 {"lawd":"11380","umdNm":"진관동","jibun":"105","apt":"마고정3단지센트레빌(323~335동)BL2-2","area":167.14,"floor":6,"built":2009,"date":"2026-09-07","deposit":10000,"rent":260,"term":"26.09~27.12","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":260}
+{"lawd":"11380","umdNm":"대조동","jibun":"6-17","apt":"미래하임","area":32.79,"floor":8,"built":2012,"date":"2026-09-07","deposit":25000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11380","umdNm":"응암동","jibun":"759","apt":"백련산힐스테이트1차","area":59.63,"floor":8,"built":2011,"date":"2026-09-07","deposit":20000,"rent":120,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11380","umdNm":"응암동","jibun":"764","apt":"백련산힐스테이트4차","area":84.98,"floor":10,"built":2018,"date":"2026-09-07","deposit":63000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":60000,"preRent":0}
 {"lawd":"11380","umdNm":"대조동","jibun":"241","apt":"베르디움STAY1","area":21.97,"floor":13,"built":2022,"date":"2026-09-07","deposit":10300,"rent":21,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":10300,"preRent":19}
@@ -682,6 +683,7 @@
 {"lawd":"11380","umdNm":"증산동","jibun":"258","apt":"DMC센트럴자이(3단지)","area":84.85,"floor":12,"built":2023,"date":"2026-09-30","deposit":80000,"rent":30,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11380","umdNm":"증산동","jibun":"258","apt":"DMC센트럴자이(3단지)","area":84.85,"floor":12,"built":2023,"date":"2026-09-30","deposit":80000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11380","umdNm":"증산동","jibun":"258","apt":"DMC센트럴자이(4단지)","area":39.29,"floor":13,"built":2023,"date":"2026-09-30","deposit":9499,"rent":35,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11380","umdNm":"증산동","jibun":"258","apt":"DMC센트럴자이(4단지)","area":39.29,"floor":13,"built":2023,"date":"2026-09-30","deposit":10891,"rent":28,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11380","umdNm":"수색동","jibun":"419","apt":"DMCSK뷰아이파크포레","area":39.97,"floor":13,"built":2025,"date":"2026-09-30","deposit":47000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11380","umdNm":"불광동","jibun":"302-13","apt":"LUMINO816","area":17.02,"floor":12,"built":2024,"date":"2026-09-30","deposit":5700,"rent":41,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":5700,"preRent":39}
 {"lawd":"11380","umdNm":"불광동","jibun":"302-13","apt":"LUMINO816","area":17.02,"floor":14,"built":2024,"date":"2026-09-30","deposit":5700,"rent":41,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":5700,"preRent":39}

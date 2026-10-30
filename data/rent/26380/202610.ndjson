@@ -106,6 +106,7 @@
 {"lawd":"26380","umdNm":"하단동","jibun":"1161-2","apt":"가락타운1","area":84.96,"floor":17,"built":1992,"date":"2026-10-17","deposit":24000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"하단동","jibun":"1175","apt":"가락타운3","area":84.93,"floor":15,"built":1992,"date":"2026-10-17","deposit":13500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"장림동","jibun":"1154","apt":"두산위브더제니스센트럴사하","area":59.93,"floor":28,"built":2024,"date":"2026-10-17","deposit":23000,"rent":0,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26380","umdNm":"괴정동","jibun":"491-3","apt":"새괴정화신","area":49.32,"floor":4,"built":1981,"date":"2026-10-17","deposit":8500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"감천동","jibun":"296-44","apt":"신도","area":59.88,"floor":3,"built":1995,"date":"2026-10-17","deposit":1000,"rent":35,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"하단동","jibun":"887-7","apt":"헤를리치","area":56.27,"floor":15,"built":2017,"date":"2026-10-17","deposit":16000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"괴정동","jibun":"955-4","apt":"IDS아델하임","area":40.13,"floor":16,"built":2017,"date":"2026-10-17","deposit":1000,"rent":55,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -140,6 +141,7 @@
 {"lawd":"26380","umdNm":"괴정동","jibun":"1081-1","apt":"동덕","area":72.54,"floor":3,"built":1987,"date":"2026-10-24","deposit":7100,"rent":5,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"장림동","jibun":"185-1","apt":"장림3차동원","area":71.54,"floor":22,"built":1999,"date":"2026-10-24","deposit":11000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":11000,"preRent":0}
 {"lawd":"26380","umdNm":"신평동","jibun":"425","apt":"한신","area":84.96,"floor":11,"built":1993,"date":"2026-10-24","deposit":3000,"rent":70,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26380","umdNm":"괴정동","jibun":"398-23","apt":"신괴정화신아파트","area":84.99,"floor":13,"built":1990,"date":"2026-10-25","deposit":13500,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"신평동","jibun":"668","apt":"신평삼한사랑채","area":84.97,"floor":5,"built":2016,"date":"2026-10-25","deposit":3000,"rent":90,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"하단동","jibun":"1161-2","apt":"가락타운1","area":84.96,"floor":9,"built":1992,"date":"2026-10-26","deposit":24000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"다대동","jibun":"1667","apt":"다대푸르지오","area":84.94,"floor":13,"built":2012,"date":"2026-10-26","deposit":3932,"rent":46,"term":"27.03~29.03","type":"갱신","rrr":null,"preDeposit":3932,"preRent":52}
@@ -147,9 +149,15 @@
 {"lawd":"26380","umdNm":"하단동","jibun":"515-5","apt":"송림원룸B","area":22.98,"floor":4,"built":2002,"date":"2026-10-26","deposit":500,"rent":33,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"장림동","jibun":"372-4","apt":"장림현대(372-4)","area":84.89,"floor":2,"built":1989,"date":"2026-10-26","deposit":2000,"rent":60,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"괴정동","jibun":"950-2","apt":"괴정어반푸르지오","area":63.43,"floor":20,"built":2019,"date":"2026-10-27","deposit":30000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26380","umdNm":"구평동","jibun":"41-7","apt":"구평화신","area":84.95,"floor":7,"built":1993,"date":"2026-10-27","deposit":12000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":13000,"preRent":1300}
 {"lawd":"26380","umdNm":"다대동","jibun":"37","apt":"다대코오롱맨션","area":43.33,"floor":4,"built":1988,"date":"2026-10-27","deposit":8000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26380","umdNm":"다대동","jibun":"1550","apt":"몰운대","area":49.08,"floor":11,"built":1996,"date":"2026-10-27","deposit":600,"rent":39,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"장림동","jibun":"333-2","apt":"지원시티파크","area":36.86,"floor":7,"built":2015,"date":"2026-10-27","deposit":2000,"rent":45,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26380","umdNm":"괴정동","jibun":"1065","apt":"괴정자유3","area":84.87,"floor":2,"built":1997,"date":"2026-10-28","deposit":9000,"rent":25,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"장림동","jibun":"1154","apt":"두산위브더제니스센트럴사하","area":59.93,"floor":6,"built":2024,"date":"2026-10-28","deposit":22000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":20000,"preRent":0}
 {"lawd":"26380","umdNm":"장림동","jibun":"1154","apt":"두산위브더제니스센트럴사하","area":84.96,"floor":14,"built":2024,"date":"2026-10-28","deposit":8000,"rent":92,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":7000,"preRent":90}
 {"lawd":"26380","umdNm":"당리동","jibun":"306-16","apt":"화천승학","area":75.42,"floor":3,"built":1983,"date":"2026-10-28","deposit":12000,"rent":7,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":12000,"preRent":0}
+{"lawd":"26380","umdNm":"괴정동","jibun":"11-6","apt":"금화맨션","area":73.62,"floor":5,"built":1992,"date":"2026-10-29","deposit":7900,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"다대동","jibun":"113-11","apt":"다대해송","area":52.11,"floor":6,"built":1991,"date":"2026-10-29","deposit":10400,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26380","umdNm":"다대동","jibun":"1550","apt":"몰운대","area":49.08,"floor":12,"built":1996,"date":"2026-10-29","deposit":6900,"rent":10,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26380","umdNm":"괴정동","jibun":"614-9","apt":"우신타워아파트","area":84.79,"floor":12,"built":1989,"date":"2026-10-29","deposit":9350,"rent":7,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

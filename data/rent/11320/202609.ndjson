@@ -58,6 +58,7 @@
 {"lawd":"11320","umdNm":"창동","jibun":"38","apt":"주공17단지","area":36.16,"floor":5,"built":1989,"date":"2026-09-05","deposit":12150,"rent":0,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11320","umdNm":"창동","jibun":"38","apt":"주공17단지","area":36.16,"floor":8,"built":1989,"date":"2026-09-05","deposit":20000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11320","umdNm":"창동","jibun":"38","apt":"주공17단지","area":36.16,"floor":9,"built":1989,"date":"2026-09-05","deposit":14500,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":14000,"preRent":0}
+{"lawd":"11320","umdNm":"창동","jibun":"27","apt":"주공19단지(창동리버타운)","area":68.86,"floor":10,"built":1988,"date":"2026-09-05","deposit":10000,"rent":150,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11320","umdNm":"창동","jibun":"815","apt":"창동2차현대","area":84.5,"floor":5,"built":2001,"date":"2026-09-05","deposit":49350,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":47000,"preRent":0}
 {"lawd":"11320","umdNm":"창동","jibun":"30","apt":"창동주공18단지","area":45.9,"floor":2,"built":1988,"date":"2026-09-05","deposit":3500,"rent":80,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11320","umdNm":"창동","jibun":"30","apt":"창동주공18단지","area":45.9,"floor":12,"built":1988,"date":"2026-09-05","deposit":3000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

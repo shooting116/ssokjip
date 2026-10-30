@@ -10,6 +10,7 @@
 {"lawd":"27290","umdNm":"감삼동","jibun":"461","apt":"월드마크웨스트엔드","area":113.77,"floor":13,"built":2010,"date":"2026-10-01","deposit":3000,"rent":160,"term":"26.10~28.09","type":"갱신","rrr":"사용","preDeposit":3000,"preRent":160}
 {"lawd":"27290","umdNm":"진천동","jibun":"847","apt":"월배역디엘라온프라이빗","area":99.84,"floor":44,"built":2024,"date":"2026-10-01","deposit":5000,"rent":160,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"월성동","jibun":"777-2","apt":"월성월드메르디앙","area":84.37,"floor":6,"built":2009,"date":"2026-10-01","deposit":32500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"월성동","jibun":"1863","apt":"월성협성휴포레","area":84.97,"floor":5,"built":2016,"date":"2026-10-01","deposit":4000,"rent":135,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"유천동","jibun":"597","apt":"진천역AK그랑폴리스","area":84.85,"floor":21,"built":2013,"date":"2026-10-01","deposit":28000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":28000,"preRent":0}
 {"lawd":"27290","umdNm":"용산동","jibun":"419-1","apt":"한마음","area":59.95,"floor":10,"built":1997,"date":"2026-10-01","deposit":1000,"rent":58,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"본동","jibun":"247","apt":"그린맨션2차","area":69.43,"floor":12,"built":1986,"date":"2026-10-02","deposit":1000,"rent":60,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -17,6 +18,7 @@
 {"lawd":"27290","umdNm":"두류동","jibun":"2369","apt":"두류역서한포레스트","area":84.7,"floor":9,"built":2025,"date":"2026-10-02","deposit":1000,"rent":100,"term":"26.10~27.04","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"42","apt":"보성은하","area":59.88,"floor":25,"built":1994,"date":"2026-10-02","deposit":1000,"rent":60,"term":"26.11~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":117.68,"floor":21,"built":2024,"date":"2026-10-02","deposit":32700,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"월성동","jibun":"89","apt":"서한맨션","area":84.81,"floor":13,"built":1992,"date":"2026-10-02","deposit":17000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"용산동","jibun":"414-4","apt":"성서6주공","area":59.99,"floor":16,"built":1997,"date":"2026-10-02","deposit":10000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"송현동","jibun":"906","apt":"송현우방하이츠","area":134.92,"floor":1,"built":2002,"date":"2026-10-02","deposit":22000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"용산동","jibun":"935","apt":"용산세광그린빌","area":84.92,"floor":2,"built":1999,"date":"2026-10-02","deposit":2000,"rent":75,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -61,6 +63,7 @@
 {"lawd":"27290","umdNm":"본리동","jibun":"1238","apt":"달서푸르지오시그니처","area":84.99,"floor":6,"built":2026,"date":"2026-10-05","deposit":27000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"유천동","jibun":"612","apt":"대구월배2차아이파크","area":84.54,"floor":22,"built":2016,"date":"2026-10-05","deposit":34000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"두류동","jibun":"2348","apt":"두류파크KCC스위첸","area":84.97,"floor":17,"built":2023,"date":"2026-10-05","deposit":2000,"rent":110,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"성당동","jibun":"840","apt":"두산위브","area":84.6,"floor":7,"built":2009,"date":"2026-10-05","deposit":2000,"rent":75,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"도원동","jibun":"677-1","apt":"롯데캐슬레이크","area":128.13,"floor":6,"built":2005,"date":"2026-10-05","deposit":29000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":28000,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"42","apt":"보성은하","area":59.88,"floor":6,"built":1994,"date":"2026-10-05","deposit":1000,"rent":60,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1501","apt":"상인동화,태왕,한양타운","area":59.91,"floor":2,"built":1993,"date":"2026-10-05","deposit":1000,"rent":50,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -75,6 +78,7 @@
 {"lawd":"27290","umdNm":"상인동","jibun":"327-11","apt":"상인메트로빌104동","area":77.89,"floor":3,"built":2002,"date":"2026-10-06","deposit":1000,"rent":65,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.85,"floor":7,"built":2024,"date":"2026-10-06","deposit":25300,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.85,"floor":7,"built":2024,"date":"2026-10-06","deposit":25300,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.94,"floor":20,"built":2024,"date":"2026-10-06","deposit":26300,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1521","apt":"서한","area":134.93,"floor":2,"built":1993,"date":"2026-10-06","deposit":2000,"rent":90,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"신당동","jibun":"1846","apt":"성서주공2","area":37.67,"floor":5,"built":1995,"date":"2026-10-06","deposit":500,"rent":30,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"월성동","jibun":"1300","apt":"월성래미안","area":124.65,"floor":13,"built":2006,"date":"2026-10-06","deposit":32000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -105,6 +109,7 @@
 {"lawd":"27290","umdNm":"월성동","jibun":"500","apt":"월성청구타운","area":134.99,"floor":6,"built":1991,"date":"2026-10-07","deposit":2000,"rent":90,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"월성동","jibun":"1863","apt":"월성협성휴포레","area":84.92,"floor":13,"built":2016,"date":"2026-10-07","deposit":2000,"rent":110,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":2000,"preRent":90}
 {"lawd":"27290","umdNm":"월성동","jibun":"536","apt":"월성e-편한세상","area":128.7,"floor":12,"built":2009,"date":"2026-10-07","deposit":50000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"죽전동","jibun":"645","apt":"죽전역에일린의뜰","area":59.98,"floor":10,"built":2024,"date":"2026-10-07","deposit":2000,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1474","apt":"한양은하","area":55.8,"floor":2,"built":1989,"date":"2026-10-07","deposit":1000,"rent":45,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"도원동","jibun":"1439","apt":"가람마을","area":59.99,"floor":19,"built":1997,"date":"2026-10-08","deposit":10000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"본리동","jibun":"1238","apt":"달서푸르지오시그니처","area":85,"floor":7,"built":2026,"date":"2026-10-08","deposit":30000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -216,6 +221,7 @@
 {"lawd":"27290","umdNm":"유천동","jibun":"605","apt":"현대아이파크","area":59.93,"floor":7,"built":2015,"date":"2026-10-15","deposit":23000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":23000,"preRent":0}
 {"lawd":"27290","umdNm":"감삼동","jibun":"707","apt":"빌리브스카이주상복합","area":84.89,"floor":40,"built":2022,"date":"2026-10-16","deposit":4000,"rent":155,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":4000,"preRent":150}
 {"lawd":"27290","umdNm":"두류동","jibun":"486-2","apt":"삼정그린빌","area":75.88,"floor":21,"built":2002,"date":"2026-10-16","deposit":23000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"상인동","jibun":"171-1","apt":"상인대성스카이렉스","area":147,"floor":8,"built":2007,"date":"2026-10-16","deposit":5000,"rent":160,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.85,"floor":7,"built":2024,"date":"2026-10-16","deposit":24300,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.85,"floor":19,"built":2024,"date":"2026-10-16","deposit":25800,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.94,"floor":26,"built":2024,"date":"2026-10-16","deposit":25800,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -258,6 +264,7 @@
 {"lawd":"27290","umdNm":"상인동","jibun":"330","apt":"세정드림타운","area":84.57,"floor":10,"built":2004,"date":"2026-10-19","deposit":16500,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"대천동","jibun":"1042","apt":"월배삼정그린코아포레스트","area":84.55,"floor":28,"built":2021,"date":"2026-10-19","deposit":32500,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":31000,"preRent":0}
 {"lawd":"27290","umdNm":"월성동","jibun":"84","apt":"월성주공1(저층)","area":51.18,"floor":3,"built":1991,"date":"2026-10-19","deposit":7000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"도원동","jibun":"1443","apt":"강산타운","area":84.97,"floor":4,"built":1997,"date":"2026-10-20","deposit":20000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"대곡동","jibun":"1098","apt":"대구대곡엘에이치천년나무1단지","area":21.71,"floor":2,"built":2019,"date":"2026-10-20","deposit":2286,"rent":11,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.85,"floor":2,"built":2024,"date":"2026-10-20","deposit":22200,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.85,"floor":6,"built":2024,"date":"2026-10-20","deposit":24000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -281,6 +288,7 @@
 {"lawd":"27290","umdNm":"월성동","jibun":"1835","apt":"월배e-편한세상","area":59.97,"floor":25,"built":2014,"date":"2026-10-21","deposit":2000,"rent":95,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"월성동","jibun":"1835","apt":"월배e-편한세상","area":84.99,"floor":15,"built":2014,"date":"2026-10-21","deposit":35000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"유천동","jibun":"597","apt":"진천역AK그랑폴리스","area":84.92,"floor":13,"built":2013,"date":"2026-10-21","deposit":29000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":25000,"preRent":0}
+{"lawd":"27290","umdNm":"도원동","jibun":"1439","apt":"가람마을","area":59.99,"floor":15,"built":1997,"date":"2026-10-22","deposit":1000,"rent":55,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"본리동","jibun":"423-3","apt":"굿모닝","area":84.98,"floor":5,"built":2016,"date":"2026-10-22","deposit":17800,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"두류동","jibun":"2348","apt":"두류파크KCC스위첸","area":39.91,"floor":11,"built":2023,"date":"2026-10-22","deposit":16500,"rent":0,"term":"26.11~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"본리동","jibun":"1234","apt":"두산위브더제니스센트럴달서","area":84.99,"floor":35,"built":2024,"date":"2026-10-22","deposit":2000,"rent":120,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -306,6 +314,7 @@
 {"lawd":"27290","umdNm":"월성동","jibun":"120","apt":"월성푸르지오","area":84.92,"floor":12,"built":2008,"date":"2026-10-23","deposit":32000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"월성동","jibun":"1863","apt":"월성협성휴포레","area":69.96,"floor":19,"built":2016,"date":"2026-10-23","deposit":26000,"rent":0,"term":"27.05~29.05","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"도원동","jibun":"1429","apt":"한실들마을","area":59.76,"floor":5,"built":1996,"date":"2026-10-23","deposit":1000,"rent":42,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":1000,"preRent":46}
+{"lawd":"27290","umdNm":"도원동","jibun":"677-1","apt":"롯데캐슬레이크","area":115.66,"floor":4,"built":2005,"date":"2026-10-24","deposit":2000,"rent":130,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"750","apt":"상인화성하이츠","area":85,"floor":18,"built":1999,"date":"2026-10-24","deposit":2000,"rent":95,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"송현동","jibun":"1029-1","apt":"우방맨션","area":134.73,"floor":4,"built":1992,"date":"2026-10-24","deposit":25000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"진천동","jibun":"15-1","apt":"월배역포스코더샵","area":128.08,"floor":7,"built":2006,"date":"2026-10-24","deposit":33000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -314,6 +323,7 @@
 {"lawd":"27290","umdNm":"상인동","jibun":"171-1","apt":"상인대성스카이렉스","area":84.88,"floor":22,"built":2007,"date":"2026-10-25","deposit":22000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":20000,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.94,"floor":9,"built":2024,"date":"2026-10-25","deposit":25500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.94,"floor":25,"built":2024,"date":"2026-10-25","deposit":26500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"신당동","jibun":"1846","apt":"성서주공2","area":42.9,"floor":15,"built":1995,"date":"2026-10-25","deposit":500,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"월성동","jibun":"1863","apt":"월성협성휴포레","area":84.92,"floor":1,"built":2016,"date":"2026-10-25","deposit":3000,"rent":145,"term":"27.05~29.05","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"대곡동","jibun":"46","apt":"대곡한라하우젠트","area":71.08,"floor":14,"built":2005,"date":"2026-10-26","deposit":2000,"rent":65,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.85,"floor":14,"built":2024,"date":"2026-10-26","deposit":24800,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -330,6 +340,7 @@
 {"lawd":"27290","umdNm":"용산동","jibun":"221","apt":"우방죽전타운","area":84.97,"floor":17,"built":1997,"date":"2026-10-27","deposit":5000,"rent":65,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1474","apt":"한양은하","area":55.8,"floor":1,"built":1989,"date":"2026-10-27","deposit":500,"rent":45,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"42","apt":"보성은하","area":134.92,"floor":9,"built":1994,"date":"2026-10-28","deposit":4000,"rent":110,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"상인동","jibun":"1600","apt":"상인역모아엘가파크뷰","area":59.98,"floor":4,"built":2019,"date":"2026-10-28","deposit":3000,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.85,"floor":7,"built":2024,"date":"2026-10-28","deposit":24800,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.85,"floor":22,"built":2024,"date":"2026-10-28","deposit":25000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.94,"floor":8,"built":2024,"date":"2026-10-28","deposit":25300,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -340,3 +351,12 @@
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.94,"floor":26,"built":2024,"date":"2026-10-29","deposit":26500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":113.85,"floor":19,"built":2024,"date":"2026-10-29","deposit":32700,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":117.68,"floor":28,"built":2024,"date":"2026-10-29","deposit":32700,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"용산동","jibun":"917","apt":"청구블루빌","area":85,"floor":7,"built":2000,"date":"2026-10-29","deposit":14500,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"대곡동","jibun":"46","apt":"대곡한라하우젠트","area":84.98,"floor":23,"built":2005,"date":"2026-10-30","deposit":21840,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":21000,"preRent":0}
+{"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.85,"floor":25,"built":2024,"date":"2026-10-30","deposit":26300,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.94,"floor":8,"built":2024,"date":"2026-10-30","deposit":24800,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.94,"floor":13,"built":2024,"date":"2026-10-30","deposit":25300,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"상인동","jibun":"1604","apt":"상인푸르지오센터파크","area":84.94,"floor":16,"built":2024,"date":"2026-10-30","deposit":26000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"용산동","jibun":"501-2","apt":"성서2보성타운","area":84.95,"floor":3,"built":1997,"date":"2026-10-30","deposit":18000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":18000,"preRent":0}
+{"lawd":"27290","umdNm":"월성동","jibun":"270","apt":"월성주공4단지","area":52.09,"floor":9,"built":1992,"date":"2026-10-30","deposit":500,"rent":50,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27290","umdNm":"유천동","jibun":"597","apt":"진천역AK그랑폴리스","area":59.97,"floor":2,"built":2013,"date":"2026-10-30","deposit":23000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
