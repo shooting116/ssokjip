@@ -19,6 +19,7 @@
 {"lawd":"28125","umdNm":"송림동","jibun":"348","apt":"동인천역파크푸르지오","area":59.87,"floor":13,"built":2023,"date":"2026-10-06","deposit":10500,"rent":59,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28125","umdNm":"북성동1가","jibun":"4-246","apt":"동일","area":39.96,"floor":1,"built":1987,"date":"2026-10-06","deposit":7000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28125","umdNm":"항동7가","jibun":"27-107","apt":"라이프비취1차","area":72.73,"floor":8,"built":1980,"date":"2026-10-06","deposit":1000,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28125","umdNm":"신흥동3가","jibun":"7-235","apt":"신흥아이파크","area":84,"floor":14,"built":2002,"date":"2026-10-06","deposit":22000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28125","umdNm":"신흥동3가","jibun":"31-13","apt":"인천유림노르웨이숲에듀오션","area":59.87,"floor":33,"built":2023,"date":"2026-10-06","deposit":2000,"rent":95,"term":"26.10~27.03","type":"갱신","rrr":null,"preDeposit":2000,"preRent":95}
 {"lawd":"28125","umdNm":"신흥동3가","jibun":"31-13","apt":"인천유림노르웨이숲에듀오션","area":59.87,"floor":36,"built":2023,"date":"2026-10-06","deposit":2000,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28125","umdNm":"송림동","jibun":"348","apt":"동인천역파크푸르지오","area":59.6,"floor":37,"built":2023,"date":"2026-10-07","deposit":16000,"rent":42,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

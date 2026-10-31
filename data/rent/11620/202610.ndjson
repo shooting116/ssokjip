@@ -285,6 +285,7 @@
 {"lawd":"11620","umdNm":"봉천동","jibun":"1717","apt":"관악푸르지오","area":59.58,"floor":9,"built":2004,"date":"2026-10-27","deposit":16000,"rent":103,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":16000,"preRent":95}
 {"lawd":"11620","umdNm":"봉천동","jibun":"1706","apt":"봉천우성","area":114.78,"floor":18,"built":2000,"date":"2026-10-27","deposit":63000,"rent":40,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11620","umdNm":"신림동","jibun":"1644-3","apt":"유벤투스240","area":32.81,"floor":10,"built":2025,"date":"2026-10-27","deposit":15000,"rent":41,"term":"26.12~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11620","umdNm":"신림동","jibun":"1746","apt":"힐스테이트뉴포레","area":44.98,"floor":5,"built":2022,"date":"2026-10-27","deposit":15536,"rent":23,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":10720,"preRent":43}
 {"lawd":"11620","umdNm":"신림동","jibun":"1746","apt":"힐스테이트뉴포레","area":84.94,"floor":26,"built":2022,"date":"2026-10-27","deposit":84000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":80000,"preRent":0}
 {"lawd":"11620","umdNm":"봉천동","jibun":"1730","apt":"e편한세상서울대입구1단지","area":84.97,"floor":9,"built":2019,"date":"2026-10-27","deposit":5000,"rent":252,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":240}
 {"lawd":"11620","umdNm":"봉천동","jibun":"1719","apt":"관악동부센트레빌","area":59.75,"floor":8,"built":2004,"date":"2026-10-28","deposit":10000,"rent":200,"term":"27.02~28.04","type":"갱신","rrr":null,"preDeposit":10000,"preRent":135}
@@ -294,6 +295,7 @@
 {"lawd":"11620","umdNm":"신림동","jibun":"1747","apt":"센터스퀘어서울대점","area":22.96,"floor":5,"built":2024,"date":"2026-10-28","deposit":8700,"rent":60,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11620","umdNm":"신림동","jibun":"534-1","apt":"아데나","area":18.25,"floor":9,"built":2010,"date":"2026-10-28","deposit":6000,"rent":30,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11620","umdNm":"신림동","jibun":"1745","apt":"최강타워","area":18.89,"floor":3,"built":2023,"date":"2026-10-28","deposit":5200,"rent":38,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11620","umdNm":"신림동","jibun":"1746","apt":"힐스테이트뉴포레","area":44.98,"floor":28,"built":2022,"date":"2026-10-28","deposit":9508,"rent":75,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":12864,"preRent":51}
 {"lawd":"11620","umdNm":"신림동","jibun":"1735-2","apt":"관악산휴먼시아3단지","area":39.82,"floor":1,"built":2008,"date":"2026-10-29","deposit":4868,"rent":23,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":3398,"preRent":29}
 {"lawd":"11620","umdNm":"신림동","jibun":"1735-2","apt":"관악산휴먼시아3단지","area":39.82,"floor":2,"built":2008,"date":"2026-10-29","deposit":6568,"rent":13,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":3398,"preRent":29}
 {"lawd":"11620","umdNm":"신림동","jibun":"1735-2","apt":"관악산휴먼시아3단지","area":39.82,"floor":5,"built":2008,"date":"2026-10-29","deposit":6568,"rent":13,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":3398,"preRent":29}
