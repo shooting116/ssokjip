@@ -2,32 +2,32 @@
  "41210-14": {
   "q": "\"주공10\" 재건축",
   "why": "redev",
-  "at": "2026-10-25",
+  "at": "2026-11-01",
   "items": [
    {
-    "t": "우리도 이젠 강남...\"1년새 8억 뛰어 44억 찍었다\" [부동산 아토즈]",
-    "o": "파이낸셜뉴스",
-    "d": "2026-10-24",
-    "u": "https://www.fnnews.com/news/202610231413159886"
-   },
-   {
-    "t": "“시세 14억인데 분양가 7억”…당첨되면 7억 차익 ‘줍줍 아파트’ 나...",
-    "o": "서울경제",
-    "d": "2026-09-22",
-    "u": "https://www.sedaily.com/article/20093912?ref=naver"
-   },
-   {
-    "t": "\"당첨되면 7억 차익\"…광명 '줍줍' 오늘 접수",
+    "t": "영등포·부천서 아파트 '보류지' 매각",
     "o": "한국경제",
-    "d": "2026-09-21",
-    "u": "https://www.hankyung.com/article/2026092297067"
+    "d": "2026-10-29",
+    "u": "https://www.hankyung.com/article/2026102941741"
+   },
+   {
+    "t": "강북 전셋값마저 6억 넘어…강남보다 상승세 가팔랐다",
+    "o": "경향신문",
+    "d": "2026-10-27",
+    "u": "https://www.khan.co.kr/article/202610272056025"
+   },
+   {
+    "t": "강북 전셋값마저 6억원 넘어, 올해만 10% 올랐다…평균 매매가도 12억 돌...",
+    "o": "경향신문",
+    "d": "2026-10-27",
+    "u": "https://www.khan.co.kr/article/202610271731001"
    }
   ]
  },
  "41210-15": {
   "q": "\"주공11\" 재건축",
   "why": "redev",
-  "at": "2026-10-25",
+  "at": "2026-11-01",
   "items": [
    {
     "t": "정비구역 지정 전 ‘꼼수’ 막는다···노원구, ‘행위제한’ 추진",
@@ -52,38 +52,50 @@
  "41210-18": {
   "q": "\"주공3\" 재건축",
   "why": "redev",
-  "at": "2026-10-25",
+  "at": "2026-11-01",
   "items": [
    {
-    "t": "\"삼성맨 들이닥치니 답 없다\"…옆동네 3억대 아파트 '발칵'",
-    "o": "이데일리",
-    "d": "2026-10-16",
-    "u": "https://www.edaily.co.kr/News/Read?newsId=04359126645613576&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+    "t": "서울 외곽 경매시장 ‘후끈’…노원 고가 낙찰 비중 1년 새 6배[집슐랭]",
+    "o": "서울경제",
+    "d": "2026-10-27",
+    "u": "https://www.sedaily.com/article/20106835?ref=naver"
+   },
+   {
+    "t": "노원 ‘웃돈 낙찰’ 1년새 6배 급증…강남은 제자리",
+    "o": "서울경제",
+    "d": "2026-10-27",
+    "u": "https://www.sedaily.com/article/20106785?ref=naver"
+   },
+   {
+    "t": "강남권 재건축 형님이 움직인다",
+    "o": "한국경제",
+    "d": "2026-10-25",
+    "u": "https://magazine.hankyung.com/money/article/202609143226c"
    }
   ]
  },
  "41210-19": {
   "q": "\"주공4\" 재건축",
   "why": "redev",
-  "at": "2026-10-25",
+  "at": "2026-11-01",
   "items": [
    {
-    "t": "재건축 심의 지연 줄인다…서울시, 초기부터 현장 자문 강화한다",
-    "o": "뉴스1",
-    "d": "2026-10-24",
-    "u": "https://www.news1.kr/realestate/general/6330120"
-   },
-   {
-    "t": "서울 성북동 한성대입구 인근 1070가구 재개발 신통기획",
-    "o": "한국경제",
-    "d": "2026-10-22",
-    "u": "https://www.hankyung.com/article/202610228241i"
-   },
-   {
-    "t": "아파트에 오페라하우스가…“집값 올린다” vs “정부 과잉 개입”",
+    "t": "“10억 이하로 인서울 가능?”…노원·도봉에 실수요 몰린 까닭",
     "o": "이데일리",
-    "d": "2026-10-20",
-    "u": "https://www.edaily.co.kr/News/Read?newsId=04241046645614888&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+    "d": "2026-10-28",
+    "u": "https://www.edaily.co.kr/News/Read?newsId=04733046645617512&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+   },
+   {
+    "t": "아파트에 오페라하우스·아이스링크?…건설사 시설경쟁에 정부, 칼 빼들...",
+    "o": "매일경제",
+    "d": "2026-10-27",
+    "u": "https://www.mk.co.kr/article/12186963"
+   },
+   {
+    "t": "노원구, 하계한신동성 재건축 조합설립추진위 승인",
+    "o": "연합뉴스",
+    "d": "2026-10-26",
+    "u": "https://www.yna.co.kr/view/AKR20261026125600004?input=1195m"
    }
   ]
  }

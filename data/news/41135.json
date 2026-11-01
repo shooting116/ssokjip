@@ -2,7 +2,7 @@
  "41135-127": {
   "q": "\"목련마을\" 재건축",
   "why": "redev",
-  "at": "2026-10-25",
+  "at": "2026-11-01",
   "items": [
    {
     "t": "“천당 위 분당? 7억은 번다” 지금 사두면 강남 뺨칠 ‘로또’",
@@ -27,7 +27,7 @@
  "41135-20": {
   "q": "\"샛별마을\" 재건축",
   "why": "redev",
-  "at": "2026-10-25",
+  "at": "2026-11-01",
   "items": [
    {
     "t": "“천당 위 분당? 7억은 번다” 지금 사두면 강남 뺨칠 ‘로또’",
@@ -52,7 +52,7 @@
  "41135-32": {
   "q": "\"장안타운\" 재건축",
   "why": "redev",
-  "at": "2026-10-25",
+  "at": "2026-11-01",
   "items": [
    {
     "t": "성남 ‘분당 선도지구’ 3곳 재건축 사업자 확정",
@@ -77,33 +77,39 @@
  "41135-69": {
   "q": "\"한솔마을\" 재건축",
   "why": "redev",
-  "at": "2026-10-25",
+  "at": "2026-11-01",
   "items": [
+   {
+    "t": "'갑툭튀' 교통영향평가...신상진 \"국토부가 분당 재건축 발목\"",
+    "o": "이데일리",
+    "d": "2026-10-27",
+    "u": "https://www.edaily.co.kr/News/Read?newsId=04037686645617184&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+   },
+   {
+    "t": "규제 완화에 리모델링 기지개…건설사도 시장 공략 속도[집슐랭]",
+    "o": "서울경제",
+    "d": "2026-10-25",
+    "u": "https://www.sedaily.com/article/20105871?ref=naver"
+   },
    {
     "t": "상반기만 조합설립 인가 6곳…대형사도 리모델링 수주전 치열",
     "o": "서울경제",
     "d": "2026-10-25",
     "u": "https://www.sedaily.com/article/20105853?ref=naver"
-   },
-   {
-    "t": "1년 새 29.5% 뛰었다 “자고 나면 올라”…전국 집값 상승률 1위 찍은 ‘...",
-    "o": "서울경제",
-    "d": "2026-10-23",
-    "u": "https://www.sedaily.com/article/20105559?ref=naver"
-   },
-   {
-    "t": "“천당 위 분당? 7억은 번다” 지금 사두면 강남 뺨칠 ‘로또’",
-    "o": "중앙일보",
-    "d": "2026-10-23",
-    "u": "https://www.joongang.co.kr/article/25472251"
    }
   ]
  },
  "41135-72": {
   "q": "\"양지마을\" 재건축",
   "why": "redev",
-  "at": "2026-10-25",
+  "at": "2026-11-01",
   "items": [
+   {
+    "t": "분당과 삼성동에 재물 기운 듬뿍 안기는 탄천",
+    "o": "동아일보",
+    "d": "2026-10-31",
+    "u": "https://weekly.donga.com/3/all/11/6438622/1"
+   },
    {
     "t": "수십명 동원 삼성물산...'4조' 대어 양지마을, 설계사는 누가 [르포]",
     "o": "파이낸셜뉴스",
@@ -115,45 +121,45 @@
     "o": "서울경제",
     "d": "2026-10-23",
     "u": "https://www.sedaily.com/article/20105559?ref=naver"
-   },
-   {
-    "t": "“천당 위 분당? 7억은 번다” 지금 사두면 강남 뺨칠 ‘로또’",
-    "o": "중앙일보",
-    "d": "2026-10-23",
-    "u": "https://www.joongang.co.kr/article/25472251"
    }
   ]
  },
  "41135-75": {
   "q": "\"파크타운\" 재건축",
   "why": "redev",
-  "at": "2026-10-25",
+  "at": "2026-11-01",
   "items": [
    {
-    "t": "1년 새 29.5% 뛰었다 “자고 나면 올라”…전국 집값 상승률 1위 찍은 ‘...",
-    "o": "서울경제",
-    "d": "2026-10-23",
-    "u": "https://www.sedaily.com/article/20105559?ref=naver"
+    "t": "신상진 “국토부 이율배반 행정에 재건축 발목”…분당 1만3429가구 차질...",
+    "o": "동아일보",
+    "d": "2026-10-27",
+    "u": "https://www.donga.com/news/Society/article/all/20261027/134918573/1"
    },
    {
-    "t": "“천당 위 분당? 7억은 번다” 지금 사두면 강남 뺨칠 ‘로또’",
-    "o": "중앙일보",
-    "d": "2026-10-23",
-    "u": "https://www.joongang.co.kr/article/25472251"
+    "t": "성남시장 “국토부, 분당재건축 발목…교통평가 재검토 촉구”",
+    "o": "KBS",
+    "d": "2026-10-27",
+    "u": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8696470&ref=A"
    },
    {
-    "t": "‘서수정’ 이어 ‘미야오’까지 들썩…재건축 기대감에 힘받는 분당 아...",
-    "o": "매일경제",
-    "d": "2026-10-12",
-    "u": "https://www.mk.co.kr/article/12173730"
+    "t": "'갑툭튀' 교통영향평가...신상진 \"국토부가 분당 재건축 발목\"",
+    "o": "이데일리",
+    "d": "2026-10-27",
+    "u": "https://www.edaily.co.kr/News/Read?newsId=04037686645617184&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
    }
   ]
  },
  "41135-78": {
   "q": "\"푸른마을\" 재건축",
   "why": "redev",
-  "at": "2026-10-25",
+  "at": "2026-11-01",
   "items": [
+   {
+    "t": "'갑툭튀' 교통영향평가...신상진 \"국토부가 분당 재건축 발목\"",
+    "o": "이데일리",
+    "d": "2026-10-27",
+    "u": "https://www.edaily.co.kr/News/Read?newsId=04037686645617184&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+   },
    {
     "t": "1년 새 29.5% 뛰었다 “자고 나면 올라”…전국 집값 상승률 1위 찍은 ‘...",
     "o": "서울경제",
@@ -165,20 +171,20 @@
     "o": "중앙일보",
     "d": "2026-10-23",
     "u": "https://www.joongang.co.kr/article/25472251"
-   },
-   {
-    "t": "‘서수정’ 이어 ‘미야오’까지 들썩…재건축 기대감에 힘받는 분당 아...",
-    "o": "매일경제",
-    "d": "2026-10-12",
-    "u": "https://www.mk.co.kr/article/12173730"
    }
   ]
  },
  "41135-97": {
   "q": "\"이매촌\" 재건축",
   "why": "redev",
-  "at": "2026-10-25",
+  "at": "2026-11-01",
   "items": [
+   {
+    "t": "'갑툭튀' 교통영향평가...신상진 \"국토부가 분당 재건축 발목\"",
+    "o": "이데일리",
+    "d": "2026-10-27",
+    "u": "https://www.edaily.co.kr/News/Read?newsId=04037686645617184&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+   },
    {
     "t": "1년 새 29.5% 뛰었다 “자고 나면 올라”…전국 집값 상승률 1위 찍은 ‘...",
     "o": "서울경제",
@@ -190,12 +196,6 @@
     "o": "중앙일보",
     "d": "2026-10-23",
     "u": "https://www.joongang.co.kr/article/25472251"
-   },
-   {
-    "t": "‘서수정’ 이어 ‘미야오’까지 들썩…재건축 기대감에 힘받는 분당 아...",
-    "o": "매일경제",
-    "d": "2026-10-12",
-    "u": "https://www.mk.co.kr/article/12173730"
    }
   ]
  }

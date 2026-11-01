@@ -14,8 +14,14 @@
  "11140-1520": {
   "q": "\"세운푸르지오헤리시티\" 아파트 중구",
   "why": "down",
-  "at": "2026-10-25",
+  "at": "2026-11-01",
   "items": [
+   {
+    "t": "단기임대 구하기 힘드네… 종로·용산·마포·중구 예약 꽉 차",
+    "o": "조선일보",
+    "d": "2026-10-27",
+    "u": "https://www.chosun.com/economy/realty/2026/10/28/7QG7EN2RURC5ZLM3OXZFWBIOLM/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
+   },
    {
     "t": "전국 상가 임대료는 하락인데, 서울만 상승세…이유는?",
     "o": "이데일리",
@@ -27,12 +33,6 @@
     "o": "동아일보",
     "d": "2026-10-21",
     "u": "https://edu.donga.com/news/articleView.html?idxno=113041"
-   },
-   {
-    "t": "을지로·명동 출퇴근 5분 …풀옵션 투룸 최소 4주부터 단기 계약",
-    "o": "조선일보",
-    "d": "2026-08-26",
-    "u": "https://realty.chosun.com/site/data/html_dir/2026/08/26/2026082602719.html"
    }
   ]
  }
