@@ -26,12 +26,19 @@ const PAGES = [
   { key: 'nhuf_newlywed', name: '신혼부부 전용 구입자금(주택도시기금)', url: 'https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030601.jsp', rules: (r) => minmax(r.policy.products.newlywed_first.rate_table.rows.flat()) },
   { key: 'nhuf_newborn', name: '신생아 특례(주택도시기금)', url: 'https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030801.jsp', rules: (r) => minmax(r.policy.products.newborn.rate_table.rows.flat()) },
 ];
+// 보도자료 — 국토부 누리집은 해외(GitHub) IP에서 리다이렉트 루프, 기금 공지는 406이라 뺐다. 국토부·금융위는 정책브리핑(korea.kr) 부처별 목록으로 본다.
 const NEWS = [
-  { key: 'hf_news', name: '주금공 보도자료', url: 'https://www.hf.go.kr/ko/sub06/sub06_01_01.do' },
-  { key: 'molit_news', name: '국토부 보도자료(정책브리핑 RSS)', url: 'https://www.korea.kr/rss/dept_molit.xml', rss: true },
-  { key: 'fsc_news', name: '금융위 보도자료(정책브리핑 RSS)', url: 'https://www.korea.kr/rss/dept_fsc.xml', rss: true },
-  { key: 'nhuf_notice', name: '주택도시기금 공지', url: 'https://nhuf.molit.go.kr/FP/FP08/FP0801/FP080101.jsp' },
+  { key: 'hf_news', name: '주금공 보도자료', url: 'https://www.hf.go.kr/ko/sub05/sub05_04_05.do', parse: (h) => titles(h).filter((t) => /자세히 보기$/.test(t)).map((t) => t.replace(/\s*자세히 보기$/, '')) },
+  { key: 'molit_news', name: '국토부 보도자료(정책브리핑)', url: 'https://www.korea.kr/briefing/pressReleaseList.do?repCodeType=A&repCode=A00006', parse: koreaKr },
+  { key: 'fsc_news', name: '금융위 보도자료(정책브리핑)', url: 'https://www.korea.kr/briefing/pressReleaseList.do?repCodeType=A&repCode=C00003', parse: koreaKr },
+  { key: 'fsc_site', name: '금융위 보도자료(누리집)', url: 'https://www.fsc.go.kr/no010101', parse: (h) => titles(h).filter((t) => !/\.(hwpx?|pdf|zip|xlsx?|docx?)$/i.test(t)) },
 ];
+/** 정책브리핑 보도자료 목록: <a href="/briefing/pressReleaseView.do…"><span class="text"><strong>제목</strong>… */
+function koreaKr(html) {
+  const out = [];
+  for (const m of html.matchAll(/<a href="\/briefing\/pressReleaseView\.do[^"]*">\s*<span class="text">\s*<strong>([\s\S]*?)<\/strong>/g)) out.push(stripTags(m[1]).replace(/&quot;/g, '"').replace(/&#39;/g, "'").trim());
+  return [...new Set(out)];
+}
 const minmax = (a) => [Math.min(...a), Math.max(...a)];
 const KEYWORDS = /보금자리|디딤돌|버팀목|신생아|신혼부부|LTV|DSR|DTI|규제지역|조정대상지역|투기과열|토지거래허가|주택담보대출|주담대|대출 한도|금리 인상|금리 인하|가계부채|주택도시기금|정책대출/;
 
@@ -81,12 +88,8 @@ async function tryOnly() {
       const hits = all.filter((t) => KEYWORDS.test(t));
       const longest = [...all].sort((x, y) => y.length - x.length).slice(0, 6);
       const fields = [...new Set([...html.matchAll(/<(?:select|input)\b[^>]*\bname=["']([^"']+)["']/gi)].map((m) => m[1]))].slice(0, 30);
-      const opts = [...html.matchAll(/<option\b[^>]*value=["']([^"']*)["'][^>]*>\s*(국토교통부|금융위원회)\s*</gi)].map((m) => `${m[2]}=${m[1]}`);
       const links = [...new Set([...html.matchAll(/href=["']([^"']*(?:rss|\.xml)[^"']*)["']/gi)].map((m) => m[1]))].slice(0, 5);
-      const ctx = [...html.matchAll(/[\s\S]{0,160}금융위원회[\s\S]{0,60}/g)].slice(0, 2).map((m) => m[0].replace(/\s+/g, ' '));
-      const item = /<a\b[^>]*>(?:(?!<\/a>)[\s\S])*?관련 보도자료[\s\S]*?<\/a>/.exec(html)?.[0].replace(/\s+/g, ' ').slice(0, 700) ?? '';
-      const srcs = [...html.matchAll(/class="source">\s*<span>([\d.]+)<\/span>\s*<span>([^<]+)<\/span>/g)].map((m) => `${m[1]} ${m[2].trim()}`).slice(0, 12);
-      note(`[try] ${u} → HTTP ${status} ${ctype.split(';')[0]} ${html.length}자 · ${isRss ? 'RSS' : 'HTML'} 제목 ${all.length}개 · 키워드 ${hits.length}개 · 긴 제목: ${longest.join(' | ').slice(0, 400)} · 필드: ${fields.join(',')} · 옵션: ${opts.join(',')} · rss링크: ${links.join(' ')} · 목록 출처: ${srcs.join(', ')} · 항목 마크업: ${item} · 금융위 문맥: ${ctx.join(' ⟂ ').slice(0, 300)} · 본문: ${stripTags(html).slice(0, 160)}`);
+      note(`[try] ${u} → HTTP ${status} ${ctype.split(';')[0]} ${html.length}자 · ${isRss ? 'RSS' : 'HTML'} 제목 ${all.length}개 · 키워드 ${hits.length}개 · 긴 제목: ${longest.join(' | ').slice(0, 400)} · 폼 필드: ${fields.join(',')} · rss링크: ${links.join(' ')} · 본문: ${stripTags(html).slice(0, 160)}`);
     } catch (e) { note(`[try] ${u} → 실패: ${e?.cause?.code ?? e?.cause?.message ?? e?.message ?? e}`); }
   }
   if (process.env.GITHUB_ACTIONS) notices.forEach((m, i) => console.log(`::notice title=try ${i + 1}::${m.slice(0, 3900)}`));
@@ -128,7 +131,7 @@ async function main() {
   for (const n of NEWS) {
     try {
       const { status, html } = await getText(n.url);
-      const all = titles(html, !!n.rss);
+      const all = n.parse ? n.parse(html) : titles(html, !!n.rss);
       const hits = all.filter((t) => KEYWORDS.test(t));
       if (probe) { note(`${n.name} HTTP ${status} 제목 ${all.length}개 · 키워드 ${hits.length}개: ${hits.slice(0, 5).join(' | ').slice(0, 300)} ‖ 샘플: ${all.filter((t) => t.length > 14).slice(0, 5).join(' | ').slice(0, 300)}`); continue; }
       if (status !== 200 || !all.length) { note(`${n.name}: 응답 이상(HTTP ${status}, 링크 ${all.length}개) — 건너뜀`); continue; }
