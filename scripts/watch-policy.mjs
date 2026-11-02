@@ -3,6 +3,7 @@
 // 규칙표는 자동으로 바꾸지 않는다 — 감지·알림·초안(data/watch/)까지만. 확정은 사람이 규칙표에 새 버전으로 넣는다.
 //   node scripts/watch-policy.mjs [--notify] [--probe]
 //   --probe: 각 소스의 응답·추출 결과를 그대로 보여준다(파싱 점검용, 상태 저장 안 함)
+//   --try=URL,URL: 후보 URL의 응답·제목 추출만 찍어 본다(소스 고를 때)
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { ROOT } from './lib/regions.mjs';
@@ -10,6 +11,7 @@ import { kakaoMemo } from './lib/kakao.mjs';
 
 const args = new Set(process.argv.slice(2));
 const notify = args.has('--notify'), probe = args.has('--probe');
+const tryUrls = [...args].find((a) => a.startsWith('--try='))?.slice(6).split(',').filter(Boolean) ?? [];   // 소스 후보 URL 점검용
 const OUT = join(ROOT, 'data', 'watch');
 const STATE = join(OUT, 'policy-state.json');
 const today = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);   // KST
@@ -34,11 +36,11 @@ const minmax = (a) => [Math.min(...a), Math.max(...a)];
 const KEYWORDS = /보금자리|디딤돌|버팀목|신생아|신혼부부|LTV|DSR|DTI|규제지역|조정대상지역|투기과열|토지거래허가|주택담보대출|주담대|대출 한도|금리 인상|금리 인하|가계부채|주택도시기금|정책대출/;
 
 async function getText(url) {
-  const r = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'accept-language': 'ko-KR,ko;q=0.9' }, signal: AbortSignal.timeout(45_000), redirect: 'follow' });
+  const r = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'accept-language': 'ko-KR,ko;q=0.9', referer: new URL(url).origin + '/' }, signal: AbortSignal.timeout(45_000), redirect: 'follow' });
   const buf = Buffer.from(await r.arrayBuffer());
   let text = buf.toString('utf8');
   if (/charset=["']?euc-kr/i.test(text.slice(0, 2000)) || /�/.test(text.slice(0, 5000))) { try { text = new TextDecoder('euc-kr').decode(buf); } catch { /* utf8 유지 */ } }
-  return { status: r.status, html: text };
+  return { status: r.status, html: text, ctype: r.headers.get('content-type') ?? '' };
 }
 const stripTags = (html) => html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ');
 /** 본문에서 금리처럼 생긴 숫자(0.5~12.0, 소수 둘째 자리)만 순서대로 뽑는다 — 표 구조를 몰라도 '숫자 지문'으로 변경을 잡는다 */
