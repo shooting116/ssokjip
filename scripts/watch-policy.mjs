@@ -19,20 +19,22 @@ const note = (m) => { console.log(m); notices.push(m); };
 // 감시 대상 — 공식 기관 페이지만
 const PAGES = [
   { key: 'hf_bogeumjari_rate', name: '보금자리론 금리표(주금공)', url: 'https://www.hf.go.kr/ko/sub01/sub01_01_04.do', rules: (r) => [...r.policy.products.bogeumjari.rate_table.akkime, ...r.policy.products.bogeumjari.rate_table.u_t] },
-  { key: 'nhuf_didimdol', name: '디딤돌대출(주택도시기금)', url: 'https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030101.jsp', rules: (r) => r.policy.products.didimdol.rate_table.rows.flat() },
-  { key: 'nhuf_newlywed', name: '신혼부부 전용 구입자금(주택도시기금)', url: 'https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030601.jsp', rules: (r) => r.policy.products.newlywed_first.rate_table.rows.flat() },
-  { key: 'nhuf_newborn', name: '신생아 특례(주택도시기금)', url: 'https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030801.jsp', rules: (r) => r.policy.products.newborn.rate_table.rows.flat() },
+  // 기금 소개 페이지는 표 전체가 아니라 '최저~최고'만 글자로 노출한다 → 규칙표도 최저·최고 두 값으로 비교
+  { key: 'nhuf_didimdol', name: '디딤돌대출(주택도시기금)', url: 'https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030101.jsp', rules: (r) => minmax(r.policy.products.didimdol.rate_table.rows.flat()) },
+  { key: 'nhuf_newlywed', name: '신혼부부 전용 구입자금(주택도시기금)', url: 'https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030601.jsp', rules: (r) => minmax(r.policy.products.newlywed_first.rate_table.rows.flat()) },
+  { key: 'nhuf_newborn', name: '신생아 특례(주택도시기금)', url: 'https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030801.jsp', rules: (r) => minmax(r.policy.products.newborn.rate_table.rows.flat()) },
 ];
 const NEWS = [
   { key: 'hf_news', name: '주금공 보도자료', url: 'https://www.hf.go.kr/ko/sub06/sub06_01_01.do' },
-  { key: 'molit_news', name: '국토부 보도자료', url: 'https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp' },
-  { key: 'fsc_news', name: '금융위 보도자료', url: 'https://www.fsc.go.kr/no010101' },
+  { key: 'molit_news', name: '국토부 보도자료(정책브리핑 RSS)', url: 'https://www.korea.kr/rss/dept_molit.xml', rss: true },
+  { key: 'fsc_news', name: '금융위 보도자료(정책브리핑 RSS)', url: 'https://www.korea.kr/rss/dept_fsc.xml', rss: true },
   { key: 'nhuf_notice', name: '주택도시기금 공지', url: 'https://nhuf.molit.go.kr/FP/FP08/FP0801/FP080101.jsp' },
 ];
+const minmax = (a) => [Math.min(...a), Math.max(...a)];
 const KEYWORDS = /보금자리|디딤돌|버팀목|신생아|신혼부부|LTV|DSR|DTI|규제지역|조정대상지역|투기과열|토지거래허가|주택담보대출|주담대|대출 한도|금리 인상|금리 인하|가계부채|주택도시기금|정책대출/;
 
 async function getText(url) {
-  const r = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 (ssokjip policy watch; +https://korea-rich.com)', accept: 'text/html,*/*' }, signal: AbortSignal.timeout(45_000), redirect: 'follow' });
+  const r = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'accept-language': 'ko-KR,ko;q=0.9' }, signal: AbortSignal.timeout(45_000), redirect: 'follow' });
   const buf = Buffer.from(await r.arrayBuffer());
   let text = buf.toString('utf8');
   if (/charset=["']?euc-kr/i.test(text.slice(0, 2000)) || /�/.test(text.slice(0, 5000))) { try { text = new TextDecoder('euc-kr').decode(buf); } catch { /* utf8 유지 */ } }
@@ -45,10 +47,14 @@ function rateNumbers(text) {
   for (const m of text.matchAll(/(?<![\d.])(\d{1,2}\.\d{1,2})\s*%?(?![\d.])/g)) { const v = Number(m[1]); if (v >= 0.5 && v <= 12) out.push(v); }
   return out.slice(0, 120);
 }
-/** 보도자료 목록에서 제목 후보(링크 글자) */
-function titles(html) {
+/** 보도자료 목록에서 제목 후보 — RSS면 <title>, HTML이면 링크 글자와 title 속성 */
+function titles(html, rss = false) {
   const out = [];
-  for (const m of html.matchAll(/<a[^>]*>([\s\S]*?)<\/a>/gi)) { const t = stripTags(m[1]).trim(); if (t.length >= 8 && t.length <= 120) out.push(t); }
+  if (rss) { for (const m of html.matchAll(/<item>[\s\S]*?<title>([\s\S]*?)<\/title>/gi)) out.push(stripTags(m[1]).replace(/^<!\[CDATA\[|\]\]>$/g, '').trim()); return [...new Set(out)]; }
+  for (const m of html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)) {
+    const t = stripTags(m[2]).trim(); if (t.length >= 8 && t.length <= 120) out.push(t);
+    const tt = /title=["']([^"']{8,120})["']/i.exec(m[1]); if (tt) out.push(tt[1].trim());
+  }
   return [...new Set(out)];
 }
 function loadRulesAll() {
@@ -93,9 +99,9 @@ async function main() {
   for (const n of NEWS) {
     try {
       const { status, html } = await getText(n.url);
-      const all = titles(html);
+      const all = titles(html, !!n.rss);
       const hits = all.filter((t) => KEYWORDS.test(t));
-      if (probe) { note(`${n.name} HTTP ${status} 링크 ${all.length}개 · 키워드 ${hits.length}개: ${hits.slice(0, 6).join(' | ').slice(0, 400)}`); continue; }
+      if (probe) { note(`${n.name} HTTP ${status} 제목 ${all.length}개 · 키워드 ${hits.length}개: ${hits.slice(0, 5).join(' | ').slice(0, 300)} ‖ 샘플: ${all.filter((t) => t.length > 14).slice(0, 5).join(' | ').slice(0, 300)}`); continue; }
       if (status !== 200 || !all.length) { note(`${n.name}: 응답 이상(HTTP ${status}, 링크 ${all.length}개) — 건너뜀`); continue; }
       const seen = new Set(state.news[n.key] ?? []);
       const fresh = state.news[n.key] ? hits.filter((t) => !seen.has(t)) : [];   // 첫 실행은 기준선만 저장
