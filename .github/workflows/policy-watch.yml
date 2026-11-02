@@ -1,0 +1,46 @@
+name: 정책대출 변경 감시
+# 월·목 09:30 KST — 주금공·주택도시기금 금리표 숫자와 주금공·국토부·금융위·기금 보도자료 제목을 지난번과 비교해, 달라진 게 있으면 카카오톡으로 알린다.
+# 규칙표(data/rules)는 자동으로 바꾸지 않는다. 감지 결과·초안은 data/watch/ 에 남긴다.
+on:
+  schedule:
+    - cron: '30 0 * * 1,4'   # UTC 00:30 = KST 09:30, 월·목
+  workflow_dispatch:
+    inputs:
+      probe:
+        description: '점검 모드(--probe): 소스별 응답·추출 결과만 보고 상태는 저장하지 않음'
+        type: boolean
+        default: false
+
+concurrency:
+  group: data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 감시 + 알림
+        id: watch
+        env:
+          KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
+          KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
+          KAKAO_JS_KEY: ${{ secrets.KAKAO_JS_KEY }}
+        run: node scripts/watch-policy.mjs ${{ inputs.probe && '--probe' || '--notify' }}
+      - name: 커밋·푸시
+        if: ${{ !inputs.probe }}
+        run: |
+          git config user.name "ssokjip-bot"
+          git config user.email "bot@korea-rich.com"
+          git add data/watch
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -m "정책대출 감시 $(TZ=Asia/Seoul date +%F): 알림 ${{ steps.watch.outputs.alerts || 0 }}건"
+          git pull --rebase origin main
+          git push origin HEAD:main

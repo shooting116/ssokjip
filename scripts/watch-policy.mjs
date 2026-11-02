@@ -1,0 +1,123 @@
+#!/usr/bin/env node
+// 정책대출·규제 변경 감시: 공식 페이지의 금리표 숫자와 보도자료 제목을 읽어 지난번과 비교하고, 달라진 게 있으면 카카오톡으로 알린다.
+// 규칙표는 자동으로 바꾸지 않는다 — 감지·알림·초안(data/watch/)까지만. 확정은 사람이 규칙표에 새 버전으로 넣는다.
+//   node scripts/watch-policy.mjs [--notify] [--probe]
+//   --probe: 각 소스의 응답·추출 결과를 그대로 보여준다(파싱 점검용, 상태 저장 안 함)
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
+import { ROOT } from './lib/regions.mjs';
+import { kakaoMemo } from './lib/kakao.mjs';
+
+const args = new Set(process.argv.slice(2));
+const notify = args.has('--notify'), probe = args.has('--probe');
+const OUT = join(ROOT, 'data', 'watch');
+const STATE = join(OUT, 'policy-state.json');
+const today = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);   // KST
+const notices = [];
+const note = (m) => { console.log(m); notices.push(m); };
+
+// 감시 대상 — 공식 기관 페이지만
+const PAGES = [
+  { key: 'hf_bogeumjari_rate', name: '보금자리론 금리표(주금공)', url: 'https://www.hf.go.kr/ko/sub01/sub01_01_04.do', rules: (r) => [...r.policy.products.bogeumjari.rate_table.akkime, ...r.policy.products.bogeumjari.rate_table.u_t] },
+  { key: 'nhuf_didimdol', name: '디딤돌대출(주택도시기금)', url: 'https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030101.jsp', rules: (r) => r.policy.products.didimdol.rate_table.rows.flat() },
+  { key: 'nhuf_newlywed', name: '신혼부부 전용 구입자금(주택도시기금)', url: 'https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030601.jsp', rules: (r) => r.policy.products.newlywed_first.rate_table.rows.flat() },
+  { key: 'nhuf_newborn', name: '신생아 특례(주택도시기금)', url: 'https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030801.jsp', rules: (r) => r.policy.products.newborn.rate_table.rows.flat() },
+];
+const NEWS = [
+  { key: 'hf_news', name: '주금공 보도자료', url: 'https://www.hf.go.kr/ko/sub06/sub06_01_01.do' },
+  { key: 'molit_news', name: '국토부 보도자료', url: 'https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp' },
+  { key: 'fsc_news', name: '금융위 보도자료', url: 'https://www.fsc.go.kr/no010101' },
+  { key: 'nhuf_notice', name: '주택도시기금 공지', url: 'https://nhuf.molit.go.kr/FP/FP08/FP0801/FP080101.jsp' },
+];
+const KEYWORDS = /보금자리|디딤돌|버팀목|신생아|신혼부부|LTV|DSR|DTI|규제지역|조정대상지역|투기과열|토지거래허가|주택담보대출|주담대|대출 한도|금리 인상|금리 인하|가계부채|주택도시기금|정책대출/;
+
+async function getText(url) {
+  const r = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 (ssokjip policy watch; +https://korea-rich.com)', accept: 'text/html,*/*' }, signal: AbortSignal.timeout(45_000), redirect: 'follow' });
+  const buf = Buffer.from(await r.arrayBuffer());
+  let text = buf.toString('utf8');
+  if (/charset=["']?euc-kr/i.test(text.slice(0, 2000)) || /�/.test(text.slice(0, 5000))) { try { text = new TextDecoder('euc-kr').decode(buf); } catch { /* utf8 유지 */ } }
+  return { status: r.status, html: text };
+}
+const stripTags = (html) => html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ');
+/** 본문에서 금리처럼 생긴 숫자(0.5~12.0, 소수 둘째 자리)만 순서대로 뽑는다 — 표 구조를 몰라도 '숫자 지문'으로 변경을 잡는다 */
+function rateNumbers(text) {
+  const out = [];
+  for (const m of text.matchAll(/(?<![\d.])(\d{1,2}\.\d{1,2})\s*%?(?![\d.])/g)) { const v = Number(m[1]); if (v >= 0.5 && v <= 12) out.push(v); }
+  return out.slice(0, 120);
+}
+/** 보도자료 목록에서 제목 후보(링크 글자) */
+function titles(html) {
+  const out = [];
+  for (const m of html.matchAll(/<a[^>]*>([\s\S]*?)<\/a>/gi)) { const t = stripTags(m[1]).trim(); if (t.length >= 8 && t.length <= 120) out.push(t); }
+  return [...new Set(out)];
+}
+function loadRulesAll() {
+  const dir = join(ROOT, 'data', 'rules');
+  return readdirSync(dir).filter((f) => /^v\d{4}-\d{2}-\d{2}\.json$/.test(f)).sort().map((f) => JSON.parse(readFileSync(join(dir, f), 'utf8')));
+}
+const uniq = (a) => [...new Set(a)];
+const fmt = (a) => (a.length ? `${Math.min(...a)}~${Math.max(...a)}` : '-');
+
+async function main() {
+  mkdirSync(OUT, { recursive: true });
+  const state = existsSync(STATE) ? JSON.parse(readFileSync(STATE, 'utf8')) : { pages: {}, news: {} };
+  const rulesAll = loadRulesAll();
+  const current = rulesAll.filter((r) => r.meta.effective_from <= today).at(-1);
+  const future = rulesAll.filter((r) => r.meta.effective_from > today);
+  const alerts = [];
+  const drafts = {};
+
+  for (const p of PAGES) {
+    try {
+      const { status, html } = await getText(p.url);
+      const text = stripTags(html);
+      const nums = rateNumbers(text);
+      const fp = nums.join(',');
+      const prev = state.pages[p.key];
+      const ruleNow = uniq(p.rules(current)), ruleFuture = future.map((r) => uniq(p.rules(r)));
+      const has = (set) => set.every((v) => nums.includes(v));
+      const matchNow = has(ruleNow), matchFuture = ruleFuture.some(has);
+      if (probe) { note(`${p.name} HTTP ${status} 글자 ${text.length} · 숫자 ${nums.length}개: ${nums.slice(0, 40).join(' ')} · 규칙표(시행중) 포함 ${matchNow}${ruleFuture.length ? ` · 예정판 포함 ${matchFuture}` : ''}`); continue; }
+      if (status !== 200 || !nums.length) { note(`${p.name}: 응답 이상(HTTP ${status}, 숫자 ${nums.length}개) — 건너뜀`); continue; }
+      if (prev && prev.fp !== fp) {
+        const gone = prev.nums.filter((v) => !nums.includes(v)), added = nums.filter((v) => !prev.nums.includes(v));
+        alerts.push(`▶ ${p.name} 숫자 변경: 빠짐 ${uniq(gone).slice(0, 8).join(' ') || '-'} / 새로 ${uniq(added).slice(0, 8).join(' ') || '-'} · 규칙표 ${matchNow ? '일치' : matchFuture ? '예정판과 일치' : '불일치 → 확인 필요'}`);
+        drafts[p.key] = { page: p.url, checked: today, numbers: nums, previous: prev.nums, rules_now: ruleNow, rules_future: ruleFuture };
+      } else if (!prev && !matchNow && !matchFuture) {
+        alerts.push(`▶ ${p.name}: 규칙표 금리(${fmt(ruleNow)})가 페이지에 안 보임 → 표가 바뀌었는지 확인`);
+      }
+      state.pages[p.key] = { fp, nums, checked: today, matchNow, matchFuture };
+    } catch (e) { note(`${p.name} 실패: ${String(e.message).slice(0, 120)}`); }
+  }
+
+  for (const n of NEWS) {
+    try {
+      const { status, html } = await getText(n.url);
+      const all = titles(html);
+      const hits = all.filter((t) => KEYWORDS.test(t));
+      if (probe) { note(`${n.name} HTTP ${status} 링크 ${all.length}개 · 키워드 ${hits.length}개: ${hits.slice(0, 6).join(' | ').slice(0, 400)}`); continue; }
+      if (status !== 200 || !all.length) { note(`${n.name}: 응답 이상(HTTP ${status}, 링크 ${all.length}개) — 건너뜀`); continue; }
+      const seen = new Set(state.news[n.key] ?? []);
+      const fresh = state.news[n.key] ? hits.filter((t) => !seen.has(t)) : [];   // 첫 실행은 기준선만 저장
+      if (fresh.length) alerts.push(`▶ ${n.name} 새 글 ${fresh.length}건: ${fresh.slice(0, 3).map((t) => t.slice(0, 40)).join(' / ')}`);
+      state.news[n.key] = uniq([...hits, ...(state.news[n.key] ?? [])]).slice(0, 200);
+    } catch (e) { note(`${n.name} 실패: ${String(e.message).slice(0, 120)}`); }
+  }
+
+  if (probe) { finish(); return; }
+  state.lastRun = today;
+  writeFileSync(STATE, JSON.stringify(state, null, 1) + '\n');
+  if (Object.keys(drafts).length) writeFileSync(join(OUT, `draft-${today}.json`), JSON.stringify({ note: '감시기가 감지한 페이지 숫자. 규칙표에 넣기 전에 사람이 시행일·경과규정을 확인한다.', ...drafts }, null, 1) + '\n');
+
+  const head = `[쏙집 정책대출 감시 ${today.slice(5).replace('-', '/')}]`;
+  if (alerts.length) {
+    const msg = [head, ...alerts, `규칙표: 시행중 ${current.meta.version}(${current.meta.effective_from})${future.length ? ` · 예정 ${future.map((r) => `${r.meta.version}(${r.meta.effective_from})`).join(', ')}` : ''}`, '반영은 자동으로 하지 않습니다 — 확인 후 "반영"이라고 말해 주세요.'].join('\n').slice(0, 900);
+    note(msg);
+    if (notify) { const sent = await kakaoMemo(msg); console.log(sent ? '카카오톡 알림 전송' : '카카오톡 알림 안 보냄'); }
+  } else note(`${head} 변경 없음 (페이지 ${Object.keys(state.pages).length} · 보도자료 ${Object.keys(state.news).length})`);
+  if (process.env.GITHUB_OUTPUT) writeFileSync(process.env.GITHUB_OUTPUT, `alerts=${alerts.length}\n`, { flag: 'a' });
+  finish();
+}
+function finish() { if (process.env.GITHUB_ACTIONS) for (let i = 0; i < notices.length; i += 4) console.log(`::notice title=policy-watch ${i / 4 + 1}::${notices.slice(i, i + 4).join(' | ').slice(0, 3900)}`); }
+
+main().catch((e) => { console.error('[policy-watch] 오류:', e.message); if (process.env.GITHUB_ACTIONS) console.log(`::error title=policy-watch::${String(e.message).slice(0, 800)}`); process.exit(1); });
