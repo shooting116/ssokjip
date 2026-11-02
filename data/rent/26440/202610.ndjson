@@ -33,6 +33,7 @@
 {"lawd":"26440","umdNm":"지사동","jibun":"1184-1","apt":"지사금강펜테리움","area":59.96,"floor":2,"built":2013,"date":"2026-10-02","deposit":8400,"rent":9,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3232","apt":"퀸덤1차아인슈타인타운","area":117.27,"floor":3,"built":2009,"date":"2026-10-02","deposit":33000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"지사동","jibun":"1186","apt":"협성·DS엘리시안","area":59.99,"floor":11,"built":2015,"date":"2026-10-02","deposit":12300,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":12500,"preRent":0}
+{"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":8,"built":2018,"date":"2026-10-03","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":15,"built":2018,"date":"2026-10-03","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3354","apt":"명지1차 금강펜테리움 센트럴파크","area":61.26,"floor":1,"built":2015,"date":"2026-10-03","deposit":25000,"rent":0,"term":"26.12~27.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3599-3","apt":"명지국제신도시삼정그린코아더베스트","area":101.08,"floor":8,"built":2019,"date":"2026-10-03","deposit":34000,"rent":0,"term":"26.12~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -42,6 +43,7 @@
 {"lawd":"26440","umdNm":"신호동","jibun":"296-1","apt":"부산신호사랑으로부영1차","area":84.36,"floor":14,"built":2013,"date":"2026-10-03","deposit":14326,"rent":0,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"신호동","jibun":"298-1","apt":"부산신호사랑으로부영2차","area":59.93,"floor":11,"built":2014,"date":"2026-10-03","deposit":12255,"rent":0,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"신호동","jibun":"302-2","apt":"부산신호사랑으로부영5차","area":84.36,"floor":18,"built":2014,"date":"2026-10-03","deposit":15230,"rent":0,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"강동동","jibun":"가-","apt":"부산에코델타시티디에트르더퍼스트","area":85,"floor":6,"built":2026,"date":"2026-10-03","deposit":3000,"rent":110,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3325","apt":"스위트팰리스","area":74.84,"floor":20,"built":2018,"date":"2026-10-03","deposit":4000,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3595-3","apt":"더샵명지퍼스트월드3단지","area":85,"floor":21,"built":2020,"date":"2026-10-04","deposit":33000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":32000,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3234","apt":"명지두산위브포세이돈","area":84.98,"floor":7,"built":2013,"date":"2026-10-04","deposit":3000,"rent":100,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -112,6 +114,7 @@
 {"lawd":"26440","umdNm":"강동동","jibun":"가-","apt":"부산에코델타시티디에트르더퍼스트","area":85,"floor":6,"built":2026,"date":"2026-10-08","deposit":3000,"rent":110,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59,"floor":14,"built":2018,"date":"2026-10-09","deposit":19640,"rent":9,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":3,"built":2018,"date":"2026-10-09","deposit":19640,"rent":9,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"명지동","jibun":"3595-3","apt":"더샵명지퍼스트월드3단지","area":85,"floor":29,"built":2020,"date":"2026-10-09","deposit":2000,"rent":140,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":2000,"preRent":115}
 {"lawd":"26440","umdNm":"명지동","jibun":"3404","apt":"더힐시그니처","area":135.3,"floor":5,"built":2019,"date":"2026-10-09","deposit":50000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":50000,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3354","apt":"명지1차 금강펜테리움 센트럴파크","area":84.26,"floor":3,"built":2015,"date":"2026-10-09","deposit":30000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3328","apt":"명지협성휴포레","area":59.96,"floor":2,"built":2016,"date":"2026-10-09","deposit":23000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -211,6 +214,7 @@
 {"lawd":"26440","umdNm":"신호동","jibun":"300-1","apt":"부산신호사랑으로부영3차","area":147.1,"floor":16,"built":2014,"date":"2026-10-15","deposit":28783,"rent":0,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"신호동","jibun":"302-2","apt":"부산신호사랑으로부영5차","area":84.36,"floor":16,"built":2014,"date":"2026-10-15","deposit":15230,"rent":1,"term":"26.12~27.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3232","apt":"퀸덤1차아인슈타인타운","area":84.97,"floor":11,"built":2009,"date":"2026-10-15","deposit":16000,"rent":40,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.73,"floor":5,"built":2018,"date":"2026-10-16","deposit":19630,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19130,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.73,"floor":11,"built":2018,"date":"2026-10-16","deposit":19630,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19130,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.89,"floor":14,"built":2018,"date":"2026-10-16","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.89,"floor":17,"built":2018,"date":"2026-10-16","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
@@ -230,6 +234,7 @@
 {"lawd":"26440","umdNm":"신호동","jibun":"302-2","apt":"부산신호사랑으로부영5차","area":84.98,"floor":9,"built":2014,"date":"2026-10-16","deposit":15230,"rent":0,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"신호동","jibun":"302-2","apt":"부산신호사랑으로부영5차","area":147.1,"floor":16,"built":2014,"date":"2026-10-16","deposit":28783,"rent":0,"term":"26.11~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3361","apt":"에일린의 뜰","area":75.29,"floor":17,"built":2015,"date":"2026-10-16","deposit":31000,"rent":0,"term":"27.01~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"명지동","jibun":"3235","apt":"엘크루솔마레","area":84.99,"floor":3,"built":2014,"date":"2026-10-16","deposit":3000,"rent":110,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.89,"floor":8,"built":2018,"date":"2026-10-17","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.96,"floor":6,"built":2018,"date":"2026-10-17","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.96,"floor":12,"built":2018,"date":"2026-10-17","deposit":19640,"rent":9,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -262,7 +267,7 @@
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":13,"built":2018,"date":"2026-10-19","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":14,"built":2018,"date":"2026-10-19","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":15,"built":2018,"date":"2026-10-19","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
-{"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":17,"built":2018,"date":"2026-10-19","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
+{"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":17,"built":2018,"date":"2026-10-19","deposit":19640,"rent":9,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":18,"built":2018,"date":"2026-10-19","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"화전동","jibun":"558","apt":"명지화전우방아이유쉘","area":59.87,"floor":6,"built":2020,"date":"2026-10-19","deposit":14000,"rent":0,"term":"27.01~28.01","type":"갱신","rrr":null,"preDeposit":14000,"preRent":0}
 {"lawd":"26440","umdNm":"화전동","jibun":"558","apt":"명지화전우방아이유쉘","area":59.95,"floor":14,"built":2020,"date":"2026-10-19","deposit":14000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -324,6 +329,7 @@
 {"lawd":"26440","umdNm":"명지동","jibun":"3243","apt":"엘크루블루오션","area":124.47,"floor":4,"built":2012,"date":"2026-10-21","deposit":15000,"rent":120,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.96,"floor":8,"built":2018,"date":"2026-10-22","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.96,"floor":19,"built":2018,"date":"2026-10-22","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
+{"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":5,"built":2018,"date":"2026-10-22","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":9,"built":2018,"date":"2026-10-22","deposit":19640,"rent":9,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":10,"built":2018,"date":"2026-10-22","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":11,"built":2018,"date":"2026-10-22","deposit":19640,"rent":9,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -370,7 +376,9 @@
 {"lawd":"26440","umdNm":"명지동","jibun":"3399","apt":"명지더웨스턴","area":84.61,"floor":2,"built":2018,"date":"2026-10-24","deposit":27000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"신호동","jibun":"298-1","apt":"부산신호사랑으로부영2차","area":59.93,"floor":14,"built":2014,"date":"2026-10-24","deposit":12255,"rent":1,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"강동동","jibun":"가-","apt":"중흥S-클래스에코델타시티","area":84.97,"floor":12,"built":2026,"date":"2026-10-24","deposit":25000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"강동동","jibun":"가-","apt":"중흥S-클래스에코델타시티","area":84.97,"floor":13,"built":2026,"date":"2026-10-24","deposit":3000,"rent":120,"term":"26.12~27.06","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"지사동","jibun":"1185-1","apt":"지사과학삼정그린코아","area":59.98,"floor":16,"built":2017,"date":"2026-10-24","deposit":12500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"명지동","jibun":"3232","apt":"퀸덤1차아인슈타인타운","area":84.97,"floor":1,"built":2009,"date":"2026-10-24","deposit":3000,"rent":100,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":8,"built":2018,"date":"2026-10-25","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":9,"built":2018,"date":"2026-10-25","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":14,"built":2018,"date":"2026-10-25","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
@@ -437,6 +445,7 @@
 {"lawd":"26440","umdNm":"지사동","jibun":"1184-1","apt":"지사금강펜테리움","area":59.99,"floor":11,"built":2013,"date":"2026-10-28","deposit":11000,"rent":0,"term":"26.11~28.06","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.89,"floor":5,"built":2018,"date":"2026-10-29","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.89,"floor":19,"built":2018,"date":"2026-10-29","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
+{"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.96,"floor":1,"built":2018,"date":"2026-10-29","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.96,"floor":5,"built":2018,"date":"2026-10-29","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.96,"floor":11,"built":2018,"date":"2026-10-29","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
 {"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":3,"built":2018,"date":"2026-10-29","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
@@ -473,3 +482,14 @@
 {"lawd":"26440","umdNm":"신호동","jibun":"300-1","apt":"부산신호사랑으로부영3차","area":84.36,"floor":1,"built":2014,"date":"2026-10-30","deposit":15230,"rent":1,"term":"26.12~27.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"신호동","jibun":"300-1","apt":"부산신호사랑으로부영3차","area":84.36,"floor":5,"built":2014,"date":"2026-10-30","deposit":15230,"rent":0,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26440","umdNm":"신호동","jibun":"300-1","apt":"부산신호사랑으로부영3차","area":84.88,"floor":12,"built":2014,"date":"2026-10-30","deposit":14407,"rent":0,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"신호동","jibun":"302-2","apt":"부산신호사랑으로부영5차","area":147.1,"floor":11,"built":2014,"date":"2026-10-30","deposit":29243,"rent":0,"term":"27.01~28.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"지사동","jibun":"1186","apt":"협성·DS엘리시안","area":59.99,"floor":11,"built":2015,"date":"2026-10-30","deposit":1500,"rent":100,"term":"26.10~27.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":3,"built":2018,"date":"2026-10-31","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
+{"lawd":"26440","umdNm":"명지동","jibun":"3347","apt":"금강펜테리움센트럴파크3차","area":59.98,"floor":14,"built":2018,"date":"2026-10-31","deposit":19640,"rent":9,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19140,"preRent":9}
+{"lawd":"26440","umdNm":"명지동","jibun":"3595-3","apt":"더샵명지퍼스트월드3단지","area":84.96,"floor":1,"built":2020,"date":"2026-10-31","deposit":33000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"명지동","jibun":"3354","apt":"명지1차 금강펜테리움 센트럴파크","area":61.26,"floor":16,"built":2015,"date":"2026-10-31","deposit":25000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"명지동","jibun":"3344","apt":"명지국제신도시호반베르디움2차","area":84.8,"floor":21,"built":2017,"date":"2026-10-31","deposit":30000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"명지동","jibun":"3236","apt":"명지오션시티한신휴플러스","area":84.99,"floor":3,"built":2014,"date":"2026-10-31","deposit":28000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"명지동","jibun":"3328","apt":"명지협성휴포레","area":59.94,"floor":13,"built":2016,"date":"2026-10-31","deposit":23500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"강동동","jibun":"가-","apt":"부산에코델타시티디에트르더퍼스트","area":84.99,"floor":10,"built":2026,"date":"2026-10-31","deposit":28000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26440","umdNm":"지사동","jibun":"1185-1","apt":"지사과학삼정그린코아","area":66.3,"floor":15,"built":2017,"date":"2026-10-31","deposit":2000,"rent":65,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

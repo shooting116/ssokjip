@@ -7,6 +7,7 @@
 {"lawd":"26530","umdNm":"감전동","jibun":"961","apt":"감전엘에이치","area":46.95,"floor":11,"built":2014,"date":"2026-10-02","deposit":6308,"rent":11,"term":"26.10~28.05","type":"갱신","rrr":null,"preDeposit":3208,"preRent":27}
 {"lawd":"26530","umdNm":"괘법동","jibun":"523-19","apt":"그랑드원","area":22.99,"floor":3,"built":2013,"date":"2026-10-02","deposit":1900,"rent":30,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"주례동","jibun":"1010-3","apt":"벽산신화","area":60.48,"floor":11,"built":1993,"date":"2026-10-02","deposit":9400,"rent":10,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"괘법동","jibun":"984","apt":"센트럴스타힐스","area":59.99,"floor":23,"built":2022,"date":"2026-10-02","deposit":28600,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":26000,"preRent":0}
 {"lawd":"26530","umdNm":"학장동","jibun":"571-3","apt":"신구덕우성","area":84.97,"floor":5,"built":2000,"date":"2026-10-02","deposit":20000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"괘법동","jibun":"542-15","apt":"아이더블유타워","area":42.04,"floor":3,"built":2019,"date":"2026-10-02","deposit":2500,"rent":65,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"주례동","jibun":"80-142","apt":"광우파크","area":51.84,"floor":3,"built":1986,"date":"2026-10-03","deposit":500,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -33,6 +34,8 @@
 {"lawd":"26530","umdNm":"감전동","jibun":"134-1","apt":"엘메르","area":68.16,"floor":16,"built":2025,"date":"2026-10-07","deposit":20056,"rent":0,"term":"26.10~29.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"감전동","jibun":"134-1","apt":"엘메르","area":68.25,"floor":12,"built":2025,"date":"2026-10-07","deposit":19650,"rent":0,"term":"26.10~29.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"감전동","jibun":"134-1","apt":"엘메르","area":71.28,"floor":13,"built":2025,"date":"2026-10-07","deposit":21193,"rent":0,"term":"26.10~29.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"괘법동","jibun":"541-3","apt":"올유레스틴뷰","area":37.82,"floor":10,"built":2018,"date":"2026-10-07","deposit":1000,"rent":70,"term":"26.11~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"주례동","jibun":"616-4","apt":"주례벽산","area":72.69,"floor":8,"built":1992,"date":"2026-10-07","deposit":1000,"rent":45,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"학장동","jibun":"210-1","apt":"학장동양","area":63.72,"floor":3,"built":1984,"date":"2026-10-07","deposit":1000,"rent":37,"term":"26.10~29.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"감전동","jibun":"118-6","apt":"감전역예서두레라움","area":48.4,"floor":5,"built":2018,"date":"2026-10-08","deposit":12000,"rent":34,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"괘법동","jibun":"548-7","apt":"강일프라임빌","area":42.13,"floor":11,"built":2014,"date":"2026-10-08","deposit":1000,"rent":60,"term":"26.12~27.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -70,6 +73,7 @@
 {"lawd":"26530","umdNm":"괘법동","jibun":"984","apt":"센트럴스타힐스","area":59.99,"floor":7,"built":2022,"date":"2026-10-15","deposit":10000,"rent":65,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":10950,"preRent":40}
 {"lawd":"26530","umdNm":"엄궁동","jibun":"683-3","apt":"엄궁2차한신","area":118.51,"floor":19,"built":1999,"date":"2026-10-15","deposit":15000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"모라동","jibun":"313","apt":"우성2차","area":84.91,"floor":15,"built":1996,"date":"2026-10-15","deposit":11000,"rent":30,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"모라동","jibun":"75","apt":"주공4","area":49.94,"floor":5,"built":1993,"date":"2026-10-15","deposit":1000,"rent":45,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"괘법동","jibun":"541-2","apt":"사상역이즈팰리스","area":43.44,"floor":10,"built":2016,"date":"2026-10-16","deposit":1000,"rent":65,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"덕포동","jibun":"198","apt":"유원","area":53.84,"floor":2,"built":1980,"date":"2026-10-16","deposit":9000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"주례동","jibun":"1289","apt":"주례롯데캐슬골드스마트","area":59.92,"floor":14,"built":2022,"date":"2026-10-16","deposit":32500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -80,6 +84,7 @@
 {"lawd":"26530","umdNm":"엄궁동","jibun":"25-110","apt":"엄궁럭키","area":68.59,"floor":9,"built":1993,"date":"2026-10-17","deposit":11000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"주례동","jibun":"1289","apt":"주례롯데캐슬골드스마트","area":84.86,"floor":27,"built":2022,"date":"2026-10-17","deposit":44000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"주례동","jibun":"1289","apt":"주례롯데캐슬골드스마트","area":59.92,"floor":25,"built":2022,"date":"2026-10-18","deposit":36000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"주례동","jibun":"1289","apt":"주례롯데캐슬골드스마트","area":84.88,"floor":19,"built":2022,"date":"2026-10-18","deposit":30000,"rent":50,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"감전동","jibun":"118-6","apt":"감전역예서두레라움","area":48.4,"floor":14,"built":2018,"date":"2026-10-19","deposit":11000,"rent":58,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"모라동","jibun":"991-2","apt":"모라동골든파크","area":84.83,"floor":10,"built":2005,"date":"2026-10-19","deposit":14000,"rent":35,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"괘법동","jibun":"984","apt":"센트럴스타힐스","area":84.81,"floor":14,"built":2022,"date":"2026-10-19","deposit":5000,"rent":160,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -100,9 +105,11 @@
 {"lawd":"26530","umdNm":"주례동","jibun":"1289","apt":"주례롯데캐슬골드스마트","area":73.68,"floor":14,"built":2022,"date":"2026-10-23","deposit":37000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"주례동","jibun":"221-1","apt":"주례센텀","area":59.94,"floor":8,"built":2014,"date":"2026-10-23","deposit":2000,"rent":80,"term":"26.12~27.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"주례동","jibun":"305","apt":"현대","area":71.8,"floor":4,"built":1989,"date":"2026-10-23","deposit":13000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"감전동","jibun":"118-6","apt":"감전역예서두레라움","area":48.4,"floor":16,"built":2018,"date":"2026-10-24","deposit":12000,"rent":34,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"모라동","jibun":"552","apt":"백양그린","area":49.94,"floor":1,"built":1992,"date":"2026-10-24","deposit":2000,"rent":20,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"괘법동","jibun":"550-2","apt":"사상역봄여름가을겨울","area":68.87,"floor":5,"built":2023,"date":"2026-10-24","deposit":3000,"rent":80,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"학장동","jibun":"437","apt":"삼정송림맨션","area":43.74,"floor":5,"built":1986,"date":"2026-10-24","deposit":500,"rent":35,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"괘법동","jibun":"543-3","apt":"포에스타워","area":21.05,"floor":8,"built":2013,"date":"2026-10-24","deposit":500,"rent":49,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"학장동","jibun":"168-8","apt":"구학마을","area":46.32,"floor":12,"built":1992,"date":"2026-10-25","deposit":500,"rent":40,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"모라동","jibun":"1375-1","apt":"모라역베스티움더시티","area":49.55,"floor":6,"built":2020,"date":"2026-10-26","deposit":15000,"rent":12,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"괘법동","jibun":"984","apt":"센트럴스타힐스","area":59.99,"floor":14,"built":2022,"date":"2026-10-26","deposit":30000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -116,9 +123,15 @@
 {"lawd":"26530","umdNm":"학장동","jibun":"574-82","apt":"목화","area":49.97,"floor":18,"built":1993,"date":"2026-10-28","deposit":8500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"엄궁동","jibun":"726","apt":"롯데캐슬","area":59.99,"floor":19,"built":2010,"date":"2026-10-29","deposit":6000,"rent":60,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"엄궁동","jibun":"726","apt":"롯데캐슬","area":84.97,"floor":2,"built":2010,"date":"2026-10-29","deposit":10732,"rent":21,"term":"27.02~29.02","type":"갱신","rrr":null,"preDeposit":11116,"preRent":25}
+{"lawd":"26530","umdNm":"엄궁동","jibun":"726","apt":"롯데캐슬","area":84.97,"floor":14,"built":2010,"date":"2026-10-29","deposit":9194,"rent":21,"term":"26.11~27.01","type":"갱신","rrr":null,"preDeposit":9536,"preRent":22}
 {"lawd":"26530","umdNm":"학장동","jibun":"574-82","apt":"목화","area":40.42,"floor":8,"built":1993,"date":"2026-10-29","deposit":6200,"rent":10,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"괘법동","jibun":"509-6","apt":"사상샬레","area":45.84,"floor":11,"built":2016,"date":"2026-10-29","deposit":2000,"rent":55,"term":"26.12~27.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"주례동","jibun":"1288","apt":"주례경동리인","area":67.76,"floor":18,"built":2017,"date":"2026-10-29","deposit":2000,"rent":90,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"주례동","jibun":"1289","apt":"주례롯데캐슬골드스마트","area":59.92,"floor":27,"built":2022,"date":"2026-10-29","deposit":30000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":24150,"preRent":0}
+{"lawd":"26530","umdNm":"괘법동","jibun":"548-3","apt":"리베르캐슬","area":30.23,"floor":7,"built":2016,"date":"2026-10-30","deposit":1000,"rent":60,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"모라동","jibun":"203","apt":"모라벽산","area":121.83,"floor":9,"built":2001,"date":"2026-10-30","deposit":14000,"rent":55,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"엄궁동","jibun":"683-3","apt":"엄궁2차한신","area":59.98,"floor":7,"built":1999,"date":"2026-10-30","deposit":9000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":8000,"preRent":0}
 {"lawd":"26530","umdNm":"주례동","jibun":"1289","apt":"주례롯데캐슬골드스마트","area":84.88,"floor":7,"built":2022,"date":"2026-10-30","deposit":40000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":28350,"preRent":0}
 {"lawd":"26530","umdNm":"주례동","jibun":"1289","apt":"주례롯데캐슬골드스마트","area":84.88,"floor":33,"built":2022,"date":"2026-10-30","deposit":37000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"주례동","jibun":"239","apt":"한일유엔아이","area":149.93,"floor":3,"built":2005,"date":"2026-10-30","deposit":0,"rent":110,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"주례동","jibun":"1289","apt":"주례롯데캐슬골드스마트","area":84.86,"floor":20,"built":2022,"date":"2026-10-31","deposit":40000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
