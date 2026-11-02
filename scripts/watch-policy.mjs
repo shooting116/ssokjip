@@ -37,6 +37,12 @@ const KEYWORDS = /보금자리|디딤돌|버팀목|신생아|신혼부부|LTV|DS
 
 async function getText(url) {
   const r = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'accept-language': 'ko-KR,ko;q=0.9', referer: new URL(url).origin + '/' }, signal: AbortSignal.timeout(45_000), redirect: 'follow' });
+  if (r.status === 406) {   // 일부 공공 사이트(주택도시기금)는 accept 헤더가 길면 406을 낸다 → 단순 헤더로 한 번 더
+    const r2 = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0', accept: '*/*' }, signal: AbortSignal.timeout(45_000), redirect: 'follow' });
+    const b2 = Buffer.from(await r2.arrayBuffer()); let t2 = b2.toString('utf8');
+    if (/charset=["']?euc-kr/i.test(t2.slice(0, 2000)) || /�/.test(t2.slice(0, 5000))) { try { t2 = new TextDecoder('euc-kr').decode(b2); } catch { /* utf8 유지 */ } }
+    return { status: r2.status, html: t2, ctype: r2.headers.get('content-type') ?? '' };
+  }
   const buf = Buffer.from(await r.arrayBuffer());
   let text = buf.toString('utf8');
   if (/charset=["']?euc-kr/i.test(text.slice(0, 2000)) || /�/.test(text.slice(0, 5000))) { try { text = new TextDecoder('euc-kr').decode(buf); } catch { /* utf8 유지 */ } }
@@ -74,7 +80,10 @@ async function tryOnly() {
       const all = titles(html, isRss);
       const hits = all.filter((t) => KEYWORDS.test(t));
       const longest = [...all].sort((x, y) => y.length - x.length).slice(0, 6);
-      note(`[try] ${u} → HTTP ${status} ${ctype.split(';')[0]} ${html.length}자 · ${isRss ? 'RSS' : 'HTML'} 제목 ${all.length}개 · 키워드 ${hits.length}개 · 긴 제목: ${longest.join(' | ').slice(0, 500)} · 본문: ${stripTags(html).slice(0, 200)}`);
+      const fields = [...new Set([...html.matchAll(/<(?:select|input)\b[^>]*\bname=["']([^"']+)["']/gi)].map((m) => m[1]))].slice(0, 30);
+      const opts = [...html.matchAll(/<option\b[^>]*value=["']([^"']*)["'][^>]*>\s*(국토교통부|금융위원회)\s*</gi)].map((m) => `${m[2]}=${m[1]}`);
+      const links = [...new Set([...html.matchAll(/href=["']([^"']*(?:rss|\.xml)[^"']*)["']/gi)].map((m) => m[1]))].slice(0, 5);
+      note(`[try] ${u} → HTTP ${status} ${ctype.split(';')[0]} ${html.length}자 · ${isRss ? 'RSS' : 'HTML'} 제목 ${all.length}개 · 키워드 ${hits.length}개 · 긴 제목: ${longest.join(' | ').slice(0, 400)} · 필드: ${fields.join(',')} · 옵션: ${opts.join(',')} · rss링크: ${links.join(' ')} · 본문: ${stripTags(html).slice(0, 160)}`);
     } catch (e) { note(`[try] ${u} → 실패: ${e?.cause?.code ?? e?.cause?.message ?? e?.message ?? e}`); }
   }
   if (process.env.GITHUB_ACTIONS) notices.forEach((m, i) => console.log(`::notice title=try ${i + 1}::${m.slice(0, 3900)}`));
