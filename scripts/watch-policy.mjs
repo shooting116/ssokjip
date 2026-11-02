@@ -64,7 +64,22 @@ function loadRulesAll() {
 const uniq = (a) => [...new Set(a)];
 const fmt = (a) => (a.length ? `${Math.min(...a)}~${Math.max(...a)}` : '-');
 
+async function tryOnly() {
+  for (const u of tryUrls) {
+    try {
+      const { status, html, ctype } = await getText(u);
+      const isRss = /xml|rss/i.test(ctype) || /<rss|<feed/i.test(html.slice(0, 500));
+      const all = titles(html, isRss);
+      const hits = all.filter((t) => KEYWORDS.test(t));
+      const longest = [...all].sort((x, y) => y.length - x.length).slice(0, 6);
+      note(`[try] ${u} → HTTP ${status} ${ctype.split(';')[0]} ${html.length}자 · ${isRss ? 'RSS' : 'HTML'} 제목 ${all.length}개 · 키워드 ${hits.length}개 · 긴 제목: ${longest.join(' | ').slice(0, 500)} · 본문: ${stripTags(html).slice(0, 200)}`);
+    } catch (e) { note(`[try] ${u} → 실패: ${e?.cause?.code ?? e?.cause?.message ?? e?.message ?? e}`); }
+  }
+  if (process.env.GITHUB_ACTIONS) notices.forEach((m, i) => console.log(`::notice title=try ${i + 1}::${m.slice(0, 3900)}`));
+}
+
 async function main() {
+  if (tryUrls.length) return tryOnly();
   mkdirSync(OUT, { recursive: true });
   const state = existsSync(STATE) ? JSON.parse(readFileSync(STATE, 'utf8')) : { pages: {}, news: {} };
   const rulesAll = loadRulesAll();
