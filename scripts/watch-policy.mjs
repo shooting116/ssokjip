@@ -84,8 +84,9 @@ async function tryOnly() {
       const opts = [...html.matchAll(/<option\b[^>]*value=["']([^"']*)["'][^>]*>\s*(국토교통부|금융위원회)\s*</gi)].map((m) => `${m[2]}=${m[1]}`);
       const links = [...new Set([...html.matchAll(/href=["']([^"']*(?:rss|\.xml)[^"']*)["']/gi)].map((m) => m[1]))].slice(0, 5);
       const ctx = [...html.matchAll(/[\s\S]{0,160}금융위원회[\s\S]{0,60}/g)].slice(0, 2).map((m) => m[0].replace(/\s+/g, ' '));
+      const item = /<a\b[^>]*>(?:(?!<\/a>)[\s\S])*?관련 보도자료[\s\S]*?<\/a>/.exec(html)?.[0].replace(/\s+/g, ' ').slice(0, 700) ?? '';
       const srcs = [...html.matchAll(/class="source">\s*<span>([\d.]+)<\/span>\s*<span>([^<]+)<\/span>/g)].map((m) => `${m[1]} ${m[2].trim()}`).slice(0, 12);
-      note(`[try] ${u} → HTTP ${status} ${ctype.split(';')[0]} ${html.length}자 · ${isRss ? 'RSS' : 'HTML'} 제목 ${all.length}개 · 키워드 ${hits.length}개 · 긴 제목: ${longest.join(' | ').slice(0, 400)} · 필드: ${fields.join(',')} · 옵션: ${opts.join(',')} · rss링크: ${links.join(' ')} · 목록 출처: ${srcs.join(', ')} · 금융위 문맥: ${ctx.join(' ⟂ ').slice(0, 600)} · 본문: ${stripTags(html).slice(0, 160)}`);
+      note(`[try] ${u} → HTTP ${status} ${ctype.split(';')[0]} ${html.length}자 · ${isRss ? 'RSS' : 'HTML'} 제목 ${all.length}개 · 키워드 ${hits.length}개 · 긴 제목: ${longest.join(' | ').slice(0, 400)} · 필드: ${fields.join(',')} · 옵션: ${opts.join(',')} · rss링크: ${links.join(' ')} · 목록 출처: ${srcs.join(', ')} · 항목 마크업: ${item} · 금융위 문맥: ${ctx.join(' ⟂ ').slice(0, 300)} · 본문: ${stripTags(html).slice(0, 160)}`);
     } catch (e) { note(`[try] ${u} → 실패: ${e?.cause?.code ?? e?.cause?.message ?? e?.message ?? e}`); }
   }
   if (process.env.GITHUB_ACTIONS) notices.forEach((m, i) => console.log(`::notice title=try ${i + 1}::${m.slice(0, 3900)}`));
