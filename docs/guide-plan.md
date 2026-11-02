@@ -20,7 +20,7 @@
 | 2026-10-31 | 35 | 1주택 양도세 비과세 — 12억·보유·거주 요건 | capital-gains-exempt | tax | none | 완료(capital-gains-exempt) |
 | 2026-11-01 | 36 | 일시적 2주택 — 비과세·취득세 중과 배제 요건 한 장 정리 | temporary-two-homes | tax | calc | 완료(temporary-two-homes) |
 | 2026-11-02 | 37 | 부모 도움받아 집 살 때 — 증여세 공제, 차용증, 자금출처 | family-gift-loan | tax | none | 완료(family-gift-loan) |
-| 2026-11-03 | 38 | 청년 대출 — 만 34세 이하 장래소득 인정 DSR과 정책대출 | youth-loans | loan | calc | |
+| 2026-11-03 | 38 | 청년 대출 — 만 34세 이하 장래소득 인정 DSR과 정책대출 | youth-loans | loan | calc | 완료(youth-loans) |
 | 2026-11-04 | 39 | 신혼부부 정책대출 — 디딤돌·버팀목 신혼 특례, 혼인 7년 기준 | newlywed-loans | loan | calc | |
 | 2026-11-05 | 40 | 주담대 갈아타기(대환) — 온라인 대환 인프라, 중도상환수수료 | refinancing | loan | calc | |
 | 2026-11-06 | 41 | 상환 방식 — 원리금균등·원금균등·체증식, 총이자 차이 | repayment-methods | loan | calc | |
