@@ -31,16 +31,16 @@ const NEWS = [
   { key: 'hf_news', name: '주금공 보도자료', url: 'https://www.hf.go.kr/ko/sub05/sub05_04_05.do', parse: (h) => titles(h).filter((t) => /자세히 보기$/.test(t)).map((t) => t.replace(/\s*자세히 보기$/, '')) },
   { key: 'molit_news', name: '국토부 보도자료(정책브리핑)', url: 'https://www.korea.kr/briefing/pressReleaseList.do?repCodeType=A&repCode=A00006', parse: koreaKr },
   { key: 'fsc_news', name: '금융위 보도자료(정책브리핑)', url: 'https://www.korea.kr/briefing/pressReleaseList.do?repCodeType=A&repCode=C00003', parse: koreaKr },
-  { key: 'fsc_site', name: '금융위 보도자료(누리집)', url: 'https://www.fsc.go.kr/no010101', parse: (h) => titles(h).filter((t) => !/\.(hwpx?|pdf|zip|xlsx?|docx?)$/i.test(t)) },
 ];
 /** 정책브리핑 보도자료 목록: <a href="/briefing/pressReleaseView.do…"><span class="text"><strong>제목</strong>… */
 function koreaKr(html) {
   const out = [];
-  for (const m of html.matchAll(/<a href="\/briefing\/pressReleaseView\.do[^"]*">\s*<span class="text">\s*<strong>([\s\S]*?)<\/strong>/g)) out.push(stripTags(m[1]).replace(/&quot;/g, '"').replace(/&#39;/g, "'").trim());
+  for (const m of html.matchAll(/<a href="\/briefing\/pressReleaseView\.do[^"]*">\s*<span class="text">\s*<strong>([\s\S]*?)<\/strong>/g)) out.push(stripTags(m[1]).trim());
   return [...new Set(out)];
 }
 const minmax = (a) => [Math.min(...a), Math.max(...a)];
-const KEYWORDS = /보금자리|디딤돌|버팀목|신생아|신혼부부|LTV|DSR|DTI|규제지역|조정대상지역|투기과열|토지거래허가|주택담보대출|주담대|대출 한도|금리 인상|금리 인하|가계부채|주택도시기금|정책대출/;
+// 규칙표(정책대출 금리·한도, LTV·DSR, 규제지역, 취득세)에 닿을 만한 제목만 — 공급·교통 등 일반 국토부 자료는 거른다
+const KEYWORDS = /보금자리|디딤돌|버팀목|신생아|신혼부부|LTV|DSR|DTI|규제지역|조정대상지역|투기과열|토지거래허가|주택담보대출|주담대|전세대출|대출 한도|금리 인상|금리 인하|가계부채|가계대출|주택도시기금|정책대출|부동산 대책|주택시장 안정|취득세|양도소득세|종합부동산세|보유세/;
 
 async function getText(url) {
   const r = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'accept-language': 'ko-KR,ko;q=0.9', referer: new URL(url).origin + '/' }, signal: AbortSignal.timeout(45_000), redirect: 'follow' });
@@ -55,7 +55,7 @@ async function getText(url) {
   if (/charset=["']?euc-kr/i.test(text.slice(0, 2000)) || /�/.test(text.slice(0, 5000))) { try { text = new TextDecoder('euc-kr').decode(buf); } catch { /* utf8 유지 */ } }
   return { status: r.status, html: text, ctype: r.headers.get('content-type') ?? '' };
 }
-const stripTags = (html) => html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ');
+const stripTags = (html) => html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'").replace(/&middot;/g, '·').replace(/\s+/g, ' ');
 /** 본문에서 금리처럼 생긴 숫자(0.5~12.0, 소수 둘째 자리)만 순서대로 뽑는다 — 표 구조를 몰라도 '숫자 지문'으로 변경을 잡는다 */
 function rateNumbers(text) {
   const out = [];
