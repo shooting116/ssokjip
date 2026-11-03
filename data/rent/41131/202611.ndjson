@@ -2,3 +2,5 @@
 {"lawd":"41131","umdNm":"단대동","jibun":"124","apt":"진로","area":59.97,"floor":11,"built":1998,"date":"2026-11-01","deposit":30000,"rent":60,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41131","umdNm":"신흥동","jibun":"6961","apt":"산성역자이푸르지오1단지","area":74.96,"floor":4,"built":2024,"date":"2026-11-02","deposit":40000,"rent":150,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41131","umdNm":"창곡동","jibun":"507","apt":"위례보미리즌빌","area":96.21,"floor":5,"built":2017,"date":"2026-11-02","deposit":78750,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":75000,"preRent":0}
+{"lawd":"41131","umdNm":"고등동","jibun":"578","apt":"고등마을","area":26.52,"floor":14,"built":2019,"date":"2026-11-03","deposit":8159,"rent":11,"term":"27.01~28.12","type":"갱신","rrr":null,"preDeposit":5580,"preRent":23}
+{"lawd":"41131","umdNm":"고등동","jibun":"592","apt":"판교밸리호반써밋","area":84.99,"floor":1,"built":2019,"date":"2026-11-03","deposit":10000,"rent":248,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":235}

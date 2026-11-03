@@ -187,6 +187,7 @@
 {"lawd":"26260","umdNm":"온천동","jibun":"1838","apt":"동래효성해링턴플레이스","area":105.32,"floor":11,"built":2019,"date":"2026-10-19","deposit":5000,"rent":200,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26260","umdNm":"온천동","jibun":"1862","apt":"래미안포레스티지2단지","area":49.98,"floor":23,"built":2024,"date":"2026-10-19","deposit":23000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":22000,"preRent":0}
 {"lawd":"26260","umdNm":"사직동","jibun":"1061","apt":"사직하늘채리센티아","area":84.9,"floor":2,"built":2024,"date":"2026-10-19","deposit":28000,"rent":80,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26260","umdNm":"온천동","jibun":"435-1","apt":"온천프라자","area":40.5,"floor":7,"built":1996,"date":"2026-10-19","deposit":2000,"rent":45,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":1000,"preRent":50}
 {"lawd":"26260","umdNm":"수안동","jibun":"329","apt":"이룸더시티","area":64.11,"floor":2,"built":2024,"date":"2026-10-19","deposit":23500,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26260","umdNm":"명륜동","jibun":"805","apt":"힐스테이트명륜트라디움","area":84.93,"floor":16,"built":2022,"date":"2026-10-19","deposit":55000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26260","umdNm":"사직동","jibun":"113-1","apt":"대륙코리아나","area":59.4,"floor":7,"built":1992,"date":"2026-10-20","deposit":18000,"rent":0,"term":"27.01~29.04","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -248,6 +249,7 @@
 {"lawd":"26260","umdNm":"사직동","jibun":"1058","apt":"쌍용더플래티넘사직아시아드아파트","area":84.94,"floor":5,"built":2020,"date":"2026-10-27","deposit":65500,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26260","umdNm":"낙민동","jibun":"172","apt":"한양","area":82.91,"floor":4,"built":1980,"date":"2026-10-27","deposit":15000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":15000,"preRent":0}
 {"lawd":"26260","umdNm":"온천동","jibun":"1853","apt":"동래래미안아이파크","area":84.99,"floor":19,"built":2022,"date":"2026-10-28","deposit":20000,"rent":140,"term":"27.02~29.02","type":"갱신","rrr":null,"preDeposit":20000,"preRent":100}
+{"lawd":"26260","umdNm":"온천동","jibun":"1853","apt":"동래래미안아이파크","area":84.99,"floor":24,"built":2022,"date":"2026-10-28","deposit":30000,"rent":70,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":30000,"preRent":70}
 {"lawd":"26260","umdNm":"명륜동","jibun":"533-229","apt":"동래롯데캐슬퀸","area":84.98,"floor":9,"built":2020,"date":"2026-10-28","deposit":44100,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":42000,"preRent":0}
 {"lawd":"26260","umdNm":"온천동","jibun":"1834","apt":"동래지웰","area":59.97,"floor":22,"built":2018,"date":"2026-10-28","deposit":23000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":22000,"preRent":0}
 {"lawd":"26260","umdNm":"온천동","jibun":"1862","apt":"래미안포레스티지2단지","area":84.98,"floor":11,"built":2024,"date":"2026-10-28","deposit":35000,"rent":0,"term":"26.11~27.10","type":"갱신","rrr":null,"preDeposit":35000,"preRent":0}
@@ -268,6 +270,7 @@
 {"lawd":"26260","umdNm":"안락동","jibun":"1242","apt":"안락뜨란채2단지","area":51.86,"floor":4,"built":2005,"date":"2026-10-30","deposit":5000,"rent":50,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26260","umdNm":"수안동","jibun":"329","apt":"이룸더시티","area":69.93,"floor":3,"built":2024,"date":"2026-10-30","deposit":24000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26260","umdNm":"사직동","jibun":"601-3","apt":"해운","area":60.84,"floor":5,"built":1984,"date":"2026-10-30","deposit":2000,"rent":70,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26260","umdNm":"온천동","jibun":"172-35","apt":"협성스카이라인80","area":31.94,"floor":11,"built":2004,"date":"2026-10-30","deposit":500,"rent":50,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26260","umdNm":"명장동","jibun":"623","apt":"e편한세상동래명장1단지","area":84.98,"floor":11,"built":2019,"date":"2026-10-30","deposit":36750,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":35000,"preRent":0}
 {"lawd":"26260","umdNm":"명장동","jibun":"624","apt":"e편한세상동래명장2단지","area":65.21,"floor":16,"built":2019,"date":"2026-10-30","deposit":34000,"rent":0,"term":"26.10~27.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26260","umdNm":"온천동","jibun":"1846","apt":"e편한세상동래아시아드","area":59.99,"floor":9,"built":2020,"date":"2026-10-30","deposit":42000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -275,3 +278,4 @@
 {"lawd":"26260","umdNm":"온천동","jibun":"1853","apt":"동래래미안아이파크","area":84.99,"floor":8,"built":2022,"date":"2026-10-31","deposit":50000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26260","umdNm":"온천동","jibun":"1863","apt":"래미안포레스티지3단지","area":72.91,"floor":15,"built":2024,"date":"2026-10-31","deposit":8000,"rent":115,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":8000,"preRent":110}
 {"lawd":"26260","umdNm":"사직동","jibun":"1017","apt":"사직쌍용예가","area":119.01,"floor":20,"built":2006,"date":"2026-10-31","deposit":31000,"rent":40,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26260","umdNm":"수안동","jibun":"34-1","apt":"새동래3","area":51.22,"floor":4,"built":1981,"date":"2026-10-31","deposit":10000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
