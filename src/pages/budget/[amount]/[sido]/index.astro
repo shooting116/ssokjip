@@ -34,7 +34,7 @@ const prev = amount - 5000 >= 20000 ? amount - 5000 : null, next = amount + 5000
 const title = `${eok(amount)}으로 살 수 있는 ${sido} 아파트`;
 const desc = `${sido}에서 ${eok(amount)} 예산 안에 드는 아파트 ${totalIn.toLocaleString()}개 단지, 예산의 85~100% 구간 ${totalFit.toLocaleString()}개. 시군구별 실거래 시세 기준(국토교통부 ${sm.asOf}).`;
 ---
-<Base title={title} description={desc}>
+<Base title={title} description={desc} noindex>
   <nav class="sub" style="padding:2px 4px 6px"><a href="/">홈</a> › 예산별 › {sido}</nav>
   <header class="q" style="padding:4px 4px 10px">
     <h1 class="big" style="margin:0;font-size:24px">{eok(amount)}으로 살 수 있는<br />{sido} 아파트</h1>

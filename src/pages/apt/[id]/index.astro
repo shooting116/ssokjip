@@ -86,7 +86,7 @@ const roadviewUrl = hasGeo ? `https://map.kakao.com/link/roadview/${c.lat},${c.l
 const title = `${c.name} 실거래가·시세`;
 const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label}(${rep.pyeong}평형) ${eok(rep.price)}` : ''} · 36개월 실거래 ${c.n36}건${k?.units ? ` · ${k.units.toLocaleString()}세대` : ''}${c.built ? ` · ${c.built}년` : ''}. 국토교통부 실거래가 ${sg.asOf} 기준.`;
 ---
-<Base title={title} description={desc}>
+<Base title={title} description={desc} noindex>
   <nav class="crumb sub" aria-label="경로">
     <a href="/">홈</a> › <a href={`/area/${lawd}/`}>{c.sido} {c.sigungu}</a> › <span>{c.umd}</span>
   </nav>
