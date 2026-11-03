@@ -14,7 +14,7 @@ sources:
   - { title: "금융위원회 — 가계부채 관리 강화 방안 (수도권 주담대 6억 상한·스트레스 DSR 3단계)", url: "https://www.fsc.go.kr/no010101/84824", date: "2025-06-27" }
   - { title: "금융위원회 — 주택시장 안정화 대책 (규제지역 LTV 40%·스트레스 금리 3.0%·15억 초과 상한)", url: "https://www.fsc.go.kr/no010101/85432", date: "2025-10-15" }
   - { title: "금융위원회 — 가계부채 관리 방안 (2026.8.13, 수도권·규제지역 규제 유지)", url: "https://www.fsc.go.kr/no010101/87517", date: "2026-08-13" }
-  - { title: "정책브리핑 — 규제지역 추가 지정(화성 동탄구·용인 기흥구·구리시, 2026.7.1)", url: "https://www.korea.kr/news/policyNewsView.do?newsId=148967354", date: "2026-07-01" }
+  - { title: "정책브리핑 — 규제지역 추가 지정(화성 동탄구·용인 기흥구·구리시, 2026.7.1)", url: "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156768715", date: "2026-07-01" }
   - { title: "한국은행 경제통계시스템(ECOS) — 예금은행 주택담보대출 신규취급 가중평균금리 (2026년 8월 4.66%)", url: "https://ecos.bok.or.kr/" }
 ---
 

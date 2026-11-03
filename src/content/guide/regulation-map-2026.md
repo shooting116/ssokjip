@@ -12,8 +12,8 @@ related: [ltv-dsr-dti, first-home-2026]
 sources:
   - { title: "금융위원회 — 가계부채 관리 강화 방안 (2025.6.27)", url: "https://www.fsc.go.kr/no010101/84824", date: "2025-06-27" }
   - { title: "금융위원회 — 주택시장 안정화 대책 (2025.10.15)", url: "https://www.fsc.go.kr/no010101/85432", date: "2025-10-15" }
-  - { title: "정책브리핑 — 규제지역 지정 (2025.10)", url: "https://www.korea.kr/news/policyNewsView.do?newsId=148950973" }
-  - { title: "정책브리핑 — 규제지역 추가 지정 (2026.7)", url: "https://www.korea.kr/news/policyNewsView.do?newsId=148967354" }
+  - { title: "정책브리핑 — 규제지역 지정 (2025.10)", url: "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156718969" }
+  - { title: "정책브리핑 — 규제지역 추가 지정 (2026.7)", url: "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156768715" }
 ---
 
 ## 지역은 세 묶음으로 나뉜다

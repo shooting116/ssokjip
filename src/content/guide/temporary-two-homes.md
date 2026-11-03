@@ -21,8 +21,8 @@ sources:
   - { title: "기획재정부 — 일시적 2주택자, 주택처분기한 2년 → 3년으로 늘린다(양도세·취득세·종부세, 2023-01-12부터 적용) — 정책브리핑", url: "https://www.korea.kr/news/policyNewsView.do?newsId=148910484", date: "2023-01-12" }
   - { title: "기획재정부 — 일시적 2주택자, 2년 내 집 팔면 양도세 비과세…전입요건도 삭제(2022-05-10 이후 양도분) — 정책브리핑", url: "https://www.korea.kr/news/policyNewsView.do?newsId=148901443", date: "2022-05-09" }
   - { title: "기획재정부 — 입주·분양권 보유 '1주택자', 3년 내 기존주택 팔면 양도세 면제 — 정책브리핑", url: "https://www.korea.kr/news/policyNewsView.do?newsId=148910915", date: "2023-01-26" }
-  - { title: "정책브리핑 — 규제지역 지정(2025년 10월, 서울 전역·경기 12곳)", url: "https://www.korea.kr/news/policyNewsView.do?newsId=148950973" }
-  - { title: "정책브리핑 — 규제지역 추가 지정(2026년 7월)", url: "https://www.korea.kr/news/policyNewsView.do?newsId=148967354" }
+  - { title: "정책브리핑 — 규제지역 지정(2025년 10월, 서울 전역·경기 12곳)", url: "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156718969" }
+  - { title: "정책브리핑 — 규제지역 추가 지정(2026년 7월)", url: "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156768715" }
   - { title: "금융위원회 — 가계부채 관리 강화 방안(1주택자 수도권·규제지역 주담대 6개월 내 처분 조건)", url: "https://www.fsc.go.kr/no010101/84824", date: "2025-06-27" }
 ---
 

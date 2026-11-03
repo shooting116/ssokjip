@@ -24,7 +24,7 @@ sources:
   - { title: "정책브리핑 — 소득세법 개정사항: 1세대 1주택 비과세 기준금액 9억 → 12억 원, 2021-12-08 이후 양도분부터", url: "https://www.korea.kr/multi/visualNewsView.do?newsId=148897192", date: "2021-12-08" }
   - { title: "정책브리핑 — 1주택+1분양권자 3년 내 기존주택 팔아야 양도세상 1주택자(2021-01-01 이후 취득 분양권 주택 수 포함)", url: "https://m.korea.kr/news/policyNewsView.do?newsId=148882327" }
   - { title: "정책브리핑 — 대출·세제·청약…규제 풀어 부동산 시장 정상화(2023년 1월 강남·서초·송파·용산 외 규제지역 해제)", url: "https://www.korea.kr/news/policyNewsView.do?newsId=148910538", date: "2023-01-16" }
-  - { title: "정책브리핑 — 규제지역 지정(2025년 10월, 서울 전역·경기 12곳)", url: "https://www.korea.kr/news/policyNewsView.do?newsId=148950973" }
+  - { title: "정책브리핑 — 규제지역 지정(2025년 10월, 서울 전역·경기 12곳)", url: "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156718969" }
   - { title: "재정경제부 — 조정대상지역 일시적 2주택 특례 '2년'으로 단축…10월 1일 시행(상생임대 거주요건 면제 2026-12-31 종료 포함) — 정책브리핑", url: "https://www.korea.kr/news/policyNewsView.do?newsId=148972735", date: "2026-09-29" }
   - { title: "재정경제부 — 상생임대주택 양도세 특례 10문 10답(임대료 5% 이내·직전 1년 6개월·상생 2년) — 정책브리핑", url: "https://www.korea.kr/briefing/policyBriefingView.do?endDate=2025-06-25&newsId=148902883&pageIndex=&srchWord=&startDate=2024-06-25", date: "2022-06-24" }
   - { title: "관계부처합동 — 다주택자 양도세 중과 유예 5월 9일 종료 — 정책브리핑", url: "https://www.korea.kr/news/policyNewsView.do?newsId=148959488", date: "2026-02-12" }
