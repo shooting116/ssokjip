@@ -1,7 +1,8 @@
-# 가이드 글 발행 계획 — 50편, 하루 1편
+# 가이드 글 발행 계획 — 80편, 하루 1편
 
 - 1~23편은 2026-10-12~10-18에 하루 3편씩 공개 완료. 24편(실거래 vs 부동산원 지수)은 2026-10-20 19:00 공개.
 - 25편부터는 **매일 1편**. 매일 아침 예약 작업이 아래 표에서 그날 날짜의 글을 써서 `publishAt: "YYYY-MM-DDT08:00:00+09:00"`, `published: true`로 커밋한다.
+- 51~80편(11/16~12/15)은 2026-11-03에 추가. 78 지역주택조합은 판단 표현 없이 국토부·지자체 통계만, 80편은 `data/rules/README.md` 버전 기록과 출처로 쓴다.
 - 쓰는 규칙은 `docs/guide-writing.md`. 표의 slug·category·cta는 제안값이며 글을 쓰면서 바꿔도 된다(바꾸면 표도 고친다).
 - 쓴 날은 `상태` 칸을 `완료(slug)`로 바꾼다. 표가 바닥나면 운영자에게 알린다.
 
@@ -33,6 +34,36 @@
 | 2026-11-13 | 48 | 아파트 vs 주상복합 vs 오피스텔(아파텔) — 대출·세금·관리비 차이 | apt-vs-officetel | situation | calc | |
 | 2026-11-14 | 49 | 세대수·동수·주차대수 — 건축물대장으로 단지 읽기 | building-register | price | find | |
 | 2026-11-15 | 50 | 신축·준신축·구축 — 준공연도별 가격 차이와 확인할 것 | age-of-building | price | find | |
+| 2026-11-16 | 51 | 청약 가점 계산 — 무주택 기간·부양가족·통장 가입기간 | subscription-points | situation | none | |
+| 2026-11-17 | 52 | 특별공급 종류 — 신혼·생애최초·다자녀·노부모, 소득 기준 | special-supply | situation | calc | |
+| 2026-11-18 | 53 | 전세사기 예방 체크리스트 — 깡통전세·선순위·확정일자 | jeonse-fraud-check | situation | find | |
+| 2026-11-19 | 54 | 스트레스 DSR — 가산금리가 한도를 얼마나 줄이나 | stress-dsr | loan | calc | |
+| 2026-11-20 | 55 | 전월세 전환율 — 전세를 월세로 바꾸면 얼마인가, 반전세 | rent-conversion | price | none | |
+| 2026-11-21 | 56 | 상속받은 집 — 취득세·양도세 기준일, 비과세 특례 | inherited-home | tax | none | |
+| 2026-11-22 | 57 | 분양가 상한제와 실거주 의무·전매제한 | price-cap-rules | future | none | |
+| 2026-11-23 | 58 | 전세보증금 반환보증(HUG·HF·SGI) — 가입 조건과 90% 기준 | deposit-guarantee | situation | find | |
+| 2026-11-24 | 59 | 전세대출 기초 — 버팀목·일반 전세대출, DSR에 들어가나 | jeonse-loans | loan | calc | |
+| 2026-11-25 | 60 | 지역별 변동률 읽는 법 — 부동산원 주간지수와 쏙집 지역별 페이지 | weekly-index-reading | price | ref | |
+| 2026-11-26 | 61 | 부부 공동명의 — 취득·보유·양도세가 어떻게 달라지나 | joint-ownership | tax | none | |
+| 2026-11-27 | 62 | 무순위 청약 — 자격, 규제지역과 비규제지역 차이 | unranked-subscription | situation | none | |
+| 2026-11-28 | 63 | 중도상환수수료 — 계산법과 면제되는 경우 | prepayment-fee | loan | calc | |
+| 2026-11-29 | 64 | 실거래 취소·해제 건 — 공개 시스템에서 걸러 보는 법 | cancelled-trades | price | find | |
+| 2026-11-30 | 65 | 임대차 3법 — 계약갱신요구권·전월세상한제·신고제 | lease-three-laws | situation | none | |
+| 2026-12-01 | 66 | 3기 신도시 입주 일정 — 지구별 분양·입주 시점 | third-newtown-timeline | future | find | |
+| 2026-12-02 | 67 | 신용점수와 주담대 금리 — 가산금리·우대금리 구조 | credit-score-rate | loan | calc | |
+| 2026-12-03 | 68 | 직거래와 중개거래 — 실거래 표기 차이, 가족 간 거래 | direct-vs-brokered | price | none | |
+| 2026-12-04 | 69 | 주택임대소득 과세 — 연 2천만 원 기준, 월세 받을 때 | rental-income-tax | tax | none | |
+| 2026-12-05 | 70 | 청약 당첨 후 자금 흐름 — 계약금·중도금 대출·잔금 | subscription-funding | loan | calc | |
+| 2026-12-06 | 71 | 세대당 주차·초등학교 거리·역 거리 — 쏙집 필터 데이터의 출처와 한계 | filter-data-sources | price | find | |
+| 2026-12-07 | 72 | 장기수선충당금 — 세입자가 돌려받는 돈, 매도 때 정산 | long-term-repair-fund | situation | none | |
+| 2026-12-08 | 73 | 공공분양 vs 민간분양 — 나눔형·선택형·일반형 | public-vs-private-presale | future | none | |
+| 2026-12-09 | 74 | 생활안정자금 주담대 — 한도와 규제지역 제한 | living-stability-loan | loan | calc | |
+| 2026-12-10 | 75 | 연말정산 주택 항목 — 주담대 이자·전세대출 원리금·청약통장 공제 | year-end-housing-deductions | tax | none | |
+| 2026-12-11 | 76 | 평형별 ㎡당 가격이 다른 이유 — 소형·중형·대형 | price-per-area-by-size | price | find | |
+| 2026-12-12 | 77 | 금리 지표 읽기 — 코픽스·금융채·기준금리, ECOS로 보기 | cofix-and-rates | loan | ref | |
+| 2026-12-13 | 78 | 지역주택조합 — 구조와 통계로 보는 진행률 | regional-housing-association | future | none | |
+| 2026-12-14 | 79 | 같은 단지 안 가격 차이 — 층·향·동 격차 읽기 | floor-direction-premium | price | find | |
+| 2026-12-15 | 80 | 2026년 바뀐 부동산 제도 정리 — 대출·세금·규제 한 장(규칙표 버전 기록·출처 그대로) | changes-2026-review | tax | calc | |
 
 ## 이미 공개된 글(겹치지 않게 참고)
 
