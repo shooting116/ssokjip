@@ -119,7 +119,7 @@
 {"lawd":"11530","umdNm":"구로동","jibun":"43-4","apt":"다솜금호","area":59.95,"floor":7,"built":1995,"date":"2026-10-08","deposit":43000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"신도림동","jibun":"642","apt":"대림1","area":59.9,"floor":20,"built":1999,"date":"2026-10-08","deposit":5000,"rent":140,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":5000,"preRent":120}
 {"lawd":"11530","umdNm":"구로동","jibun":"106-2","apt":"대림역포스큐","area":14.58,"floor":14,"built":2015,"date":"2026-10-08","deposit":9000,"rent":15,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
-{"lawd":"11530","umdNm":"구로동","jibun":"108-2","apt":"새솔금호","area":59.9,"floor":13,"built":1996,"date":"2026-10-08","deposit":36750,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":35000,"preRent":0}
+{"lawd":"11530","umdNm":"구로동","jibun":"108-2","apt":"새솔금호","area":59.9,"floor":13,"built":1996,"date":"2026-10-08","deposit":36750,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":36750,"preRent":0}
 {"lawd":"11530","umdNm":"개봉동","jibun":"497","apt":"센트레빌레우스1단지","area":74,"floor":15,"built":2020,"date":"2026-10-08","deposit":25825,"rent":42,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"개봉동","jibun":"497","apt":"센트레빌레우스1단지","area":74.94,"floor":5,"built":2020,"date":"2026-10-08","deposit":20660,"rent":45,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":20660,"preRent":44}
 {"lawd":"11530","umdNm":"개봉동","jibun":"497","apt":"센트레빌레우스1단지","area":84.96,"floor":20,"built":2020,"date":"2026-10-08","deposit":27891,"rent":48,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":27891,"preRent":46}
@@ -380,6 +380,7 @@
 {"lawd":"11530","umdNm":"오류동","jibun":"344","apt":"경남아너스빌","area":84.93,"floor":15,"built":2003,"date":"2026-10-21","deposit":10000,"rent":190,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"고척동","jibun":"339","apt":"고척파크푸르지오","area":84.94,"floor":3,"built":2009,"date":"2026-10-21","deposit":65000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":65000,"preRent":0}
 {"lawd":"11530","umdNm":"구로동","jibun":"1265","apt":"구로두산","area":51.84,"floor":11,"built":1998,"date":"2026-10-21","deposit":5000,"rent":105,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":5000,"preRent":100}
+{"lawd":"11530","umdNm":"구로동","jibun":"1265","apt":"구로두산","area":51.84,"floor":24,"built":1998,"date":"2026-10-21","deposit":3000,"rent":140,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"신도림동","jibun":"642","apt":"대림1","area":59.88,"floor":11,"built":1999,"date":"2026-10-21","deposit":58000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"신도림동","jibun":"642","apt":"대림2","area":134.99,"floor":20,"built":2001,"date":"2026-10-21","deposit":40000,"rent":160,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":40000,"preRent":160}
 {"lawd":"11530","umdNm":"신도림동","jibun":"645","apt":"동아3","area":60,"floor":6,"built":2000,"date":"2026-10-21","deposit":64050,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":61000,"preRent":0}
@@ -431,6 +432,7 @@
 {"lawd":"11530","umdNm":"고척동","jibun":"337","apt":"한일유앤아이","area":59.65,"floor":11,"built":2005,"date":"2026-10-22","deposit":40000,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":35000,"preRent":0}
 {"lawd":"11530","umdNm":"고척동","jibun":"52-332","apt":"한효","area":69.87,"floor":5,"built":1985,"date":"2026-10-22","deposit":38000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"개봉동","jibun":"481","apt":"현대","area":84.99,"floor":12,"built":2001,"date":"2026-10-22","deposit":29000,"rent":90,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":29000,"preRent":35}
+{"lawd":"11530","umdNm":"구로동","jibun":"685-70","apt":"현대연예인","area":84.91,"floor":6,"built":1989,"date":"2026-10-22","deposit":45000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"구로동","jibun":"745-14","apt":"(745-14)","area":43.34,"floor":5,"built":1998,"date":"2026-10-23","deposit":2000,"rent":70,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"신도림동","jibun":"642","apt":"대림1","area":59.88,"floor":11,"built":1999,"date":"2026-10-23","deposit":56700,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":54000,"preRent":0}
 {"lawd":"11530","umdNm":"오류동","jibun":"345","apt":"동선","area":58.22,"floor":10,"built":2004,"date":"2026-10-23","deposit":36500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -453,12 +455,15 @@
 {"lawd":"11530","umdNm":"신도림동","jibun":"641","apt":"현대홈타운아파트","area":64.23,"floor":6,"built":1999,"date":"2026-10-23","deposit":34000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"구로동","jibun":"780-86","apt":"(780-86)","area":35.55,"floor":2,"built":1961,"date":"2026-10-24","deposit":12100,"rent":5,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":12100,"preRent":5}
 {"lawd":"11530","umdNm":"고척동","jibun":"339","apt":"고척파크푸르지오","area":84.94,"floor":7,"built":2009,"date":"2026-10-24","deposit":70000,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":59400,"preRent":0}
+{"lawd":"11530","umdNm":"구로동","jibun":"1265","apt":"구로두산","area":44.64,"floor":10,"built":1998,"date":"2026-10-24","deposit":28200,"rent":10,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":28200,"preRent":0}
 {"lawd":"11530","umdNm":"구로동","jibun":"1278","apt":"구로두산위브","area":36.88,"floor":9,"built":2006,"date":"2026-10-24","deposit":33000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"오류동","jibun":"343","apt":"금강(343)","area":84.98,"floor":1,"built":2003,"date":"2026-10-24","deposit":6000,"rent":220,"term":"27.02~27.05","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"신도림동","jibun":"642","apt":"대림2","area":84.95,"floor":11,"built":2001,"date":"2026-10-24","deposit":5000,"rent":260,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":5000,"preRent":175}
 {"lawd":"11530","umdNm":"신도림동","jibun":"649","apt":"대림e-편한세상7","area":84.93,"floor":8,"built":2004,"date":"2026-10-24","deposit":50000,"rent":140,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"신도림동","jibun":"649","apt":"대림e-편한세상7","area":84.93,"floor":19,"built":2004,"date":"2026-10-24","deposit":40000,"rent":165,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"구로동","jibun":"1257","apt":"럭키","area":59.98,"floor":14,"built":1992,"date":"2026-10-24","deposit":31500,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":0}
+{"lawd":"11530","umdNm":"고척동","jibun":"141-1","apt":"서울가든","area":64.39,"floor":7,"built":1989,"date":"2026-10-24","deposit":34600,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":33000,"preRent":0}
+{"lawd":"11530","umdNm":"개봉동","jibun":"170-30","apt":"신개봉삼환","area":84.99,"floor":8,"built":2001,"date":"2026-10-24","deposit":45000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":45000,"preRent":0}
 {"lawd":"11530","umdNm":"구로동","jibun":"1267","apt":"신도림태영타운","area":59.88,"floor":19,"built":2000,"date":"2026-10-24","deposit":64000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"구로동","jibun":"1058","apt":"우성(1058)","area":59.34,"floor":9,"built":1995,"date":"2026-10-24","deposit":38000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":35000,"preRent":0}
 {"lawd":"11530","umdNm":"천왕동","jibun":"274","apt":"천왕이펜하우스7단지","area":29.96,"floor":6,"built":2017,"date":"2026-10-24","deposit":5344,"rent":9,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":4176,"preRent":14}
@@ -509,6 +514,7 @@
 {"lawd":"11530","umdNm":"구로동","jibun":"685-222","apt":"주공1","area":73.68,"floor":10,"built":1986,"date":"2026-10-28","deposit":27000,"rent":40,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"구로동","jibun":"685-222","apt":"주공1","area":83.81,"floor":10,"built":1986,"date":"2026-10-28","deposit":40900,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":39000,"preRent":0}
 {"lawd":"11530","umdNm":"구로동","jibun":"685-223","apt":"주공2","area":54.9,"floor":4,"built":1987,"date":"2026-10-28","deposit":30000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11530","umdNm":"천왕동","jibun":"282","apt":"천왕이펜하우스1단지","area":39.45,"floor":5,"built":2011,"date":"2026-10-28","deposit":2500,"rent":31,"term":"26.11~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"천왕동","jibun":"282","apt":"천왕이펜하우스1단지","area":39.45,"floor":5,"built":2011,"date":"2026-10-28","deposit":3548,"rent":29,"term":"26.11~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"천왕동","jibun":"278","apt":"천왕이펜하우스3단지","area":84.96,"floor":10,"built":2011,"date":"2026-10-28","deposit":36750,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":35000,"preRent":0}
 {"lawd":"11530","umdNm":"항동","jibun":"243","apt":"하버라인11단지","area":39.69,"floor":12,"built":2019,"date":"2026-10-28","deposit":9739,"rent":12,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":6568,"preRent":22}
@@ -539,13 +545,16 @@
 {"lawd":"11530","umdNm":"구로동","jibun":"1281","apt":"한일유앤아이","area":84.96,"floor":5,"built":2006,"date":"2026-10-30","deposit":47000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"개봉동","jibun":"481","apt":"현대","area":84.99,"floor":23,"built":2001,"date":"2026-10-30","deposit":63000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"개봉동","jibun":"501","apt":"호반써밋개봉","area":59.93,"floor":11,"built":2024,"date":"2026-10-30","deposit":50000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11530","umdNm":"개봉동","jibun":"501","apt":"호반써밋개봉","area":84.79,"floor":10,"built":2024,"date":"2026-10-30","deposit":10000,"rent":210,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"개봉동","jibun":"487","apt":"개봉동상우","area":82.8,"floor":11,"built":2005,"date":"2026-10-31","deposit":42500,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":32500,"preRent":0}
 {"lawd":"11530","umdNm":"신도림동","jibun":"642","apt":"대림1","area":59.9,"floor":5,"built":1999,"date":"2026-10-31","deposit":40000,"rent":60,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":40000,"preRent":0}
 {"lawd":"11530","umdNm":"신도림동","jibun":"642","apt":"대림1","area":59.9,"floor":18,"built":1999,"date":"2026-10-31","deposit":65000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"신도림동","jibun":"644","apt":"동아2","area":112.35,"floor":17,"built":2000,"date":"2026-10-31","deposit":94500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":90000,"preRent":0}
+{"lawd":"11530","umdNm":"개봉동","jibun":"472","apt":"두산","area":59.69,"floor":14,"built":1997,"date":"2026-10-31","deposit":38000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"구로동","jibun":"256-1","apt":"삼성래미안","area":78.67,"floor":22,"built":2004,"date":"2026-10-31","deposit":45000,"rent":80,"term":"27.03~29.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"고척동","jibun":"141-1","apt":"서울가든","area":84.99,"floor":6,"built":1989,"date":"2026-10-31","deposit":52000,"rent":0,"term":"27.01~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"고척동","jibun":"322","apt":"성원","area":84.56,"floor":3,"built":1996,"date":"2026-10-31","deposit":47000,"rent":15,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11530","umdNm":"신도림동","jibun":"694","apt":"신도림크라운빌","area":20.41,"floor":11,"built":2015,"date":"2026-10-31","deposit":2000,"rent":75,"term":"26.11~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"신도림동","jibun":"638","apt":"우성5","area":79.56,"floor":1,"built":1994,"date":"2026-10-31","deposit":44200,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":42200,"preRent":0}
 {"lawd":"11530","umdNm":"천왕동","jibun":"274","apt":"천왕이펜하우스7단지","area":29.96,"floor":6,"built":2017,"date":"2026-10-31","deposit":5932,"rent":9,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":4176,"preRent":14}
 {"lawd":"11530","umdNm":"개봉동","jibun":"476","apt":"한마을","area":149.97,"floor":14,"built":1999,"date":"2026-10-31","deposit":40000,"rent":110,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
