@@ -24,7 +24,7 @@
 | 2026-11-03 | 38 | 청년 대출 — 만 34세 이하 장래소득 인정 DSR과 정책대출 | youth-loans | loan | calc | 완료(youth-loans) |
 | 2026-11-04 | 39 | 신혼부부 정책대출 — 디딤돌·버팀목 신혼 특례, 혼인 7년 기준 | newlywed-loans | loan | calc |완료(newlywed-loans) |
 | 2026-11-05 | 40 | 주담대 갈아타기(대환) — 온라인 대환 인프라, 중도상환수수료 | refinancing | loan | calc | 완료(refinancing) |
-| 2026-11-06 | 41 | 상환 방식 — 원리금균등·원금균등·체증식, 총이자 차이 | repayment-methods | loan | calc | |
+| 2026-11-06 | 41 | 상환 방식 — 원리금균등·원금균등·체증식, 총이자 차이 | repayment-methods | loan | calc | 완료(repayment-methods) |
 | 2026-11-07 | 42 | DSR에 잡히는 것들 — 신용대출·카드론·전세대출·학자금 | dsr-components | loan | calc | |
 | 2026-11-08 | 43 | 보금자리론 2026 — 자격·한도·금리 구조 | bogeumjari-2026 | loan | calc | |
 | 2026-11-09 | 44 | 입주 물량 보는 법 — 공급이 가격에 닿는 시차 | supply-pipeline | price | find | |
