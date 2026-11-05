@@ -47,7 +47,7 @@
     0.7,
     1
    ],
-   "checked": "2026-11-03",
+   "checked": "2026-11-05",
    "matchNow": true,
    "matchFuture": true
   },
@@ -82,7 +82,7 @@
     0.6,
     0.6
    ],
-   "checked": "2026-11-03",
+   "checked": "2026-11-05",
    "matchNow": true,
    "matchFuture": true
   },
@@ -112,7 +112,7 @@
     0.6,
     0.6
    ],
-   "checked": "2026-11-03",
+   "checked": "2026-11-05",
    "matchNow": true,
    "matchFuture": true
   },
@@ -149,7 +149,7 @@
     0.6,
     0.6
    ],
-   "checked": "2026-11-03",
+   "checked": "2026-11-05",
    "matchNow": true,
    "matchFuture": true
   }
@@ -161,5 +161,5 @@
   "molit_news": [],
   "fsc_news": []
  },
- "lastRun": "2026-11-03"
+ "lastRun": "2026-11-05"
 }
