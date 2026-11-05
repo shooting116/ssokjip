@@ -2,4 +2,9 @@
 {"lawd":"11305","umdNm":"미아동","jibun":"1357","apt":"삼각산아이원","area":84.71,"floor":5,"built":2003,"date":"2026-11-03","deposit":45000,"rent":0,"term":"26.11~27.02","type":"갱신","rrr":null,"preDeposit":45000,"preRent":0}
 {"lawd":"11305","umdNm":"번동","jibun":"446-59","apt":"스카이캐슬","area":15.03,"floor":9,"built":2021,"date":"2026-11-03","deposit":17500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11305","umdNm":"미아동","jibun":"1353","apt":"에스케이북한산시티","area":84.76,"floor":20,"built":2004,"date":"2026-11-03","deposit":42000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":40000,"preRent":0}
+{"lawd":"11305","umdNm":"미아동","jibun":"4","apt":"꿈의숲롯데캐슬","area":84.98,"floor":6,"built":2017,"date":"2026-11-04","deposit":40000,"rent":95,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11305","umdNm":"미아동","jibun":"1354","apt":"벽산라이브파크","area":84.89,"floor":15,"built":2004,"date":"2026-11-04","deposit":10000,"rent":180,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11305","umdNm":"미아동","jibun":"1353","apt":"에스케이북한산시티","area":84.76,"floor":20,"built":2004,"date":"2026-11-04","deposit":30000,"rent":100,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11305","umdNm":"번동","jibun":"657","apt":"동문","area":134.27,"floor":3,"built":1998,"date":"2026-11-05","deposit":58400,"rent":0,"term":"26.11~27.11","type":"갱신","rrr":null,"preDeposit":52400,"preRent":0}
+{"lawd":"11305","umdNm":"우이동","jibun":"340","apt":"성원그린(103동)","area":84.77,"floor":3,"built":1995,"date":"2026-11-05","deposit":10000,"rent":110,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11305","umdNm":"수유동","jibun":"205","apt":"수유벽산1차","area":122.58,"floor":11,"built":1993,"date":"2026-11-05","deposit":10000,"rent":139,"term":"26.11~27.11","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":130}

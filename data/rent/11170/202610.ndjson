@@ -168,6 +168,7 @@
 {"lawd":"11170","umdNm":"문배동","jibun":"17-1","apt":"지오베르크","area":84.99,"floor":10,"built":2004,"date":"2026-10-14","deposit":61700,"rent":0,"term":"26.11~27.11","type":"갱신","rrr":null,"preDeposit":61700,"preRent":0}
 {"lawd":"11170","umdNm":"한남동","jibun":"828","apt":"한남아이파크애비뉴","area":46.24,"floor":6,"built":2017,"date":"2026-10-14","deposit":50000,"rent":94,"term":"27.01~28.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11170","umdNm":"한남동","jibun":"828","apt":"한남아이파크애비뉴","area":46.24,"floor":6,"built":2017,"date":"2026-10-14","deposit":50000,"rent":79,"term":"26.10~27.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11170","umdNm":"한남동","jibun":"828","apt":"한남아이파크애비뉴","area":48.41,"floor":13,"built":2017,"date":"2026-10-14","deposit":10000,"rent":250,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11170","umdNm":"효창동","jibun":"5-495","apt":"효창맨션","area":66.12,"floor":4,"built":1969,"date":"2026-10-14","deposit":33000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11170","umdNm":"이태원동","jibun":"729","apt":"남산대림","area":59.92,"floor":2,"built":1994,"date":"2026-10-15","deposit":50000,"rent":80,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":53000,"preRent":0}
 {"lawd":"11170","umdNm":"이촌동","jibun":"395","apt":"대림","area":84.78,"floor":14,"built":1994,"date":"2026-10-15","deposit":20000,"rent":270,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

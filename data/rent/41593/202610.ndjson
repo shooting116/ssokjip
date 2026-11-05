@@ -95,6 +95,7 @@
 {"lawd":"41593","umdNm":"기안동","jibun":"935","apt":"화성우방아이유쉘MEGACITY1단지","area":84.54,"floor":7,"built":2022,"date":"2026-10-15","deposit":30000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":0}
 {"lawd":"41593","umdNm":"봉담읍 동화리","jibun":"594","apt":"휴먼시아동화마을(1단지)","area":51.92,"floor":2,"built":2007,"date":"2026-10-15","deposit":5096,"rent":10,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":2567,"preRent":21}
 {"lawd":"41593","umdNm":"봉담읍 동화리","jibun":"603","apt":"휴먼시아동화마을(4단지)","area":51.92,"floor":1,"built":2007,"date":"2026-10-15","deposit":5096,"rent":10,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":2567,"preRent":21}
+{"lawd":"41593","umdNm":"기안동","jibun":"895","apt":"기안마을풍성신미주","area":84.8,"floor":1,"built":2004,"date":"2026-10-16","deposit":2000,"rent":95,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41593","umdNm":"정남면 발산리","jibun":"490-12","apt":"동남훼미리","area":39.81,"floor":5,"built":2000,"date":"2026-10-16","deposit":7000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41593","umdNm":"정남면 발산리","jibun":"490-12","apt":"동남훼미리","area":39.81,"floor":15,"built":2000,"date":"2026-10-16","deposit":7800,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":7500,"preRent":0}
 {"lawd":"41593","umdNm":"봉담읍 와우리","jibun":"591","apt":"봉담휴먼빌","area":84.95,"floor":14,"built":2012,"date":"2026-10-16","deposit":30000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -186,4 +187,5 @@
 {"lawd":"41593","umdNm":"봉담읍 수영리","jibun":"692","apt":"화성봉담2엘에이치3단지","area":26.9,"floor":9,"built":2017,"date":"2026-10-30","deposit":2529,"rent":11,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":2457,"preRent":15}
 {"lawd":"41593","umdNm":"봉담읍 동화리","jibun":"611","apt":"휴먼시아동화마을(2단지)","area":39.84,"floor":7,"built":2007,"date":"2026-10-30","deposit":1593,"rent":12,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":1458,"preRent":12}
 {"lawd":"41593","umdNm":"봉담읍 수영리","jibun":"647-5","apt":"수정마을동남메리트","area":75.09,"floor":6,"built":2002,"date":"2026-10-31","deposit":3000,"rent":110,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41593","umdNm":"봉담읍 상리","jibun":"614","apt":"청운마을신안인스빌","area":84.91,"floor":6,"built":2004,"date":"2026-10-31","deposit":15000,"rent":50,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41593","umdNm":"봉담읍 내리","jibun":"882","apt":"힐스테이트봉담프라이드시티","area":60,"floor":13,"built":2024,"date":"2026-10-31","deposit":5000,"rent":135,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

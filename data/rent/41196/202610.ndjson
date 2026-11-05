@@ -11,6 +11,7 @@
 {"lawd":"41196","umdNm":"원종동","jibun":"361-6","apt":"삼신(361-6)","area":39.62,"floor":3,"built":1988,"date":"2026-10-06","deposit":12500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"원종동","jibun":"361-6","apt":"삼신(361-6)","area":39.62,"floor":3,"built":1988,"date":"2026-10-06","deposit":12500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"원종동","jibun":"129-8","apt":"영화","area":84.88,"floor":1,"built":1998,"date":"2026-10-06","deposit":9000,"rent":100,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41196","umdNm":"고강동","jibun":"364","apt":"동원(364)","area":42.34,"floor":5,"built":1989,"date":"2026-10-07","deposit":1000,"rent":50,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"오정동","jibun":"558-4","apt":"삼두(558-4)","area":51.84,"floor":5,"built":1983,"date":"2026-10-07","deposit":2000,"rent":55,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"고강동","jibun":"378","apt":"인성","area":50.57,"floor":5,"built":1986,"date":"2026-10-07","deposit":9000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"원종동","jibun":"212-4","apt":"기용","area":43.8,"floor":4,"built":1989,"date":"2026-10-08","deposit":15000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -76,12 +77,15 @@
 {"lawd":"41196","umdNm":"원종동","jibun":"70-1","apt":"동문1차","area":78.12,"floor":5,"built":1990,"date":"2026-10-26","deposit":23000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":23000,"preRent":0}
 {"lawd":"41196","umdNm":"오정동","jibun":"179","apt":"세종2","area":59.96,"floor":5,"built":1995,"date":"2026-10-26","deposit":24000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"원종동","jibun":"220-3","apt":"욱일7차","area":48.96,"floor":3,"built":1987,"date":"2026-10-26","deposit":1000,"rent":80,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41196","umdNm":"오정동","jibun":"415-4","apt":"효행복마을","area":16.14,"floor":4,"built":2013,"date":"2026-10-26","deposit":500,"rent":42,"term":"26.10~27.10","type":"갱신","rrr":"사용","preDeposit":500,"preRent":40}
 {"lawd":"41196","umdNm":"고강동","jibun":"327-7","apt":"동문미도(327-7)","area":51.3,"floor":5,"built":1989,"date":"2026-10-27","deposit":12900,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"여월동","jibun":"340","apt":"여월휴먼시아3단지","area":84.95,"floor":7,"built":2007,"date":"2026-10-27","deposit":45000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"여월동","jibun":"340","apt":"여월휴먼시아3단지","area":84.95,"floor":14,"built":2007,"date":"2026-10-27","deposit":50000,"rent":0,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"원종동","jibun":"313-13","apt":"다우로얄팰리스","area":84,"floor":7,"built":2007,"date":"2026-10-29","deposit":5000,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"원종동","jibun":"352","apt":"미성","area":34.16,"floor":2,"built":1983,"date":"2026-10-29","deposit":1000,"rent":35,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"오정동","jibun":"549","apt":"에리트","area":55.08,"floor":1,"built":1986,"date":"2026-10-29","deposit":0,"rent":35,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41196","umdNm":"고강동","jibun":"246-2","apt":"고강1차","area":47.7,"floor":2,"built":1985,"date":"2026-10-30","deposit":12600,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"내동","jibun":"348","apt":"신영","area":51,"floor":5,"built":1990,"date":"2026-10-30","deposit":10500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"오정동","jibun":"549","apt":"에리트","area":49.32,"floor":5,"built":1986,"date":"2026-10-30","deposit":12500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41196","umdNm":"고강동","jibun":"425-25","apt":"윤성","area":59.31,"floor":2,"built":1996,"date":"2026-10-30","deposit":14000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"원종동","jibun":"470","apt":"원종동금호어울림","area":97.99,"floor":14,"built":2011,"date":"2026-10-31","deposit":42000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":37800,"preRent":0}
