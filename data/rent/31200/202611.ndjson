@@ -10,4 +10,9 @@
 {"lawd":"31200","umdNm":"산하동","jibun":"968-2","apt":"힐스테이트강동","area":84.77,"floor":18,"built":2017,"date":"2026-11-03","deposit":25000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31200","umdNm":"산하동","jibun":"1033-1","apt":"울산블루마시티2차푸르지오","area":85,"floor":9,"built":2015,"date":"2026-11-04","deposit":23000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31200","umdNm":"신천동","jibun":"530-1","apt":"극동스타클래스","area":84.94,"floor":9,"built":2007,"date":"2026-11-05","deposit":21000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31200","umdNm":"매곡동","jibun":"897","apt":"드림인시티에일린의뜰1차","area":84.9,"floor":18,"built":2017,"date":"2026-11-05","deposit":36000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31200","umdNm":"천곡동","jibun":"410-1","apt":"쌍용아진그린4","area":59.95,"floor":5,"built":1998,"date":"2026-11-05","deposit":12500,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":12500,"preRent":0}
 {"lawd":"31200","umdNm":"상안동","jibun":"381-1","apt":"쌍용아진그린타운2","area":59.98,"floor":6,"built":1996,"date":"2026-11-05","deposit":1000,"rent":65,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31200","umdNm":"상안동","jibun":"367","apt":"프리드","area":44.91,"floor":4,"built":2015,"date":"2026-11-05","deposit":9000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31200","umdNm":"화봉동","jibun":"1440","apt":"화봉2주공","area":46.9,"floor":5,"built":2009,"date":"2026-11-05","deposit":2776,"rent":21,"term":"27.01~28.12","type":"갱신","rrr":null,"preDeposit":2695,"preRent":20}
+{"lawd":"31200","umdNm":"매곡동","jibun":"966","apt":"매곡에듀파크에일린의뜰","area":85,"floor":6,"built":2021,"date":"2026-11-06","deposit":35000,"rent":0,"term":"26.11~28.06","type":"갱신","rrr":null,"preDeposit":27000,"preRent":0}
