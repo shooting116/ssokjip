@@ -38,7 +38,7 @@ interface State {
   park: 'all' | 1 | 1.3;        // 세대당 주차대수 이상
   mode: 'live' | 'gap';         // live = 실거주할 집(기본), gap = 전세 끼고 살 집(갭 기준)
   gapMan: number;               // 갭(내 돈) 상한, 만 원. 0이면 없음. gap 모드에서만
-  sort: 'fit' | 'priceAsc' | 'priceDesc' | 'trades' | 'new' | 'units' | 'gapAsc';
+  sort: 'fit' | 'priceAsc' | 'priceDesc' | 'trades' | 'new' | 'units' | 'gapAsc' | 'gapDesc';
   view: 'both' | 'list';
 }
 const KEY = 'ssokjip-find-v1';
@@ -267,6 +267,7 @@ function compute() {
     units: (a, b) => (b.c.u ?? 0) - (a.c.u ?? 0),
     // 갭 낮은 순: 순수 오름차순(전세가 ≥ 매매가도 그대로 앞에 옴 — 순서를 바꾸지 않고 빨간 글씨로 표시). 전세 표본이 없어 갭이 없는 단지만 뒤로
     gapAsc: (a, b) => (gapOf(a) ?? Infinity) - (gapOf(b) ?? Infinity) || b.c.n6 - a.c.n6,
+    gapDesc: (a, b) => (gapOf(b) ?? -Infinity) - (gapOf(a) ?? -Infinity) || b.c.n6 - a.c.n6,
   };
   fitted.sort(by[s.sort]);
 }
@@ -379,7 +380,7 @@ function renderFilters() {
           <option value="trades" ${s.sort === 'trades' ? 'selected' : ''}>최근 거래 많은 순</option>
           <option value="new" ${s.sort === 'new' ? 'selected' : ''}>신축 순</option>
           <option value="units" ${s.sort === 'units' ? 'selected' : ''}>세대수 많은 순</option>
-          ${s.mode === 'gap' ? `<option value="gapAsc" ${s.sort === 'gapAsc' ? 'selected' : ''}>갭(매매−전세) 낮은 순</option>` : ''}
+          ${s.mode === 'gap' ? `<option value="gapAsc" ${s.sort === 'gapAsc' ? 'selected' : ''}>갭(매매−전세) 낮은 순</option><option value="gapDesc" ${s.sort === 'gapDesc' ? 'selected' : ''}>갭(매매−전세) 높은 순</option>` : ''}
         </select>
       </div>
       <div class="fpanel" ${filtersOpen ? '' : 'hidden'}>
