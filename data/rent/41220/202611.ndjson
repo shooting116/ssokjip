@@ -131,3 +131,8 @@
 {"lawd":"41220","umdNm":"진위면 견산리","jibun":"27-15","apt":"한승아파트","area":44.46,"floor":2,"built":2000,"date":"2026-11-06","deposit":1000,"rent":60,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"비전동","jibun":"828-2","apt":"현대이화","area":62.38,"floor":2,"built":1993,"date":"2026-11-06","deposit":15000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"세교동","jibun":"596","apt":"힐스테이트평택3차(3-1블록)","area":84.87,"floor":8,"built":2019,"date":"2026-11-06","deposit":2000,"rent":140,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41220","umdNm":"비전동","jibun":"828","apt":"동아동백","area":84.91,"floor":5,"built":1994,"date":"2026-11-07","deposit":18000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":22000,"preRent":0}
+{"lawd":"41220","umdNm":"소사동","jibun":"670","apt":"평택효성해링턴플레이스1단지","area":72.65,"floor":9,"built":2019,"date":"2026-11-07","deposit":2000,"rent":120,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41220","umdNm":"소사동","jibun":"697","apt":"평택효성해링턴플레이스2단지","area":59.98,"floor":24,"built":2019,"date":"2026-11-07","deposit":2000,"rent":100,"term":"27.01~28.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41220","umdNm":"소사동","jibun":"697","apt":"평택효성해링턴플레이스2단지","area":84.77,"floor":15,"built":2019,"date":"2026-11-07","deposit":2000,"rent":130,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41220","umdNm":"비전동","jibun":"856-1","apt":"SK비전","area":84.92,"floor":5,"built":2003,"date":"2026-11-07","deposit":21000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
