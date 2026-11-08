@@ -25,7 +25,7 @@ jobs:
         id: fetch
         env:
           RONE_KEY: ${{ secrets.RONE_KEY }}
-        run: node scripts/fetch-rone.mjs --mode weekly --weeks 110
+        run: node scripts/fetch-rone.mjs --mode weekly --weeks 520
       - name: 커밋·푸시
         if: always()
         run: |
