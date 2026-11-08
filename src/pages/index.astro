@@ -36,7 +36,8 @@ const situations = [
     </button>
   </section>
 
-  <section class="card" aria-labelledby="sit">
+  <section class="card fold" data-fold="sit" data-fold-default="open" aria-labelledby="sit">
+    <button type="button" class="fold-t" data-fold-t aria-expanded="true" aria-label="어떤 상황인가요 접기·펼치기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></button>
     <h2 id="sit" class="h">어떤 상황인가요?</h2>
     <div class="sgrid">
       {situations.map((s) => (
@@ -53,7 +54,8 @@ const situations = [
   </section>
 
   {chgList.length > 0 && (
-    <section class="card chg" aria-labelledby="chg-h">
+    <section class="card chg fold" data-fold="chg" data-fold-default="closed" aria-labelledby="chg-h">
+      <button type="button" class="fold-t" data-fold-t aria-expanded="true" aria-label="지역별 1년 변동률 접기·펼치기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></button>
       <h2 id="chg-h" class="h">지역별 1년 변동률 <span class="sub">실거래 {sm.asOf} 기준</span></h2>
       <div class="cgrid">
         {(cap || rAll) && (
@@ -70,18 +72,19 @@ const situations = [
     </section>
   )}
 
-  <section class="card lncard" aria-labelledby="ln-h">
+  <section class="card lncard fold" data-fold="line" data-fold-default="open" aria-labelledby="ln-h">
+    <button type="button" class="fold-t" data-fold-t aria-expanded="true" aria-label="노선별 시세분석 접기·펼치기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></button>
     <a class="lnhead" href="/line/">
       <span class="lnic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="14" rx="3" /><path d="M5 11h14M9 21l-2-4M15 21l2-4" /><circle cx="9" cy="14" r=".6" fill="currentColor" /><circle cx="15" cy="14" r=".6" fill="currentColor" /></svg></span>
       <span class="lntx"><h2 id="ln-h" class="h">노선별 시세분석</h2><span class="d">지하철이 지나는 시·구를 순서대로, 84㎡ 시세와 10년 흐름</span></span>
-      <span class="ch" aria-hidden="true">›</span>
     </a>
     <div class="lnchips">
       {LINES.map((l) => <a class="lnchip" href={`/line/${l.slug}/`} style={`--lc:${l.color}`}><i></i>{l.name}</a>)}
     </div>
   </section>
 
-  <section class="card quick" aria-labelledby="qk">
+  <section class="card quick fold" data-fold="quick" data-fold-default="open" aria-labelledby="qk">
+    <button type="button" class="fold-t" data-fold-t aria-expanded="true" aria-label="예산을 이미 알고 있다면 접기·펼치기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></button>
     <h2 id="qk" class="h">예산을 이미 알고 있다면</h2>
     <div class="qgrid">
       <a class="qcell" href="/find/"><b>집 찾기</b><span class="d">예산·지역·평형으로 지도에서</span></a>
@@ -96,6 +99,19 @@ const situations = [
     </div>
   </section>
 
+  <script is:inline>
+    // 홈 카드 접기: 처음 상태는 data-fold-default, 방문자가 바꾸면 이 브라우저에 기억
+    (function () {
+      var get = function (k) { try { return localStorage.getItem('fold:' + k); } catch (e) { return null; } };
+      var set = function (k, v) { try { localStorage.setItem('fold:' + k, v); } catch (e) {} };
+      document.querySelectorAll('[data-fold]').forEach(function (c) {
+        var k = c.getAttribute('data-fold'), b = c.querySelector('[data-fold-t]');
+        var apply = function (closed) { c.classList.toggle('closed', closed); b.setAttribute('aria-expanded', closed ? 'false' : 'true'); };
+        apply((get(k) || c.getAttribute('data-fold-default')) === 'closed');
+        b.addEventListener('click', function () { var closed = !c.classList.contains('closed'); apply(closed); set(k, closed ? 'closed' : 'open'); });
+      });
+    })();
+  </script>
 </Base>
 
 <style>
@@ -123,12 +139,18 @@ const situations = [
     .sgrid { grid-template-columns: 1fr 1fr; }
     .scell:last-child { grid-column: 1 / -1; }
   }
+  /* 카드 접기 */
+  .fold { position: relative; }
+  .fold > .h, .fold .lnhead { padding-right: 44px; }
+  .fold-t { position: absolute; top: calc(var(--pad) - 8px); right: calc(var(--pad) - 8px); width: 36px; height: 36px; border: 0; border-radius: 50%; background: var(--soft); color: var(--fg2); display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; }
+  .fold-t svg { width: 20px; height: 20px; transform: rotate(180deg); transition: transform .2s; }
+  .fold.closed .fold-t svg { transform: none; }
+  .fold.closed .sgrid, .fold.closed .ccell, .fold.closed > .src, .fold.closed .lnchips, .fold.closed .qgrid, .fold.closed .chips { display: none; }
   .lncard { margin-top: var(--gap); }
-  .lnhead { position: relative; display: flex; align-items: center; gap: 14px; padding-right: 24px; color: inherit; }
+  .lnhead { position: relative; display: flex; align-items: center; gap: 14px; color: inherit; }
   .lnic { flex: none; width: 48px; height: 48px; border-radius: 16px; background: var(--blue-soft); color: var(--blue); display: flex; align-items: center; justify-content: center; }
   .lnic svg { width: 24px; height: 24px; }
   .lntx { min-width: 0; display: flex; flex-direction: column; gap: 2px; } .lntx .h { margin: 0; } .lntx .d { font-size: 12.5px; color: var(--fg2); line-height: 1.4; word-break: keep-all; }
-  .lnhead .ch { position: absolute; right: 0; top: 50%; transform: translateY(-50%); color: #b0b8c1; font-size: 22px; line-height: 1; }
   .lnchips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
   .lnchip { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 700; padding: 7px 11px 7px 9px; border-radius: 999px; background: var(--soft); color: var(--fg); white-space: nowrap; }
   .lnchip i { width: 10px; height: 10px; border-radius: 50%; background: var(--lc); }
