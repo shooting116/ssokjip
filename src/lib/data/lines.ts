@@ -11,7 +11,16 @@ const CAPITAL = new Set(['서울', '경기', '인천']);
 /** 모든 노선의 공통 기준 지역(2026-11-08 결정: 노선끼리 비교되도록 하나로 통일) */
 export const REF = { lawd: '11650', sido: '서울', sigungu: '서초구', label: '서초구' };
 
-export const LINES: { slug: string; name: string; color: string; order: 'id' | 'geo' | 'rule'; note?: string }[] = [
+export const LINES: { slug: string; name: string; color: string; order: 'id' | 'geo' | 'rule' | 'seg'; note?: string; segments?: { title: string; names: string[] }[] }[] = [
+  {
+    slug: '1', name: '1호선', color: '#0052a4', order: 'seg',
+    note: '서울·경기·인천 구간만 담았습니다(천안·아산 방면 제외). 구로에서 인천행과 수원·평택행으로 갈라집니다.',
+    segments: [
+      { title: '연천 ~ 서울역 ~ 구로', names: ['연천','전곡','청산','소요산','동두천','보산','동두천중앙','지행','덕정','덕계','양주','녹양','가능','의정부','회룡','망월사','도봉산','도봉','방학','창동','녹천','월계','광운대','석계','신이문','외대앞','회기','청량리','제기동','신설동','동묘앞','동대문','종로5가','종로3가','종각','시청','서울','남영','용산','노량진','대방','신길','영등포','신도림','구로'] },
+      { title: '경인선 · 구로 ~ 인천', names: ['구일','개봉','오류동','온수','역곡','소사','부천','중동','송내','부개','부평','백운','동암','간석','주안','도화','제물포','도원','동인천','인천'] },
+      { title: '경부선 · 구로 ~ 평택', names: ['가산디지털단지','독산','금천구청','광명','석수','관악','안양','명학','금정','군포','당정','의왕','성균관대','화서','수원','세류','병점','서동탄','세마','오산대','오산','진위','송탄','서정리','평택지제','평택'] },
+    ],
+  },
   { slug: 'gtx-a', name: 'GTX-A', color: '#9a6292', order: 'rule', note: '운정중앙~서울역, 수서~동탄 운행 중. 삼성역은 공사 중이며 창릉역은 2030년 개통 예정입니다.' },
   { slug: 'gtx-b', name: 'GTX-B', color: '#0d4d9b', order: 'rule', note: '공사 중인 노선입니다. 역 주변 지역을 미리 비교하는 용도이며, 개통 시기는 GTX 일정 가이드를 확인하세요.' },
   { slug: 'gtx-c', name: 'GTX-C', color: '#2e7d5b', order: 'rule', note: '2026년 9월 본공사를 시작한 노선입니다. 역 구성은 2022년 발표 기준이며 바뀔 수 있습니다.' },
@@ -40,6 +49,7 @@ export interface RegionRow {
   rel: number | null;                                            // 그래프 시작 주 대비 기준 지역보다 더 오른 폭(%p) = 상대지수 − 100
   series: (number | null)[] | null;                              // 기준 지역 대비 상대지수(시작 주 = 100)
   isRef: boolean;
+  seg: string | null;                                            // 이 지역부터 시작하는 구간 제목(1호선처럼 갈라지는 노선)
 }
 export interface LineData {
   slug: string; name: string; color: string; asOf: string; lineNote: string | null;
@@ -115,18 +125,26 @@ export function loadLine(slug: string): LineData | null {
   const { all, asOf, stations, med } = base();
   const sm = loadSummary();
   const mine = def.order === 'rule' ? ruleStations(def.name) : stations.filter((s) => s.l === def.name);
-  const ordered = def.order === 'id' ? [...mine].sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true })) : def.order === 'rule' ? mine : geoOrder(mine);
+  // 구간이 정해진 노선(1호선)은 구간 순서대로, 각 역에 구간 제목을 단다
+  const segOf = new Map<Station, string>();
+  const ordered = def.order === 'seg'
+    ? def.segments!.flatMap((g) => g.names.map((n) => mine.find((s) => s.n === n)).filter((s): s is Station => !!s).map((s) => (segOf.set(s, g.title), s)))
+    : def.order === 'id' ? [...mine].sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true })) : def.order === 'rule' ? mine : geoOrder(mine);
 
   // 역 → 지역, 지역은 노선에서 처음 나오는 순서대로
   const byName = new Map<string, Complex>();
   for (const c of all) { const k = `${c.sido} ${c.sigungu}`; if (!byName.has(k)) byName.set(k, c); }
-  const byLawd = new Map<string, { lawd: string; sido: string; sigungu: string; stations: string[] }>();
+  const byLawd = new Map<string, { lawd: string; sido: string; sigungu: string; stations: string[]; seg: string | null }>();
+  let curSeg: string | null = null, segShown = new Set<string>();
   for (const s of ordered) {
     const c = regionOf(s, all, byName); if (!c) continue;
-    const r = byLawd.get(c.lawd) ?? { lawd: c.lawd, sido: c.sido, sigungu: c.sigungu, stations: [] };
+    curSeg = segOf.get(s) ?? null;
+    const key = curSeg ? `${curSeg}|${c.lawd}` : c.lawd;   // 구간이 다르면 같은 구도 따로 놓는다
+    const first = curSeg && !segShown.has(curSeg) ? (segShown.add(curSeg), curSeg) : null;
+    const r = byLawd.get(key) ?? { lawd: c.lawd, sido: c.sido, sigungu: c.sigungu, stations: [], seg: first };
     const nm = s.st && s.st !== '운행중' ? `${s.n}(${s.st})` : s.n;
     if (!r.stations.includes(nm)) r.stations.push(nm);
-    byLawd.set(c.lawd, r);
+    byLawd.set(key, r);
   }
   const base0 = [...byLawd.values()].map((r) => ({ ...r, ...med.get(r.lawd)! }));
 
@@ -153,7 +171,7 @@ export function loadLine(slug: string): LineData | null {
       lawd: r.lawd, sido: r.sido, sigungu: r.sigungu, label: shortName(r.sido, r.sigungu), stations: r.stations,
       med: r.med, n84: r.n, ratio: refRow?.med && r.med ? Math.round((r.med / refRow.med) * 100) : null,
       yoy: meta?.chg?.yoy ?? null, rone: roneSigungu(r.sido, r.sigungu)?.yoy ?? null,
-      rel, series, isRef: r.lawd === refRow?.lawd,
+      rel, series, isRef: r.lawd === refRow?.lawd, seg: r.seg,
     };
   });
   const ref = { label: REF.label, med: refRow.med, n: refRow.n, onLine: regions.some((r) => r.isRef) };
@@ -165,7 +183,9 @@ export function loadLine(slug: string): LineData | null {
   }
   // 그래프: 경기·인천 지역이 있으면 그 지역들, 없으면 서울 지역(기준 제외), 최대 8곳
   const outer = regions.filter((r) => !r.isRef && r.series && r.sido !== '서울');
-  const keys = (outer.length ? outer : regions.filter((r) => !r.isRef && r.series)).slice(0, 8).map((r) => r.lawd);
+  const cand = [...new Map((outer.length ? outer : regions.filter((r) => !r.isRef && r.series)).map((r) => [r.lawd, r])).values()];
+  const pick = cand.length <= 8 ? cand : Array.from({ length: 8 }, (_, i) => cand[Math.round((i * (cand.length - 1)) / 7)]);   // 많으면 노선 위에서 고르게 8곳
+  const keys = pick.map((r) => r.lawd);
   const out: LineData = { slug, name: def.name, color: def.color, asOf, lineNote: def.note ?? null, regions, ref, note, chart: keys.length ? { periods, labels, keys } : null };
   lineCache.set(slug, out);
   return out;

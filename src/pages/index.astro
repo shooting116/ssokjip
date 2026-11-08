@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import { loadSummary } from '../lib/data/index.ts';
 import { pct } from '../lib/ui/format.ts';
 import { roneSido, roneText } from '../lib/data/rone.ts';
+import { LINES } from '../lib/data/lines.ts';
 const sm = loadSummary();
 const chgList = Object.entries(sm.sido).map(([sido, v]) => ({ sido, chg: v.chg })).filter((x) => x.chg);
 const cap = sm.groups?.수도권?.chg ?? null;
@@ -48,6 +49,17 @@ const situations = [
           <span class="ch" aria-hidden="true">›</span>
         </a>
       ))}
+    </div>
+  </section>
+
+  <section class="card lncard" aria-labelledby="ln-h">
+    <a class="lnhead" href="/line/">
+      <span class="lnic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="14" rx="3" /><path d="M5 11h14M9 21l-2-4M15 21l2-4" /><circle cx="9" cy="14" r=".6" fill="currentColor" /><circle cx="15" cy="14" r=".6" fill="currentColor" /></svg></span>
+      <span class="lntx"><h2 id="ln-h" class="h">노선별 시세분석</h2><span class="d">지하철이 지나는 시·구를 순서대로, 84㎡ 시세와 10년 흐름</span></span>
+      <span class="ch" aria-hidden="true">›</span>
+    </a>
+    <div class="lnchips">
+      {LINES.map((l) => <a class="lnchip" href={`/line/${l.slug}/`} style={`--lc:${l.color}`}><i></i>{l.name}</a>)}
     </div>
   </section>
 
@@ -111,6 +123,15 @@ const situations = [
     .sgrid { grid-template-columns: 1fr 1fr; }
     .scell:last-child { grid-column: 1 / -1; }
   }
+  .lncard { margin-top: var(--gap); }
+  .lnhead { position: relative; display: flex; align-items: center; gap: 14px; padding-right: 24px; color: inherit; }
+  .lnic { flex: none; width: 48px; height: 48px; border-radius: 16px; background: var(--blue-soft); color: var(--blue); display: flex; align-items: center; justify-content: center; }
+  .lnic svg { width: 24px; height: 24px; }
+  .lntx { min-width: 0; display: flex; flex-direction: column; gap: 2px; } .lntx .h { margin: 0; } .lntx .d { font-size: 12.5px; color: var(--fg2); line-height: 1.4; word-break: keep-all; }
+  .lnhead .ch { position: absolute; right: 0; top: 50%; transform: translateY(-50%); color: #b0b8c1; font-size: 22px; line-height: 1; }
+  .lnchips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+  .lnchip { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 700; padding: 7px 11px 7px 9px; border-radius: 999px; background: var(--soft); color: var(--fg); white-space: nowrap; }
+  .lnchip i { width: 10px; height: 10px; border-radius: 50%; background: var(--lc); }
   .quick { margin-top: var(--gap); }
   .chg { margin-top: var(--gap); }
   .cgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; margin-top: 8px; }

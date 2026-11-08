@@ -36,9 +36,9 @@ const toLabel = chart ? chart.labels[chart.periods[n - 1]] ?? chart.periods[n - 
   <nav class="sub" style="padding:2px 4px 6px"><a href="/">홈</a> › <a href="/line/">노선별 시세분석</a> › {d.name}</nav>
   <header class="q" style="padding:4px 4px 10px">
     <h1 class="big" style="margin:0;font-size:24px;display:flex;align-items:center;gap:8px"><span class="ln" style={`background:${d.color}`}></span>{d.name} 시세분석</h1>
-    <p class="sub2" style="margin:6px 0 0">{d.name}이 지나는 시·구 {d.regions.length}곳을 노선 순서대로 놓았습니다.</p>
+    <p class="sub2" style="margin:6px 0 0">{d.name}이 지나는 시·구 {new Set(d.regions.map((r) => r.lawd)).size}곳을 노선 순서대로 놓았습니다.</p>
     <p class="sub" style="margin:4px 0 0">기준: <b>{ref.label}</b> 84㎡ 시세 중앙값 <b>{eok(ref.med)}</b> = 100% (모든 노선 공통){!ref.onLine && ' · 이 노선은 서초구를 지나지 않습니다'}</p>
-    {d.lineNote && <p class="sub" style="margin:2px 0 0">{d.lineNote} <a href="/guide/gtx-timeline-2026/">GTX 일정</a></p>}
+    {d.lineNote && <p class="sub" style="margin:2px 0 0">{d.lineNote}{d.slug.startsWith('gtx') && <> <a href="/guide/gtx-timeline-2026/">GTX 일정</a></>}</p>}
     {d.note && <p class="sub" style="margin:2px 0 0">참고: {d.note.label} 84㎡ 시세 중앙값 <b>{eok(d.note.med)}</b> ({d.note.n}개 단지)</p>}
   </header>
 
@@ -59,6 +59,7 @@ const toLabel = chart ? chart.labels[chart.periods[n - 1]] ?? chart.periods[n - 
   <ol class="rl" style={`--lc:${d.color}`}>
     {d.regions.map((r, i) => (
       <li class:list={[{ ref: r.isRef }]}>
+        {r.seg && <div class="seg">{r.seg}</div>}
         <span class="dot" aria-hidden="true"></span>
         <a class="card rc" href={`/area/${r.lawd}/`}>
           <div class="hd">
@@ -104,6 +105,8 @@ const toLabel = chart ? chart.labels[chart.periods[n - 1]] ?? chart.periods[n - 
   .rl > li { position: relative; margin-bottom: 10px; }
   .dot { position: absolute; left: -17px; top: 18px; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid var(--lc); box-sizing: border-box; z-index: 1; }
   .ref .dot { background: var(--lc); }
+  .seg { margin: 6px 0 8px -2px; font-size: 13px; font-weight: 800; color: var(--fg2); }
+  .seg ~ .dot { top: 46px; }
   .rc { display: block; color: inherit; padding: 14px 16px; margin: 0; }
   .hd { display: flex; align-items: center; gap: 8px; }
   .nm { flex: 1; min-width: 0; display: flex; align-items: center; gap: 6px; } .nm b { font-size: 16px; }
