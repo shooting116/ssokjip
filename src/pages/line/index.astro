@@ -1,39 +1,36 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { LINES, loadLine, RADIUS_M } from '../../lib/data/lines.ts';
+import { LINES, loadLine } from '../../lib/data/lines.ts';
 import { eok } from '../../lib/ui/format.ts';
 
 const rows = LINES.map((l) => {
   const d = loadLine(l.slug)!;
-  const p = d.stations.filter((s) => s.med != null).map((s) => s.med!);
-  return { ...l, n: d.stations.length, lo: p.length ? Math.min(...p) : null, hi: p.length ? Math.max(...p) : null, asOf: d.asOf, ref: d.ref };
+  return { ...l, n: d.regions.length, path: d.regions.map((r) => r.label), asOf: d.asOf, ref: d.ref };
 });
 const asOf = rows[0]?.asOf;
-const km = RADIUS_M / 1000;
 ---
-<Base title="노선별 아파트 시세 — 지하철 역 따라 보기" description={`수도권 도시철도 ${rows.length}개 노선의 역을 순서대로 놓고, 역 ${km}km 안 아파트 84㎡ 실거래 시세를 비교합니다. ${asOf} 기준.`}>
+<Base title="노선별 지역 비교 — 지하철 따라 시·구 시세 보기" description={`수도권 도시철도 ${rows.length}개 노선이 지나는 시·구를 노선 순서대로 놓고, 84㎡ 실거래 시세·변동률과 부동산원 지수 흐름을 비교합니다. ${asOf} 기준.`}>
   <header class="q" style="padding:4px 4px 10px">
-    <h1 class="big" style="margin:0;font-size:24px">노선별 시세</h1>
-    <p class="sub2" style="margin:6px 0 0">지하철 노선을 따라 역마다 {km}km 안 아파트 84㎡ 시세를 이어 봅니다. 출퇴근 방향으로 예산에 맞는 구간을 찾을 때 씁니다.</p>
+    <h1 class="big" style="margin:0;font-size:24px">노선별 지역 비교</h1>
+    <p class="sub2" style="margin:6px 0 0">지하철 노선이 지나는 시·구를 순서대로 놓고 시세와 흐름을 비교합니다. 출퇴근 노선 위에서 지역을 고를 때 씁니다.</p>
   </header>
   <ul class="lines card">
     {rows.map((r) => (
       <li><a href={`/line/${r.slug}/`}>
         <span class="ln" style={`background:${r.color}`}></span>
-        <span class="nm"><b>{r.name}</b><span class="sub">{r.n}개 역</span></span>
-        <span class="rg">{r.lo && r.hi ? `${eok(r.lo)} ~ ${eok(r.hi)}` : '-'}</span>
+        <span class="nm"><b>{r.name}</b><span class="sub">{r.n}개 시·구 · 기준 {r.ref?.label} {eok(r.ref?.med)}</span><span class="pa">{r.path.join(' → ')}</span></span>
       </a></li>
     ))}
   </ul>
-  <p class="src">역 {km}km 안 84㎡ 타입 최근 6개월 실거래 중앙값의 노선 내 최저~최고(시세 단지 3곳 이상인 역만). 출처: 국토교통부 실거래가({asOf} 기준) · 국가철도공단 전국도시철도역사정보. 1호선·경의중앙선은 지선이 많아 역 순서를 정리한 뒤 추가합니다.</p>
+  <p class="src">지역 시세는 84㎡ 타입 최근 6개월 실거래 중앙값. 출처: 국토교통부 실거래가({asOf} 기준) · 한국부동산원 R-ONE · 국가철도공단 전국도시철도역사정보. 1호선·경의중앙선은 지선이 많아 순서를 정리한 뒤 추가합니다.</p>
   <div class="ad-slot" aria-hidden="true"></div>
 </Base>
 <style>
   .lines { list-style: none; margin: 0 0 12px; padding: 4px 16px; }
   .lines li { border-bottom: 1px solid var(--soft); } .lines li:last-child { border-bottom: 0; }
   .lines a { display: flex; align-items: center; gap: 12px; padding: 13px 0; color: inherit; }
-  .ln { flex: none; width: 6px; height: 28px; border-radius: 3px; }
-  .nm { flex: 1; min-width: 0; display: flex; align-items: baseline; gap: 6px; } .nm b { font-size: 15.5px; }
-  .rg { flex: none; font-weight: 700; font-variant-numeric: tabular-nums; font-size: 14px; }
+  .ln { flex: none; width: 6px; align-self: stretch; border-radius: 3px; }
+  .nm { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; } .nm b { font-size: 15.5px; }
+  .pa { font-size: 12.5px; color: var(--fg2); word-break: keep-all; line-height: 1.5; }
   .ad-slot { min-height: 0; }
 </style>

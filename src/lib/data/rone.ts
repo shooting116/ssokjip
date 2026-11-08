@@ -70,3 +70,14 @@ export function roneText(r: RoneStat | null): string {
   const s = r.streak >= 2 ? ` · 최근 ${r.streak}주째 ↑` : r.streak <= -2 ? ` · 최근 ${-r.streak}주째 ↓` : '';
   return `1년 ${r.yoy > 0 ? '+' : ''}${r.yoy.toFixed(1)}%${s}`;
 }
+
+/** 시군구 주간 지수 시계열(노선별 지역 비교 그래프용). 이름 규칙은 roneSigungu와 같다 */
+export function roneSeries(sido: string, sigungu: string): { periods: string[]; labels: Record<string, string>; values: (number | null)[] } | null {
+  const w = load(); if (!w) return null;
+  const parts = sigungu.trim().split(/\s+/);
+  const tail = '>' + parts.join('>');
+  const roots = [sido, ...(SIDO_ALIAS[sido] ?? []).map((a) => a.split('>')[0])];
+  const k = keys().find((x) => roots.some((r) => x.startsWith(r + '>')) && x.endsWith(tail));
+  if (!k) return null;
+  return { periods: w.periods, labels: w.labels, values: w.periods.map((p) => w.series[k][p] ?? null) };
+}

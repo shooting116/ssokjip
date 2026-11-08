@@ -1,45 +1,71 @@
 ---
 import Base from '../../../layouts/Base.astro';
-import { LINES, loadLine, RADIUS_M, MIN_COMPLEX } from '../../../lib/data/lines.ts';
+import { LINES, loadLine, MIN_COMPLEX } from '../../../lib/data/lines.ts';
 import { eok, pct } from '../../../lib/ui/format.ts';
 
 export function getStaticPaths() {
   return LINES.map((l) => ({ params: { slug: l.slug } }));
 }
 const d = loadLine(Astro.params.slug!)!;
-const priced = d.stations.filter((s) => s.med != null);
-const lo = priced.length ? Math.min(...priced.map((s) => s.med!)) : null;
-const hi = priced.length ? Math.max(...priced.map((s) => s.med!)) : null;
-const title = `${d.name} 역별 아파트 시세 — 역 1km 안 84㎡ 실거래 중앙값`;
-const desc = `${d.name} ${d.stations.length}개 역을 순서대로 놓고, 역마다 반경 1km 안 아파트의 84㎡ 최근 6개월 실거래 중앙값·1년 변동률·거래 건수를 보여줍니다. ${d.asOf} 기준.`;
-const yoyCls = (v: number | null) => (v == null ? '' : v > 0 ? 'up' : v < 0 ? 'down' : '');
-const km = RADIUS_M / 1000;
+const ref = d.ref;
+const title = `${d.name} 따라 지역 비교 — 시·구별 84㎡ 시세와 변동률`;
+const desc = `${d.name}이 지나는 ${d.regions.length}개 시·구를 노선 순서대로 놓고, 지역별 84㎡ 실거래 시세·1년 변동률과 부동산원 지수 흐름을 ${ref?.label ?? '기준 지역'}과 비교합니다. ${d.asOf} 기준.`;
+const cls = (v: number | null) => (v == null ? 'na' : v > 0 ? 'up' : v < 0 ? 'down' : '');
+
+// 그래프: 기준 지역 대비 상대지수(시작 주 = 100)
+const PAL = ['#3182f6', '#f04452', '#00b493', '#f59e0b', '#8b5cf6', '#ec4899', '#0ea5e9', '#84cc16'];
+const W = 340, H = 210, PL = 30, PR = 8, PT = 10, PB = 22;
+const chart = d.chart;
+const lines = chart ? chart.keys.map((k, i) => ({ r: d.regions.find((r) => r.lawd === k)!, c: PAL[i % PAL.length] })) : [];
+const vals = lines.flatMap((l) => l.r.series!.filter((v): v is number => v != null));
+const yMin = vals.length ? Math.floor(Math.min(95, ...vals) / 5) * 5 : 90, yMax = vals.length ? Math.ceil(Math.max(105, ...vals) / 5) * 5 : 110;
+const n = chart?.periods.length ?? 0;
+const X = (i: number) => PL + (i / Math.max(1, n - 1)) * (W - PL - PR);
+const Y = (v: number) => PT + (1 - (v - yMin) / (yMax - yMin)) * (H - PT - PB);
+const path = (s: (number | null)[]) => s.map((v, i) => (v == null ? '' : `${X(i).toFixed(1)},${Y(v).toFixed(1)}`)).filter(Boolean).join(' ');
+const ticks: number[] = []; for (let v = yMin; v <= yMax; v += 5) ticks.push(v);
+const lab = (p: string) => { const s = chart?.labels[p] ?? p; const m = /(\d{4})\D+(\d{1,2})/.exec(s); return m ? `${m[1].slice(2)}.${m[2].padStart(2, '0')}` : p.slice(2, 4) + '년'; };
+const xt = chart ? [0, Math.floor((n - 1) / 2), n - 1] : [];
+const fromLabel = chart ? chart.labels[chart.periods[0]] ?? chart.periods[0] : '';
+const toLabel = chart ? chart.labels[chart.periods[n - 1]] ?? chart.periods[n - 1] : '';
 ---
 <Base title={title} description={desc}>
   <nav class="sub" style="padding:2px 4px 6px"><a href="/">홈</a> › <a href="/line/">노선별</a> › {d.name}</nav>
   <header class="q" style="padding:4px 4px 10px">
-    <h1 class="big" style={`margin:0;font-size:24px;display:flex;align-items:center;gap:8px`}><span class="ln" style={`background:${d.color}`}></span>{d.name} 역별 시세</h1>
-    <p class="sub2" style="margin:6px 0 0">{d.stations.length}개 역 · 역 {km}km 안 84㎡ 시세 {lo && hi ? <><b>{eok(lo)}</b> ~ <b>{eok(hi)}</b></> : '-'}</p>
-    <p class="sub" style="margin:4px 0 0">기준: {d.ref.name} 84㎡ 시세 중앙값 <b>{eok(d.ref.med)}</b> ({d.ref.n}개 단지) = 100%</p>
+    <h1 class="big" style="margin:0;font-size:24px;display:flex;align-items:center;gap:8px"><span class="ln" style={`background:${d.color}`}></span>{d.name} 따라 지역 비교</h1>
+    <p class="sub2" style="margin:6px 0 0">{d.name}이 지나는 시·구 {d.regions.length}곳을 노선 순서대로 놓았습니다.</p>
+    {ref && <p class="sub" style="margin:4px 0 0">기준: <b>{ref.label}</b> 84㎡ 시세 중앙값 <b>{eok(ref.med)}</b> = 100% (노선이 지나는 서울 지역 중 시세가 가장 높은 곳)</p>}
   </header>
 
-  <ol class="lineview card" style={`--lc:${d.color}`}>
-    {d.stations.map((s, i) => (
-      <li class:list={[{ nodata: s.med == null, br: !!s.branch }]}>
-        {s.branch && <div class="brk">{s.branch}</div>}
-        <details>
-          <summary>
-            <span class="dot" aria-hidden="true"></span>
-            <span class="nm">
-              <span class="t1"><b>{s.name}</b>{s.transfer.length > 0 && <span class="tf">{s.transfer.slice(0, 3).join('·')}{s.transfer.length > 3 ? ` 외 ${s.transfer.length - 3}` : ''}</span>}</span>
-              <span class="meta">{s.med != null ? <>84㎡ 단지 {s.complexes}곳{s.yoy != null && <> · 1년 <span class={yoyCls(s.yoy)}>{pct(s.yoy)}</span></>} · 6개월 {s.n6.toLocaleString()}건</> : s.complexes > 0 ? <>84㎡ 시세 단지 {s.complexes}곳(3곳 미만) · 6개월 {s.n6.toLocaleString()}건</> : <>{km}km 안 84㎡ 시세 단지 없음</>}</span>
-            </span>
-            <span class="pr">{s.med != null ? <><b>{eok(s.med)}</b><span class="rt">{d.ref.name} {s.ratio}%</span></> : <span class="na">-</span>}</span>
-          </summary>
-          {s.top.length > 0 && (
-            <ul class="tops">{s.top.map((c) => <li>{c.static ? <a href={`/apt/${c.id}/`}>{c.name}</a> : <span>{c.name}</span>}<b>{eok(c.price)}</b></li>)}</ul>
-          )}
-        </details>
+  {chart && (
+    <section class="card sec">
+      <h2>{ref!.label} 대비 흐름 <span class="sub">부동산원 지수, 시작 주 = 100</span></h2>
+      <svg viewBox={`0 0 ${W} ${H}`} class="ch" role="img" aria-label={`${d.name} 지역별 ${ref!.label} 대비 상대지수`}>
+        {ticks.map((t) => <g><line x1={PL} x2={W - PR} y1={Y(t)} y2={Y(t)} class={t === 100 ? 'g100' : 'g'} /><text x={PL - 4} y={Y(t) + 3} class="yt">{t}</text></g>)}
+        {xt.map((i) => <text x={X(i)} y={H - 6} class="xt" text-anchor={i === 0 ? 'start' : i === n - 1 ? 'end' : 'middle'}>{lab(chart.periods[i])}</text>)}
+        {lines.map((l) => <polyline points={path(l.r.series!)} fill="none" stroke={l.c} stroke-width="2" stroke-linejoin="round" />)}
+      </svg>
+      <ul class="lg">{lines.map((l) => <li><span class="sw" style={`background:${l.c}`}></span>{l.r.label}<b class={cls(l.r.rel)}>{l.r.rel != null ? `${l.r.rel > 0 ? '+' : ''}${l.r.rel}` : '-'}</b></li>)}</ul>
+      <p class="src">{fromLabel} = 100으로 놓고, 각 지역 지수 변화를 {ref!.label} 지수 변화로 나눈 값입니다. 100보다 위면 그 기간 {ref!.label}보다 더 올랐다는 뜻(숫자 = 100과의 차이, %p)이고, 가격 수준이나 앞으로의 방향을 뜻하지 않습니다. {toLabel}까지.</p>
+    </section>
+  )}
+
+  <ol class="rl" style={`--lc:${d.color}`}>
+    {d.regions.map((r, i) => (
+      <li class:list={[{ ref: r.isRef }]}>
+        <span class="dot" aria-hidden="true"></span>
+        <a class="card rc" href={`/area/${r.lawd}/`}>
+          <div class="hd">
+            <span class="nm"><b>{r.label}</b>{r.isRef && <span class="pill p-soft">기준</span>}</span>
+            <span class="pr">{r.med != null ? <b>{eok(r.med)}</b> : <span class="na">-</span>}</span>
+          </div>
+          <div class="st">{r.stations.join(' · ')}</div>
+          <div class="kv">
+            <span>{ref?.label} 대비<b>{r.ratio != null ? `${r.ratio}%` : '-'}</b></span>
+            <span>실거래 1년<b class={cls(r.yoy)}>{r.yoy != null ? pct(r.yoy) : '-'}</b></span>
+            <span>지수 1년<b class={cls(r.rone)}>{r.rone != null ? pct(r.rone) : '-'}</b></span>
+          </div>
+        </a>
         {i === 3 && <div class="ad-slot" aria-hidden="true"></div>}
       </li>
     ))}
@@ -48,43 +74,39 @@ const km = RADIUS_M / 1000;
   <section class="card sec">
     <h2>숫자 읽는 법</h2>
     <ul class="how">
-      <li><b>시세</b> = 역에서 직선 {km}km 안 단지들의 84㎡ 타입(±5㎡) 최근 6개월 실거래 중앙값을 모아, 그 가운데 값을 냈습니다. 시세가 있는 단지가 {MIN_COMPLEX}곳 미만이면 비워 둡니다.</li>
-      <li><b>{d.ref.name} %</b> = 이 역 시세 ÷ {d.ref.name} 84㎡ 시세 중앙값. 가격 수준을 비교하는 계산값이며, 가치나 전망을 뜻하지 않습니다.</li>
-      <li><b>1년</b> = 같은 단지들의 1년 변동률(최근 6개월 중앙값 vs 1년 전 같은 6개월, 양쪽 3건 이상) 가운데 값. <b>6개월 거래</b> = 반경 안 모든 단지·평형의 최근 6개월 거래 건수 합.</li>
-      <li>역 사이 반경이 겹치면 같은 단지가 여러 역에 함께 잡힙니다. 직선거리라 실제 걷는 거리는 더 깁니다(<a href="/guide/station-radius/">역 거리 기준</a>).</li>
+      <li><b>시세</b> = 그 시·구 전체 단지 중 84㎡ 타입(±5㎡) 최근 6개월 실거래가 3건 이상인 단지들의 중앙값(지역별 페이지와 같은 값). 단지가 {MIN_COMPLEX}곳 미만이면 비워 둡니다.</li>
+      <li><b>{ref?.label} 대비</b> = 이 지역 시세 ÷ {ref?.label} 시세. 가격 수준을 비교한 계산값입니다.</li>
+      <li><b>실거래 1년</b> = 최근 6개월 중앙값과 1년 전 같은 6개월 비교(평형별 변동률의 중앙값). <b>지수 1년</b> = 한국부동산원 주간 매매가격지수 52주 전 대비.</li>
+      <li>지역은 역에서 가장 가까운 단지의 시·구로 정했습니다. 노선이 지역 경계를 지나면 역 이름과 행정구역이 다를 수 있습니다.</li>
     </ul>
   </section>
-  <a class="btn" href="/find/" style="margin-bottom:12px">내 예산으로 단지 찾기</a>
-  <p class="src">출처: 국토교통부 아파트 매매 실거래가({d.asOf} 기준, 해제·직거래 제외) · 국가철도공단 전국도시철도역사정보. 역 순서는 역 번호·위치로 정렬했습니다.</p>
+  <p class="src">출처: 국토교통부 아파트 매매 실거래가({d.asOf} 기준, 해제·직거래 제외) · 한국부동산원 R-ONE 주간 아파트 매매가격지수 · 국가철도공단 전국도시철도역사정보.</p>
   <div class="ad-slot" aria-hidden="true"></div>
 </Base>
 <style>
   .ln { display: inline-block; width: 6px; height: 22px; border-radius: 3px; }
-  .lineview { list-style: none; margin: 0 0 12px; padding: 8px 16px; }
-  .lineview > li { position: relative; }
-  .lineview > li::before { content: ''; position: absolute; left: 6px; top: 0; bottom: 0; width: 3px; background: var(--lc); opacity: .9; }
-  .lineview > li:first-child::before { top: 22px; } .lineview > li:last-child::before { bottom: calc(100% - 22px); }
-  .lineview summary { list-style: none; display: flex; align-items: center; gap: 10px; padding: 10px 0; cursor: pointer; }
-  .lineview summary::-webkit-details-marker { display: none; }
-  .dot { position: relative; z-index: 1; flex: none; width: 15px; height: 15px; border-radius: 50%; background: var(--card, #fff); border: 3px solid var(--lc); box-sizing: border-box; }
-  .nm { flex: 1; min-width: 0; display: flex; flex-direction: column; }
-  .nm b { font-size: 15px; }
-  .t1 { display: flex; align-items: baseline; gap: 6px; min-width: 0; }
-  .tf { font-size: 11px; color: var(--fg2); background: var(--bg, #f2f4f6); border-radius: 6px; padding: 1px 6px; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .meta { font-size: 12.5px; color: var(--fg2); margin-top: 2px; word-break: keep-all; }
-  .pr { flex: none; text-align: right; display: flex; flex-direction: column; align-items: flex-end; }
-  .pr b { font-size: 15.5px; font-variant-numeric: tabular-nums; }
-  .rt { font-size: 11.5px; color: var(--muted); margin-top: 2px; white-space: nowrap; }
-  .na { color: var(--muted); }
-  .nodata .nm b { color: var(--fg2); font-weight: 600; } .nodata .dot { opacity: .55; }
-  .brk { margin: 8px 0 0 22px; font-size: 12px; font-weight: 700; color: var(--muted); }
-  .br::before { top: 30px; }
-  .tops { list-style: none; margin: -2px 0 10px 25px; padding: 8px 12px; background: var(--bg, #f2f4f6); border-radius: 12px; font-size: 13px; }
-  .tops li { display: flex; justify-content: space-between; gap: 8px; padding: 3px 0; }
-  .tops a, .tops span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: inherit; }
-  .tops b { flex: none; font-variant-numeric: tabular-nums; }
-  .up { color: var(--red); } .down { color: var(--blue); }
-  .sec { margin-bottom: 12px; } .sec h2 { font-size: 16px; margin: 0 0 6px; }
+  .sec { margin-bottom: 12px; } .sec h2 { font-size: 16px; margin: 0 0 8px; } .sec h2 .sub { font-weight: 500; margin-left: 6px; }
+  .ch { width: 100%; height: auto; display: block; }
+  .ch .g { stroke: var(--soft, #eef0f3); stroke-width: 1; } .ch .g100 { stroke: #8b95a1; stroke-width: 1.2; stroke-dasharray: 3 3; }
+  .ch .yt { font-size: 9px; fill: var(--muted, #8b95a1); text-anchor: end; } .ch .xt { font-size: 9px; fill: var(--muted, #8b95a1); }
+  .lg { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 14px; font-size: 13px; }
+  .lg li { display: flex; align-items: center; gap: 6px; min-width: 0; } .lg b { margin-left: auto; font-variant-numeric: tabular-nums; }
+  .sw { flex: none; width: 10px; height: 10px; border-radius: 3px; }
+  .rl { list-style: none; margin: 0 0 12px; padding: 0 0 0 18px; position: relative; }
+  .rl::before { content: ''; position: absolute; left: 6px; top: 18px; bottom: 18px; width: 4px; border-radius: 2px; background: var(--lc); }
+  .rl > li { position: relative; margin-bottom: 10px; }
+  .dot { position: absolute; left: -17px; top: 18px; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid var(--lc); box-sizing: border-box; z-index: 1; }
+  .ref .dot { background: var(--lc); }
+  .rc { display: block; color: inherit; padding: 14px 16px; margin: 0; }
+  .hd { display: flex; align-items: center; gap: 8px; }
+  .nm { flex: 1; min-width: 0; display: flex; align-items: center; gap: 6px; } .nm b { font-size: 16px; }
+  .nm .pill { font-size: 11px; padding: 2px 7px; }
+  .pr b { font-size: 17px; font-variant-numeric: tabular-nums; }
+  .st { font-size: 12.5px; color: var(--muted); margin: 3px 0 8px; word-break: keep-all; }
+  .kv { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .kv span { display: flex; flex-direction: column; font-size: 11.5px; color: var(--muted); background: var(--bg, #f2f4f6); border-radius: 10px; padding: 7px 9px; }
+  .kv b { font-size: 14px; color: var(--fg, #191f28); margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .up { color: var(--red) !important; } .down { color: var(--blue) !important; } .na { color: var(--muted); }
   .how { margin: 0; padding-left: 18px; font-size: 13.5px; line-height: 1.6; color: var(--fg2); } .how li { margin: 4px 0; }
   .ad-slot { min-height: 0; }
 </style>
