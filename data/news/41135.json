@@ -2,8 +2,14 @@
  "41135-127": {
   "q": "\"목련마을\" 재건축",
   "why": "redev",
-  "at": "2026-11-01",
+  "at": "2026-11-08",
   "items": [
+   {
+    "t": "중앙공원 주변 2만가구 재건축 시동…대출 규제에도 집값 들썩",
+    "o": "서울경제",
+    "d": "2026-11-02",
+    "u": "https://www.sedaily.com/article/20109242?ref=naver"
+   },
    {
     "t": "“천당 위 분당? 7억은 번다” 지금 사두면 강남 뺨칠 ‘로또’",
     "o": "중앙일보",
@@ -15,44 +21,38 @@
     "o": "한국경제",
     "d": "2026-10-09",
     "u": "https://www.hankyung.com/article/2026100927771"
-   },
-   {
-    "t": "1기 신도시 재건축… 산본·분당 속도 내고, 일산·중동은 고전",
-    "o": "조선일보",
-    "d": "2026-10-06",
-    "u": "https://www.chosun.com/economy/2026/10/07/BHA2PRDK7RA4BNPZPI7IHMENAY/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
    }
   ]
  },
  "41135-20": {
   "q": "\"샛별마을\" 재건축",
   "why": "redev",
-  "at": "2026-11-01",
+  "at": "2026-11-08",
   "items": [
    {
-    "t": "“천당 위 분당? 7억은 번다” 지금 사두면 강남 뺨칠 ‘로또’",
-    "o": "중앙일보",
-    "d": "2026-10-23",
-    "u": "https://www.joongang.co.kr/article/25472251"
+    "t": "샛별·양지·더시범 시공사 입찰 채비…분당 선도지구 수주전 초읽기",
+    "o": "서울경제",
+    "d": "2026-11-04",
+    "u": "https://www.sedaily.com/article/20110022?ref=naver"
    },
    {
-    "t": "'분당 목련마을 빌라' 잡아라…GS·대우·현산 3파전",
+    "t": "李 \"투기공화국 오명 벗어야\" 언급에…'17억 근저당' 매도 재조명",
     "o": "한국경제",
-    "d": "2026-10-09",
-    "u": "https://www.hankyung.com/article/2026100927771"
+    "d": "2026-11-03",
+    "u": "https://www.hankyung.com/article/202611032769H"
    },
    {
-    "t": "1기 신도시 재건축… 산본·분당 속도 내고, 일산·중동은 고전",
-    "o": "조선일보",
-    "d": "2026-10-06",
-    "u": "https://www.chosun.com/economy/2026/10/07/BHA2PRDK7RA4BNPZPI7IHMENAY/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
+    "t": "“평당 1억 육박” 분당 중앙공원 2만가구 재건축…대출 한파 속 소형 폭...",
+    "o": "서울경제",
+    "d": "2026-11-03",
+    "u": "https://www.sedaily.com/article/20109450?ref=naver"
    }
   ]
  },
  "41135-32": {
   "q": "\"장안타운\" 재건축",
   "why": "redev",
-  "at": "2026-11-01",
+  "at": "2026-11-08",
   "items": [
    {
     "t": "성남 ‘분당 선도지구’ 3곳 재건축 사업자 확정",
@@ -77,125 +77,125 @@
  "41135-69": {
   "q": "\"한솔마을\" 재건축",
   "why": "redev",
-  "at": "2026-11-01",
+  "at": "2026-11-08",
   "items": [
    {
-    "t": "'갑툭튀' 교통영향평가...신상진 \"국토부가 분당 재건축 발목\"",
-    "o": "이데일리",
-    "d": "2026-10-27",
-    "u": "https://www.edaily.co.kr/News/Read?newsId=04037686645617184&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+    "t": "원도심·분당 2만6934가구 … 성남시, 노후 주거지 정비 속도 낸다",
+    "o": "조선일보",
+    "d": "2026-11-05",
+    "u": "https://www.chosun.com/national/regional/2026/11/06/TLLWUBNWHZCKNLVZ5ACDBANN5E/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
    },
    {
-    "t": "규제 완화에 리모델링 기지개…건설사도 시장 공략 속도[집슐랭]",
-    "o": "서울경제",
-    "d": "2026-10-25",
-    "u": "https://www.sedaily.com/article/20105871?ref=naver"
+    "t": "분당 30년 구축도 ‘국평 20억’… 경기남부 갈아타기 수요 몰린다",
+    "o": "조선일보",
+    "d": "2026-11-04",
+    "u": "https://biz.chosun.com/real_estate/real_estate_general/2026/11/04/B76VYH3FIJAI3B66JT3VCG5RMI/?utm_source=naver&utm_medium=original&utm_campaign=biz"
    },
    {
-    "t": "상반기만 조합설립 인가 6곳…대형사도 리모델링 수주전 치열",
+    "t": "샛별·양지·더시범 시공사 입찰 채비…분당 선도지구 수주전 초읽기",
     "o": "서울경제",
-    "d": "2026-10-25",
-    "u": "https://www.sedaily.com/article/20105853?ref=naver"
+    "d": "2026-11-04",
+    "u": "https://www.sedaily.com/article/20110022?ref=naver"
    }
   ]
  },
  "41135-72": {
   "q": "\"양지마을\" 재건축",
   "why": "redev",
-  "at": "2026-11-01",
+  "at": "2026-11-08",
   "items": [
    {
-    "t": "분당과 삼성동에 재물 기운 듬뿍 안기는 탄천",
-    "o": "동아일보",
-    "d": "2026-10-31",
-    "u": "https://weekly.donga.com/3/all/11/6438622/1"
+    "t": "노도강·금관구도 월세 300만원 속출…서울 외곽 주거비 비명",
+    "o": "뉴시스",
+    "d": "2026-11-07",
+    "u": "https://www.newsis.com/view/NISX20261106_0003858038"
    },
    {
-    "t": "수십명 동원 삼성물산...'4조' 대어 양지마을, 설계사는 누가 [르포]",
-    "o": "파이낸셜뉴스",
-    "d": "2026-10-24",
-    "u": "https://www.fnnews.com/news/202610241403239528"
+    "t": "'대통령의 아파트 매도방식' 급속 확산…강남·분당 재건축까지 번진‘...",
+    "o": "조선일보",
+    "d": "2026-11-04",
+    "u": "https://realty.chosun.com/site/data/html_dir/2026/11/04/2026110402050.html"
    },
    {
-    "t": "1년 새 29.5% 뛰었다 “자고 나면 올라”…전국 집값 상승률 1위 찍은 ‘...",
+    "t": "샛별·양지·더시범 시공사 입찰 채비…분당 선도지구 수주전 초읽기",
     "o": "서울경제",
-    "d": "2026-10-23",
-    "u": "https://www.sedaily.com/article/20105559?ref=naver"
+    "d": "2026-11-04",
+    "u": "https://www.sedaily.com/article/20110022?ref=naver"
    }
   ]
  },
  "41135-75": {
   "q": "\"파크타운\" 재건축",
   "why": "redev",
-  "at": "2026-11-01",
+  "at": "2026-11-08",
   "items": [
    {
-    "t": "신상진 “국토부 이율배반 행정에 재건축 발목”…분당 1만3429가구 차질...",
-    "o": "동아일보",
-    "d": "2026-10-27",
-    "u": "https://www.donga.com/news/Society/article/all/20261027/134918573/1"
+    "t": "원도심·분당 2만6934가구 … 성남시, 노후 주거지 정비 속도 낸다",
+    "o": "조선일보",
+    "d": "2026-11-05",
+    "u": "https://www.chosun.com/national/regional/2026/11/06/TLLWUBNWHZCKNLVZ5ACDBANN5E/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
    },
    {
-    "t": "성남시장 “국토부, 분당재건축 발목…교통평가 재검토 촉구”",
-    "o": "KBS",
-    "d": "2026-10-27",
-    "u": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8696470&ref=A"
+    "t": "분당 30년 구축도 ‘국평 20억’… 경기남부 갈아타기 수요 몰린다",
+    "o": "조선일보",
+    "d": "2026-11-04",
+    "u": "https://biz.chosun.com/real_estate/real_estate_general/2026/11/04/B76VYH3FIJAI3B66JT3VCG5RMI/?utm_source=naver&utm_medium=original&utm_campaign=biz"
    },
    {
-    "t": "'갑툭튀' 교통영향평가...신상진 \"국토부가 분당 재건축 발목\"",
-    "o": "이데일리",
-    "d": "2026-10-27",
-    "u": "https://www.edaily.co.kr/News/Read?newsId=04037686645617184&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+    "t": "샛별·양지·더시범 시공사 입찰 채비…분당 선도지구 수주전 초읽기",
+    "o": "서울경제",
+    "d": "2026-11-04",
+    "u": "https://www.sedaily.com/article/20110022?ref=naver"
    }
   ]
  },
  "41135-78": {
   "q": "\"푸른마을\" 재건축",
   "why": "redev",
-  "at": "2026-11-01",
+  "at": "2026-11-08",
   "items": [
    {
-    "t": "'갑툭튀' 교통영향평가...신상진 \"국토부가 분당 재건축 발목\"",
-    "o": "이데일리",
-    "d": "2026-10-27",
-    "u": "https://www.edaily.co.kr/News/Read?newsId=04037686645617184&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+    "t": "원도심·분당 2만6934가구 … 성남시, 노후 주거지 정비 속도 낸다",
+    "o": "조선일보",
+    "d": "2026-11-05",
+    "u": "https://www.chosun.com/national/regional/2026/11/06/TLLWUBNWHZCKNLVZ5ACDBANN5E/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
    },
    {
-    "t": "1년 새 29.5% 뛰었다 “자고 나면 올라”…전국 집값 상승률 1위 찍은 ‘...",
+    "t": "분당 30년 구축도 ‘국평 20억’… 경기남부 갈아타기 수요 몰린다",
+    "o": "조선일보",
+    "d": "2026-11-04",
+    "u": "https://biz.chosun.com/real_estate/real_estate_general/2026/11/04/B76VYH3FIJAI3B66JT3VCG5RMI/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+   },
+   {
+    "t": "샛별·양지·더시범 시공사 입찰 채비…분당 선도지구 수주전 초읽기",
     "o": "서울경제",
-    "d": "2026-10-23",
-    "u": "https://www.sedaily.com/article/20105559?ref=naver"
-   },
-   {
-    "t": "“천당 위 분당? 7억은 번다” 지금 사두면 강남 뺨칠 ‘로또’",
-    "o": "중앙일보",
-    "d": "2026-10-23",
-    "u": "https://www.joongang.co.kr/article/25472251"
+    "d": "2026-11-04",
+    "u": "https://www.sedaily.com/article/20110022?ref=naver"
    }
   ]
  },
  "41135-97": {
   "q": "\"이매촌\" 재건축",
   "why": "redev",
-  "at": "2026-11-01",
+  "at": "2026-11-08",
   "items": [
    {
-    "t": "'갑툭튀' 교통영향평가...신상진 \"국토부가 분당 재건축 발목\"",
-    "o": "이데일리",
-    "d": "2026-10-27",
-    "u": "https://www.edaily.co.kr/News/Read?newsId=04037686645617184&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+    "t": "원도심·분당 2만6934가구 … 성남시, 노후 주거지 정비 속도 낸다",
+    "o": "조선일보",
+    "d": "2026-11-05",
+    "u": "https://www.chosun.com/national/regional/2026/11/06/TLLWUBNWHZCKNLVZ5ACDBANN5E/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
    },
    {
-    "t": "1년 새 29.5% 뛰었다 “자고 나면 올라”…전국 집값 상승률 1위 찍은 ‘...",
+    "t": "분당 30년 구축도 ‘국평 20억’… 경기남부 갈아타기 수요 몰린다",
+    "o": "조선일보",
+    "d": "2026-11-04",
+    "u": "https://biz.chosun.com/real_estate/real_estate_general/2026/11/04/B76VYH3FIJAI3B66JT3VCG5RMI/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+   },
+   {
+    "t": "샛별·양지·더시범 시공사 입찰 채비…분당 선도지구 수주전 초읽기",
     "o": "서울경제",
-    "d": "2026-10-23",
-    "u": "https://www.sedaily.com/article/20105559?ref=naver"
-   },
-   {
-    "t": "“천당 위 분당? 7억은 번다” 지금 사두면 강남 뺨칠 ‘로또’",
-    "o": "중앙일보",
-    "d": "2026-10-23",
-    "u": "https://www.joongang.co.kr/article/25472251"
+    "d": "2026-11-04",
+    "u": "https://www.sedaily.com/article/20110022?ref=naver"
    }
   ]
  }
