@@ -29,7 +29,7 @@ export const LINES: { slug: string; name: string; color: string; order: 'id' | '
   { slug: 'incheon-2', name: '인천 2호선', color: '#ed8b00', order: 'id' },
 ];
 
-interface Station { id: string; n: string; l: string; lat: number; lng: number; st?: string }
+interface Station { id: string; n: string; l: string; lat: number; lng: number; st?: string; addr?: string }
 export interface RegionRow {
   lawd: string; sido: string; sigungu: string; label: string;   // label: "안양 동안구"처럼 짧게
   stations: string[];                                            // 이 노선의 역(노선 순서). 운행 전 역은 '(공사중)' 등이 붙는다
@@ -80,15 +80,22 @@ function base() {
   return cache;
 }
 
-/** 역이 속한 시·구 = 2km 안 가장 가까운 단지의 시군구(수도권만) */
-function regionOf(s: Station, all: Complex[]) {
-  let best: Complex | null = null, bd = 2000;
+/** 역이 속한 시·구: 주소가 있으면 주소로, 없으면 반경 800m 안 단지가 가장 많은 시군구(가까울수록 가중), 그것도 없으면 2km 안 가장 가까운 단지 */
+function regionOf(s: Station, all: Complex[], byName: Map<string, Complex>) {
+  if (s.addr) {
+    const t = s.addr.split(/\s+/);
+    for (const k of [`${t[0]} ${t[1]} ${t[2]}`, `${t[0]} ${t[1]}`]) { const c = byName.get(k); if (c) return c; }
+  }
+  const votes = new Map<string, { w: number; c: Complex }>(); let best: Complex | null = null, bd = 2000;
   for (const c of all) {
     if (c.lat == null || c.lng == null || !CAPITAL.has(c.sido)) continue;
     if (Math.abs(c.lat - s.lat) > 0.02 || Math.abs(c.lng - s.lng) > 0.025) continue;
-    const d = distM(s, { lat: c.lat, lng: c.lng }); if (d < bd) { bd = d; best = c; }
+    const d = distM(s, { lat: c.lat, lng: c.lng });
+    if (d < bd) { bd = d; best = c; }
+    if (d <= 800) { const v = votes.get(c.lawd) ?? { w: 0, c }; v.w += 1 / Math.max(150, d); votes.set(c.lawd, v); }
   }
-  return best;
+  const top = [...votes.values()].sort((a, b) => b.w - a.w)[0];
+  return top?.c ?? best;
 }
 const shortName = (sido: string, sigungu: string) => {
   const p = sigungu.split(/\s+/);
@@ -97,8 +104,8 @@ const shortName = (sido: string, sigungu: string) => {
 
 /** GTX처럼 도시철도 역사정보에 없는 노선: 쏙집 철도 규칙표(data/transit)의 역 순서·좌표를 쓴다 */
 function ruleStations(line: string): Station[] {
-  const st = JSON.parse(readFileSync(join(process.cwd(), 'data', 'transit', 'stations.json'), 'utf8')).stations as { line: string; name: string; status: string; lat?: number; lng?: number }[];
-  return st.filter((x) => x.line === line && x.lat != null && x.lng != null).map((x, i) => ({ id: String(i), n: x.name.replace(/\(가칭\)/, ''), l: line, lat: x.lat!, lng: x.lng!, st: x.status }));
+  const st = JSON.parse(readFileSync(join(process.cwd(), 'data', 'transit', 'stations.json'), 'utf8')).stations as { line: string; name: string; status: string; lat?: number; lng?: number; addr?: string }[];
+  return st.filter((x) => x.line === line && x.lat != null && x.lng != null).map((x, i) => ({ id: String(i), n: x.name.replace(/\(가칭\)/, ''), l: line, lat: x.lat!, lng: x.lng!, st: x.status, addr: x.addr }));
 }
 
 const lineCache = new Map<string, LineData>();
@@ -111,9 +118,11 @@ export function loadLine(slug: string): LineData | null {
   const ordered = def.order === 'id' ? [...mine].sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true })) : def.order === 'rule' ? mine : geoOrder(mine);
 
   // 역 → 지역, 지역은 노선에서 처음 나오는 순서대로
+  const byName = new Map<string, Complex>();
+  for (const c of all) { const k = `${c.sido} ${c.sigungu}`; if (!byName.has(k)) byName.set(k, c); }
   const byLawd = new Map<string, { lawd: string; sido: string; sigungu: string; stations: string[] }>();
   for (const s of ordered) {
-    const c = regionOf(s, all); if (!c) continue;
+    const c = regionOf(s, all, byName); if (!c) continue;
     const r = byLawd.get(c.lawd) ?? { lawd: c.lawd, sido: c.sido, sigungu: c.sigungu, stations: [] };
     const nm = s.st && s.st !== '운행중' ? `${s.n}(${s.st})` : s.n;
     if (!r.stations.includes(nm)) r.stations.push(nm);
