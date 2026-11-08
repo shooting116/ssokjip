@@ -12,13 +12,13 @@ const asOf = rows[0]?.asOf;
 <Base title="노선별 시세분석 — 지하철 따라 시·구 시세와 흐름" description={`수도권 도시철도 ${rows.length}개 노선이 지나는 시·구를 노선 순서대로 놓고, 84㎡ 실거래 시세·변동률과 부동산원 지수 흐름을 비교합니다. ${asOf} 기준.`}>
   <header class="q" style="padding:4px 4px 10px">
     <h1 class="big" style="margin:0;font-size:24px">노선별 시세분석</h1>
-    <p class="sub2" style="margin:6px 0 0">지하철 노선이 지나는 시·구를 순서대로 놓고 시세와 흐름을 비교합니다. 출퇴근 노선 위에서 지역을 고를 때 씁니다.</p>
+    <p class="sub2" style="margin:6px 0 0">지하철 노선이 지나는 시·구를 순서대로 놓고 시세와 흐름을 비교합니다. 출퇴근 노선 위에서 지역을 고를 때 씁니다. 모든 노선의 기준은 <b>서초구</b> 84㎡ 시세(= 100%)와 서초구 부동산원 지수입니다.</p>
   </header>
   <ul class="lines card">
     {rows.map((r) => (
       <li><a href={`/line/${r.slug}/`}>
         <span class="ln" style={`background:${r.color}`}></span>
-        <span class="nm"><b>{r.name}</b><span class="sub">{r.n}개 시·구 · 기준 {r.ref?.label} {eok(r.ref?.med)}</span><span class="pa">{r.path.join(' → ')}</span></span>
+        <span class="nm"><b>{r.name}</b><span class="sub">{r.n}개 시·구</span><span class="pa">{r.path.join(' → ')}</span></span>
       </a></li>
     ))}
   </ul>

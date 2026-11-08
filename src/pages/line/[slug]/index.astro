@@ -9,7 +9,7 @@ export function getStaticPaths() {
 const d = loadLine(Astro.params.slug!)!;
 const ref = d.ref;
 const title = `${d.name} 시세분석 — 지나는 시·구별 84㎡ 시세와 흐름`;
-const desc = `${d.name}이 지나는 ${d.regions.length}개 시·구를 노선 순서대로 놓고, 지역별 84㎡ 실거래 시세·1년 변동률과 부동산원 지수 흐름을 ${ref?.label ?? '기준 지역'}과 비교합니다. ${d.asOf} 기준.`;
+const desc = `${d.name}이 지나는 ${d.regions.length}개 시·구를 노선 순서대로 놓고, 지역별 84㎡ 실거래 시세·1년 변동률과 부동산원 지수 10년 흐름을 ${ref.label}과 비교합니다. ${d.asOf} 기준.`;
 const cls = (v: number | null) => (v == null ? 'na' : v > 0 ? 'up' : v < 0 ? 'down' : '');
 
 // 그래프: 기준 지역 대비 상대지수(시작 주 = 100)
@@ -37,20 +37,21 @@ const toLabel = chart ? chart.labels[chart.periods[n - 1]] ?? chart.periods[n - 
   <header class="q" style="padding:4px 4px 10px">
     <h1 class="big" style="margin:0;font-size:24px;display:flex;align-items:center;gap:8px"><span class="ln" style={`background:${d.color}`}></span>{d.name} 시세분석</h1>
     <p class="sub2" style="margin:6px 0 0">{d.name}이 지나는 시·구 {d.regions.length}곳을 노선 순서대로 놓았습니다.</p>
-    {ref && <p class="sub" style="margin:4px 0 0">기준: <b>{ref.label}</b> 84㎡ 시세 중앙값 <b>{eok(ref.med)}</b> = 100% (노선이 지나는 서울 지역 중 시세가 가장 높은 곳)</p>}
+    <p class="sub" style="margin:4px 0 0">기준: <b>{ref.label}</b> 84㎡ 시세 중앙값 <b>{eok(ref.med)}</b> = 100% (모든 노선 공통){!ref.onLine && ' · 이 노선은 서초구를 지나지 않습니다'}</p>
+    {d.note && <p class="sub" style="margin:2px 0 0">참고: {d.note.label} 84㎡ 시세 중앙값 <b>{eok(d.note.med)}</b> ({d.note.n}개 단지)</p>}
   </header>
 
   {chart && (
     <section class="card sec">
-      <h2>{ref!.label} 대비 흐름 <span class="sub">부동산원 지수 {years >= 9 ? '10년' : `${years}년`}, 시작 주 = 100</span></h2>
-      <svg viewBox={`0 0 ${W} ${H}`} class="ch" role="img" aria-label={`${d.name} 지역별 ${ref!.label} 대비 상대지수`}>
+      <h2>{ref.label} 대비 흐름 <span class="sub">부동산원 지수 {years >= 9 ? '10년' : `${years}년`}, 시작 주 = 100</span></h2>
+      <svg viewBox={`0 0 ${W} ${H}`} class="ch" role="img" aria-label={`${d.name} 지역별 ${ref.label} 대비 상대지수`}>
         {ticks.map((t) => <g><line x1={PL} x2={W - PR} y1={Y(t)} y2={Y(t)} class={t === 100 ? 'g100' : 'g'} /><text x={PL - 4} y={Y(t) + 3} class="yt">{t}</text></g>)}
         {xt.map((i) => <g><line x1={X(i)} x2={X(i)} y1={PT} y2={H - PB} class="g" /><text x={X(i)} y={H - 6} class="xt" text-anchor="middle">{lab(chart.periods[i])}</text></g>)}
         {lines.map((l) => { const a = avgOf(l.r.series!); return a != null ? <line x1={PL} x2={W - PR} y1={Y(a)} y2={Y(a)} stroke={l.c} stroke-width="1" stroke-dasharray="4 3" opacity=".55" /> : null; })}
         {lines.map((l) => <polyline points={path(l.r.series!)} fill="none" stroke={l.c} stroke-width="1.6" stroke-linejoin="round" />)}
       </svg>
       <table class="lgt"><thead><tr><th>지역</th><th>지금</th><th>{years >= 9 ? '10년 평균' : '기간 평균'}</th></tr></thead><tbody>{lines.map((l) => { const a = avgOf(l.r.series!); return <tr><td><span class="sw" style={`background:${l.c}`}></span>{l.r.label}</td><td><b>{l.r.series!.filter((v): v is number => v != null).at(-1)?.toFixed(1)}</b></td><td>{a != null ? a.toFixed(1) : '-'}</td></tr>; })}</tbody></table>
-      <p class="src">{fromLabel} = 100으로 놓고, 각 지역 지수 변화를 {ref!.label} 지수 변화로 나눈 값입니다(실선). 점선은 같은 기간 그 값의 평균입니다. 100보다 위면 시작 주보다 {ref!.label}에 견줘 더 올랐다는 뜻이고, 가격 수준이나 앞으로의 방향을 뜻하지 않습니다. {toLabel}까지.</p>
+      <p class="src">{fromLabel} = 100으로 놓고, 각 지역 지수 변화를 {ref.label} 지수 변화로 나눈 값입니다(실선). 점선은 같은 기간 그 값의 평균입니다. 100보다 위면 시작 주보다 {ref.label}에 견줘 더 올랐다는 뜻이고, 가격 수준이나 앞으로의 방향을 뜻하지 않습니다. {toLabel}까지.</p>
     </section>
   )}
 
@@ -65,7 +66,7 @@ const toLabel = chart ? chart.labels[chart.periods[n - 1]] ?? chart.periods[n - 
           </div>
           <div class="st">{r.stations.join(' · ')}</div>
           <div class="kv">
-            <span>{ref?.label} 대비<b>{r.ratio != null ? `${r.ratio}%` : '-'}</b></span>
+            <span>{ref.label} 대비<b>{r.ratio != null ? `${r.ratio}%` : '-'}</b></span>
             <span>실거래 1년<b class={cls(r.yoy)}>{r.yoy != null ? pct(r.yoy) : '-'}</b></span>
             <span>지수 1년<b class={cls(r.rone)}>{r.rone != null ? pct(r.rone) : '-'}</b></span>
           </div>
@@ -79,7 +80,7 @@ const toLabel = chart ? chart.labels[chart.periods[n - 1]] ?? chart.periods[n - 
     <h2>숫자 읽는 법</h2>
     <ul class="how">
       <li><b>시세</b> = 그 시·구 전체 단지 중 84㎡ 타입(±5㎡) 최근 6개월 실거래가 3건 이상인 단지들의 중앙값(지역별 페이지와 같은 값). 단지가 {MIN_COMPLEX}곳 미만이면 비워 둡니다.</li>
-      <li><b>{ref?.label} 대비</b> = 이 지역 시세 ÷ {ref?.label} 시세. 가격 수준을 비교한 계산값입니다.</li>
+      <li><b>{ref.label} 대비</b> = 이 지역 시세 ÷ {ref.label} 시세. 가격 수준을 비교한 계산값입니다.</li>
       <li><b>실거래 1년</b> = 최근 6개월 중앙값과 1년 전 같은 6개월 비교(평형별 변동률의 중앙값). <b>지수 1년</b> = 한국부동산원 주간 매매가격지수 52주 전 대비.</li>
       <li>지역은 역에서 가장 가까운 단지의 시·구로 정했습니다. 노선이 지역 경계를 지나면 역 이름과 행정구역이 다를 수 있습니다.</li>
     </ul>

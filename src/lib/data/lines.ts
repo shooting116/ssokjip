@@ -8,6 +8,8 @@ import { roneSigungu, roneSeries } from './rone.ts';
 
 export const MIN_COMPLEX = 3;            // 84㎡ 시세 중앙값을 내는 최소 단지 수
 const CAPITAL = new Set(['서울', '경기', '인천']);
+/** 모든 노선의 공통 기준 지역(2026-11-08 결정: 노선끼리 비교되도록 하나로 통일) */
+export const REF = { lawd: '11650', sido: '서울', sigungu: '서초구', label: '서초구' };
 
 export const LINES: { slug: string; name: string; color: string; order: 'id' | 'geo' }[] = [
   { slug: '2', name: '2호선', color: '#00a84d', order: 'id' },
@@ -38,7 +40,8 @@ export interface RegionRow {
 }
 export interface LineData {
   slug: string; name: string; color: string; asOf: string;
-  regions: RegionRow[]; ref: RegionRow | null;
+  regions: RegionRow[]; ref: { label: string; med: number | null; n: number; onLine: boolean };
+  note: { label: string; med: number; n: number } | null;   // 참고 시세(인천 노선 = 송도동)
   chart: { periods: string[]; labels: Record<string, string>; keys: string[] } | null;   // keys = 그래프에 그릴 지역 lawd
 }
 
@@ -108,10 +111,9 @@ export function loadLine(slug: string): LineData | null {
   }
   const base0 = [...byLawd.values()].map((r) => ({ ...r, ...med.get(r.lawd)! }));
 
-  // 기준 지역: 노선이 지나는 서울 구 중 84㎡ 시세가 가장 높은 곳(서울 구간이 없으면 노선 전체에서)
-  const pool = base0.filter((r) => r.med != null && r.sido === '서울');
-  const refRow = (pool.length ? pool : base0.filter((r) => r.med != null)).sort((a, b) => b.med! - a.med!)[0] ?? null;
-  const refSeries = refRow ? roneSeries(refRow.sido, refRow.sigungu) : null;
+  // 기준: 모든 노선 공통 서초구
+  const refRow = { lawd: REF.lawd, ...med.get(REF.lawd)! };
+  const refSeries = roneSeries(REF.sido, REF.sigungu);
 
   let periods: string[] = [], labels: Record<string, string> = {};
   const regions: RegionRow[] = base0.map((r) => {
@@ -135,11 +137,17 @@ export function loadLine(slug: string): LineData | null {
       rel, series, isRef: r.lawd === refRow?.lawd,
     };
   });
-  const ref = regions.find((r) => r.isRef) ?? null;
+  const ref = { label: REF.label, med: refRow.med, n: refRow.n, onLine: regions.some((r) => r.isRef) };
+  // 인천 노선: 송도동 시세를 참고로 함께 보여준다
+  let note: LineData['note'] = null;
+  if (regions.length && regions.every((r) => r.sido === '인천')) {
+    const p = all.filter((c) => c.lawd === '28185' && /송도/.test(c.umd)).map((c) => c.types.find((t) => Math.abs(t.key - 84) <= 5 && t.basis === 'median6')?.price).filter((v): v is number => !!v);
+    if (p.length >= MIN_COMPLEX) note = { label: '송도동', med: median(p)!, n: p.length };
+  }
   // 그래프: 경기·인천 지역이 있으면 그 지역들, 없으면 서울 지역(기준 제외), 최대 8곳
   const outer = regions.filter((r) => !r.isRef && r.series && r.sido !== '서울');
   const keys = (outer.length ? outer : regions.filter((r) => !r.isRef && r.series)).slice(0, 8).map((r) => r.lawd);
-  const out: LineData = { slug, name: def.name, color: def.color, asOf, regions, ref, chart: ref && keys.length ? { periods, labels, keys } : null };
+  const out: LineData = { slug, name: def.name, color: def.color, asOf, regions, ref, note, chart: keys.length ? { periods, labels, keys } : null };
   lineCache.set(slug, out);
   return out;
 }
