@@ -11,7 +11,10 @@ const CAPITAL = new Set(['서울', '경기', '인천']);
 /** 모든 노선의 공통 기준 지역(2026-11-08 결정: 노선끼리 비교되도록 하나로 통일) */
 export const REF = { lawd: '11650', sido: '서울', sigungu: '서초구', label: '서초구' };
 
-export const LINES: { slug: string; name: string; color: string; order: 'id' | 'geo' }[] = [
+export const LINES: { slug: string; name: string; color: string; order: 'id' | 'geo' | 'rule'; note?: string }[] = [
+  { slug: 'gtx-a', name: 'GTX-A', color: '#9a6292', order: 'rule', note: '운정중앙~서울역, 수서~동탄 운행 중. 삼성역은 공사 중이며 창릉역은 2030년 개통 예정입니다.' },
+  { slug: 'gtx-b', name: 'GTX-B', color: '#0d4d9b', order: 'rule', note: '공사 중인 노선입니다. 역 주변 지역을 미리 비교하는 용도이며, 개통 시기는 GTX 일정 가이드를 확인하세요.' },
+  { slug: 'gtx-c', name: 'GTX-C', color: '#2e7d5b', order: 'rule', note: '2026년 9월 본공사를 시작한 노선입니다. 역 구성은 2022년 발표 기준이며 바뀔 수 있습니다.' },
   { slug: '2', name: '2호선', color: '#00a84d', order: 'id' },
   { slug: '3', name: '3호선', color: '#ef7c1c', order: 'geo' },
   { slug: '4', name: '4호선', color: '#00a5de', order: 'geo' },
@@ -26,10 +29,10 @@ export const LINES: { slug: string; name: string; color: string; order: 'id' | '
   { slug: 'incheon-2', name: '인천 2호선', color: '#ed8b00', order: 'id' },
 ];
 
-interface Station { id: string; n: string; l: string; lat: number; lng: number }
+interface Station { id: string; n: string; l: string; lat: number; lng: number; st?: string }
 export interface RegionRow {
   lawd: string; sido: string; sigungu: string; label: string;   // label: "안양 동안구"처럼 짧게
-  stations: string[];                                            // 이 노선의 역(노선 순서)
+  stations: string[];                                            // 이 노선의 역(노선 순서). 운행 전 역은 '(공사중)' 등이 붙는다
   med: number | null; n84: number;                               // 지역 전체 84㎡ 시세 중앙값, 단지 수
   ratio: number | null;                                          // med ÷ 기준 지역 med (%)
   yoy: number | null;                                            // 실거래 1년 변동률(지역별 페이지와 같은 값)
@@ -39,7 +42,7 @@ export interface RegionRow {
   isRef: boolean;
 }
 export interface LineData {
-  slug: string; name: string; color: string; asOf: string;
+  slug: string; name: string; color: string; asOf: string; lineNote: string | null;
   regions: RegionRow[]; ref: { label: string; med: number | null; n: number; onLine: boolean };
   note: { label: string; med: number; n: number } | null;   // 참고 시세(인천 노선 = 송도동)
   chart: { periods: string[]; labels: Record<string, string>; keys: string[] } | null;   // keys = 그래프에 그릴 지역 lawd
@@ -92,21 +95,28 @@ const shortName = (sido: string, sigungu: string) => {
   return p.length > 1 ? `${p[0].replace(/시$/, '')} ${p[1]}` : sido === '서울' || sido === '인천' ? sigungu : sigungu.replace(/시$|군$/, (m) => (m === '군' ? '군' : ''));
 };
 
+/** GTX처럼 도시철도 역사정보에 없는 노선: 쏙집 철도 규칙표(data/transit)의 역 순서·좌표를 쓴다 */
+function ruleStations(line: string): Station[] {
+  const st = JSON.parse(readFileSync(join(process.cwd(), 'data', 'transit', 'stations.json'), 'utf8')).stations as { line: string; name: string; status: string; lat?: number; lng?: number }[];
+  return st.filter((x) => x.line === line && x.lat != null && x.lng != null).map((x, i) => ({ id: String(i), n: x.name.replace(/\(가칭\)/, ''), l: line, lat: x.lat!, lng: x.lng!, st: x.status }));
+}
+
 const lineCache = new Map<string, LineData>();
 export function loadLine(slug: string): LineData | null {
   if (lineCache.has(slug)) return lineCache.get(slug)!;
   const def = LINES.find((l) => l.slug === slug); if (!def) return null;
   const { all, asOf, stations, med } = base();
   const sm = loadSummary();
-  const mine = stations.filter((s) => s.l === def.name);
-  const ordered = def.order === 'id' ? [...mine].sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true })) : geoOrder(mine);
+  const mine = def.order === 'rule' ? ruleStations(def.name) : stations.filter((s) => s.l === def.name);
+  const ordered = def.order === 'id' ? [...mine].sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true })) : def.order === 'rule' ? mine : geoOrder(mine);
 
   // 역 → 지역, 지역은 노선에서 처음 나오는 순서대로
   const byLawd = new Map<string, { lawd: string; sido: string; sigungu: string; stations: string[] }>();
   for (const s of ordered) {
     const c = regionOf(s, all); if (!c) continue;
     const r = byLawd.get(c.lawd) ?? { lawd: c.lawd, sido: c.sido, sigungu: c.sigungu, stations: [] };
-    if (!r.stations.includes(s.n)) r.stations.push(s.n);
+    const nm = s.st && s.st !== '운행중' ? `${s.n}(${s.st})` : s.n;
+    if (!r.stations.includes(nm)) r.stations.push(nm);
     byLawd.set(c.lawd, r);
   }
   const base0 = [...byLawd.values()].map((r) => ({ ...r, ...med.get(r.lawd)! }));
@@ -147,7 +157,7 @@ export function loadLine(slug: string): LineData | null {
   // 그래프: 경기·인천 지역이 있으면 그 지역들, 없으면 서울 지역(기준 제외), 최대 8곳
   const outer = regions.filter((r) => !r.isRef && r.series && r.sido !== '서울');
   const keys = (outer.length ? outer : regions.filter((r) => !r.isRef && r.series)).slice(0, 8).map((r) => r.lawd);
-  const out: LineData = { slug, name: def.name, color: def.color, asOf, regions, ref, note, chart: keys.length ? { periods, labels, keys } : null };
+  const out: LineData = { slug, name: def.name, color: def.color, asOf, lineNote: def.note ?? null, regions, ref, note, chart: keys.length ? { periods, labels, keys } : null };
   lineCache.set(slug, out);
   return out;
 }

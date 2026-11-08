@@ -38,6 +38,7 @@ const toLabel = chart ? chart.labels[chart.periods[n - 1]] ?? chart.periods[n - 
     <h1 class="big" style="margin:0;font-size:24px;display:flex;align-items:center;gap:8px"><span class="ln" style={`background:${d.color}`}></span>{d.name} 시세분석</h1>
     <p class="sub2" style="margin:6px 0 0">{d.name}이 지나는 시·구 {d.regions.length}곳을 노선 순서대로 놓았습니다.</p>
     <p class="sub" style="margin:4px 0 0">기준: <b>{ref.label}</b> 84㎡ 시세 중앙값 <b>{eok(ref.med)}</b> = 100% (모든 노선 공통){!ref.onLine && ' · 이 노선은 서초구를 지나지 않습니다'}</p>
+    {d.lineNote && <p class="sub" style="margin:2px 0 0">{d.lineNote} <a href="/guide/gtx-timeline-2026/">GTX 일정</a></p>}
     {d.note && <p class="sub" style="margin:2px 0 0">참고: {d.note.label} 84㎡ 시세 중앙값 <b>{eok(d.note.med)}</b> ({d.note.n}개 단지)</p>}
   </header>
 
