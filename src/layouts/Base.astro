@@ -28,6 +28,7 @@ const nav = [
   { href: '/calc/', label: '예산 계산기', short: '계산기', icon: 'calc' },
   { href: '/find/', label: '집 찾기', icon: 'map' },
   { href: '/area/', label: '지역', icon: 'grid', iconOnlyNarrow: true },
+  { href: '/line/', label: '노선별 시세분석', icon: 'train', iconOnlyNarrow: true },
   { href: '/guide/', label: '가이드', icon: 'book', iconOnlyTiny: true },
 ];
 ---
@@ -77,7 +78,7 @@ const nav = [
         <Logo size={hero ? 'md' : 'sm'} />
         <nav aria-label="주요 메뉴">
           {nav.map((n) => (
-            <a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined} class={n.iconOnlyNarrow ? 'io' : n.iconOnlyTiny ? 'io2' : ''} aria-label={n.label}>
+            <a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined} class={n.iconOnlyNarrow ? 'io' : n.iconOnlyTiny ? 'io2' : ''} aria-label={n.label} title={n.label}>
               {n.icon === 'calc' && (
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <rect x="5" y="2.5" width="14" height="19" rx="3" />
@@ -98,6 +99,11 @@ const nav = [
               {n.icon === 'book' && (
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z" /><path d="M4 20.5V5.5" /><path d="M8 7h8M8 10.5h6" />
+                </svg>
+              )}
+              {n.icon === 'train' && (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="5" y="3" width="14" height="14" rx="3.5" /><path d="M5 10.5h14" /><path d="M12 3v7.5" /><circle cx="8.6" cy="13.8" r="1.1" fill="currentColor" stroke="none" /><circle cx="15.4" cy="13.8" r="1.1" fill="currentColor" stroke="none" /><path d="M8 17l-2.5 4M16 17l2.5 4M7 20h10" />
                 </svg>
               )}
               {n.icon === 'grid' && (
@@ -123,7 +129,7 @@ const nav = [
         실거래가 출처: 국토교통부 · 대출 규칙은 공개 자료 기준이며 실제 한도는 금융기관 심사에 따라 다릅니다.
       </p>
       <p class="src links">
-        <a href="/calc/">예산 계산기</a> · <a href="/find/">집 찾기</a> · <a href="/area/">지역별</a> · <a href="/ref/">레퍼런스</a> · <a href="/compare/">비교</a> · <a href="/about/">소개</a> · <a href="/privacy/">개인정보처리방침</a> · <a href="/contact/">문의</a>
+        <a href="/calc/">예산 계산기</a> · <a href="/find/">집 찾기</a> · <a href="/area/">지역별</a> · <a href="/line/">노선별 시세분석</a> · <a href="/ref/">레퍼런스</a> · <a href="/compare/">비교</a> · <a href="/about/">소개</a> · <a href="/privacy/">개인정보처리방침</a> · <a href="/contact/">문의</a>
       </p>
     </footer>
   </body>
