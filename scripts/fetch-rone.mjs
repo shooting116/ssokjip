@@ -84,7 +84,7 @@ async function weekly() {
     const r = await getJson('SttsApiTblData.do', { STATBL_ID: tbl, DTACYCLE_CD: cycle, pIndex: p, pSize: SIZE }); calls++;
     for (const x of r.rows) { rows.push(x); periods.add(x.WRTTIME_IDTFR_ID); }
     if (periods.size > weeks + 1) break;
-    if (calls > 80) break;
+    if (calls > Math.ceil(weeks * 0.35) + 20) break;   // 한 주 약 300행 → 1,000행 페이지 기준 호출 상한
   }
   const keepList = [...periods].sort().slice(-weeks);
   const keep = new Set(keepList);
