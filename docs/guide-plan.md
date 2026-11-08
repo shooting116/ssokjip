@@ -27,7 +27,7 @@
 | 2026-11-06 | 41 | 상환 방식 — 원리금균등·원금균등·체증식, 총이자 차이 | repayment-methods | loan | calc | 완료(repayment-methods) |
 | 2026-11-07 | 42 | DSR에 잡히는 것들 — 신용대출·카드론·전세대출·학자금 | dsr-components | loan | calc | 완료(dsr-components) |
 | 2026-11-08 | 43 | 보금자리론 2026 — 자격·한도·금리 구조 | bogeumjari-2026 | loan | calc | 완료(bogeumjari-2026) |
-| 2026-11-09 | 44 | 입주 물량 보는 법 — 공급이 가격에 닿는 시차 | supply-pipeline | price | find | |
+| 2026-11-09 | 44 | 입주 물량 보는 법 — 공급이 가격에 닿는 시차 | supply-pipeline | price | find | 완료(supply-pipeline) |
 | 2026-11-10 | 45 | 미분양 통계 읽는 법 — 국토부 월간 통계, 준공 후 미분양 | unsold-stats | price | none | |
 | 2026-11-11 | 46 | 용적률·대지지분 — 재건축 사업성을 가르는 두 숫자 | far-and-land-share | future | find | |
 | 2026-11-12 | 47 | 분양권 vs 입주권 — 차이, 세금, 대출 | presale-vs-occupancy-right | future | none | |
