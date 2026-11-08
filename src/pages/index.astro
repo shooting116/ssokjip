@@ -52,17 +52,6 @@ const situations = [
     </div>
   </section>
 
-  <section class="card lncard" aria-labelledby="ln-h">
-    <a class="lnhead" href="/line/">
-      <span class="lnic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="14" rx="3" /><path d="M5 11h14M9 21l-2-4M15 21l2-4" /><circle cx="9" cy="14" r=".6" fill="currentColor" /><circle cx="15" cy="14" r=".6" fill="currentColor" /></svg></span>
-      <span class="lntx"><h2 id="ln-h" class="h">노선별 시세분석</h2><span class="d">지하철이 지나는 시·구를 순서대로, 84㎡ 시세와 10년 흐름</span></span>
-      <span class="ch" aria-hidden="true">›</span>
-    </a>
-    <div class="lnchips">
-      {LINES.map((l) => <a class="lnchip" href={`/line/${l.slug}/`} style={`--lc:${l.color}`}><i></i>{l.name}</a>)}
-    </div>
-  </section>
-
   {chgList.length > 0 && (
     <section class="card chg" aria-labelledby="chg-h">
       <h2 id="chg-h" class="h">지역별 1년 변동률 <span class="sub">실거래 {sm.asOf} 기준</span></h2>
@@ -80,6 +69,17 @@ const situations = [
       <p class="src"><b>실거래</b> = 쏙집이 국토부 실거래로 계산한 1년 변동률(평균이 아니라 같은 단지·같은 평형끼리 비교한 중앙값). <b>부동산원 지수</b> = 한국부동산원 주간 아파트 매매가격지수의 52주 전 대비(1년)와 전주 대비 연속 상승·하락 주 수(최근). 시·구 단위는 <a href="/area/">지역별 페이지</a>에서. 가격 전망이 아닙니다.</p>
     </section>
   )}
+
+  <section class="card lncard" aria-labelledby="ln-h">
+    <a class="lnhead" href="/line/">
+      <span class="lnic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="14" rx="3" /><path d="M5 11h14M9 21l-2-4M15 21l2-4" /><circle cx="9" cy="14" r=".6" fill="currentColor" /><circle cx="15" cy="14" r=".6" fill="currentColor" /></svg></span>
+      <span class="lntx"><h2 id="ln-h" class="h">노선별 시세분석</h2><span class="d">지하철이 지나는 시·구를 순서대로, 84㎡ 시세와 10년 흐름</span></span>
+      <span class="ch" aria-hidden="true">›</span>
+    </a>
+    <div class="lnchips">
+      {LINES.map((l) => <a class="lnchip" href={`/line/${l.slug}/`} style={`--lc:${l.color}`}><i></i>{l.name}</a>)}
+    </div>
+  </section>
 
   <section class="card quick" aria-labelledby="qk">
     <h2 id="qk" class="h">예산을 이미 알고 있다면</h2>
