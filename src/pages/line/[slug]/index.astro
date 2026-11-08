@@ -1,0 +1,90 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { LINES, loadLine, RADIUS_M, MIN_COMPLEX } from '../../../lib/data/lines.ts';
+import { eok, pct } from '../../../lib/ui/format.ts';
+
+export function getStaticPaths() {
+  return LINES.map((l) => ({ params: { slug: l.slug } }));
+}
+const d = loadLine(Astro.params.slug!)!;
+const priced = d.stations.filter((s) => s.med != null);
+const lo = priced.length ? Math.min(...priced.map((s) => s.med!)) : null;
+const hi = priced.length ? Math.max(...priced.map((s) => s.med!)) : null;
+const title = `${d.name} 역별 아파트 시세 — 역 1km 안 84㎡ 실거래 중앙값`;
+const desc = `${d.name} ${d.stations.length}개 역을 순서대로 놓고, 역마다 반경 1km 안 아파트의 84㎡ 최근 6개월 실거래 중앙값·1년 변동률·거래 건수를 보여줍니다. ${d.asOf} 기준.`;
+const yoyCls = (v: number | null) => (v == null ? '' : v > 0 ? 'up' : v < 0 ? 'down' : '');
+const km = RADIUS_M / 1000;
+---
+<Base title={title} description={desc}>
+  <nav class="sub" style="padding:2px 4px 6px"><a href="/">홈</a> › <a href="/line/">노선별</a> › {d.name}</nav>
+  <header class="q" style="padding:4px 4px 10px">
+    <h1 class="big" style={`margin:0;font-size:24px;display:flex;align-items:center;gap:8px`}><span class="ln" style={`background:${d.color}`}></span>{d.name} 역별 시세</h1>
+    <p class="sub2" style="margin:6px 0 0">{d.stations.length}개 역 · 역 {km}km 안 84㎡ 시세 {lo && hi ? <><b>{eok(lo)}</b> ~ <b>{eok(hi)}</b></> : '-'}</p>
+    <p class="sub" style="margin:4px 0 0">기준: {d.ref.name} 84㎡ 시세 중앙값 <b>{eok(d.ref.med)}</b> ({d.ref.n}개 단지) = 100%</p>
+  </header>
+
+  <ol class="lineview card" style={`--lc:${d.color}`}>
+    {d.stations.map((s, i) => (
+      <li class:list={[{ nodata: s.med == null, br: !!s.branch }]}>
+        {s.branch && <div class="brk">{s.branch}</div>}
+        <details>
+          <summary>
+            <span class="dot" aria-hidden="true"></span>
+            <span class="nm">
+              <span class="t1"><b>{s.name}</b>{s.transfer.length > 0 && <span class="tf">{s.transfer.slice(0, 3).join('·')}{s.transfer.length > 3 ? ` 외 ${s.transfer.length - 3}` : ''}</span>}</span>
+              <span class="meta">{s.med != null ? <>84㎡ 단지 {s.complexes}곳{s.yoy != null && <> · 1년 <span class={yoyCls(s.yoy)}>{pct(s.yoy)}</span></>} · 6개월 {s.n6.toLocaleString()}건</> : s.complexes > 0 ? <>84㎡ 시세 단지 {s.complexes}곳(3곳 미만) · 6개월 {s.n6.toLocaleString()}건</> : <>{km}km 안 84㎡ 시세 단지 없음</>}</span>
+            </span>
+            <span class="pr">{s.med != null ? <><b>{eok(s.med)}</b><span class="rt">{d.ref.name} {s.ratio}%</span></> : <span class="na">-</span>}</span>
+          </summary>
+          {s.top.length > 0 && (
+            <ul class="tops">{s.top.map((c) => <li>{c.static ? <a href={`/apt/${c.id}/`}>{c.name}</a> : <span>{c.name}</span>}<b>{eok(c.price)}</b></li>)}</ul>
+          )}
+        </details>
+        {i === 3 && <div class="ad-slot" aria-hidden="true"></div>}
+      </li>
+    ))}
+  </ol>
+
+  <section class="card sec">
+    <h2>숫자 읽는 법</h2>
+    <ul class="how">
+      <li><b>시세</b> = 역에서 직선 {km}km 안 단지들의 84㎡ 타입(±5㎡) 최근 6개월 실거래 중앙값을 모아, 그 가운데 값을 냈습니다. 시세가 있는 단지가 {MIN_COMPLEX}곳 미만이면 비워 둡니다.</li>
+      <li><b>{d.ref.name} %</b> = 이 역 시세 ÷ {d.ref.name} 84㎡ 시세 중앙값. 가격 수준을 비교하는 계산값이며, 가치나 전망을 뜻하지 않습니다.</li>
+      <li><b>1년</b> = 같은 단지들의 1년 변동률(최근 6개월 중앙값 vs 1년 전 같은 6개월, 양쪽 3건 이상) 가운데 값. <b>6개월 거래</b> = 반경 안 모든 단지·평형의 최근 6개월 거래 건수 합.</li>
+      <li>역 사이 반경이 겹치면 같은 단지가 여러 역에 함께 잡힙니다. 직선거리라 실제 걷는 거리는 더 깁니다(<a href="/guide/station-radius/">역 거리 기준</a>).</li>
+    </ul>
+  </section>
+  <a class="btn" href="/find/" style="margin-bottom:12px">내 예산으로 단지 찾기</a>
+  <p class="src">출처: 국토교통부 아파트 매매 실거래가({d.asOf} 기준, 해제·직거래 제외) · 국가철도공단 전국도시철도역사정보. 역 순서는 역 번호·위치로 정렬했습니다.</p>
+  <div class="ad-slot" aria-hidden="true"></div>
+</Base>
+<style>
+  .ln { display: inline-block; width: 6px; height: 22px; border-radius: 3px; }
+  .lineview { list-style: none; margin: 0 0 12px; padding: 8px 16px; }
+  .lineview > li { position: relative; }
+  .lineview > li::before { content: ''; position: absolute; left: 6px; top: 0; bottom: 0; width: 3px; background: var(--lc); opacity: .9; }
+  .lineview > li:first-child::before { top: 22px; } .lineview > li:last-child::before { bottom: calc(100% - 22px); }
+  .lineview summary { list-style: none; display: flex; align-items: center; gap: 10px; padding: 10px 0; cursor: pointer; }
+  .lineview summary::-webkit-details-marker { display: none; }
+  .dot { position: relative; z-index: 1; flex: none; width: 15px; height: 15px; border-radius: 50%; background: var(--card, #fff); border: 3px solid var(--lc); box-sizing: border-box; }
+  .nm { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+  .nm b { font-size: 15px; }
+  .t1 { display: flex; align-items: baseline; gap: 6px; min-width: 0; }
+  .tf { font-size: 11px; color: var(--fg2); background: var(--bg, #f2f4f6); border-radius: 6px; padding: 1px 6px; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .meta { font-size: 12.5px; color: var(--fg2); margin-top: 2px; word-break: keep-all; }
+  .pr { flex: none; text-align: right; display: flex; flex-direction: column; align-items: flex-end; }
+  .pr b { font-size: 15.5px; font-variant-numeric: tabular-nums; }
+  .rt { font-size: 11.5px; color: var(--muted); margin-top: 2px; white-space: nowrap; }
+  .na { color: var(--muted); }
+  .nodata .nm b { color: var(--fg2); font-weight: 600; } .nodata .dot { opacity: .55; }
+  .brk { margin: 8px 0 0 22px; font-size: 12px; font-weight: 700; color: var(--muted); }
+  .br::before { top: 30px; }
+  .tops { list-style: none; margin: -2px 0 10px 25px; padding: 8px 12px; background: var(--bg, #f2f4f6); border-radius: 12px; font-size: 13px; }
+  .tops li { display: flex; justify-content: space-between; gap: 8px; padding: 3px 0; }
+  .tops a, .tops span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: inherit; }
+  .tops b { flex: none; font-variant-numeric: tabular-nums; }
+  .up { color: var(--red); } .down { color: var(--blue); }
+  .sec { margin-bottom: 12px; } .sec h2 { font-size: 16px; margin: 0 0 6px; }
+  .how { margin: 0; padding-left: 18px; font-size: 13.5px; line-height: 1.6; color: var(--fg2); } .how li { margin: 4px 0; }
+  .ad-slot { min-height: 0; }
+</style>
