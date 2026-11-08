@@ -142,7 +142,7 @@ const situations = [
   /* 카드 접기 */
   .fold { position: relative; }
   .fold > .h, .fold .lnhead { padding-right: 44px; }
-  .fold-t { position: absolute; top: calc(var(--pad) - 8px); right: calc(var(--pad) - 8px); width: 36px; height: 36px; border: 0; border-radius: 50%; background: var(--soft); color: var(--fg2); display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; }
+  .fold-t { position: absolute; z-index: 2; top: calc(var(--pad) - 8px); right: calc(var(--pad) - 8px); width: 36px; height: 36px; border: 0; border-radius: 50%; background: var(--soft); color: var(--fg2); display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; }
   .fold-t svg { width: 20px; height: 20px; transform: rotate(180deg); transition: transform .2s; }
   .fold.closed .fold-t svg { transform: none; }
   .fold.closed .sgrid, .fold.closed .ccell, .fold.closed > .src, .fold.closed .lnchips, .fold.closed .qgrid, .fold.closed .chips { display: none; }
