@@ -8,7 +8,7 @@ export function getStaticPaths() {
 }
 const d = loadLine(Astro.params.slug!)!;
 const ref = d.ref;
-const title = `${d.name} 따라 지역 비교 — 시·구별 84㎡ 시세와 변동률`;
+const title = `${d.name} 시세분석 — 지나는 시·구별 84㎡ 시세와 흐름`;
 const desc = `${d.name}이 지나는 ${d.regions.length}개 시·구를 노선 순서대로 놓고, 지역별 84㎡ 실거래 시세·1년 변동률과 부동산원 지수 흐름을 ${ref?.label ?? '기준 지역'}과 비교합니다. ${d.asOf} 기준.`;
 const cls = (v: number | null) => (v == null ? 'na' : v > 0 ? 'up' : v < 0 ? 'down' : '');
 
@@ -24,29 +24,33 @@ const X = (i: number) => PL + (i / Math.max(1, n - 1)) * (W - PL - PR);
 const Y = (v: number) => PT + (1 - (v - yMin) / (yMax - yMin)) * (H - PT - PB);
 const path = (s: (number | null)[]) => s.map((v, i) => (v == null ? '' : `${X(i).toFixed(1)},${Y(v).toFixed(1)}`)).filter(Boolean).join(' ');
 const ticks: number[] = []; for (let v = yMin; v <= yMax; v += 5) ticks.push(v);
-const lab = (p: string) => { const s = chart?.labels[p] ?? p; const m = /(\d{4})\D+(\d{1,2})/.exec(s); return m ? `${m[1].slice(2)}.${m[2].padStart(2, '0')}` : p.slice(2, 4) + '년'; };
-const xt = chart ? [0, Math.floor((n - 1) / 2), n - 1] : [];
+const lab = (p: string) => `${p.slice(0, 4)}`;
+const xt: number[] = [];
+if (chart) { let lastY = ''; chart.periods.forEach((p, i) => { const y = p.slice(0, 4); if (y !== lastY && Number(y) % 2 === 0 && i > 8 && i < n - 8) xt.push(i); lastY = y; }); }
+const avgOf = (s: (number | null)[]) => { const v = s.filter((x): x is number => x != null); return v.length ? +(v.reduce((a, b) => a + b, 0) / v.length).toFixed(1) : null; };
+const years = chart ? Math.round((n / 52) * 10) / 10 : 0;
 const fromLabel = chart ? chart.labels[chart.periods[0]] ?? chart.periods[0] : '';
 const toLabel = chart ? chart.labels[chart.periods[n - 1]] ?? chart.periods[n - 1] : '';
 ---
 <Base title={title} description={desc}>
-  <nav class="sub" style="padding:2px 4px 6px"><a href="/">홈</a> › <a href="/line/">노선별</a> › {d.name}</nav>
+  <nav class="sub" style="padding:2px 4px 6px"><a href="/">홈</a> › <a href="/line/">노선별 시세분석</a> › {d.name}</nav>
   <header class="q" style="padding:4px 4px 10px">
-    <h1 class="big" style="margin:0;font-size:24px;display:flex;align-items:center;gap:8px"><span class="ln" style={`background:${d.color}`}></span>{d.name} 따라 지역 비교</h1>
+    <h1 class="big" style="margin:0;font-size:24px;display:flex;align-items:center;gap:8px"><span class="ln" style={`background:${d.color}`}></span>{d.name} 시세분석</h1>
     <p class="sub2" style="margin:6px 0 0">{d.name}이 지나는 시·구 {d.regions.length}곳을 노선 순서대로 놓았습니다.</p>
     {ref && <p class="sub" style="margin:4px 0 0">기준: <b>{ref.label}</b> 84㎡ 시세 중앙값 <b>{eok(ref.med)}</b> = 100% (노선이 지나는 서울 지역 중 시세가 가장 높은 곳)</p>}
   </header>
 
   {chart && (
     <section class="card sec">
-      <h2>{ref!.label} 대비 흐름 <span class="sub">부동산원 지수, 시작 주 = 100</span></h2>
+      <h2>{ref!.label} 대비 흐름 <span class="sub">부동산원 지수 {years >= 9 ? '10년' : `${years}년`}, 시작 주 = 100</span></h2>
       <svg viewBox={`0 0 ${W} ${H}`} class="ch" role="img" aria-label={`${d.name} 지역별 ${ref!.label} 대비 상대지수`}>
         {ticks.map((t) => <g><line x1={PL} x2={W - PR} y1={Y(t)} y2={Y(t)} class={t === 100 ? 'g100' : 'g'} /><text x={PL - 4} y={Y(t) + 3} class="yt">{t}</text></g>)}
-        {xt.map((i) => <text x={X(i)} y={H - 6} class="xt" text-anchor={i === 0 ? 'start' : i === n - 1 ? 'end' : 'middle'}>{lab(chart.periods[i])}</text>)}
-        {lines.map((l) => <polyline points={path(l.r.series!)} fill="none" stroke={l.c} stroke-width="2" stroke-linejoin="round" />)}
+        {xt.map((i) => <g><line x1={X(i)} x2={X(i)} y1={PT} y2={H - PB} class="g" /><text x={X(i)} y={H - 6} class="xt" text-anchor="middle">{lab(chart.periods[i])}</text></g>)}
+        {lines.map((l) => { const a = avgOf(l.r.series!); return a != null ? <line x1={PL} x2={W - PR} y1={Y(a)} y2={Y(a)} stroke={l.c} stroke-width="1" stroke-dasharray="4 3" opacity=".55" /> : null; })}
+        {lines.map((l) => <polyline points={path(l.r.series!)} fill="none" stroke={l.c} stroke-width="1.6" stroke-linejoin="round" />)}
       </svg>
-      <ul class="lg">{lines.map((l) => <li><span class="sw" style={`background:${l.c}`}></span>{l.r.label}<b class={cls(l.r.rel)}>{l.r.rel != null ? `${l.r.rel > 0 ? '+' : ''}${l.r.rel}` : '-'}</b></li>)}</ul>
-      <p class="src">{fromLabel} = 100으로 놓고, 각 지역 지수 변화를 {ref!.label} 지수 변화로 나눈 값입니다. 100보다 위면 그 기간 {ref!.label}보다 더 올랐다는 뜻(숫자 = 100과의 차이, %p)이고, 가격 수준이나 앞으로의 방향을 뜻하지 않습니다. {toLabel}까지.</p>
+      <table class="lgt"><thead><tr><th>지역</th><th>지금</th><th>{years >= 9 ? '10년 평균' : '기간 평균'}</th></tr></thead><tbody>{lines.map((l) => { const a = avgOf(l.r.series!); return <tr><td><span class="sw" style={`background:${l.c}`}></span>{l.r.label}</td><td><b>{l.r.series!.filter((v) => v != null).at(-1)}</b></td><td>{a ?? '-'}</td></tr>; })}</tbody></table>
+      <p class="src">{fromLabel} = 100으로 놓고, 각 지역 지수 변화를 {ref!.label} 지수 변화로 나눈 값입니다(실선). 점선은 같은 기간 그 값의 평균입니다. 100보다 위면 시작 주보다 {ref!.label}에 견줘 더 올랐다는 뜻이고, 가격 수준이나 앞으로의 방향을 뜻하지 않습니다. {toLabel}까지.</p>
     </section>
   )}
 
@@ -89,9 +93,10 @@ const toLabel = chart ? chart.labels[chart.periods[n - 1]] ?? chart.periods[n - 
   .ch { width: 100%; height: auto; display: block; }
   .ch .g { stroke: var(--soft, #eef0f3); stroke-width: 1; } .ch .g100 { stroke: #8b95a1; stroke-width: 1.2; stroke-dasharray: 3 3; }
   .ch .yt { font-size: 9px; fill: var(--muted, #8b95a1); text-anchor: end; } .ch .xt { font-size: 9px; fill: var(--muted, #8b95a1); }
-  .lg { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 14px; font-size: 13px; }
-  .lg li { display: flex; align-items: center; gap: 6px; min-width: 0; } .lg b { margin-left: auto; font-variant-numeric: tabular-nums; }
-  .sw { flex: none; width: 10px; height: 10px; border-radius: 3px; }
+  .lgt { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; font-variant-numeric: tabular-nums; }
+  .lgt th { font-size: 11.5px; color: var(--muted); font-weight: 600; text-align: right; padding: 4px 0; } .lgt th:first-child { text-align: left; }
+  .lgt td { padding: 4px 0; text-align: right; border-top: 1px solid var(--soft); } .lgt td:first-child { text-align: left; }
+  .sw { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
   .rl { list-style: none; margin: 0 0 12px; padding: 0 0 0 18px; position: relative; }
   .rl::before { content: ''; position: absolute; left: 6px; top: 18px; bottom: 18px; width: 4px; border-radius: 2px; background: var(--lc); }
   .rl > li { position: relative; margin-bottom: 10px; }

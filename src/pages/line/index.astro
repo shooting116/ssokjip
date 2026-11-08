@@ -9,9 +9,9 @@ const rows = LINES.map((l) => {
 });
 const asOf = rows[0]?.asOf;
 ---
-<Base title="노선별 지역 비교 — 지하철 따라 시·구 시세 보기" description={`수도권 도시철도 ${rows.length}개 노선이 지나는 시·구를 노선 순서대로 놓고, 84㎡ 실거래 시세·변동률과 부동산원 지수 흐름을 비교합니다. ${asOf} 기준.`}>
+<Base title="노선별 시세분석 — 지하철 따라 시·구 시세와 흐름" description={`수도권 도시철도 ${rows.length}개 노선이 지나는 시·구를 노선 순서대로 놓고, 84㎡ 실거래 시세·변동률과 부동산원 지수 흐름을 비교합니다. ${asOf} 기준.`}>
   <header class="q" style="padding:4px 4px 10px">
-    <h1 class="big" style="margin:0;font-size:24px">노선별 지역 비교</h1>
+    <h1 class="big" style="margin:0;font-size:24px">노선별 시세분석</h1>
     <p class="sub2" style="margin:6px 0 0">지하철 노선이 지나는 시·구를 순서대로 놓고 시세와 흐름을 비교합니다. 출퇴근 노선 위에서 지역을 고를 때 씁니다.</p>
   </header>
   <ul class="lines card">
