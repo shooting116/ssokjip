@@ -22,6 +22,7 @@
 {"lawd":"26140","umdNm":"남부민동","jibun":"706","apt":"풀리페","area":51.64,"floor":12,"built":2013,"date":"2026-10-08","deposit":6053,"rent":19,"term":"26.11~29.08","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26140","umdNm":"토성동2가","jibun":"8-7","apt":"한성그린아파트","area":50.69,"floor":8,"built":2016,"date":"2026-10-08","deposit":2000,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26140","umdNm":"암남동","jibun":"775","apt":"힐스테이트이진베이시티아파트","area":92.76,"floor":59,"built":2022,"date":"2026-10-09","deposit":40000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":40000,"preRent":0}
+{"lawd":"26140","umdNm":"암남동","jibun":"775","apt":"힐스테이트이진베이시티아파트","area":105.48,"floor":47,"built":2022,"date":"2026-10-09","deposit":5000,"rent":220,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26140","umdNm":"암남동","jibun":"775","apt":"힐스테이트이진베이시티아파트","area":105.54,"floor":23,"built":2022,"date":"2026-10-09","deposit":56000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26140","umdNm":"암남동","jibun":"775","apt":"힐스테이트이진베이시티아파트","area":116.12,"floor":16,"built":2022,"date":"2026-10-09","deposit":10000,"rent":240,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26140","umdNm":"암남동","jibun":"778","apt":"e편한세상송도더퍼스트비치","area":84.93,"floor":18,"built":2024,"date":"2026-10-09","deposit":4000,"rent":150,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -81,6 +82,7 @@
 {"lawd":"26140","umdNm":"암남동","jibun":"775","apt":"힐스테이트이진베이시티아파트","area":84.52,"floor":42,"built":2022,"date":"2026-10-29","deposit":10000,"rent":110,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26140","umdNm":"암남동","jibun":"775","apt":"힐스테이트이진베이시티아파트","area":92.91,"floor":45,"built":2022,"date":"2026-10-29","deposit":50000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26140","umdNm":"동대신동3가","jibun":"553","apt":"브라운스톤하이포레","area":84.94,"floor":9,"built":2020,"date":"2026-10-30","deposit":10000,"rent":100,"term":"26.12~28.11","type":"갱신","rrr":null,"preDeposit":10000,"preRent":70}
+{"lawd":"26140","umdNm":"동대신동2가","jibun":"313","apt":"삼익","area":88.2,"floor":5,"built":1976,"date":"2026-10-30","deposit":9000,"rent":40,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26140","umdNm":"암남동","jibun":"115-18","apt":"송도자이르네디오션","area":106,"floor":4,"built":2025,"date":"2026-10-30","deposit":34000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26140","umdNm":"암남동","jibun":"775","apt":"힐스테이트이진베이시티아파트","area":92.91,"floor":46,"built":2022,"date":"2026-10-30","deposit":43500,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":41500,"preRent":0}
 {"lawd":"26140","umdNm":"암남동","jibun":"778","apt":"e편한세상송도더퍼스트비치","area":84.92,"floor":18,"built":2024,"date":"2026-10-30","deposit":44000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":42000,"preRent":0}

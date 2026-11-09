@@ -5,8 +5,10 @@
 {"lawd":"26530","umdNm":"엄궁동","jibun":"669-2","apt":"엄궁대림","area":59.85,"floor":1,"built":1999,"date":"2026-11-02","deposit":2000,"rent":55,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"모라동","jibun":"1362","apt":"우신모라","area":47.37,"floor":4,"built":1992,"date":"2026-11-02","deposit":10200,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"주례동","jibun":"239","apt":"한일유엔아이","area":59.67,"floor":22,"built":2005,"date":"2026-11-02","deposit":17500,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"주례동","jibun":"595-4","apt":"럭키주례2","area":59.86,"floor":12,"built":1989,"date":"2026-11-03","deposit":13000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"학장동","jibun":"573-1","apt":"반도보라타운","area":59.88,"floor":12,"built":1994,"date":"2026-11-03","deposit":10000,"rent":20,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"엄궁동","jibun":"683-3","apt":"엄궁2차한신","area":84.9,"floor":8,"built":1999,"date":"2026-11-03","deposit":6000,"rent":55,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"모라동","jibun":"1362","apt":"우신모라","area":74.93,"floor":3,"built":1992,"date":"2026-11-03","deposit":1000,"rent":60,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"주례동","jibun":"1289","apt":"주례롯데캐슬골드스마트","area":39.72,"floor":4,"built":2022,"date":"2026-11-03","deposit":16000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":15500,"preRent":0}
 {"lawd":"26530","umdNm":"모라동","jibun":"552","apt":"백양그린","area":49.94,"floor":11,"built":1992,"date":"2026-11-04","deposit":9200,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"엄궁동","jibun":"25-110","apt":"엄궁럭키","area":82.6,"floor":3,"built":1993,"date":"2026-11-04","deposit":10900,"rent":2,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -18,6 +20,10 @@
 {"lawd":"26530","umdNm":"주례동","jibun":"1288","apt":"주례경동리인","area":67.76,"floor":3,"built":2017,"date":"2026-11-05","deposit":13927,"rent":15,"term":"27.01~28.12","type":"갱신","rrr":null,"preDeposit":13263,"preRent":15}
 {"lawd":"26530","umdNm":"주례동","jibun":"1289","apt":"주례롯데캐슬골드스마트","area":73.68,"floor":27,"built":2022,"date":"2026-11-05","deposit":38000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"주례동","jibun":"55-139","apt":"경동윈츠빌","area":30.57,"floor":11,"built":2004,"date":"2026-11-06","deposit":500,"rent":40,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"학장동","jibun":"573-1","apt":"반도보라타운","area":84.9,"floor":12,"built":1994,"date":"2026-11-06","deposit":16500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"괘법동","jibun":"984","apt":"센트럴스타힐스","area":59.91,"floor":14,"built":2022,"date":"2026-11-06","deposit":3000,"rent":90,"term":"26.12~28.11","type":"갱신","rrr":null,"preDeposit":2000,"preRent":80}
 {"lawd":"26530","umdNm":"모라동","jibun":"552","apt":"주공1단지(임대)","area":26.37,"floor":8,"built":1992,"date":"2026-11-06","deposit":275,"rent":5,"term":"27.01~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26530","umdNm":"주례동","jibun":"1289","apt":"주례롯데캐슬골드스마트","area":84.86,"floor":14,"built":2022,"date":"2026-11-06","deposit":38500,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"주례동","jibun":"519-6","apt":"주례맨션","area":72.41,"floor":2,"built":1983,"date":"2026-11-06","deposit":12000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"괘법동","jibun":"549-6","apt":"파밀리아","area":49.63,"floor":12,"built":2013,"date":"2026-11-07","deposit":1000,"rent":60,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26530","umdNm":"엄궁동","jibun":"1","apt":"무학다솜","area":49.8,"floor":24,"built":2000,"date":"2026-11-09","deposit":10000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

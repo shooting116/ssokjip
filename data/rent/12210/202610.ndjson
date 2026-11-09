@@ -41,6 +41,7 @@
 {"lawd":"12210","umdNm":"용산동","jibun":"663","apt":"용산지구모아엘가에듀파크","area":84.9,"floor":11,"built":2019,"date":"2026-10-10","deposit":7000,"rent":90,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12210","umdNm":"소태동","jibun":"618","apt":"백조맨션","area":55.31,"floor":4,"built":1983,"date":"2026-10-11","deposit":1500,"rent":35,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":500,"preRent":60}
 {"lawd":"12210","umdNm":"계림동","jibun":"1869","apt":"계림아이파크에스케이뷰","area":39.91,"floor":14,"built":2022,"date":"2026-10-12","deposit":20000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"12210","umdNm":"계림동","jibun":"1827","apt":"그랜드센트럴","area":59.91,"floor":17,"built":2020,"date":"2026-10-12","deposit":5000,"rent":95,"term":"26.11~27.11","type":"갱신","rrr":null,"preDeposit":5000,"preRent":95}
 {"lawd":"12210","umdNm":"계림동","jibun":"1827","apt":"그랜드센트럴","area":106.99,"floor":13,"built":2020,"date":"2026-10-12","deposit":5000,"rent":150,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12210","umdNm":"계림동","jibun":"1845","apt":"두산위브3차(두산위브더파크)","area":59.99,"floor":9,"built":2021,"date":"2026-10-12","deposit":28000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12210","umdNm":"소태동","jibun":"618","apt":"백조맨션","area":55,"floor":4,"built":1983,"date":"2026-10-12","deposit":6000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
@@ -54,6 +55,7 @@
 {"lawd":"12210","umdNm":"내남동","jibun":"904","apt":"내남지구2차진아리채","area":85,"floor":2,"built":2020,"date":"2026-10-14","deposit":20479,"rent":7,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":20479,"preRent":5}
 {"lawd":"12210","umdNm":"내남동","jibun":"904","apt":"내남지구2차진아리채","area":85,"floor":13,"built":2020,"date":"2026-10-14","deposit":21211,"rent":5,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12210","umdNm":"용산동","jibun":"668","apt":"용산지구대성베르힐","area":59.61,"floor":13,"built":2019,"date":"2026-10-14","deposit":20200,"rent":10,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"12210","umdNm":"충장로4가","jibun":"14","apt":"충장아트원","area":18,"floor":5,"built":2014,"date":"2026-10-14","deposit":4500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12210","umdNm":"산수동","jibun":"25","apt":"명성맨션","area":59.49,"floor":2,"built":1984,"date":"2026-10-15","deposit":1000,"rent":43,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12210","umdNm":"소태동","jibun":"1103","apt":"무등산골드클래스","area":84.96,"floor":12,"built":2018,"date":"2026-10-15","deposit":10000,"rent":90,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12210","umdNm":"산수동","jibun":"723","apt":"무등산그린웰로제비앙","area":84.84,"floor":3,"built":2019,"date":"2026-10-15","deposit":29000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
