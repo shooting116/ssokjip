@@ -29,7 +29,7 @@
 | 2026-11-08 | 43 | 보금자리론 2026 — 자격·한도·금리 구조 | bogeumjari-2026 | loan | calc | 완료(bogeumjari-2026) |
 | 2026-11-09 | 44 | 입주 물량 보는 법 — 공급이 가격에 닿는 시차 | supply-pipeline | price | find | 완료(supply-pipeline) |
 | 2026-11-10 | 45 | 미분양 통계 읽는 법 — 국토부 월간 통계, 준공 후 미분양 | unsold-stats | price | none | 완료(unsold-stats) |
-| 2026-11-11 | 46 | 용적률·대지지분 — 재건축 사업성을 가르는 두 숫자 | far-and-land-share | future | find | |
+| 2026-11-11 | 46 | 용적률·대지지분 — 재건축 사업성을 가르는 두 숫자 | far-and-land-share | future | find | 완료(far-and-land-share) |
 | 2026-11-12 | 47 | 분양권 vs 입주권 — 차이, 세금, 대출 | presale-vs-occupancy-right | future | none | |
 | 2026-11-13 | 48 | 아파트 vs 주상복합 vs 오피스텔(아파텔) — 대출·세금·관리비 차이 | apt-vs-officetel | situation | calc | |
 | 2026-11-14 | 49 | 세대수·동수·주차대수 — 건축물대장으로 단지 읽기 | building-register | price | find | |
