@@ -395,6 +395,7 @@
 {"lawd":"41273","umdNm":"원시동","jibun":"850","apt":"안산스마트허브경기행복주택","area":21.84,"floor":12,"built":2021,"date":"2026-10-30","deposit":2179,"rent":9,"term":"27.01~28.12","type":"갱신","rrr":null,"preDeposit":2179,"preRent":9}
 {"lawd":"41273","umdNm":"선부동","jibun":"1003","apt":"안산중흥S클래스더퍼스트","area":59.88,"floor":6,"built":2024,"date":"2026-10-30","deposit":18710,"rent":0,"term":"26.12~28.11","type":"갱신","rrr":null,"preDeposit":18060,"preRent":0}
 {"lawd":"41273","umdNm":"고잔동","jibun":"670","apt":"주공7","area":54.9,"floor":1,"built":1987,"date":"2026-10-30","deposit":2000,"rent":75,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41273","umdNm":"고잔동","jibun":"728","apt":"푸르지오3차","area":101.95,"floor":7,"built":2003,"date":"2026-10-30","deposit":48500,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":47000,"preRent":0}
 {"lawd":"41273","umdNm":"고잔동","jibun":"853","apt":"힐스테이트중앙","area":59.99,"floor":25,"built":2018,"date":"2026-10-30","deposit":44000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":42000,"preRent":0}
 {"lawd":"41273","umdNm":"원곡동","jibun":"1002","apt":"e편한세상초지역센트럴포레","area":59.97,"floor":34,"built":2021,"date":"2026-10-30","deposit":28000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41273","umdNm":"원곡동","jibun":"1002","apt":"e편한세상초지역센트럴포레","area":85,"floor":16,"built":2021,"date":"2026-10-30","deposit":48000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

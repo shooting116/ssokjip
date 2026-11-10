@@ -82,8 +82,10 @@
 {"lawd":"30110","umdNm":"용전동","jibun":"181-1","apt":"새피앙","area":84,"floor":8,"built":1997,"date":"2026-10-13","deposit":10500,"rent":30,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"용전동","jibun":"181-1","apt":"새피앙","area":84.82,"floor":8,"built":1997,"date":"2026-10-13","deposit":10500,"rent":30,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"낭월동","jibun":"611","apt":"석천들주공","area":51.86,"floor":10,"built":2004,"date":"2026-10-13","deposit":1987,"rent":0,"term":"26.11~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"30110","umdNm":"낭월동","jibun":"611","apt":"석천들주공","area":51.86,"floor":12,"built":2004,"date":"2026-10-13","deposit":4087,"rent":8,"term":"26.11~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"낭월동","jibun":"611","apt":"석천들주공","area":59.99,"floor":4,"built":2004,"date":"2026-10-13","deposit":2413,"rent":23,"term":"26.11~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"낭월동","jibun":"611","apt":"석천들주공","area":59.99,"floor":11,"built":2004,"date":"2026-10-13","deposit":2413,"rent":23,"term":"26.11~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"30110","umdNm":"낭월동","jibun":"611","apt":"석천들주공","area":59.99,"floor":15,"built":2004,"date":"2026-10-13","deposit":2413,"rent":23,"term":"26.11~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"삼성동","jibun":"369-1","apt":"솔랑마을","area":84.84,"floor":9,"built":2000,"date":"2026-10-13","deposit":19000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"대성동","jibun":"454","apt":"은어송하늘채리버뷰","area":84.96,"floor":11,"built":2024,"date":"2026-10-13","deposit":5000,"rent":120,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"대동","jibun":"539","apt":"이스트시티1단지","area":59.95,"floor":15,"built":2018,"date":"2026-10-13","deposit":27500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

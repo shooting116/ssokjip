@@ -1,3 +1,4 @@
+{"lawd":"41610","umdNm":"역동","jibun":"388","apt":"경기광주역행복주택","area":44.7,"floor":13,"built":2021,"date":"2026-11-01","deposit":10622,"rent":16,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":10622,"preRent":16}
 {"lawd":"41610","umdNm":"역동","jibun":"364","apt":"광주역자연앤자이","area":84.55,"floor":11,"built":2021,"date":"2026-11-01","deposit":20000,"rent":130,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41610","umdNm":"양벌동","jibun":"347","apt":"대주파크빌제1차B블럭","area":84.99,"floor":12,"built":2003,"date":"2026-11-01","deposit":3000,"rent":120,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41610","umdNm":"고산동","jibun":"707","apt":"오포자이오브제","area":85,"floor":21,"built":2024,"date":"2026-11-01","deposit":42000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":40000,"preRent":0}
@@ -30,6 +31,7 @@
 {"lawd":"41610","umdNm":"양벌동","jibun":"1111","apt":"광주역우방아이유쉘2단지","area":77.9,"floor":7,"built":2018,"date":"2026-11-05","deposit":33000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":32400,"preRent":0}
 {"lawd":"41610","umdNm":"송정동","jibun":"367-7","apt":"대주파크빌","area":84.99,"floor":13,"built":2005,"date":"2026-11-05","deposit":25000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41610","umdNm":"탄벌동","jibun":"37","apt":"산호","area":84.87,"floor":6,"built":1994,"date":"2026-11-05","deposit":27000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41610","umdNm":"문형동","jibun":"600","apt":"오포문형양우내안애","area":84.88,"floor":13,"built":2018,"date":"2026-11-05","deposit":24150,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":23000,"preRent":0}
 {"lawd":"41610","umdNm":"고산동","jibun":"705","apt":"오포자이디오브(4단지)","area":85,"floor":9,"built":2024,"date":"2026-11-05","deposit":50000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41610","umdNm":"고산동","jibun":"182-4","apt":"우림(Lumiart)","area":84.12,"floor":8,"built":1998,"date":"2026-11-05","deposit":5000,"rent":150,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41610","umdNm":"역동","jibun":"244","apt":"이편한세상광주역2단지","area":84.98,"floor":1,"built":2016,"date":"2026-11-05","deposit":5000,"rent":147,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":140}
@@ -46,7 +48,15 @@
 {"lawd":"41610","umdNm":"쌍령동","jibun":"503","apt":"광주센트럴푸르지오","area":84.91,"floor":11,"built":2018,"date":"2026-11-07","deposit":42000,"rent":0,"term":"27.03~29.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41610","umdNm":"역동","jibun":"364","apt":"광주역자연앤자이","area":84.55,"floor":9,"built":2021,"date":"2026-11-07","deposit":57500,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":55000,"preRent":0}
 {"lawd":"41610","umdNm":"탄벌동","jibun":"770","apt":"벽산블루밍2단지","area":84.98,"floor":2,"built":2011,"date":"2026-11-07","deposit":32000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41610","umdNm":"경안동","jibun":"157-2","apt":"푸르지오","area":59.92,"floor":10,"built":2002,"date":"2026-11-07","deposit":4000,"rent":90,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41610","umdNm":"쌍령동","jibun":"360-1","apt":"현대모닝사이드2","area":84.9,"floor":6,"built":2003,"date":"2026-11-07","deposit":24100,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":23000,"preRent":0}
+{"lawd":"41610","umdNm":"태전동","jibun":"702","apt":"힐스테이트태전6지구(1601동~1608동)","area":59.94,"floor":11,"built":2017,"date":"2026-11-08","deposit":4000,"rent":150,"term":"27.01~27.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41610","umdNm":"태전동","jibun":"702","apt":"힐스테이트태전6지구(1601동~1608동)","area":59.94,"floor":11,"built":2017,"date":"2026-11-08","deposit":38000,"rent":0,"term":"27.02~29.02","type":"갱신","rrr":null,"preDeposit":4000,"preRent":150}
 {"lawd":"41610","umdNm":"초월읍 쌍동리","jibun":"392","apt":"광주초월동광모닝스카이","area":85,"floor":12,"built":2005,"date":"2026-11-09","deposit":30000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41610","umdNm":"탄벌동","jibun":"778","apt":"광주탄벌서희스타힐스2단지","area":59.97,"floor":17,"built":2025,"date":"2026-11-09","deposit":3000,"rent":150,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41610","umdNm":"곤지암읍 곤지암리","jibun":"593","apt":"삼주노블리제","area":59.84,"floor":15,"built":2005,"date":"2026-11-09","deposit":21000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":20000,"preRent":0}
+{"lawd":"41610","umdNm":"태전동","jibun":"228","apt":"성원","area":84.6,"floor":17,"built":1999,"date":"2026-11-09","deposit":30000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41610","umdNm":"경안동","jibun":"185-1","apt":"해태","area":85,"floor":9,"built":2000,"date":"2026-11-09","deposit":32000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41610","umdNm":"곤지암읍 삼리","jibun":"125-1","apt":"곤지암킴스빌리지","area":35.63,"floor":10,"built":2001,"date":"2026-11-10","deposit":1000,"rent":55,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41610","umdNm":"송정동","jibun":"715","apt":"광주송정중흥S-클래스파크뷰","area":84.84,"floor":14,"built":2026,"date":"2026-11-10","deposit":45000,"rent":0,"term":"26.11~29.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41610","umdNm":"능평동","jibun":"914","apt":"능평리금강KCC","area":84.99,"floor":3,"built":2004,"date":"2026-11-10","deposit":25000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":25000,"preRent":35}

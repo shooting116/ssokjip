@@ -76,6 +76,7 @@
 {"lawd":"27230","umdNm":"칠성동2가","jibun":"733","apt":"오페라삼정그린코아더베스트","area":84.97,"floor":25,"built":2017,"date":"2026-10-07","deposit":3000,"rent":140,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"태전동","jibun":"169-2","apt":"우방타운","area":85,"floor":14,"built":1992,"date":"2026-10-07","deposit":1000,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"검단동","jibun":"887-8","apt":"유성청구","area":47.49,"floor":13,"built":1992,"date":"2026-10-07","deposit":7500,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27230","umdNm":"침산동","jibun":"123-1","apt":"침산화성2","area":85,"floor":11,"built":1999,"date":"2026-10-07","deposit":1000,"rent":80,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"침산동","jibun":"105-73","apt":"코오롱하늘채1단지","area":84.51,"floor":4,"built":2006,"date":"2026-10-07","deposit":30000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"침산동","jibun":"1663-344","apt":"대구침산행복주택","area":36.98,"floor":4,"built":2024,"date":"2026-10-08","deposit":4350,"rent":3,"term":"26.12~28.11","type":"갱신","rrr":null,"preDeposit":3456,"preRent":17}
 {"lawd":"27230","umdNm":"복현동","jibun":"241-1","apt":"복현블루밍브라운스톤명문세가","area":59.95,"floor":12,"built":2011,"date":"2026-10-08","deposit":12462,"rent":0,"term":"27.02~29.02","type":"갱신","rrr":null,"preDeposit":13848,"preRent":0}
@@ -147,6 +148,7 @@
 {"lawd":"27230","umdNm":"검단동","jibun":"887-8","apt":"유성청구","area":47.49,"floor":5,"built":1992,"date":"2026-10-14","deposit":500,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"동천동","jibun":"915","apt":"칠곡3화성타운","area":84.96,"floor":1,"built":1999,"date":"2026-10-14","deposit":20400,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"동천동","jibun":"915","apt":"칠곡3화성타운","area":84.96,"floor":1,"built":1999,"date":"2026-10-14","deposit":23000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27230","umdNm":"태전동","jibun":"1066","apt":"칠곡대백맨션","area":59.94,"floor":14,"built":1993,"date":"2026-10-14","deposit":500,"rent":50,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"서변동","jibun":"1775","apt":"화성리버파크1","area":84.93,"floor":7,"built":2003,"date":"2026-10-14","deposit":2000,"rent":70,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"칠성동2가","jibun":"746","apt":"힐스테이트칠성더오페라주상복합","area":85,"floor":30,"built":2026,"date":"2026-10-14","deposit":2000,"rent":160,"term":"26.11~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"국우동","jibun":"1080","apt":"그린빌6단지","area":51.95,"floor":4,"built":2002,"date":"2026-10-15","deposit":1000,"rent":60,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -286,4 +288,5 @@
 {"lawd":"27230","umdNm":"서변동","jibun":"1769","apt":"동서변리벤빌","area":84.93,"floor":8,"built":2005,"date":"2026-10-31","deposit":2000,"rent":80,"term":"26.12~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"복현동","jibun":"539-106","apt":"복현보성타운","area":59.98,"floor":14,"built":1996,"date":"2026-10-31","deposit":13000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"고성동3가","jibun":"145","apt":"오페라트루엘시민의숲아파트","area":59.69,"floor":10,"built":2020,"date":"2026-10-31","deposit":3000,"rent":80,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":3000,"preRent":70}
+{"lawd":"27230","umdNm":"학정동","jibun":"980","apt":"칠곡1차한라하우젠트","area":78.52,"floor":7,"built":2007,"date":"2026-10-31","deposit":21000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"학정동","jibun":"925","apt":"학정청아람","area":84.66,"floor":16,"built":2007,"date":"2026-10-31","deposit":1900,"rent":100,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
