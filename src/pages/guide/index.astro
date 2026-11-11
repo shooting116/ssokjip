@@ -3,25 +3,73 @@ import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import { CATEGORY, isLive, fmtDate } from '../../lib/ui/guide.ts';
 const all = (await getCollection('guide')).filter(isLive).sort((a, b) => b.data.publishAt.localeCompare(a.data.publishAt));
-const byCat = Object.keys(CATEGORY).map((k) => ({ key: k, ...CATEGORY[k], items: all.filter((e) => e.data.category === k) })).filter((c) => c.items.length);
+// 칩에 쓰는 짧은 이름. 주제 설명은 칩을 골랐을 때 아래 한 줄로 보여준다
+const SHORT: Record<string, string> = { situation: '상황별', loan: '대출', tax: '세금·비용', price: '시세', future: '호재·정비' };
+const cats = Object.keys(CATEGORY).map((k) => ({ key: k, ...CATEGORY[k], short: SHORT[k] ?? CATEGORY[k].name, n: all.filter((e) => e.data.category === k).length })).filter((c) => c.n);
 ---
 <Base title="공부 가이드" description="집 사기 전에 알아야 할 대출·세금·시세 읽는 법을 숫자와 출처로 정리한 글 모음. 쏙집 계산기·집 찾기와 같은 규칙표를 씁니다.">
   <div class="q" style="padding:4px 4px 10px">
     <h1 class="big" style="margin:0;font-size:22px">공부 가이드</h1>
     <p class="sub2" style="margin:4px 0 0">판단 대신 숫자와 출처를 드립니다. 글 속 수치는 계산기와 같은 규칙표에서 가져오고, 바뀌면 글도 같이 바뀝니다. 지금 {all.length}편.</p>
   </div>
-  {byCat.map((c) => (
-    <section class="card" style="margin-bottom:12px">
-      <h2 style="font-size:16px;margin:0">{c.name} <span class="sub">{c.desc}</span></h2>
-      <ul class="gl">{c.items.map((e) => <li><a href={`/guide/${e.id}/`}><b>{e.data.title}</b><span class="sub">{e.data.description}</span><span class="sub d">{fmtDate(e.data.publishAt)}{e.data.updatedAt ? ` · 수정 ${fmtDate(e.data.updatedAt)}` : ''} · 기준 {e.data.asOf}</span></a></li>)}</ul>
+  {all.length > 0 && (
+    <section class="card gcard">
+      <div class="gchips" role="group" aria-label="주제">
+        <button type="button" class="gchip on" data-cat="all" aria-pressed="true">전체 <i>{all.length}</i></button>
+        {cats.map((c) => <button type="button" class="gchip" data-cat={c.key} data-desc={`${c.name} — ${c.desc}`} aria-pressed="false">{c.short} <i>{c.n}</i></button>)}
+      </div>
+      <div class="gbar">
+        <span class="gdesc" data-gdesc>전체 글 · <b data-gcount>{all.length}</b>편</span>
+        <span class="gsort" role="group" aria-label="정렬">
+          <button type="button" class="on" data-sort="new" aria-pressed="true">최신순</button>
+          <button type="button" data-sort="old" aria-pressed="false">과거순</button>
+        </span>
+      </div>
+      <ul class="gl" data-glist>{all.map((e) => (
+        <li data-cat={e.data.category} data-at={e.data.publishAt}><a href={`/guide/${e.id}/`}>
+          <span class="tag">{SHORT[e.data.category] ?? e.data.category}</span>
+          <b>{e.data.title}</b><span class="sub">{e.data.description}</span>
+          <span class="sub d">{fmtDate(e.data.publishAt)}{e.data.updatedAt ? ` · 수정 ${fmtDate(e.data.updatedAt)}` : ''} · 기준 {e.data.asOf}</span>
+        </a></li>
+      ))}</ul>
     </section>
-  ))}
+  )}
   {all.length === 0 && <section class="card"><p class="sub2" style="margin:0">첫 글을 준비하고 있어요.</p></section>}
+  <script is:inline>
+    // 주제 칩 + 정렬. 글 목록은 처음부터 전부 페이지에 있고, 보이는 것과 순서만 바꾼다
+    (function () {
+      var list = document.querySelector('[data-glist]'); if (!list) return;
+      var items = [].slice.call(list.children), cat = 'all', sort = 'new';
+      var desc = document.querySelector('[data-gdesc]');
+      var render = function () {
+        var n = 0;
+        items.slice().sort(function (a, b) { var x = a.dataset.at, y = b.dataset.at; return sort === 'new' ? (x < y ? 1 : x > y ? -1 : 0) : (x < y ? -1 : x > y ? 1 : 0); })
+          .forEach(function (li) { var show = cat === 'all' || li.dataset.cat === cat; li.hidden = !show; if (show) n++; list.appendChild(li); });
+        list.classList.toggle('one', cat !== 'all');
+        var on = document.querySelector('.gchip.on');
+        desc.textContent = ''; desc.append((cat === 'all' ? '전체 글' : on.dataset.desc) + ' · '); var b = document.createElement('b'); b.textContent = n; desc.append(b, '편');
+      };
+      var press = function (sel, btn) { document.querySelectorAll(sel).forEach(function (x) { var is = x === btn; x.classList.toggle('on', is); x.setAttribute('aria-pressed', is ? 'true' : 'false'); }); };
+      document.querySelectorAll('.gchip').forEach(function (b) { b.addEventListener('click', function () { cat = b.dataset.cat; press('.gchip', b); render(); }); });
+      document.querySelectorAll('.gsort button').forEach(function (b) { b.addEventListener('click', function () { sort = b.dataset.sort; press('.gsort button', b); render(); }); });
+    })();
+  </script>
 </Base>
 <style>
-  .gl { list-style: none; margin: 6px 0 0; padding: 0; }
+  .gcard { margin-bottom: 12px; }
+  .gchips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .gchip { font: inherit; font-size: 13px; font-weight: 700; padding: 8px 12px; border: 0; border-radius: 999px; background: var(--soft); color: var(--fg2); cursor: pointer; white-space: nowrap; }
+  .gchip i { font-style: normal; font-weight: 600; opacity: .6; margin-left: 2px; }
+  .gchip.on { background: var(--blue); color: #fff; }
+  .gbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--soft); }
+  .gdesc { min-width: 0; font-size: 12.5px; color: var(--fg2); line-height: 1.4; word-break: keep-all; } .gdesc b { color: var(--fg); }
+  .gsort { flex: none; display: inline-flex; padding: 3px; border-radius: 10px; background: var(--soft); }
+  .gsort button { font: inherit; font-size: 12.5px; font-weight: 700; padding: 6px 10px; border: 0; border-radius: 8px; background: transparent; color: var(--fg2); cursor: pointer; white-space: nowrap; }
+  .gsort button.on { background: var(--card); color: var(--fg); box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+  .gl { list-style: none; margin: 0; padding: 0; }
   .gl li { border-bottom: 1px solid var(--soft); } .gl li:last-child { border-bottom: 0; }
-  .gl a { display: flex; flex-direction: column; gap: 3px; padding: 12px 0; color: inherit; }
+  .gl a { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; padding: 13px 0; color: inherit; }
   .gl b { font-size: 15px; } .gl .d { font-size: 12px; }
-  h2 .sub { font-weight: 500; margin-left: 6px; font-size: 13px; }
+  .gl .tag { font-size: 11px; font-weight: 700; color: var(--blue); background: var(--blue-soft); padding: 2px 8px; border-radius: 999px; margin-bottom: 2px; }
+  .gl.one .tag { display: none; }
 </style>
