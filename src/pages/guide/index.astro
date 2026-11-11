@@ -28,7 +28,7 @@ const cats = Object.keys(CATEGORY).map((k) => ({ key: k, ...CATEGORY[k], short: 
       <ul class="gl" data-glist>{all.map((e) => (
         <li data-cat={e.data.category} data-at={e.data.publishAt}><a href={`/guide/${e.id}/`}>
           <span class="tag">{SHORT[e.data.category] ?? e.data.category}</span>
-          <b>{e.data.title}</b><span class="sub">{e.data.description}</span>
+          <b>{e.data.title}</b><span class="sub ds">{e.data.description}</span>
           <span class="sub d">{fmtDate(e.data.publishAt)}{e.data.updatedAt ? ` · 수정 ${fmtDate(e.data.updatedAt)}` : ''} · 기준 {e.data.asOf}</span>
         </a></li>
       ))}</ul>
@@ -70,6 +70,7 @@ const cats = Object.keys(CATEGORY).map((k) => ({ key: k, ...CATEGORY[k], short: 
   .gl li { border-bottom: 1px solid var(--soft); } .gl li:last-child { border-bottom: 0; }
   .gl a { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; padding: 13px 0; color: inherit; }
   .gl b { font-size: 15px; } .gl .d { font-size: 12px; }
+  .gl .ds { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
   .gl .tag { font-size: 11px; font-weight: 700; color: var(--blue); background: var(--blue-soft); padding: 2px 8px; border-radius: 999px; margin-bottom: 2px; }
   .gl.one .tag { display: none; }
 </style>
