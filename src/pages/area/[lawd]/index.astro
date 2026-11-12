@@ -3,6 +3,7 @@ import Base from '../../../layouts/Base.astro';
 import { loadSummary, loadSigungu, type Complex } from '../../../lib/data/index.ts';
 import { eok, pct } from '../../../lib/ui/format.ts';
 import { roneSigungu, roneCity, roneSido, roneText } from '../../../lib/data/rone.ts';
+import { linesOfLawd } from '../../../lib/data/lines.ts';
 
 export function getStaticPaths() {
   return loadSummary().sigungu.filter((g) => g.complexes > 0).map((g) => ({ params: { lawd: g.lawd } }));
@@ -37,6 +38,8 @@ const down = [...yoyList].sort((a, b) => a.t!.yoy! - b.t!.yoy!).filter((x) => x.
 const p84 = by84.length ? cs.map((c) => c.types.find((t) => Math.abs(t.key - 84) <= 5 && t.price && t.basis === 'median6')?.price).filter((v): v is number => !!v).sort((a, b) => a - b) : [];
 const med84 = p84.length ? p84[p84.length >> 1] : null;
 
+const lines = linesOfLawd(lawd!);   // 이 시·구를 지나는 수도권 노선(없으면 카드 생략)
+
 const title = `${sg.sido} ${sg.sigungu} 아파트 실거래가·시세`;
 const desc = `${sg.sigungu} 아파트 ${cs.length.toLocaleString()}개 단지의 실거래 시세. 대장 단지·거래 활발 단지·1년 변동. 국토교통부 실거래가 ${sg.asOf} 기준.`;
 ---
@@ -51,6 +54,17 @@ const desc = `${sg.sigungu} 아파트 ${cs.length.toLocaleString()}개 단지의
   </header>
   <a class="btn" href={`/find/?lawd=${lawd}`} style="margin-bottom:12px">내 예산으로 {sg.sigungu} 단지 찾기</a>
 
+  {lines.length > 0 && (
+    <section class="card sec">
+      <h2>이 지역을 지나는 노선 <span class="sub">{lines.length}개</span></h2>
+      <ul class="lnl">{lines.map((l) => (
+        <li><a href={`/line/${l.slug}/`} data-ev="area_line" data-ev-label={l.slug}>
+          <i style={`background:${l.color}`}></i><b>{l.name}</b><span class="st">{l.stations.join(' · ')}</span><span class="ch" aria-hidden="true">›</span>
+        </a></li>
+      ))}</ul>
+      <p class="src">노선을 누르면 그 노선이 지나는 시·구의 84㎡ 시세와 10년 지수 흐름을 노선 순서대로 봅니다. 역 자료: 국가철도공단 전국도시철도역사정보, GTX는 쏙집 철도 규칙표.</p>
+    </section>
+  )}
   {by84.length > 0 && (
     <section class="card sec">
       <h2>84㎡ 기준 시세 상위 <span class="sub">6개월 중앙값</span></h2>
@@ -107,4 +121,11 @@ const desc = `${sg.sigungu} 아파트 ${cs.length.toLocaleString()}개 단지의
   .all li { break-inside: avoid; padding: 5px 0; }
   .all a { color: inherit; font-weight: 600; }
   .ad-slot { min-height: 0; margin-bottom: 12px; }
+  .lnl { list-style: none; margin: 0; padding: 0; }
+  .lnl li { border-bottom: 1px solid var(--soft); } .lnl li:last-child { border-bottom: 0; }
+  .lnl a { display: flex; align-items: center; gap: 10px; padding: 11px 0; color: inherit; }
+  .lnl i { flex: none; width: 10px; height: 10px; border-radius: 50%; }
+  .lnl b { flex: none; min-width: 76px; font-size: 14.5px; white-space: nowrap; }
+  .lnl .st { flex: 1; min-width: 0; font-size: 12.5px; color: var(--fg2); line-height: 1.45; word-break: keep-all; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
+  .lnl .ch { flex: none; color: #b0b8c1; font-size: 20px; line-height: 1; }
 </style>

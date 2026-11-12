@@ -364,12 +364,14 @@ function productRow(p: ProductResult): string {
 }
 
 // ---------- 이벤트 ----------
+/** 기능 사용 기록(GA). 상황 종류만 보내고 입력한 금액·소득은 보내지 않는다 */
+const track = (name: string, label?: string) => { try { (window as any).ssTrack?.(name, label); } catch { /* 기록 실패는 무시 */ } };
 function bind() {
   root.addEventListener('click', (e) => {
     const t = (e.target as HTMLElement).closest<HTMLElement>('[data-action],[data-situation],[data-set],[data-choice],[data-debt],[data-step-dec],[data-step-inc]');
     if (!t) return;
-    if (t.dataset.situation) { s = defaultState(t.dataset.situation as Situation); history.replaceState(null, '', `?s=${s.situation}`); render(); return; }
-    if (t.dataset.action === 'next') { if (s.step <= TOTAL_STEPS) s.step++; render(); return; }
+    if (t.dataset.situation) { s = defaultState(t.dataset.situation as Situation); history.replaceState(null, '', `?s=${s.situation}`); track('calc_start', s.situation); render(); return; }
+    if (t.dataset.action === 'next') { if (s.step <= TOTAL_STEPS) s.step++; if (s.step > TOTAL_STEPS) track('calc_result', s.situation); render(); return; }
     if (t.dataset.action === 'back') { if (s.step > 1) s.step--; else { s.step = 0; } render(); return; }
     if (t.dataset.action === 'edit') { s.step = 1; render(); return; }
     if (t.dataset.action === 'restart') { s = defaultState(s.situation); s.step = 0; history.replaceState(null, '', location.pathname); render(); return; }
