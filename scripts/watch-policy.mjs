@@ -40,6 +40,10 @@ function koreaKr(html) {
 }
 const minmax = (a) => [Math.min(...a), Math.max(...a)];
 // 규칙표(정책대출 금리·한도, LTV·DSR, 규제지역, 취득세)에 닿을 만한 제목만 — 공급·교통 등 일반 국토부 자료는 거른다
+// 매달 나오는 통계 발표(가계대출 동향·주택통계 등)는 규칙표를 바꾸지 않는다 → 알림에서 뺀다. 이 글들은 '이달의 통계' 가이드로 따로 쓴다(docs/guide-stats.md)
+const STATS = /동향|통계|\(잠정\)|현황/;
+const ACTION = /방안|대책|강화|완화|시행|개정|조치|규제/;   // 제목에 '동향'이 있어도 대책이 같이 실린 글(예: 가계부채 동향 점검 및 관리방안)은 알린다
+const isStats = (t) => STATS.test(t) && !ACTION.test(t);
 const KEYWORDS = /보금자리|디딤돌|버팀목|신생아|신혼부부|LTV|DSR|DTI|규제지역|조정대상지역|투기과열|토지거래허가|주택담보대출|주담대|전세대출|대출 한도|금리 인상|금리 인하|가계부채|가계대출|주택도시기금|정책대출|부동산 대책|주택시장 안정|취득세|양도소득세|종합부동산세|보유세/;
 
 async function getText(url) {
@@ -103,6 +107,7 @@ async function main() {
   const current = rulesAll.filter((r) => r.meta.effective_from <= today).at(-1);
   const future = rulesAll.filter((r) => r.meta.effective_from > today);
   const alerts = [];
+  let needApply = false;   // 금리표 숫자가 실제로 달라졌을 때만 '반영' 안내를 붙인다
   const drafts = {};
 
   for (const p of PAGES) {
@@ -118,10 +123,12 @@ async function main() {
       if (probe) { note(`${p.name} HTTP ${status} 글자 ${text.length} · 숫자 ${nums.length}개: ${nums.slice(0, 40).join(' ')} · 규칙표(시행중) 포함 ${matchNow}${ruleFuture.length ? ` · 예정판 포함 ${matchFuture}` : ''}`); continue; }
       if (status !== 200 || !nums.length) { note(`${p.name}: 응답 이상(HTTP ${status}, 숫자 ${nums.length}개) — 건너뜀`); continue; }
       if (prev && prev.fp !== fp) {
+        needApply = true;
         const gone = prev.nums.filter((v) => !nums.includes(v)), added = nums.filter((v) => !prev.nums.includes(v));
         alerts.push(`▶ ${p.name} 숫자 변경: 빠짐 ${uniq(gone).slice(0, 8).join(' ') || '-'} / 새로 ${uniq(added).slice(0, 8).join(' ') || '-'} · 규칙표 ${matchNow ? '일치' : matchFuture ? '예정판과 일치' : '불일치 → 확인 필요'}`);
         drafts[p.key] = { page: p.url, checked: today, numbers: nums, previous: prev.nums, rules_now: ruleNow, rules_future: ruleFuture };
       } else if (!prev && !matchNow && !matchFuture) {
+        needApply = true;
         alerts.push(`▶ ${p.name}: 규칙표 금리(${fmt(ruleNow)})가 페이지에 안 보임 → 표가 바뀌었는지 확인`);
       }
       state.pages[p.key] = { fp, nums, checked: today, matchNow, matchFuture };
@@ -136,8 +143,8 @@ async function main() {
       if (probe) { note(`${n.name} HTTP ${status} 제목 ${all.length}개 · 키워드 ${hits.length}개: ${hits.slice(0, 5).join(' | ').slice(0, 300)} ‖ 샘플: ${all.filter((t) => t.length > 14).slice(0, 5).join(' | ').slice(0, 300)}`); continue; }
       if (status !== 200 || !all.length) { note(`${n.name}: 응답 이상(HTTP ${status}, 링크 ${all.length}개) — 건너뜀`); continue; }
       const seen = new Set(state.news[n.key] ?? []);
-      const fresh = state.news[n.key] ? hits.filter((t) => !seen.has(t)) : [];   // 첫 실행은 기준선만 저장
-      if (fresh.length) alerts.push(`▶ ${n.name} 새 글 ${fresh.length}건: ${fresh.slice(0, 3).map((t) => t.slice(0, 40)).join(' / ')}`);
+      const fresh = state.news[n.key] ? hits.filter((t) => !seen.has(t) && !isStats(t)) : [];   // 첫 실행은 기준선만 저장. 통계 발표는 알리지 않는다
+      if (fresh.length) alerts.push(`▶ ${n.name} 규칙 관련 새 글 ${fresh.length}건: ${fresh.slice(0, 3).map((t) => t.slice(0, 40)).join(' / ')}`);
       state.news[n.key] = uniq([...hits, ...(state.news[n.key] ?? [])]).slice(0, 200);
     } catch (e) { note(`${n.name} 실패: ${String(e.message).slice(0, 120)}`); }
   }
@@ -149,7 +156,7 @@ async function main() {
 
   const head = `[쏙집 정책대출 감시 ${today.slice(5).replace('-', '/')}]`;
   if (alerts.length) {
-    const msg = [head, ...alerts, `규칙표: 시행중 ${current.meta.version}(${current.meta.effective_from})${future.length ? ` · 예정 ${future.map((r) => `${r.meta.version}(${r.meta.effective_from})`).join(', ')}` : ''}`, '반영은 자동으로 하지 않습니다 — 확인 후 "반영"이라고 말해 주세요.'].join('\n').slice(0, 900);
+    const msg = [head, ...alerts, `규칙표: 시행중 ${current.meta.version}(${current.meta.effective_from})${future.length ? ` · 예정 ${future.map((r) => `${r.meta.version}(${r.meta.effective_from})`).join(', ')}` : ''}`, needApply ? '규칙표 수치가 달라졌을 수 있습니다. 반영은 자동으로 하지 않습니다 — 확인 후 "반영"이라고 말해 주세요.' : '금리표 숫자는 그대로입니다. 위 보도자료가 규칙(한도·LTV·DSR 등)을 바꾸는 내용인지 확인이 필요합니다.'].join('\n').slice(0, 900);
     note(msg);
     if (notify) { const sent = await kakaoMemo(msg); console.log(sent ? '카카오톡 알림 전송' : '카카오톡 알림 안 보냄'); }
   } else note(`${head} 변경 없음 (페이지 ${Object.keys(state.pages).length} · 보도자료 ${Object.keys(state.news).length})`);

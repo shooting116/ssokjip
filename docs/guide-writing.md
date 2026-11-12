@@ -10,7 +10,7 @@
 ---
 title: "제목 — 부제"                         # 40자 안팎. 숫자·기준이 들어가면 좋다
 description: "2~3문장. 무엇을 다루고 무엇을 알게 되는지."  # 검색 결과·목록에 노출
-category: price            # situation | loan | tax | price | future (아래 표)
+category: price            # situation | loan | tax | price | future | stats (아래 표)
 publishAt: "2026-10-21T08:00:00+09:00"   # 그날 08:00 KST
 published: true            # 예약 작업이 아침에 쓸 때는 true로 바로 커밋(빌드되면 공개)
 asOf: "2026-10-21"         # 글 속 숫자의 기준일(오늘)
@@ -30,6 +30,7 @@ sources:
 | tax | 세금·부대비용 | 취득·보유·양도세, 증여, 비용 |
 | price | 시세 읽는 법 | 실거래·지수·통계·단지 데이터 읽기, 쏙집 기능 설명 |
 | future | 호재·정비사업 | 교통·정비사업·분양 — 사실과 일정만 |
+| stats | 이달의 통계 | 매달 나오는 공식 통계 발표(가계대출 동향·주택통계). 계획표와 별도이며 규칙은 `docs/guide-stats.md` |
 
 ## 2. 분량과 구조 — "한눈에 들어오게"
 

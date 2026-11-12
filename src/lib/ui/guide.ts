@@ -6,6 +6,7 @@ export const CATEGORY: Record<string, { name: string; desc: string }> = {
   tax: { name: '세금·부대비용', desc: '집값 말고 더 드는 돈' },
   price: { name: '시세 읽는 법', desc: '실거래가를 제대로 보는 눈' },
   future: { name: '호재·정비사업', desc: '사실과 일정만' },
+  stats: { name: '이달의 통계', desc: '매달 나오는 공식 통계를 숫자 그대로' },
 };
 
 /** 빌드 시점에 공개된 글만. published 플래그는 publish-guides.mjs 가 예약 시각에 켠다 */

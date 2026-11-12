@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import { CATEGORY, isLive, fmtDate } from '../../lib/ui/guide.ts';
 const all = (await getCollection('guide')).filter(isLive).sort((a, b) => b.data.publishAt.localeCompare(a.data.publishAt));
 // 칩에 쓰는 짧은 이름. 주제 설명은 칩을 골랐을 때 아래 한 줄로 보여준다
-const SHORT: Record<string, string> = { situation: '상황별', loan: '대출', tax: '세금·비용', price: '시세', future: '호재·정비' };
+const SHORT: Record<string, string> = { situation: '상황별', loan: '대출', tax: '세금·비용', price: '시세', future: '호재·정비', stats: '이달의 통계' };
 const cats = Object.keys(CATEGORY).map((k) => ({ key: k, ...CATEGORY[k], short: SHORT[k] ?? CATEGORY[k].name, n: all.filter((e) => e.data.category === k).length })).filter((c) => c.n);
 ---
 <Base title="공부 가이드" description="집 사기 전에 알아야 할 대출·세금·시세 읽는 법을 숫자와 출처로 정리한 글 모음. 쏙집 계산기·집 찾기와 같은 규칙표를 씁니다.">

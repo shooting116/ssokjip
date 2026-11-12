@@ -7,7 +7,7 @@ const guide = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    category: z.enum(['situation', 'loan', 'tax', 'price', 'future']),
+    category: z.enum(['situation', 'loan', 'tax', 'price', 'future', 'stats']),
     publishAt: z.string(),            // KST ISO (예: 2026-10-12T19:00:00+09:00). 이 시각 이후 publish-guides가 published를 켠다
     published: z.boolean().default(false),
     updatedAt: z.string().optional(),
