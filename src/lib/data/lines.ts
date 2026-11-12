@@ -1,7 +1,7 @@
 // 노선별 지역 분석: 도시철도 노선이 지나가는 시·구를 노선 순서대로 묶고, 지역끼리 시세·변동률을 비교한다.
 // 역 자료 = data/poi/stations.json(국가철도공단 전국도시철도역사정보), 시세 = data/index(실거래 6개월 중앙값),
 // 지수 = data/rone/weekly.json(한국부동산원 주간 아파트 매매가격지수). 해석·전망 없이 계산값만 낸다.
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { allSigungu, loadSummary, type Complex } from './index.ts';
 import { roneSigungu, roneSeries } from './rone.ts';
@@ -86,11 +86,17 @@ function base() {
     med.set(s.lawd, { med: p.length >= MIN_COMPLEX ? median(p) : null, n: p.length });   // 지역별 페이지의 "84㎡ 타입 시세 중앙값"과 같은 계산
   }
   const stations = JSON.parse(readFileSync(join(process.cwd(), 'data', 'poi', 'stations.json'), 'utf8')).stations as Station[];
+  // 역의 실제 행정구역(카카오 좌표→법정동, scripts/geocode-stations.mjs). 있으면 주소로 삼아 시·구를 정확히 판정한다
+  const regFile = join(process.cwd(), 'data', 'poi', 'station-regions.json');
+  if (existsSync(regFile)) {
+    const reg = JSON.parse(readFileSync(regFile, 'utf8')).regions as Record<string, { sido: string; sgg: string; dong?: string }>;
+    for (const st of stations) { const r = reg[`${st.l}|${st.n}`]; if (r && !st.addr) st.addr = `${r.sido} ${r.sgg} ${r.dong ?? ''}`.trim(); }
+  }
   cache = { all, asOf, stations, med };
   return cache;
 }
 
-/** 역이 속한 시·구: 주소가 있으면 주소로, 없으면 반경 800m 안 단지가 가장 많은 시군구(가까울수록 가중), 그것도 없으면 2km 안 가장 가까운 단지 */
+/** 역이 속한 시·구: 주소(행정구역)가 있으면 그것으로. 없거나 쏙집 지역 이름과 안 맞을 때만 반경 800m 안 단지가 가장 많은 시군구(가까울수록 가중), 그것도 없으면 2km 안 가장 가까운 단지 */
 function regionOf(s: Station, all: Complex[], byName: Map<string, Complex>) {
   if (s.addr) {
     const t = s.addr.split(/\s+/);
@@ -203,5 +209,7 @@ export function linesOfLawd(lawd: string) {
       for (const [k, st] of m) { const a = lawdLines.get(k) ?? []; a.push({ slug: l.slug, name: l.name, color: l.color, stations: st }); lawdLines.set(k, a); }
     }
   }
-  return lawdLines.get(lawd) ?? [];
+  // 이 시·구의 역이 모두 개통 전인 노선(공사 중 GTX 등)은 뒤로
+  const pending = (x: { stations: string[] }) => Number(x.stations.every((n) => n.includes('(')));
+  return [...(lawdLines.get(lawd) ?? [])].sort((a, b) => pending(a) - pending(b));
 }
