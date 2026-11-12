@@ -4,6 +4,11 @@ import { loadSummary } from '../lib/data/index.ts';
 import { pct } from '../lib/ui/format.ts';
 import { roneSido, roneText } from '../lib/data/rone.ts';
 import { LINES } from '../lib/data/lines.ts';
+import { getCollection } from 'astro:content';
+import { CAT_SHORT, isLive, fmtDate } from '../lib/ui/guide.ts';
+// 새로 올라온 글: 공개된 가이드 중 최신 3편
+const posts = (await getCollection('guide')).filter(isLive).sort((a, b) => b.data.publishAt.localeCompare(a.data.publishAt));
+const latest = posts.slice(0, 3);
 const sm = loadSummary();
 const chgList = Object.entries(sm.sido).map(([sido, v]) => ({ sido, chg: v.chg })).filter((x) => x.chg);
 const cap = sm.groups?.수도권?.chg ?? null;
@@ -41,7 +46,7 @@ const situations = [
     <h2 id="sit" class="h">어떤 상황인가요?</h2>
     <div class="sgrid">
       {situations.map((s) => (
-        <a class={`scell ${s.tone}`} href={`/calc/?s=${s.key}`}>
+        <a class={`scell ${s.tone}`} href={`/calc/?s=${s.key}`} data-ev="home_situation" data-ev-label={s.key}>
           <span class="ic" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d={s.icon} /></svg>
           </span>
@@ -79,20 +84,36 @@ const situations = [
       <span class="lntx"><h2 id="ln-h" class="h">노선별 시세분석</h2><span class="d">지하철이 지나는 시·구를 순서대로, 84㎡ 시세와 10년 흐름</span></span>
     </a>
     <div class="lnchips">
-      {LINES.map((l) => <a class="lnchip" href={`/line/${l.slug}/`} style={`--lc:${l.color}`}><i></i>{l.name}</a>)}
+      {LINES.map((l) => <a class="lnchip" href={`/line/${l.slug}/`} style={`--lc:${l.color}`} data-ev="home_line" data-ev-label={l.slug}><i></i>{l.name}</a>)}
     </div>
   </section>
+
+  {latest.length > 0 && (
+    <section class="card newg fold" data-fold="guide" data-fold-default="open" aria-labelledby="ng-h">
+      <button type="button" class="fold-t" data-fold-t aria-expanded="true" aria-label="새로 올라온 글 접기·펼치기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></button>
+      <h2 id="ng-h" class="h">새로 올라온 글 <span class="sub">공부 가이드</span></h2>
+      <ul class="ngl">
+        {latest.map((e) => (
+          <li><a href={`/guide/${e.id}/`} data-ev="home_guide" data-ev-label={e.id}>
+            <span class="meta"><span class="tag">{CAT_SHORT[e.data.category] ?? e.data.category}</span><span class="sub">{fmtDate(e.data.publishAt)}</span></span>
+            <b>{e.data.title}</b>
+          </a></li>
+        ))}
+      </ul>
+      <a class="ngall" href="/guide/" data-ev="home_guide" data-ev-label="all">가이드 {posts.length}편 전체 보기 ›</a>
+    </section>
+  )}
 
   <section class="card quick fold" data-fold="quick" data-fold-default="open" aria-labelledby="qk">
     <button type="button" class="fold-t" data-fold-t aria-expanded="true" aria-label="예산을 이미 알고 있다면 접기·펼치기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></button>
     <h2 id="qk" class="h">예산을 이미 알고 있다면</h2>
     <div class="qgrid">
-      <a class="qcell" href="/find/"><b>집 찾기</b><span class="d">예산·지역·평형으로 지도에서</span></a>
-      <a class="qcell" href="/area/"><b>지역별 실거래</b><span class="d">대장 단지 · 거래 활발 · 1년 변동</span></a>
-      <a class="qcell" href="/line/"><b>노선별 시세분석</b><span class="d">지하철 따라 시·구 시세와 10년 흐름</span></a>
-      <a class="qcell" href="/ref/"><b>공부 레퍼런스</b><span class="d">시도별 TOP · 정비사업 · 철도 호재 · 보도</span></a>
-      <a class="qcell" href="/compare/"><b>단지 비교</b><span class="d">담아둔 단지 2~4개 나란히</span></a>
-      <a class="qcell" href="/guide/"><b>공부 가이드</b><span class="d">대출·세금·시세 읽는 법, 숫자와 출처로</span></a>
+      <a class="qcell" href="/find/" data-ev="home_quick" data-ev-label="/find/"><b>집 찾기</b><span class="d">예산·지역·평형으로 지도에서</span></a>
+      <a class="qcell" href="/area/" data-ev="home_quick" data-ev-label="/area/"><b>지역별 실거래</b><span class="d">대장 단지 · 거래 활발 · 1년 변동</span></a>
+      <a class="qcell" href="/line/" data-ev="home_quick" data-ev-label="/line/"><b>노선별 시세분석</b><span class="d">지하철 따라 시·구 시세와 10년 흐름</span></a>
+      <a class="qcell" href="/ref/" data-ev="home_quick" data-ev-label="/ref/"><b>공부 레퍼런스</b><span class="d">시도별 TOP · 정비사업 · 철도 호재 · 보도</span></a>
+      <a class="qcell" href="/compare/" data-ev="home_quick" data-ev-label="/compare/"><b>단지 비교</b><span class="d">담아둔 단지 2~4개 나란히</span></a>
+      <a class="qcell" href="/guide/" data-ev="home_quick" data-ev-label="/guide/"><b>공부 가이드</b><span class="d">대출·세금·시세 읽는 법, 숫자와 출처로</span></a>
     </div>
     <div class="chips">
       {[30000, 50000, 70000, 100000, 150000].map((a) => <a class="chip" href={`/budget/${a}/서울/`}>{a / 10000}억 서울</a>)}
@@ -145,7 +166,16 @@ const situations = [
   .fold-t { position: absolute; z-index: 2; top: calc(var(--pad) - 8px); right: calc(var(--pad) - 8px); width: 36px; height: 36px; border: 0; border-radius: 50%; background: var(--soft); color: var(--fg2); display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; }
   .fold-t svg { width: 20px; height: 20px; transform: rotate(180deg); transition: transform .2s; }
   .fold.closed .fold-t svg { transform: none; }
-  .fold.closed .sgrid, .fold.closed .ccell, .fold.closed > .src, .fold.closed .lnchips, .fold.closed .qgrid, .fold.closed .chips { display: none; }
+  .fold.closed .sgrid, .fold.closed .ccell, .fold.closed > .src, .fold.closed .lnchips, .fold.closed .qgrid, .fold.closed .chips, .fold.closed .ngl, .fold.closed .ngall { display: none; }
+  .newg { margin-top: var(--gap); }
+  .ngl { list-style: none; margin: 4px 0 0; padding: 0; }
+  .ngl li { border-bottom: 1px solid var(--soft); }
+  .ngl a { display: flex; flex-direction: column; gap: 4px; padding: 12px 0; color: inherit; }
+  .ngl .meta { display: flex; align-items: center; gap: 8px; }
+  .ngl .tag { font-size: 11px; font-weight: 700; color: var(--blue); background: var(--blue-soft); padding: 2px 8px; border-radius: 999px; }
+  .ngl .meta .sub { font-size: 12px; }
+  .ngl b { font-size: 15px; line-height: 1.4; word-break: keep-all; }
+  .ngall { display: block; padding: 12px 0 0; font-size: 13.5px; font-weight: 700; color: var(--blue); }
   .lncard { margin-top: var(--gap); }
   .lnhead { position: relative; display: flex; align-items: center; gap: 14px; color: inherit; }
   .lnic { flex: none; width: 48px; height: 48px; border-radius: 16px; background: var(--blue-soft); color: var(--blue); display: flex; align-items: center; justify-content: center; }

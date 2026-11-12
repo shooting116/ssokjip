@@ -61,6 +61,7 @@ const nav = [
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <link rel="alternate" type="application/rss+xml" title="쏙집 공부 가이드" href="/rss.xml" />
     <meta name="application-name" content="쏙집" />
     <meta name="apple-mobile-web-app-title" content="쏙집" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
@@ -70,6 +71,8 @@ const nav = [
     <!-- Google Analytics 4 (측정 ID는 공개값). 방문 통계용, 개인정보처리방침 4항에 고지. -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M65MP3QN4C"></script>
     <script is:inline>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-M65MP3QN4C',{anonymize_ip:true});</script>
+    <!-- 기능 사용 기록: data-ev="이름" data-ev-label="값"이 붙은 요소를 누르면 GA 이벤트로 남긴다. 값은 메뉴·주제·노선 이름 같은 선택지뿐이고, 입력한 금액·소득은 보내지 않는다. -->
+    <script is:inline>window.ssTrack=function(n,l){try{gtag('event',n,l?{content_type:n,content_id:String(l)}:{});}catch(e){}};document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('[data-ev]');if(t)window.ssTrack(t.getAttribute('data-ev'),t.getAttribute('data-ev-label'));},true);</script>
     {BEACON && <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: BEACON })} is:inline></script>}
   </head>
   <body>

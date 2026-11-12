@@ -190,3 +190,18 @@ export function loadLine(slug: string): LineData | null {
   lineCache.set(slug, out);
   return out;
 }
+
+let lawdLines: Map<string, { slug: string; name: string; color: string; stations: string[] }[]> | null = null;
+/** 시·구(lawd)를 지나는 노선과, 그 시·구에 속한 역(노선 순서). 지역별 페이지의 '이 지역을 지나는 노선' 카드용 */
+export function linesOfLawd(lawd: string) {
+  if (!lawdLines) {
+    lawdLines = new Map();
+    for (const l of LINES) {
+      const d = loadLine(l.slug); if (!d) continue;
+      const m = new Map<string, string[]>();   // 갈라지는 노선(1호선)은 같은 구가 여러 번 나오므로 역을 합친다
+      for (const r of d.regions) { const a = m.get(r.lawd) ?? []; for (const st of r.stations) if (!a.includes(st)) a.push(st); m.set(r.lawd, a); }
+      for (const [k, st] of m) { const a = lawdLines.get(k) ?? []; a.push({ slug: l.slug, name: l.name, color: l.color, stations: st }); lawdLines.set(k, a); }
+    }
+  }
+  return lawdLines.get(lawd) ?? [];
+}

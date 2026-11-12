@@ -8,6 +8,8 @@ export const CATEGORY: Record<string, { name: string; desc: string }> = {
   future: { name: '호재·정비사업', desc: '사실과 일정만' },
   stats: { name: '이달의 통계', desc: '매달 나오는 공식 통계를 숫자 그대로' },
 };
+/** 칩·목록 표시용 짧은 이름 */
+export const CAT_SHORT: Record<string, string> = { situation: '상황별', loan: '대출', tax: '세금·비용', price: '시세', future: '호재·정비', stats: '이달의 통계' };
 
 /** 빌드 시점에 공개된 글만. published 플래그는 publish-guides.mjs 가 예약 시각에 켠다 */
 export function isLive(e: CollectionEntry<'guide'>): boolean {

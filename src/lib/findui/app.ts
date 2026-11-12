@@ -3,6 +3,8 @@
 // 기준: 예산 이하 단지 전부, 예산의 85~100%가 "쏙 들어오는 구간". 마커는 대표 평형 시세.
 
 declare const kakao: any;
+/** 기능 사용 기록(GA). 고른 방식·정렬·필터 이름만 보내고 예산·지역 입력값은 보내지 않는다 */
+const track = (name: string, label?: string) => { try { (window as any).ssTrack?.(name, label); } catch { /* 기록 실패는 무시 */ } };
 
 type Slim = {
   id: string; n: string; d: string; b: number | null; la: number | null; lo: number | null;
@@ -585,7 +587,7 @@ function bind() {
     if (!t) return;
     if (t.dataset.mode) {
       const m = t.dataset.mode as State['mode']; if (m === s.mode) return;
-      s.mode = m;
+      s.mode = m; track('find_mode', m);
       if (m === 'gap') { s.sort = 'gapAsc'; s.noReg = true; s.fitOnly = false; } else { s.sort = 'fit'; s.noReg = false; }
       compute(); shown = PAGE; save(); renderTop(); rerenderList(); syncMarkers();
     } else if (t.dataset.type) {
@@ -602,7 +604,7 @@ function bind() {
       const fl = root.querySelector('.filters'); if (fl) fl.outerHTML = renderFilters();
       rerenderList(); syncMarkers();
     } else if (t.dataset.toggle) {
-      const k = t.dataset.toggle as 'fitOnly' | 'mapOnly' | 'hotOnly' | 'noReg'; s[k] = !s[k];
+      const k = t.dataset.toggle as 'fitOnly' | 'mapOnly' | 'hotOnly' | 'noReg'; s[k] = !s[k]; if (s[k]) track('find_toggle', k);
       compute(); shown = PAGE; save();
       const fl = root.querySelector('.filters'); if (fl) fl.outerHTML = renderFilters();
       rerenderList(); syncMarkers();
@@ -629,7 +631,7 @@ function bind() {
     if (t.dataset.select === 'sido') { s.sido = t.value; s.lawd = 'all'; s.station = ''; save(); renderTop(); changeRegion(); }
     else if (t.dataset.select === 'lawd') { s.lawd = t.value; if (!stationsFor().some((x) => x.k === s.station)) s.station = ''; save(); renderTop(); changeRegion(); }
     else if (t.dataset.select === 'station') { s.station = t.value; compute(); shown = PAGE; save(); const fl = root.querySelector('.filters'); if (fl) fl.outerHTML = renderFilters(); rerenderList(); syncMarkers(); showStation(); }
-    else if (t.dataset.select === 'sort') { s.sort = t.value as State['sort']; compute(); shown = PAGE; save(); rerenderList(); }
+    else if (t.dataset.select === 'sort') { s.sort = t.value as State['sort']; track('find_sort', s.sort); compute(); shown = PAGE; save(); rerenderList(); }
   });
   let timer: number | undefined;
   root.addEventListener('input', (e) => {
