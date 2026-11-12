@@ -10,5 +10,5 @@
 - `v2026-11-09.json` — v0.2.1. 보금자리론 금리 +0.10%p(아낌e 5.00~5.30%, u·t 5.10~5.40%), 2026-11-09 신청분부터(주금공 2026-11-02 발표). 11-08까지 신청분은 v0.2 금리.
 
 ## 변경 감시
-- `.github/workflows/policy-watch.yml`(월·목 09:30 KST) → `scripts/watch-policy.mjs`. 주금공 보금자리론 금리표, 주택도시기금 디딤돌·신혼·신생아 소개 페이지의 금리 숫자와 주금공·국토부·금융위 보도자료 제목(정책브리핑 부처별 목록)을 지난번(`data/watch/policy-state.json`)과 비교해, 달라지면 카카오톡으로 알리고 `data/watch/draft-날짜.json`에 숫자를 남긴다.
+- `.github/workflows/policy-watch.yml`(평일 09:30 KST) → `scripts/watch-policy.mjs`. 주금공 보금자리론 금리표, 주택도시기금 디딤돌·신혼·신생아 소개 페이지의 금리 숫자와 주금공·국토부·금융위 보도자료 제목(정책브리핑 부처별 목록)을 지난번(`data/watch/policy-state.json`)과 비교해, 달라지면 카카오톡으로 알리고 `data/watch/draft-날짜.json`에 숫자를 남긴다.
 - 규칙표는 자동으로 바꾸지 않는다. 알림을 보고 출처·시행일·경과규정을 확인한 뒤 새 버전 파일을 추가한다(기존 버전 유지).
