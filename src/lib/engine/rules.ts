@@ -2,11 +2,12 @@
 import v20260930 from '../../../data/rules/v2026-09-30.json' with { type: 'json' };
 import v20261015 from '../../../data/rules/v2026-10-15.json' with { type: 'json' };
 import v20261109 from '../../../data/rules/v2026-11-09.json' with { type: 'json' };
+import v20261113 from '../../../data/rules/v2026-11-13.json' with { type: 'json' };
 
 // 타입은 최신 버전 기준. 옛 버전에는 나중에 추가된 필드가 없을 수 있으므로 그런 필드는 쓰는 쪽에서 `?? null`로 받는다.
-export type Rules = typeof v20261109;
+export type Rules = typeof v20261113;
 
-const versions: Rules[] = [v20260930 as unknown as Rules, v20261015 as unknown as Rules, v20261109];
+const versions: Rules[] = [v20260930 as unknown as Rules, v20261015 as unknown as Rules, v20261109 as unknown as Rules, v20261113];
 
 /** 기준일(기본 오늘)에 적용되는 규칙표 */
 export function getRules(asOf: Date = new Date()): Rules {

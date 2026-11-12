@@ -327,7 +327,7 @@ function viewResult(): string {
         <div class="k">등기 수수료·법무사 (참고)</div><div class="v">${fmtEok(b.fees.registration + b.fees.legal)}</div>
         ${b.fees.loanStamp ? `<div class="k">대출 인지세 (차주 몫)</div><div class="v">${fmtEok(b.fees.loanStamp)}</div>` : ''}
       </div>
-      <div class="sub hint">채권은 공시가를 매매가의 70%로 가정, 할인율 ${rules.fees.bond.discount_rate_default}% (2026-09). 법무사 보수는 참고치.</div>
+      <div class="sub hint">채권은 공시가를 매매가의 70%로 가정, 할인율 ${rules.fees.bond.discount_rate_default}% (${rules.fees.bond.discount_as_of ?? '2026-09'}). 법무사 보수는 참고치.</div>
     </details>`}
 
     ${none ? `<button type="button" class="btn" disabled>받을 수 있는 대출이 없어 예산을 잡을 수 없어요</button>`
