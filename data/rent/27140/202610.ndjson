@@ -148,6 +148,7 @@
 {"lawd":"27140","umdNm":"신천동","jibun":"1547","apt":"힐스테이트동대구센트럴","area":84.99,"floor":24,"built":2026,"date":"2026-10-09","deposit":33000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"신서동","jibun":"518-1","apt":"각산역더뉴클래스2차","area":48.6,"floor":4,"built":2015,"date":"2026-10-10","deposit":15000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"율암동","jibun":"1297","apt":"대구 파라곤 프레스티지","area":84.84,"floor":2,"built":2023,"date":"2026-10-10","deposit":3000,"rent":100,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27140","umdNm":"봉무동","jibun":"1529","apt":"대구이시아폴리스더샵4차","area":84.79,"floor":11,"built":2014,"date":"2026-10-10","deposit":3000,"rent":100,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"봉무동","jibun":"1529","apt":"대구이시아폴리스더샵4차","area":84.96,"floor":3,"built":2014,"date":"2026-10-10","deposit":1000,"rent":90,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"사복동","jibun":"838","apt":"대구혁신엘에이치이노힐즈","area":74.99,"floor":3,"built":2015,"date":"2026-10-10","deposit":1500,"rent":85,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"신암동","jibun":"1881","apt":"동대구더센트로데시앙","area":74.95,"floor":1,"built":2023,"date":"2026-10-10","deposit":31000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -241,6 +242,7 @@
 {"lawd":"27140","umdNm":"서호동","jibun":"9-16","apt":"골든캐슬A","area":22.51,"floor":5,"built":2011,"date":"2026-10-19","deposit":300,"rent":30,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"율하동","jibun":"1408","apt":"대구율하2세계육상선수촌2단지","area":74.94,"floor":10,"built":2011,"date":"2026-10-19","deposit":3000,"rent":110,"term":"27.01~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"봉무동","jibun":"1530","apt":"대구이시아폴리스더샵3차","area":84.85,"floor":19,"built":2013,"date":"2026-10-19","deposit":3000,"rent":120,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27140","umdNm":"신암동","jibun":"1881","apt":"동대구더센트로데시앙","area":59.96,"floor":5,"built":2023,"date":"2026-10-19","deposit":27500,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"효목동","jibun":"1331","apt":"동대구푸르지오브리센트","area":112.4,"floor":1,"built":2024,"date":"2026-10-19","deposit":41000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"불로동","jibun":"1155","apt":"에덴공항2","area":39.42,"floor":4,"built":1988,"date":"2026-10-19","deposit":5000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"방촌동","jibun":"1077-11","apt":"영남네오빌2차","area":85,"floor":3,"built":2003,"date":"2026-10-19","deposit":2000,"rent":78,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":2000,"preRent":75}
@@ -276,6 +278,7 @@
 {"lawd":"27140","umdNm":"괴전동","jibun":"660","apt":"안심역아이센스","area":84.85,"floor":11,"built":2024,"date":"2026-10-22","deposit":18468,"rent":0,"term":"26.10~29.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"사복동","jibun":"852","apt":"혁신도시서한e스테이","area":59.51,"floor":17,"built":2020,"date":"2026-10-22","deposit":9875,"rent":13,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":9875,"preRent":13}
 {"lawd":"27140","umdNm":"신천동","jibun":"1547","apt":"힐스테이트동대구센트럴","area":124.43,"floor":15,"built":2026,"date":"2026-10-22","deposit":60000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27140","umdNm":"신천동","jibun":"1525","apt":"더샵디어엘로","area":84.96,"floor":20,"built":2025,"date":"2026-10-23","deposit":3000,"rent":150,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"효목동","jibun":"1322","apt":"동대구2차비스타동원","area":76.54,"floor":7,"built":2024,"date":"2026-10-23","deposit":2000,"rent":100,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"신천동","jibun":"1518","apt":"동대구역센트럴시티자이","area":84.76,"floor":11,"built":2022,"date":"2026-10-23","deposit":3000,"rent":135,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"신암동","jibun":"1852","apt":"동대구해모로스퀘어웨스트","area":59.85,"floor":14,"built":2023,"date":"2026-10-23","deposit":28000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -332,6 +335,7 @@
 {"lawd":"27140","umdNm":"신암동","jibun":"480","apt":"신암청아람","area":84.89,"floor":22,"built":2009,"date":"2026-10-27","deposit":22050,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":21000,"preRent":0}
 {"lawd":"27140","umdNm":"괴전동","jibun":"655","apt":"안심역삼정그린코아더베스트","area":59.97,"floor":17,"built":2021,"date":"2026-10-27","deposit":20000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"괴전동","jibun":"654","apt":"안심역코오롱하늘채","area":73.07,"floor":4,"built":2017,"date":"2026-10-27","deposit":28000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27140","umdNm":"율하동","jibun":"1093","apt":"우방아이유쉘","area":84.99,"floor":11,"built":2013,"date":"2026-10-27","deposit":2000,"rent":90,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"숙천동","jibun":"381","apt":"대구신서혁신엘에이치천년나무14단지","area":46.93,"floor":1,"built":2016,"date":"2026-10-28","deposit":3235,"rent":28,"term":"26.11~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"신서동","jibun":"538-1","apt":"동화해오름타운","area":58.23,"floor":14,"built":2003,"date":"2026-10-28","deposit":15000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":15000,"preRent":0}
 {"lawd":"27140","umdNm":"동호동","jibun":"362","apt":"상록아파트","area":59.72,"floor":9,"built":2004,"date":"2026-10-28","deposit":9296,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -366,10 +370,12 @@
 {"lawd":"27140","umdNm":"동호동","jibun":"362","apt":"상록아파트","area":59.72,"floor":4,"built":2004,"date":"2026-10-30","deposit":1859,"rent":22,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"신기동","jibun":"576","apt":"신기모란2차","area":49.5,"floor":5,"built":1988,"date":"2026-10-30","deposit":6500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"신서동","jibun":"513-1","apt":"신서동신일해피트리","area":84.48,"floor":3,"built":2007,"date":"2026-10-30","deposit":21000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27140","umdNm":"신천동","jibun":"538-3","apt":"신천역까사밀라101동","area":24.03,"floor":6,"built":2015,"date":"2026-10-30","deposit":5800,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"신천동","jibun":"630","apt":"신천주공2","area":49.84,"floor":16,"built":1998,"date":"2026-10-30","deposit":1000,"rent":55,"term":"26.11~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"봉무동","jibun":"1524","apt":"대구이시아폴리스더샵1차","area":84.94,"floor":14,"built":2012,"date":"2026-10-31","deposit":2000,"rent":100,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"각산동","jibun":"1054","apt":"대구혁신엘에이치4단지","area":59.75,"floor":9,"built":2017,"date":"2026-10-31","deposit":2000,"rent":70,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"사복동","jibun":"838","apt":"대구혁신엘에이치이노힐즈","area":74.99,"floor":12,"built":2015,"date":"2026-10-31","deposit":2000,"rent":80,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27140","umdNm":"신천동","jibun":"1518","apt":"동대구역센트럴시티자이","area":84.76,"floor":7,"built":2022,"date":"2026-10-31","deposit":32500,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":31000,"preRent":0}
 {"lawd":"27140","umdNm":"효목동","jibun":"1331","apt":"동대구푸르지오브리센트","area":84.97,"floor":9,"built":2024,"date":"2026-10-31","deposit":28350,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":27000,"preRent":0}
 {"lawd":"27140","umdNm":"신천동","jibun":"1551","apt":"벤처밸리푸르지오","area":84.98,"floor":13,"built":2026,"date":"2026-10-31","deposit":3000,"rent":145,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27140","umdNm":"동호동","jibun":"362","apt":"상록아파트","area":59.72,"floor":12,"built":2004,"date":"2026-10-31","deposit":1859,"rent":22,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

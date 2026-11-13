@@ -2,7 +2,7 @@
 {"lawd":"41595","umdNm":"병점동","jibun":"822","apt":"느치미마을2단지","area":51.86,"floor":4,"built":2004,"date":"2026-11-02","deposit":25000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":22000,"preRent":0}
 {"lawd":"41595","umdNm":"반정동","jibun":"637","apt":"반정아이파크캐슬5단지","area":84.73,"floor":16,"built":2022,"date":"2026-11-02","deposit":60000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41595","umdNm":"병점동","jibun":"520","apt":"병점역한일타운","area":59.97,"floor":2,"built":2001,"date":"2026-11-02","deposit":19950,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":19000,"preRent":0}
-{"lawd":"41595","umdNm":"반월동","jibun":"944","apt":"에스케이뷰파크","area":60,"floor":10,"built":2015,"date":"2026-11-02","deposit":5000,"rent":116,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":110}
+{"lawd":"41595","umdNm":"반월동","jibun":"944","apt":"에스케이뷰파크","area":60,"floor":10,"built":2015,"date":"2026-11-02","deposit":5000,"rent":116,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41595","umdNm":"병점동","jibun":"809","apt":"주공1단지","area":39.99,"floor":10,"built":1997,"date":"2026-11-02","deposit":2000,"rent":80,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41595","umdNm":"송산동","jibun":"223","apt":"한승미메이드","area":84.73,"floor":3,"built":2008,"date":"2026-11-02","deposit":26000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41595","umdNm":"병점동","jibun":"359","apt":"대창","area":84.97,"floor":9,"built":1997,"date":"2026-11-03","deposit":2000,"rent":130,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -22,6 +22,7 @@
 {"lawd":"41595","umdNm":"반월동","jibun":"880","apt":"반달마을두산위브1단지","area":84.93,"floor":8,"built":2007,"date":"2026-11-04","deposit":42000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41595","umdNm":"반정동","jibun":"623","apt":"반정아이파크캐슬4단지","area":59.83,"floor":10,"built":2022,"date":"2026-11-04","deposit":53000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41595","umdNm":"병점동","jibun":"817","apt":"병점역센트럴허브시티","area":84.93,"floor":6,"built":2004,"date":"2026-11-04","deposit":40000,"rent":0,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41595","umdNm":"병점동","jibun":"881","apt":"병점역아이파크캐슬","area":84.97,"floor":22,"built":2021,"date":"2026-11-04","deposit":42000,"rent":0,"term":"27.02~29.02","type":"갱신","rrr":"사용","preDeposit":40000,"preRent":0}
 {"lawd":"41595","umdNm":"병점동","jibun":"520","apt":"병점역한일타운","area":84.92,"floor":8,"built":2001,"date":"2026-11-04","deposit":22000,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":15000,"preRent":0}
 {"lawd":"41595","umdNm":"능동","jibun":"1282","apt":"서동탄역파크자이","area":84.98,"floor":2,"built":2018,"date":"2026-11-04","deposit":3000,"rent":140,"term":"27.02~29.02","type":"갱신","rrr":"사용","preDeposit":3000,"preRent":135}
 {"lawd":"41595","umdNm":"반월동","jibun":"974","apt":"신동탄포레자이","area":59.98,"floor":19,"built":2023,"date":"2026-11-04","deposit":10000,"rent":190,"term":"26.12~27.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -42,6 +43,7 @@
 {"lawd":"41595","umdNm":"병점동","jibun":"881","apt":"병점역아이파크캐슬","area":84.97,"floor":9,"built":2021,"date":"2026-11-06","deposit":56000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41595","umdNm":"병점동","jibun":"859","apt":"병점역에듀포레","area":84.99,"floor":3,"built":2004,"date":"2026-11-06","deposit":2000,"rent":110,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":2000,"preRent":105}
 {"lawd":"41595","umdNm":"기산동","jibun":"464","apt":"삼성래미안1차","area":84.99,"floor":6,"built":2003,"date":"2026-11-06","deposit":22800,"rent":15,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":21690,"preRent":0}
+{"lawd":"41595","umdNm":"안녕동","jibun":"212","apt":"아름마을신한미지엔","area":84.99,"floor":10,"built":2006,"date":"2026-11-06","deposit":17500,"rent":40,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41595","umdNm":"반월동","jibun":"944","apt":"에스케이뷰파크","area":60,"floor":20,"built":2015,"date":"2026-11-06","deposit":34650,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":33000,"preRent":0}
 {"lawd":"41595","umdNm":"기산동","jibun":"476","apt":"에스케이뷰파크2차","area":84.97,"floor":20,"built":2017,"date":"2026-11-06","deposit":48000,"rent":0,"term":"27.02~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41595","umdNm":"병점동","jibun":"809","apt":"주공1단지","area":59.47,"floor":5,"built":1997,"date":"2026-11-06","deposit":24500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -49,6 +51,7 @@
 {"lawd":"41595","umdNm":"반월동","jibun":"973","apt":"나노시티역롯데캐슬","area":85,"floor":13,"built":2022,"date":"2026-11-07","deposit":58000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41595","umdNm":"반월동","jibun":"880","apt":"반달마을두산위브1단지","area":133.84,"floor":9,"built":2007,"date":"2026-11-07","deposit":42000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":40000,"preRent":0}
 {"lawd":"41595","umdNm":"병점동","jibun":"201-2","apt":"신미주","area":59.94,"floor":10,"built":1999,"date":"2026-11-07","deposit":29000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41595","umdNm":"병점동","jibun":"849","apt":"안화동마을주공7단지","area":59.92,"floor":13,"built":2004,"date":"2026-11-07","deposit":3000,"rent":120,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41595","umdNm":"반월동","jibun":"960","apt":"e편한세상반월나노시티역","area":84.8,"floor":16,"built":2017,"date":"2026-11-07","deposit":5000,"rent":170,"term":"27.02~28.05","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41595","umdNm":"반월동","jibun":"959","apt":"반월자이더파크","area":84.73,"floor":5,"built":2016,"date":"2026-11-08","deposit":5000,"rent":150,"term":"27.03~29.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41595","umdNm":"병점동","jibun":"881","apt":"병점역아이파크캐슬","area":59.89,"floor":12,"built":2021,"date":"2026-11-08","deposit":48000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -61,4 +64,8 @@
 {"lawd":"41595","umdNm":"병점동","jibun":"809","apt":"주공1단지","area":49.95,"floor":12,"built":1997,"date":"2026-11-10","deposit":21000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41595","umdNm":"안녕동","jibun":"248","apt":"화성태안엘에이치1단지아파트","area":26.85,"floor":14,"built":2022,"date":"2026-11-10","deposit":3036,"rent":7,"term":"26.12~28.11","type":"갱신","rrr":null,"preDeposit":1463,"preRent":15}
 {"lawd":"41595","umdNm":"안녕동","jibun":"248","apt":"화성태안엘에이치1단지아파트","area":46.55,"floor":14,"built":2022,"date":"2026-11-10","deposit":1222,"rent":39,"term":"26.12~28.11","type":"갱신","rrr":null,"preDeposit":4688,"preRent":27}
+{"lawd":"41595","umdNm":"능동","jibun":"1041","apt":"서동탄역우남퍼스트빌아파트","area":84.21,"floor":12,"built":2003,"date":"2026-11-11","deposit":27000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":26000,"preRent":0}
 {"lawd":"41595","umdNm":"반월동","jibun":"868","apt":"신영통현대2차","area":84.99,"floor":4,"built":2002,"date":"2026-11-11","deposit":13000,"rent":90,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41595","umdNm":"병점동","jibun":"819","apt":"안화동마을주공9단지","area":84.87,"floor":8,"built":2005,"date":"2026-11-12","deposit":26000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":25000,"preRent":0}
+{"lawd":"41595","umdNm":"병점동","jibun":"809","apt":"주공1단지","area":49.95,"floor":9,"built":1997,"date":"2026-11-12","deposit":2000,"rent":85,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41595","umdNm":"안녕동","jibun":"248","apt":"화성태안엘에이치1단지아파트","area":26.85,"floor":3,"built":2022,"date":"2026-11-12","deposit":1536,"rent":16,"term":"26.12~28.11","type":"갱신","rrr":null,"preDeposit":1463,"preRent":15}

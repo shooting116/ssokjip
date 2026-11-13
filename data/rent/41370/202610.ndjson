@@ -404,6 +404,7 @@
 {"lawd":"41370","umdNm":"부산동","jibun":"778-1","apt":"주공1","area":59.99,"floor":3,"built":2000,"date":"2026-10-20","deposit":18000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":13500,"preRent":0}
 {"lawd":"41370","umdNm":"부산동","jibun":"778-1","apt":"주공1","area":59.99,"floor":9,"built":2000,"date":"2026-10-20","deposit":20500,"rent":0,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":18000,"preRent":0}
 {"lawd":"41370","umdNm":"오산동","jibun":"920-2","apt":"주공2단지","area":84.34,"floor":12,"built":2000,"date":"2026-10-20","deposit":20000,"rent":35,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41370","umdNm":"부산동","jibun":"779-1","apt":"주공3","area":59.39,"floor":2,"built":2000,"date":"2026-10-20","deposit":11000,"rent":55,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"금암동","jibun":"485","apt":"죽미마을휴먼시아(10단지)","area":41.98,"floor":1,"built":2009,"date":"2026-10-20","deposit":2598,"rent":18,"term":"26.11~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"금암동","jibun":"485","apt":"죽미마을휴먼시아(10단지)","area":41.98,"floor":9,"built":2009,"date":"2026-10-20","deposit":2598,"rent":18,"term":"26.11~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"금암동","jibun":"485","apt":"죽미마을휴먼시아(10단지)","area":51.99,"floor":14,"built":2009,"date":"2026-10-20","deposit":4096,"rent":28,"term":"26.11~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -424,6 +425,7 @@
 {"lawd":"41370","umdNm":"부산동","jibun":"830","apt":"오산센트럴푸르지오","area":84.99,"floor":24,"built":2018,"date":"2026-10-21","deposit":26250,"rent":0,"term":"26.12~27.12","type":"갱신","rrr":"사용","preDeposit":26250,"preRent":0}
 {"lawd":"41370","umdNm":"부산동","jibun":"815","apt":"오산시티자이2차","area":84.86,"floor":18,"built":2019,"date":"2026-10-21","deposit":3000,"rent":140,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"갈곶동","jibun":"251","apt":"우림","area":49.5,"floor":3,"built":1998,"date":"2026-10-21","deposit":13950,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41370","umdNm":"갈곶동","jibun":"251","apt":"우림","area":49.5,"floor":13,"built":1998,"date":"2026-10-21","deposit":1000,"rent":70,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"누읍동","jibun":"561-1","apt":"이림","area":37.47,"floor":4,"built":2000,"date":"2026-10-21","deposit":500,"rent":55,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"누읍동","jibun":"561-1","apt":"이림","area":37.47,"floor":17,"built":2000,"date":"2026-10-21","deposit":3000,"rent":40,"term":"26.10~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"부산동","jibun":"778-1","apt":"주공1","area":59.99,"floor":4,"built":2000,"date":"2026-10-21","deposit":16800,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -455,6 +457,7 @@
 {"lawd":"41370","umdNm":"궐동","jibun":"824","apt":"중흥S-클래스에듀파크","area":84.98,"floor":13,"built":2024,"date":"2026-10-23","deposit":3000,"rent":120,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":3000,"preRent":115}
 {"lawd":"41370","umdNm":"누읍동","jibun":"659","apt":"중흥S-클래스에듀하이","area":78,"floor":20,"built":2024,"date":"2026-10-23","deposit":3500,"rent":95,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":3500,"preRent":90}
 {"lawd":"41370","umdNm":"누읍동","jibun":"659","apt":"중흥S-클래스에듀하이","area":84.98,"floor":7,"built":2024,"date":"2026-10-23","deposit":3000,"rent":126,"term":"26.11~28.08","type":"갱신","rrr":"사용","preDeposit":3000,"preRent":120}
+{"lawd":"41370","umdNm":"갈곶동","jibun":"704","apt":"한솔솔파크","area":84.92,"floor":4,"built":2007,"date":"2026-10-23","deposit":2000,"rent":111,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":2000,"preRent":105}
 {"lawd":"41370","umdNm":"벌음동","jibun":"397","apt":"호반써밋라프리미어","area":59.83,"floor":3,"built":2026,"date":"2026-10-23","deposit":3000,"rent":130,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"지곶동","jibun":"577","apt":"e편한세상오산세교","area":59.98,"floor":1,"built":2018,"date":"2026-10-23","deposit":24000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"서동","jibun":"641","apt":"더샵오산엘리포레","area":75.54,"floor":19,"built":2023,"date":"2026-10-24","deposit":35000,"rent":0,"term":"27.01~28.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -520,6 +523,7 @@
 {"lawd":"41370","umdNm":"부산동","jibun":"779-1","apt":"주공3","area":59.39,"floor":18,"built":2000,"date":"2026-10-30","deposit":23000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"누읍동","jibun":"659","apt":"중흥S-클래스에듀하이","area":84.98,"floor":10,"built":2024,"date":"2026-10-30","deposit":27300,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":17000,"preRent":0}
 {"lawd":"41370","umdNm":"금암동","jibun":"515","apt":"세교데시앙포레","area":101.17,"floor":3,"built":2010,"date":"2026-10-31","deposit":36000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41370","umdNm":"세교동","jibun":"622","apt":"세마역 트루엘 더퍼스트","area":84.61,"floor":13,"built":2013,"date":"2026-10-31","deposit":5000,"rent":130,"term":"27.02~29.01","type":"갱신","rrr":null,"preDeposit":4000,"preRent":120}
 {"lawd":"41370","umdNm":"은계동","jibun":"64-1","apt":"영산그린맨션(가,나,다,라)","area":58.61,"floor":5,"built":1985,"date":"2026-10-31","deposit":500,"rent":50,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"부산동","jibun":"801","apt":"오산시티자이1차2단지","area":59.96,"floor":6,"built":2017,"date":"2026-10-31","deposit":28000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"부산동","jibun":"815","apt":"오산시티자이2차","area":84.86,"floor":29,"built":2019,"date":"2026-10-31","deposit":31500,"rent":0,"term":"27.02~29.02","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":0}

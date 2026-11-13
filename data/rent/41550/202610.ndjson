@@ -75,6 +75,7 @@
 {"lawd":"41550","umdNm":"공도읍 진사리","jibun":"36-1","apt":"주은청설","area":39.75,"floor":12,"built":2000,"date":"2026-10-06","deposit":9000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":9000,"preRent":0}
 {"lawd":"41550","umdNm":"공도읍 용두리","jibun":"752","apt":"주은풍림","area":39.36,"floor":12,"built":2002,"date":"2026-10-06","deposit":500,"rent":65,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41550","umdNm":"공도읍 용두리","jibun":"752","apt":"주은풍림","area":39.36,"floor":16,"built":2002,"date":"2026-10-06","deposit":1000,"rent":65,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41550","umdNm":"공도읍 용두리","jibun":"752","apt":"주은풍림","area":39.36,"floor":17,"built":2002,"date":"2026-10-06","deposit":500,"rent":55,"term":"26.10~27.10","type":"갱신","rrr":null,"preDeposit":500,"preRent":50}
 {"lawd":"41550","umdNm":"공도읍 용두리","jibun":"752","apt":"주은풍림","area":49.77,"floor":6,"built":2002,"date":"2026-10-06","deposit":1000,"rent":70,"term":"26.11~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41550","umdNm":"공도읍 용두리","jibun":"752","apt":"주은풍림","area":59.76,"floor":2,"built":2002,"date":"2026-10-06","deposit":500,"rent":85,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41550","umdNm":"공도읍 만정리","jibun":"783-2","apt":"참아름2단지","area":39.59,"floor":1,"built":2008,"date":"2026-10-06","deposit":1622,"rent":9,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":1089,"preRent":9}
@@ -394,6 +395,7 @@
 {"lawd":"41550","umdNm":"아양동","jibun":"414","apt":"안성아양LH6단지","area":36.97,"floor":10,"built":2020,"date":"2026-10-23","deposit":3815,"rent":8,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":2586,"preRent":12}
 {"lawd":"41550","umdNm":"신소현동","jibun":"193","apt":"안성영무예다음","area":84.6,"floor":23,"built":2026,"date":"2026-10-23","deposit":35800,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41550","umdNm":"원곡면 외가천리","jibun":"361","apt":"원곡 제일 오투그란데","area":77.17,"floor":11,"built":2018,"date":"2026-10-23","deposit":1000,"rent":100,"term":"26.11~27.10","type":"갱신","rrr":null,"preDeposit":1000,"preRent":70}
+{"lawd":"41550","umdNm":"죽산면 장원리","jibun":"1379-1","apt":"지에프","area":59.45,"floor":11,"built":2002,"date":"2026-10-23","deposit":500,"rent":85,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41550","umdNm":"공도읍 만정리","jibun":"783-2","apt":"참아름2단지","area":39.58,"floor":4,"built":2008,"date":"2026-10-23","deposit":2070,"rent":14,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":1307,"preRent":11}
 {"lawd":"41550","umdNm":"공도읍 만정리","jibun":"783-2","apt":"참아름2단지","area":39.58,"floor":5,"built":2008,"date":"2026-10-23","deposit":1122,"rent":12,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":1089,"preRent":12}
 {"lawd":"41550","umdNm":"공도읍 만정리","jibun":"783-2","apt":"참아름2단지","area":39.58,"floor":12,"built":2008,"date":"2026-10-23","deposit":1122,"rent":12,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":1089,"preRent":12}
@@ -417,12 +419,14 @@
 {"lawd":"41550","umdNm":"금석동","jibun":"81","apt":"동남","area":58.74,"floor":3,"built":1998,"date":"2026-10-26","deposit":6600,"rent":0,"term":"26.10~28.12","type":"갱신","rrr":null,"preDeposit":6300,"preRent":0}
 {"lawd":"41550","umdNm":"공도읍 양기리","jibun":"567","apt":"송정그린빌","area":84.99,"floor":20,"built":2001,"date":"2026-10-26","deposit":13000,"rent":15,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41550","umdNm":"공도읍 진사리","jibun":"644","apt":"쌍용스윗닷홈","area":73.08,"floor":7,"built":2005,"date":"2026-10-26","deposit":19000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41550","umdNm":"아양동","jibun":"300","apt":"아양주공1","area":39.61,"floor":1,"built":1991,"date":"2026-10-26","deposit":500,"rent":45,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41550","umdNm":"공도읍 용두리","jibun":"755","apt":"안성공도우미린더퍼스트","area":73.78,"floor":21,"built":2018,"date":"2026-10-26","deposit":25000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41550","umdNm":"아양동","jibun":"414","apt":"안성아양LH6단지","area":36.97,"floor":24,"built":2020,"date":"2026-10-26","deposit":2715,"rent":13,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":2586,"preRent":12}
 {"lawd":"41550","umdNm":"공도읍 진사리","jibun":"36-1","apt":"주은청설","area":39.75,"floor":15,"built":2000,"date":"2026-10-26","deposit":500,"rent":45,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":500,"preRent":40}
 {"lawd":"41550","umdNm":"공도읍 만정리","jibun":"788-4","apt":"참아름5단지","area":49.52,"floor":8,"built":2008,"date":"2026-10-26","deposit":1994,"rent":18,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":1936,"preRent":18}
 {"lawd":"41550","umdNm":"금광면 신양복리","jibun":"139-1","apt":"홍익","area":59.74,"floor":7,"built":2001,"date":"2026-10-26","deposit":1000,"rent":70,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41550","umdNm":"당왕동","jibun":"587","apt":"e편한세상안성그랑루체","area":67.96,"floor":17,"built":2024,"date":"2026-10-26","deposit":22000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41550","umdNm":"신소현동","jibun":"184","apt":"골든스테이","area":14.31,"floor":14,"built":2023,"date":"2026-10-27","deposit":1000,"rent":70,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41550","umdNm":"죽산면 죽산리","jibun":"343-1","apt":"무지개","area":79.44,"floor":1,"built":1994,"date":"2026-10-27","deposit":7500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41550","umdNm":"당왕동","jibun":"584","apt":"삼정그린코아더베스트","area":84.95,"floor":22,"built":2019,"date":"2026-10-27","deposit":24000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41550","umdNm":"아양동","jibun":"414","apt":"안성아양LH6단지","area":36.97,"floor":11,"built":2020,"date":"2026-10-27","deposit":4417,"rent":8,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":2873,"preRent":14}
@@ -436,6 +440,7 @@
 {"lawd":"41550","umdNm":"아양동","jibun":"414","apt":"안성아양LH6단지","area":26.53,"floor":14,"built":2020,"date":"2026-10-28","deposit":3212,"rent":7,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":3097,"preRent":6}
 {"lawd":"41550","umdNm":"공도읍 진사리","jibun":"36-1","apt":"주은청설","area":39.75,"floor":13,"built":2000,"date":"2026-10-28","deposit":7200,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":8400,"preRent":0}
 {"lawd":"41550","umdNm":"공도읍 용두리","jibun":"752","apt":"주은풍림","area":49.77,"floor":3,"built":2002,"date":"2026-10-28","deposit":500,"rent":60,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41550","umdNm":"공도읍 용두리","jibun":"752","apt":"주은풍림","area":49.77,"floor":10,"built":2002,"date":"2026-10-28","deposit":500,"rent":65,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":500,"preRent":60}
 {"lawd":"41550","umdNm":"공도읍 용두리","jibun":"752","apt":"주은풍림","area":49.77,"floor":16,"built":2002,"date":"2026-10-28","deposit":500,"rent":65,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41550","umdNm":"공도읍 만정리","jibun":"783-2","apt":"참아름2단지","area":49.52,"floor":6,"built":2008,"date":"2026-10-28","deposit":1194,"rent":21,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":1936,"preRent":20}
 {"lawd":"41550","umdNm":"공도읍 용두리","jibun":"683","apt":"태산1차","area":59.67,"floor":20,"built":1999,"date":"2026-10-28","deposit":500,"rent":80,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
