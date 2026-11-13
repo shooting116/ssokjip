@@ -32,7 +32,7 @@
 | 2026-11-11 | 46 | 용적률·대지지분 — 재건축 사업성을 가르는 두 숫자 | far-and-land-share | future | find | 완료(far-and-land-share) |
 | 2026-11-12 | 47 | 분양권 vs 입주권 — 차이, 세금, 대출 | presale-vs-occupancy-right | future | none | 완료(presale-vs-occupancy-right) |
 | 2026-11-13 | 48 | 아파트 vs 주상복합 vs 오피스텔(아파텔) — 대출·세금·관리비 차이 | apt-vs-officetel | situation | calc | 완료(apt-vs-officetel) |
-| 2026-11-14 | 49 | 세대수·동수·주차대수 — 건축물대장으로 단지 읽기 | building-register | price | find | |
+| 2026-11-14 | 49 | 세대수·동수·주차대수 — 건축물대장으로 단지 읽기 | building-register | price | find | 완료(building-register) |
 | 2026-11-15 | 50 | 신축·준신축·구축 — 준공연도별 가격 차이와 확인할 것 | age-of-building | price | find | |
 | 2026-11-16 | 51 | 청약 가점 계산 — 무주택 기간·부양가족·통장 가입기간 | subscription-points | situation | none | |
 | 2026-11-17 | 52 | 특별공급 종류 — 신혼·생애최초·다자녀·노부모, 소득 기준 | special-supply | situation | calc | |
