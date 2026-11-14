@@ -1,4 +1,5 @@
 {"lawd":"26710","umdNm":"정관읍 용수리","jibun":"1322","apt":"정관신동아파밀리에","area":140.11,"floor":6,"built":2008,"date":"2026-11-01","deposit":39000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26710","umdNm":"기장읍 교리","jibun":"14-5","apt":"태영","area":59.75,"floor":9,"built":1995,"date":"2026-11-01","deposit":1000,"rent":45,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":1000,"preRent":42}
 {"lawd":"26710","umdNm":"일광읍 삼성리","jibun":"773","apt":"e편한세상일광","area":74.98,"floor":27,"built":2020,"date":"2026-11-01","deposit":3000,"rent":105,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":3000,"preRent":100}
 {"lawd":"26710","umdNm":"일광읍 삼성리","jibun":"773","apt":"e편한세상일광","area":84.99,"floor":9,"built":2020,"date":"2026-11-01","deposit":30000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"기장읍 교리","jibun":"352-4","apt":"가화랜드빌","area":52.96,"floor":7,"built":2002,"date":"2026-11-02","deposit":2000,"rent":55,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -40,6 +41,7 @@
 {"lawd":"26710","umdNm":"정관읍 용수리","jibun":"1387","apt":"정관동일스위트1차","area":59.83,"floor":11,"built":2012,"date":"2026-11-10","deposit":10000,"rent":45,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"정관읍 용수리","jibun":"1275","apt":"정관양우내안愛","area":59.9,"floor":5,"built":2016,"date":"2026-11-10","deposit":3000,"rent":70,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"기장읍 대라리","jibun":"905","apt":"행복리치빌아파트","area":69.74,"floor":7,"built":2018,"date":"2026-11-10","deposit":13000,"rent":15,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26710","umdNm":"일광읍 삼성리","jibun":"773","apt":"e편한세상일광","area":84.99,"floor":5,"built":2020,"date":"2026-11-10","deposit":3000,"rent":140,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"일광읍 삼성리","jibun":"773","apt":"e편한세상일광","area":84.99,"floor":12,"built":2020,"date":"2026-11-10","deposit":34000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"정관읍 방곡리","jibun":"380","apt":"가화만사성정관타운","area":59.96,"floor":15,"built":2014,"date":"2026-11-11","deposit":15500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"기장읍 청강리","jibun":"868","apt":"웨이브리즈","area":59.99,"floor":4,"built":2022,"date":"2026-11-11","deposit":8900,"rent":12,"term":"27.01~28.12","type":"갱신","rrr":null,"preDeposit":5905,"preRent":24}
@@ -62,3 +64,8 @@
 {"lawd":"26710","umdNm":"정관읍 모전리","jibun":"681","apt":"정관엘에이치7단지","area":26.83,"floor":12,"built":2017,"date":"2026-11-12","deposit":879,"rent":16,"term":"26.12~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"정관읍 모전리","jibun":"681","apt":"정관엘에이치7단지","area":26.83,"floor":13,"built":2017,"date":"2026-11-12","deposit":879,"rent":16,"term":"26.12~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"정관읍 모전리","jibun":"681","apt":"정관엘에이치7단지","area":26.83,"floor":14,"built":2017,"date":"2026-11-12","deposit":879,"rent":16,"term":"26.12~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26710","umdNm":"정관읍 모전리","jibun":"728","apt":"동일스위트3차","area":65.99,"floor":8,"built":2014,"date":"2026-11-13","deposit":3000,"rent":75,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26710","umdNm":"정관읍 용수리","jibun":"1387","apt":"정관동일스위트1차","area":84.87,"floor":3,"built":2012,"date":"2026-11-13","deposit":3000,"rent":100,"term":"27.02~28.01","type":"갱신","rrr":null,"preDeposit":8000,"preRent":45}
+{"lawd":"26710","umdNm":"정관읍 모전리","jibun":"759","apt":"정관롯데캐슬2차","area":101.81,"floor":6,"built":2013,"date":"2026-11-13","deposit":30000,"rent":0,"term":"27.02~28.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26710","umdNm":"정관읍 모전리","jibun":"759","apt":"정관롯데캐슬2차","area":127.26,"floor":11,"built":2013,"date":"2026-11-13","deposit":3000,"rent":140,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26710","umdNm":"일광읍 삼성리","jibun":"773","apt":"e편한세상일광","area":84.99,"floor":9,"built":2020,"date":"2026-11-13","deposit":35000,"rent":0,"term":"27.03~29.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

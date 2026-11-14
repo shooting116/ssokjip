@@ -6,6 +6,7 @@
 {"lawd":"27710","umdNm":"논공읍 북리","jibun":"803-3","apt":"평광현대","area":38.22,"floor":3,"built":1989,"date":"2026-11-01","deposit":200,"rent":35,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"화원읍 천내리","jibun":"922","apt":"화원파크뷰우방아이유쉘","area":84.89,"floor":5,"built":2022,"date":"2026-11-01","deposit":23000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"구지읍 응암리","jibun":"1210","apt":"과학마을청아람","area":39.92,"floor":4,"built":2016,"date":"2026-11-02","deposit":9500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27710","umdNm":"옥포읍 강림리","jibun":"1105","apt":"대구옥포엘에이치천년나무2단지","area":46.69,"floor":1,"built":2015,"date":"2026-11-02","deposit":2376,"rent":28,"term":"26.11~27.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"다사읍 세천리","jibun":"1588","apt":"북죽곡엠코타운더솔레뉴","area":84,"floor":6,"built":2016,"date":"2026-11-02","deposit":20000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"다사읍 서재리","jibun":"145","apt":"서재보성1","area":84.95,"floor":6,"built":1997,"date":"2026-11-02","deposit":10000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"화원읍 천내리","jibun":"918","apt":"화원이진캐스빌","area":84.57,"floor":22,"built":2017,"date":"2026-11-02","deposit":28000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -53,7 +54,10 @@
 {"lawd":"27710","umdNm":"논공읍 북리","jibun":"803-4","apt":"논공성원아파트","area":59.34,"floor":18,"built":1996,"date":"2026-11-10","deposit":300,"rent":40,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"유가읍 봉리","jibun":"595","apt":"대구테크노폴리스화성파크드림","area":77.43,"floor":5,"built":2016,"date":"2026-11-10","deposit":2000,"rent":90,"term":"26.12~27.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"논공읍 금포리","jibun":"2506","apt":"우신미가뷰아파트","area":75.91,"floor":14,"built":2018,"date":"2026-11-10","deposit":10000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27710","umdNm":"화원읍 설화리","jibun":"1150","apt":"화원신일해피트리꿈의숲","area":69.29,"floor":14,"built":2022,"date":"2026-11-10","deposit":2000,"rent":73,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"화원읍 명곡리","jibun":"139","apt":"명곡미래빌4","area":59.63,"floor":12,"built":2000,"date":"2026-11-11","deposit":1000,"rent":53,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"화원읍 구라리","jibun":"1722","apt":"신동아파밀리에","area":84.98,"floor":5,"built":2007,"date":"2026-11-11","deposit":3000,"rent":92,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"논공읍 금포리","jibun":"2506","apt":"우신미가뷰아파트","area":75.33,"floor":10,"built":2018,"date":"2026-11-11","deposit":1000,"rent":60,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"화원읍 천내리","jibun":"922","apt":"화원파크뷰우방아이유쉘","area":69.64,"floor":12,"built":2022,"date":"2026-11-12","deposit":17850,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":17850,"preRent":0}
+{"lawd":"27710","umdNm":"유가읍 봉리","jibun":"602","apt":"대구테크노폴리스4단지","area":59.93,"floor":5,"built":2017,"date":"2026-11-13","deposit":6200,"rent":27,"term":"27.01~27.12","type":"갱신","rrr":null,"preDeposit":3000,"preRent":43}
+{"lawd":"27710","umdNm":"다사읍 매곡리","jibun":"1537","apt":"대실역청아람1단지","area":84.99,"floor":13,"built":2008,"date":"2026-11-13","deposit":2000,"rent":100,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

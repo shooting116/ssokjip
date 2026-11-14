@@ -100,6 +100,7 @@
 {"lawd":"26710","umdNm":"정관읍 용수리","jibun":"1403","apt":"정관신도시한진해모로","area":123.48,"floor":2,"built":2008,"date":"2026-10-08","deposit":5000,"rent":130,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"일광읍 이천리","jibun":"921-1","apt":"가화일광타워","area":59.87,"floor":16,"built":2011,"date":"2026-10-09","deposit":1000,"rent":70,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":2000,"preRent":65}
 {"lawd":"26710","umdNm":"기장읍 대라리","jibun":"408-2","apt":"더테라스","area":63.3,"floor":17,"built":2019,"date":"2026-10-09","deposit":3000,"rent":80,"term":"26.11~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26710","umdNm":"기장읍 동부리","jibun":"374-11","apt":"동산그린타워","area":59.51,"floor":3,"built":1992,"date":"2026-10-09","deposit":11000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"정관읍 모전리","jibun":"730","apt":"이지더원3차","area":74.17,"floor":16,"built":2015,"date":"2026-10-09","deposit":14000,"rent":30,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"정관읍 모전리","jibun":"728","apt":"동일스위트3차","area":65.94,"floor":18,"built":2014,"date":"2026-10-10","deposit":2000,"rent":85,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"정관읍 모전리","jibun":"723","apt":"이지더원","area":59.88,"floor":4,"built":2011,"date":"2026-10-10","deposit":15000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -121,6 +122,7 @@
 {"lawd":"26710","umdNm":"기장읍 대라리","jibun":"418-1","apt":"동양주택","area":89.1,"floor":5,"built":1992,"date":"2026-10-13","deposit":1500,"rent":52,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"정관읍 모전리","jibun":"728","apt":"동일스위트3차","area":65.94,"floor":17,"built":2014,"date":"2026-10-13","deposit":20000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"기장읍 청강리","jibun":"868","apt":"웨이브리즈","area":55.99,"floor":12,"built":2022,"date":"2026-10-13","deposit":2561,"rent":30,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":5486,"preRent":23}
+{"lawd":"26710","umdNm":"기장읍 교리","jibun":"2","apt":"이진캐스빌블루1차","area":84.98,"floor":4,"built":2011,"date":"2026-10-13","deposit":25000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"일광읍 삼성리","jibun":"785","apt":"일광자이푸르지오2단지","area":84.91,"floor":8,"built":2020,"date":"2026-10-13","deposit":4000,"rent":150,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"일광읍 삼성리","jibun":"792","apt":"일광한신더휴센트럴포레2단지","area":75.95,"floor":12,"built":2020,"date":"2026-10-13","deposit":2000,"rent":125,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"정관읍 용수리","jibun":"1387","apt":"정관동일스위트1차","area":59.65,"floor":19,"built":2012,"date":"2026-10-13","deposit":19000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":19000,"preRent":0}
@@ -143,6 +145,7 @@
 {"lawd":"26710","umdNm":"정관읍 용수리","jibun":"1359","apt":"정관휴먼시아","area":59.99,"floor":5,"built":2008,"date":"2026-10-15","deposit":4625,"rent":21,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":4508,"preRent":20}
 {"lawd":"26710","umdNm":"기장읍 동부리","jibun":"151-5","apt":"한신","area":59.85,"floor":16,"built":1995,"date":"2026-10-15","deposit":12000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"기장읍 청강리","jibun":"291-7","apt":"대동레미안센트럴시티","area":52.23,"floor":7,"built":2016,"date":"2026-10-16","deposit":11000,"rent":0,"term":"26.11~27.09","type":"갱신","rrr":null,"preDeposit":11000,"preRent":0}
+{"lawd":"26710","umdNm":"기장읍 내리","jibun":"792","apt":"동부산관광단지삼정그린코아더베스트","area":79.98,"floor":6,"built":2017,"date":"2026-10-16","deposit":20000,"rent":50,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"기장읍 내리","jibun":"792","apt":"동부산관광단지삼정그린코아더베스트","area":84.99,"floor":7,"built":2017,"date":"2026-10-16","deposit":5000,"rent":130,"term":"26.12~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"정관읍 방곡리","jibun":"378","apt":"부산정관지구이지더원5차아파트","area":68.41,"floor":4,"built":2015,"date":"2026-10-16","deposit":2000,"rent":85,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26710","umdNm":"기장읍 청강리","jibun":"868","apt":"웨이브리즈","area":55.99,"floor":16,"built":2022,"date":"2026-10-16","deposit":8061,"rent":10,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":5486,"preRent":23}
