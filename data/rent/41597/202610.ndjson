@@ -1363,6 +1363,7 @@
 {"lawd":"41597","umdNm":"여울동","jibun":"1017","apt":"동탄2엘에이치씨26단지(행복주택)","area":16.86,"floor":9,"built":2017,"date":"2026-10-29","deposit":328,"rent":11,"term":"26.12~28.11","type":"갱신","rrr":null,"preDeposit":1728,"preRent":7}
 {"lawd":"41597","umdNm":"장지동","jibun":"913","apt":"동탄2엘에이치행복주택28단지","area":26.26,"floor":14,"built":2019,"date":"2026-10-29","deposit":4440,"rent":7,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":4368,"preRent":6}
 {"lawd":"41597","umdNm":"송동","jibun":"693","apt":"동탄2하우스디더레이크","area":59.99,"floor":8,"built":2016,"date":"2026-10-29","deposit":46000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41597","umdNm":"영천동","jibun":"866","apt":"동탄2LH2단지","area":28,"floor":4,"built":2021,"date":"2026-10-29","deposit":2049,"rent":16,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41597","umdNm":"신동","jibun":"747","apt":"동탄2LH38단지","area":36.8,"floor":6,"built":2023,"date":"2026-10-29","deposit":6652,"rent":9,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":6544,"preRent":8}
 {"lawd":"41597","umdNm":"반송동","jibun":"224","apt":"동탄나루마을동탄역U.BORA여울숲1.0","area":84.68,"floor":8,"built":2007,"date":"2026-10-29","deposit":65000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41597","umdNm":"능동","jibun":"1129","apt":"동탄숲속마을모아미래도2단지","area":100.92,"floor":17,"built":2008,"date":"2026-10-29","deposit":5000,"rent":138,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":130}

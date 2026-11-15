@@ -157,6 +157,7 @@
 {"lawd":"11350","umdNm":"중계동","jibun":"366","apt":"라이프","area":115.65,"floor":3,"built":1993,"date":"2026-11-07","deposit":45000,"rent":200,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":40000,"preRent":150}
 {"lawd":"11350","umdNm":"중계동","jibun":"361-1","apt":"롯데우성","area":115.26,"floor":5,"built":1993,"date":"2026-11-07","deposit":75000,"rent":170,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11350","umdNm":"월계동","jibun":"13","apt":"미성","area":33.28,"floor":3,"built":1986,"date":"2026-11-07","deposit":16800,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11350","umdNm":"월계동","jibun":"320-11","apt":"사슴3","area":39,"floor":3,"built":1995,"date":"2026-11-07","deposit":19400,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11350","umdNm":"월계동","jibun":"320-11","apt":"사슴3","area":39.6,"floor":3,"built":1995,"date":"2026-11-07","deposit":19400,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":18500,"preRent":0}
 {"lawd":"11350","umdNm":"월계동","jibun":"13","apt":"삼호3","area":59.22,"floor":4,"built":1986,"date":"2026-11-07","deposit":10500,"rent":49,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":10500,"preRent":45}
 {"lawd":"11350","umdNm":"월계동","jibun":"13","apt":"삼호3","area":59.22,"floor":4,"built":1986,"date":"2026-11-07","deposit":38000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
