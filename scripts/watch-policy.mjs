@@ -47,9 +47,9 @@ const isStats = (t) => STATS.test(t) && !ACTION.test(t);
 const KEYWORDS = /보금자리|디딤돌|버팀목|신생아|신혼부부|LTV|DSR|DTI|규제지역|조정대상지역|투기과열|토지거래허가|주택담보대출|주담대|전세대출|대출 한도|금리 인상|금리 인하|가계부채|가계대출|주택도시기금|정책대출|부동산 대책|주택시장 안정|취득세|양도소득세|종합부동산세|보유세/;
 
 async function getText(url) {
-  const r = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'accept-language': 'ko-KR,ko;q=0.9', referer: new URL(url).origin + '/' }, signal: AbortSignal.timeout(45_000), redirect: 'follow' });
+  const r = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'accept-language': 'ko-KR,ko;q=0.9', referer: new URL(url).origin + '/' }, signal: AbortSignal.timeout(30_000), redirect: 'follow' });
   if (r.status === 406) {   // 일부 공공 사이트(주택도시기금)는 accept 헤더가 길면 406을 낸다 → 단순 헤더로 한 번 더
-    const r2 = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0', accept: '*/*' }, signal: AbortSignal.timeout(45_000), redirect: 'follow' });
+    const r2 = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0', accept: '*/*' }, signal: AbortSignal.timeout(30_000), redirect: 'follow' });
     const b2 = Buffer.from(await r2.arrayBuffer()); let t2 = b2.toString('utf8');
     if (/charset=["']?euc-kr/i.test(t2.slice(0, 2000)) || /�/.test(t2.slice(0, 5000))) { try { t2 = new TextDecoder('euc-kr').decode(b2); } catch { /* utf8 유지 */ } }
     return { status: r2.status, html: t2, ctype: r2.headers.get('content-type') ?? '' };
@@ -58,6 +58,19 @@ async function getText(url) {
   let text = buf.toString('utf8');
   if (/charset=["']?euc-kr/i.test(text.slice(0, 2000)) || /�/.test(text.slice(0, 5000))) { try { text = new TextDecoder('euc-kr').decode(buf); } catch { /* utf8 유지 */ } }
   return { status: r.status, html: text, ctype: r.headers.get('content-type') ?? '' };
+}
+/** 접속 실패(fetch failed·시간 초과)나 5xx는 잠깐 쉬고 다시 — 한 번의 끊김으로 그날 감시를 통째로 놓치지 않게 */
+async function getTextRetry(url, tries = 3) {
+  let last;
+  for (let i = 0; i < tries; i++) {
+    if (i) await new Promise((r) => setTimeout(r, i === 1 ? 4_000 : 12_000));
+    try {
+      const res = await getText(url);
+      if (res.status < 500) return res;
+      last = new Error(`HTTP ${res.status}`);
+    } catch (e) { last = e; }
+  }
+  throw last;
 }
 const stripTags = (html) => html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'").replace(/&middot;/g, '·').replace(/\s+/g, ' ');
 /** 본문에서 금리처럼 생긴 숫자(0.5~12.0, 소수 둘째 자리)만 순서대로 뽑는다 — 표 구조를 몰라도 '숫자 지문'으로 변경을 잡는다 */
@@ -103,6 +116,17 @@ async function main() {
   if (tryUrls.length) return tryOnly();
   mkdirSync(OUT, { recursive: true });
   const state = existsSync(STATE) ? JSON.parse(readFileSync(STATE, 'utf8')) : { pages: {}, news: {} };
+  state.fails ??= {};   // 소스별 연속 읽기 실패 횟수. 읽기에 성공하면 지운다
+  const warns = [];
+  /** 읽기 실패 기록. 2번 연속이면 알리고, 그 뒤로는 5번마다 다시 알린다(매일 같은 경고가 쌓이지 않게) */
+  const failed = (key, name, why) => {
+    note(`${name} 실패: ${why}`);
+    if (probe) return;
+    const n = (state.fails[key]?.n ?? 0) + 1;
+    state.fails[key] = { n, since: state.fails[key]?.since ?? today, last: today, why };
+    if (n >= 2 && (n - 2) % 5 === 0) warns.push({ name: name.replace(/\(.*?\)/g, ''), n, since: state.fails[key].since });
+  };
+  const ok = (key) => { if (!probe) delete state.fails[key]; };
   const rulesAll = loadRulesAll();
   const current = rulesAll.filter((r) => r.meta.effective_from <= today).at(-1);
   const future = rulesAll.filter((r) => r.meta.effective_from > today);
@@ -112,7 +136,7 @@ async function main() {
 
   for (const p of PAGES) {
     try {
-      const { status, html } = await getText(p.url);
+      const { status, html } = await getTextRetry(p.url);
       const text = stripTags(html);
       const nums = rateNumbers(text);
       const fp = nums.join(',');
@@ -121,7 +145,8 @@ async function main() {
       const has = (set) => set.every((v) => nums.includes(v));
       const matchNow = has(ruleNow), matchFuture = ruleFuture.some(has);
       if (probe) { note(`${p.name} HTTP ${status} 글자 ${text.length} · 숫자 ${nums.length}개: ${nums.slice(0, 40).join(' ')} · 규칙표(시행중) 포함 ${matchNow}${ruleFuture.length ? ` · 예정판 포함 ${matchFuture}` : ''}`); continue; }
-      if (status !== 200 || !nums.length) { note(`${p.name}: 응답 이상(HTTP ${status}, 숫자 ${nums.length}개) — 건너뜀`); continue; }
+      if (status !== 200 || !nums.length) { failed(p.key, p.name, `응답 이상(HTTP ${status}, 숫자 ${nums.length}개)`); continue; }
+      ok(p.key);
       if (prev && prev.fp !== fp) {
         needApply = true;
         const gone = prev.nums.filter((v) => !nums.includes(v)), added = nums.filter((v) => !prev.nums.includes(v));
@@ -132,21 +157,22 @@ async function main() {
         alerts.push(`▶ ${p.name}: 규칙표 금리(${fmt(ruleNow)})가 페이지에 안 보임 → 표가 바뀌었는지 확인`);
       }
       state.pages[p.key] = { fp, nums, checked: today, matchNow, matchFuture };
-    } catch (e) { note(`${p.name} 실패: ${String(e.message).slice(0, 120)}`); }
+    } catch (e) { failed(p.key, p.name, String(e?.cause?.code ?? e.message).slice(0, 80)); }
   }
 
   for (const n of NEWS) {
     try {
-      const { status, html } = await getText(n.url);
+      const { status, html } = await getTextRetry(n.url);
       const all = n.parse ? n.parse(html) : titles(html, !!n.rss);
       const hits = all.filter((t) => KEYWORDS.test(t));
       if (probe) { note(`${n.name} HTTP ${status} 제목 ${all.length}개 · 키워드 ${hits.length}개: ${hits.slice(0, 5).join(' | ').slice(0, 300)} ‖ 샘플: ${all.filter((t) => t.length > 14).slice(0, 5).join(' | ').slice(0, 300)}`); continue; }
-      if (status !== 200 || !all.length) { note(`${n.name}: 응답 이상(HTTP ${status}, 링크 ${all.length}개) — 건너뜀`); continue; }
+      if (status !== 200 || !all.length) { failed(n.key, n.name, `응답 이상(HTTP ${status}, 제목 ${all.length}개)`); continue; }
+      ok(n.key);
       const seen = new Set(state.news[n.key] ?? []);
       const fresh = state.news[n.key] ? hits.filter((t) => !seen.has(t) && !isStats(t)) : [];   // 첫 실행은 기준선만 저장. 통계 발표는 알리지 않는다
       if (fresh.length) alerts.push(`▶ ${n.name} 규칙 관련 새 글 ${fresh.length}건: ${fresh.slice(0, 3).map((t) => t.slice(0, 40)).join(' / ')}`);
       state.news[n.key] = uniq([...hits, ...(state.news[n.key] ?? [])]).slice(0, 200);
-    } catch (e) { note(`${n.name} 실패: ${String(e.message).slice(0, 120)}`); }
+    } catch (e) { failed(n.key, n.name, String(e?.cause?.code ?? e.message).slice(0, 80)); }
   }
 
   if (probe) { finish(); return; }
@@ -155,12 +181,16 @@ async function main() {
   if (Object.keys(drafts).length) writeFileSync(join(OUT, `draft-${today}.json`), JSON.stringify({ note: '감시기가 감지한 페이지 숫자. 규칙표에 넣기 전에 사람이 시행일·경과규정을 확인한다.', ...drafts }, null, 1) + '\n');
 
   const head = `[쏙집 정책대출 감시 ${today.slice(5).replace('-', '/')}]`;
-  if (alerts.length) {
-    const msg = [head, ...alerts, `규칙표: 시행중 ${current.meta.version}(${current.meta.effective_from})${future.length ? ` · 예정 ${future.map((r) => `${r.meta.version}(${r.meta.effective_from})`).join(', ')}` : ''}`, needApply ? '규칙표 수치가 달라졌을 수 있습니다. 반영은 자동으로 하지 않습니다 — 확인 후 "반영"이라고 말해 주세요.' : '금리표 숫자는 그대로입니다. 위 보도자료가 규칙(한도·LTV·DSR 등)을 바꾸는 내용인지 확인이 필요합니다.'].join('\n').slice(0, 900);
+  if (alerts.length || warns.length) {
+    const lines = [head, ...alerts];
+    if (alerts.length) lines.push(`규칙표: 시행중 ${current.meta.version}(${current.meta.effective_from})${future.length ? ` · 예정 ${future.map((r) => `${r.meta.version}(${r.meta.effective_from})`).join(', ')}` : ''}`, needApply ? '규칙표 수치가 달라졌을 수 있습니다. 반영은 자동으로 하지 않습니다 — 확인 후 "반영"이라고 말해 주세요.' : '금리표 숫자는 그대로입니다. 위 보도자료가 규칙(한도·LTV·DSR 등)을 바꾸는 내용인지 확인이 필요합니다.');
+    // 카카오톡 글자 수 제한이 있어 한 줄로 묶는다
+    if (warns.length) lines.push(`⚠ ${warns.length}곳을 ${Math.min(...warns.map((w) => w.n))}번 이상 연속 읽지 못함(${warns.map((w) => w.since).sort()[0].slice(5).replace('-', '/')}부터): ${warns.map((w) => w.name).join(', ')}`, '이 기간의 변경은 확인되지 않았습니다. 주소·구조가 바뀌었는지 확인이 필요합니다.');
+    const msg = lines.join('\n').slice(0, 900);
     note(msg);
     if (notify) { const sent = await kakaoMemo(msg); console.log(sent ? '카카오톡 알림 전송' : '카카오톡 알림 안 보냄'); }
-  } else note(`${head} 변경 없음 (페이지 ${Object.keys(state.pages).length} · 보도자료 ${Object.keys(state.news).length})`);
-  if (process.env.GITHUB_OUTPUT) writeFileSync(process.env.GITHUB_OUTPUT, `alerts=${alerts.length}\n`, { flag: 'a' });
+  } else note(`${head} 변경 없음 (페이지 ${Object.keys(state.pages).length} · 보도자료 ${Object.keys(state.news).length}${Object.keys(state.fails).length ? ` · 이번에 못 읽음 ${Object.keys(state.fails).length}` : ''})`);
+  if (process.env.GITHUB_OUTPUT) writeFileSync(process.env.GITHUB_OUTPUT, `alerts=${alerts.length + warns.length}\n`, { flag: 'a' });
   finish();
 }
 function finish() { if (process.env.GITHUB_ACTIONS) for (let i = 0; i < notices.length; i += 4) console.log(`::notice title=policy-watch ${i / 4 + 1}::${notices.slice(i, i + 4).join(' | ').slice(0, 3900)}`); }

@@ -21,7 +21,7 @@ permissions:
 jobs:
   watch:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15   # 소스 7곳 × 재시도 3번(각 30초)까지 버틸 시간
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
