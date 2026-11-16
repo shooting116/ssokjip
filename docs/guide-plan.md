@@ -35,7 +35,7 @@
 | 2026-11-14 | 49 | 세대수·동수·주차대수 — 건축물대장으로 단지 읽기 | building-register | price | find | 완료(building-register) |
 | 2026-11-15 | 50 | 신축·준신축·구축 — 준공연도별 가격 차이와 확인할 것 | age-of-building | price | find | 완료(age-of-building) |
 | 2026-11-16 | 51 | 청약 가점 계산 — 무주택 기간·부양가족·통장 가입기간 | subscription-points | situation | none | 완료(subscription-points) |
-| 2026-11-17 | 52 | 특별공급 종류 — 신혼·생애최초·다자녀·노부모, 소득 기준 | special-supply | situation | calc | |
+| 2026-11-17 | 52 | 특별공급 종류 — 신혼·생애최초·다자녀·노부모, 소득 기준 | special-supply | situation | calc | 완료(special-supply) |
 | 2026-11-18 | 53 | 전세사기 예방 체크리스트 — 깡통전세·선순위·확정일자 | jeonse-fraud-check | situation | find | |
 | 2026-11-19 | 54 | 스트레스 DSR — 가산금리가 한도를 얼마나 줄이나 | stress-dsr | loan | calc | |
 | 2026-11-20 | 55 | 전월세 전환율 — 전세를 월세로 바꾸면 얼마인가, 반전세 | rent-conversion | price | none | |
