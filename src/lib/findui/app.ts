@@ -86,8 +86,9 @@ function load(): State {
   } catch { /* */ }
   if (!Array.isArray(d.types)) d.types = [];
   try { const b = localStorage.getItem(BUDGET_KEY); if (b && !d.budgetMan) { const j = JSON.parse(b); d.budgetMan = j.budgetMan ?? 0; if (j.lawd) { d.lawd = j.lawd; d.sido = j.sido ?? d.sido; } } } catch { /* */ }
-  // 공유 링크의 조건이 저장된 조건보다 우선
-  const q = new URLSearchParams(location.search);
+  // 공유 링크의 조건이 저장된 조건보다 우선.
+  // 조건은 주소의 # 뒤에 둔다(…/find/#budget=…). ?로 붙이면 검색엔진이 조건마다 다른 페이지로 색인하기 때문. 옛 ?주소도 그대로 읽는다.
+  const q = new URLSearchParams(location.hash.includes('=') ? location.hash.slice(1) : location.search);
   const num = (v: string | null) => (v && /^\d+$/.test(v) ? Number(v) : null);
   if (q.get('budget') != null) d.budgetMan = num(q.get('budget')) ?? 0;
   if (q.get('lawd')) d.lawd = q.get('lawd')!;
@@ -128,7 +129,7 @@ function syncUrl() {
   if (s.station) q.set('station', s.station);
   if (s.sort !== 'fit') q.set('sort', s.sort);
   if (s.view === 'list') q.set('view', 'list');
-  try { history.replaceState(null, '', `${location.pathname}?${q.toString()}`); } catch { /* */ }
+  try { history.replaceState(null, '', `${location.pathname}#${q.toString()}`); } catch { /* */ }
 }
 function save() { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch { /* */ } syncUrl(); }
 async function copyLink(btn: HTMLElement) {
@@ -652,6 +653,8 @@ function bind() {
 
 export async function mount(el: HTMLElement) {
   root = el;
+  // 같은 화면에서 주소의 # 뒤만 바뀐 경우(다른 조건 링크를 붙여넣음)는 새로 읽는다. 화면이 주소를 고칠 때(replaceState)는 이 이벤트가 나지 않는다
+  window.addEventListener('hashchange', () => location.reload());
   s = load();
   try { regions = await fetchJson<Regions>('/data/regions.json'); }
   catch { root.innerHTML = '<div class="card"><p class="sub2" style="margin:0">데이터를 불러오지 못했어요. 잠시 후 다시 시도해 주세요.</p></div>'; return; }

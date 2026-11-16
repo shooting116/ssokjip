@@ -42,7 +42,7 @@ const desc = `${sido}에서 ${eok(amount)} 예산 안에 드는 아파트 ${tota
   </header>
   <div class="nav2">
     {prev ? <a class="chip" href={`/budget/${prev}/${sido}/`}>‹ {eok(prev)}</a> : <span />}
-    <a class="chip on" href={`/find/?budget=${amount}&sido=${sido}`}>지도에서 보기</a>
+    <a class="chip on" href={`/find/#budget=${amount}&sido=${sido}`}>지도에서 보기</a>
     {next ? <a class="chip" href={`/budget/${next}/${sido}/`}>{eok(next)} ›</a> : <span />}
   </div>
   {groups.map((g) => (
@@ -51,7 +51,7 @@ const desc = `${sido}에서 ${eok(amount)} 예산 안에 드는 아파트 ${tota
       {g.items.length ? (
         <ul class="rank">{g.items.map((f) => <li><a href={`/apt/${f.c.id}/`}><span class="nm">{f.c.name} <span class="sub">{f.c.umd}{f.c.built ? ` · ${f.c.built}년` : ''} · {f.key}㎡</span></span><b>{eok(f.price)}</b><span class={`pill ${f.ratio >= FIT ? 'p-ok' : 'p-soft'}`}>{Math.round(f.ratio * 100)}%</span></a></li>)}</ul>
       ) : <p class="sub2" style="margin:6px 0 0">이 예산 안에 드는 단지가 없어요.</p>}
-      {g.total > g.items.length && <a class="sub more" href={`/find/?budget=${amount}&lawd=${g.lawd}`}>{g.sigungu} {g.total}단지 모두 보기 ›</a>}
+      {g.total > g.items.length && <a class="sub more" href={`/find/#budget=${amount}&lawd=${g.lawd}`}>{g.sigungu} {g.total}단지 모두 보기 ›</a>}
     </section>
   ))}
   <p class="src">시세는 최근 6개월 실거래 중앙값(해제·직거래 제외), 6개월 3건 미만이면 참고용, 없으면 마지막 거래가. 각 단지에서 예산 안에 드는 가장 큰 타입을 기준으로 했습니다. 출처: 국토교통부 실거래가. 특정 단지를 추천하지 않습니다.</p>

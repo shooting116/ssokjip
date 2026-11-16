@@ -4,6 +4,9 @@ import { loadSummary } from '../../lib/data/index.ts';
 const sm = loadSummary();
 ---
 <Base title="예산 맞춤 아파트 찾기" description={`내 예산 안에서 살 수 있는 아파트를 지도와 목록으로. 수도권·광역시 ${sm.total.complexes.toLocaleString()}개 단지, 국토교통부 실거래가 ${sm.asOf} 기준.`}>
+  <!-- 조건이 ?로 붙은 옛 주소(/find/?budget=…)는 검색엔진이 조건마다 다른 페이지로 색인했다. 내용은 같은 집 찾기이므로 검색에서 빼 달라고 표시한다.
+       대표 주소(canonical)가 /find/ 인 채로 noindex를 달면 신호가 엇갈리므로, 이 경우에만 대표 주소를 옛 주소 자신으로 바꾼다 — /find/ 자체는 계속 색인 대상. -->
+  <script is:inline>if (location.search) { var m = document.createElement('meta'); m.name = 'robots'; m.content = 'noindex, follow'; document.head.appendChild(m); var c = document.querySelector('link[rel="canonical"]'); if (c) c.href = location.origin + location.pathname + location.search; }</script>
   <div class="q" style="padding:4px 4px 10px">
     <h1 class="big" style="margin:0;font-size:22px">내 예산에 쏙 들어오는 집</h1>
     <p class="sub2" style="margin:4px 0 0">예산 안에 드는 단지를 실거래가 기준으로 찾아요. 평형·준공·세대수로 좁히고 지도에서 위치를 확인하세요.</p>

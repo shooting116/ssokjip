@@ -331,7 +331,7 @@ function viewResult(): string {
     </details>`}
 
     ${none ? `<button type="button" class="btn" disabled>받을 수 있는 대출이 없어 예산을 잡을 수 없어요</button>`
-      : `<a class="btn" href="/find/?${findQs.toString()}">이 예산으로 쏙 찾아보기</a>`}
+      : `<a class="btn" href="/find/#${findQs.toString()}">이 예산으로 쏙 찾아보기</a>`}
     <div class="row" style="margin-top:10px;gap:8px">
       <button type="button" class="btn ghost" data-action="edit">조건 수정</button>
       <button type="button" class="btn ghost" data-action="restart">처음부터</button>

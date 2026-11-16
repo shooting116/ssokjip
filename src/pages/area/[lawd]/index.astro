@@ -52,7 +52,7 @@ const desc = `${sg.sigungu} 아파트 ${cs.length.toLocaleString()}개 단지의
     {chg && <p class="sub2 chgline" style="margin:6px 0 0">실거래 1년 변동률 <b class={yoyCls(chg)}>{yoyText(chg)}</b>{chg.n ? <span class="sub"> ({chg.n}개 평형 비교)</span> : null}{city && <> · {city.name} <b class={yoyCls(city.chg)}>{yoyText(city.chg)}</b></>}{sidoChg && <> · {sg.sido} 전체 <b class={yoyCls(sidoChg)}>{yoyText(sidoChg)}</b></>}{chg.volPct != null && <span class="sub"> · 최근 6개월 거래 {chg.cur.toLocaleString()}건, 1년 전보다 {chg.volPct > 0 ? '+' : ''}{chg.volPct}%</span>}</p>}
     {roneLine && <p class="sub" style="margin:4px 0 0">부동산원 매매가격지수(한국부동산원 주간{rone ? `, ${rone.asOfLabel} 기준 주` : ''}): {roneLine}</p>}
   </header>
-  <a class="btn" href={`/find/?lawd=${lawd}`} style="margin-bottom:12px">내 예산으로 {sg.sigungu} 단지 찾기</a>
+  <a class="btn" href={`/find/#lawd=${lawd}`} style="margin-bottom:12px">내 예산으로 {sg.sigungu} 단지 찾기</a>
 
   {lines.length > 0 && (
     <section class="card sec">

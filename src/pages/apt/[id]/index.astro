@@ -123,7 +123,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
             <div><span class="k">전세가율</span><span class="v">{rep.jeonse.ratio != null ? `${rep.jeonse.ratio}%` : '—'}</span></div>
             <div class="gap"><span class="k">갭(매매−전세)</span><span class="v">{eok(rep.price - rep.jeonse.price)}</span></div>
           </div>
-          <a class="btn ghost gapbtn" href={`/find/?mode=gap&gap=${rep.price - rep.jeonse.price}&lawd=${lawd}`}>이 갭으로 다른 단지 보기</a>
+          <a class="btn ghost gapbtn" href={`/find/#mode=gap&gap=${rep.price - rep.jeonse.price}&lawd=${lawd}`}>이 갭으로 다른 단지 보기</a>
           <p class="sub gapnote">
             {sg.regulated
               ? <><b class="warn">규제지역</b> — 전세를 안고 사는 경우 주택담보대출·전입 의무 등 제한이 있습니다(규칙표 2026-07 기준, <a href="/ref/">출처</a>). 갭은 집값에서 전세 보증금을 뺀 산술 값일 뿐, 실제 필요 자금은 대출 가능 여부·취득세·중개보수에 따라 다릅니다.</>
@@ -132,7 +132,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
         </div>
       )}
       <div class="actions">
-        <a class="btn" href={`/find/?budget=${rep.price ?? ''}&lawd=${lawd}`}>이 가격대 다른 단지 보기</a>
+        <a class="btn" href={`/find/#budget=${rep.price ?? ''}&lawd=${lawd}`}>이 가격대 다른 단지 보기</a>
         <button type="button" class="btn ghost cmp" data-cmp={c.id} data-name={c.name}>비교에 담기</button>
       </div>
     </section>
@@ -150,7 +150,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
       <div class="maplinks">
         <a class="btn ghost" href={kakaoMapUrl} rel="noopener" target="_blank">카카오맵에서 열기</a>
         <a class="btn ghost" href={roadviewUrl} rel="noopener" target="_blank">로드뷰</a>
-        <a class="btn ghost" href={`/find/?lawd=${lawd}`}>내 예산으로 {c.sigungu} 찾기</a>
+        <a class="btn ghost" href={`/find/#lawd=${lawd}`}>내 예산으로 {c.sigungu} 찾기</a>
       </div>
     </section>
   )}
