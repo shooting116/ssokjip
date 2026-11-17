@@ -2,7 +2,8 @@
 // 도시철도역(data/poi/stations.json) → 역이 속한 행정구역(시도·시군구·동).
 // 1) 카카오 로컬 API 카테고리 검색(SW8 지하철역)으로 좌표 주변의 같은 이름 역을 찾아 그 역의 주소를 쓴다(구 경계에 걸친 역도 역사 주소 기준).
 // 2) 못 찾으면 좌표 → 법정동(coord2regioncode).
-//   node scripts/geocode-stations.mjs [--force]
+//   node scripts/geocode-stations.mjs [--force] [--locate 노선:역,노선:역]
+//   --locate: 원자료 좌표가 틀린 역을 카카오 키워드 검색(지하철역)으로 다시 찾아 stations.json의 좌표를 고친다(예: --locate 경의중앙선:양원)
 // 결과는 data/poi/station-regions.json 에 "노선|역명" 키로 따로 둔다(역사정보를 다시 받아도 지워지지 않게).
 // 쓰는 곳: 노선별 시세분석(src/lib/data/lines.ts) — 역이 어느 시·구에 속하는지를 주변 단지 추정 대신 실제 행정구역으로 판정.
 // 키: KAKAO_REST_KEY (Actions Secrets). 로그에 키를 찍지 않는다. 이미 받은 역은 건너뛴다(--force 면 다시).
@@ -15,7 +16,11 @@ if (!KEY) { console.error('KAKAO_REST_KEY 환경변수가 없습니다'); proces
 const force = process.argv.includes('--force');
 const SRC = join(ROOT, 'data', 'poi', 'stations.json');
 const OUT = join(ROOT, 'data', 'poi', 'station-regions.json');
-const stations = JSON.parse(readFileSync(SRC, 'utf8')).stations;
+const srcDoc = JSON.parse(readFileSync(SRC, 'utf8'));
+const stations = srcDoc.stations;
+const locateArg = process.argv.indexOf('--locate');
+const locate = locateArg > 0 ? String(process.argv[locateArg + 1] ?? '').split(',').map((x) => x.split(':')).filter((x) => x.length === 2) : [];
+const today = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
 const prev = existsSync(OUT) && !force ? JSON.parse(readFileSync(OUT, 'utf8')).regions : {};
 
 // 카카오는 시도를 정식 이름으로 준다 → 쏙집 표기(짧은 이름)로
@@ -30,19 +35,43 @@ async function region(lat, lng) {
   return { sido: SIDO[d.region_1depth_name] ?? d.region_1depth_name, sgg: d.region_2depth_name, dong: d.region_3depth_name, code: d.code };
 }
 
+/** 카카오 장소의 분류·이름에 이 노선이 들어 있는지 */
+function lineHit(l, d) {
+  const line = l.replace(/\s/g, '');
+  const c = `${d.category_name ?? ''} ${d.place_name}`.replace(/\s/g, '');
+  return line.startsWith('인천') ? c.includes('인천') && c.includes(line.replace('인천', '')) : /^\d호선$/.test(line) ? c.includes(`수도권${line}`) || (c.includes(line) && !/인천|부산|대구|대전|광주/.test(c)) : c.includes(line);
+}
+/** 좌표가 틀린 역: 이름+노선으로 지하철역 장소를 찾아 좌표를 바꾼다. 노선까지 맞는 장소가 없으면 건드리지 않는다 */
+async function relocate(l, n) {
+  const s = stations.find((x) => x.l === l && x.n === n);
+  if (!s) return `${l} ${n}: stations.json에 없음`;
+  const res = await fetch(`https://dapi.kakao.com/v2/local/search/keyword.json?${new URLSearchParams({ query: `${n}역 ${l}`, category_group_code: 'SW8', size: '15' })}`, { headers: { Authorization: `KakaoAK ${KEY}` }, signal: AbortSignal.timeout(20_000) });
+  if (!res.ok) return `${l} ${n}: HTTP ${res.status}`;
+  const docs = ((await res.json()).documents ?? []).filter((d) => d.place_name.replace(/\s/g, '').startsWith(n.replace(/\s/g, '') + '역') && lineHit(l, d));
+  if (!docs.length) return `${l} ${n}: 노선까지 맞는 지하철역 장소를 못 찾음 — 좌표 그대로`;
+  const d = docs[0], lat = +Number(d.y).toFixed(6), lng = +Number(d.x).toFixed(6);
+  const before = `${s.lat},${s.lng}`;
+  if (s.lat === lat && s.lng === lng) return `${l} ${n}: 이미 같은 좌표`;
+  s.fixed = `${today} 카카오 장소 좌표(원자료 ${before})`; s.lat = lat; s.lng = lng;
+  return `${l} ${n}: ${before} → ${lat},${lng} (${d.place_name}, ${d.road_address_name || d.address_name})`;
+}
+
 /** 좌표 주변 지하철역 POI 중 이름이 같은 역. 노선까지 맞으면 우선, 아니면 가장 가까운 것 */
 async function poi(s) {
   const res = await fetch(`https://dapi.kakao.com/v2/local/search/category.json?${new URLSearchParams({ category_group_code: 'SW8', x: String(s.lng), y: String(s.lat), radius: '500', sort: 'distance', size: '15' })}`, { headers: { Authorization: `KakaoAK ${KEY}` }, signal: AbortSignal.timeout(20_000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const docs = ((await res.json()).documents ?? []).filter((d) => d.place_name.replace(/\s/g, '').startsWith(s.n.replace(/\s/g, '')) && d.address_name);
   if (!docs.length) return null;
-  const line = s.l.replace(/\s/g, '');
-  const hit = (d) => { const c = `${d.category_name ?? ''} ${d.place_name}`.replace(/\s/g, ''); return line.startsWith('인천') ? c.includes('인천') && c.includes(line.replace('인천', '')) : /^\d호선$/.test(line) ? c.includes(`수도권${line}`) || (c.includes(line) && !/인천|부산|대구|대전|광주/.test(c)) : c.includes(line); };
+  const hit = (d) => lineHit(s.l, d);
   const d = docs.find(hit) ?? docs[0];
   const t = d.address_name.split(/\s+/);   // 예: "경기 성남시 분당구 정자동 6" · "서울 서초구 서초동 1366"
   const two = /시$/.test(t[1] ?? '') && /구$/.test(t[2] ?? '');
   return { sido: t[0], sgg: two ? `${t[1]} ${t[2]}` : t[1], dong: two ? t[3] : t[2], place: d.place_name, addr: d.road_address_name || d.address_name, via: 'poi', lineMatch: hit(d) };
 }
+
+const moved = [];
+for (const [l, n] of locate) moved.push(await relocate(l, n));
+if (moved.length) { writeFileSync(SRC, JSON.stringify(srcDoc) + '\n'); console.log('[geocode-stations] 좌표 교체: ' + moved.join(' | ')); if (process.env.GITHUB_ACTIONS) console.log(`::notice title=locate::${moved.join(' | ').slice(0, 3800)}`); }
 
 const out = {}; let calls = 0; const miss = []; let nPoi = 0, nCoord = 0, nLineMiss = 0;
 for (const s of stations) {
