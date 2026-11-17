@@ -34,6 +34,12 @@ export const LINES: { slug: string; name: string; color: string; order: 'id' | '
   { slug: '9', name: '9호선', color: '#bdb092', order: 'id' },
   { slug: 'sinbundang', name: '신분당선', color: '#d4003b', order: 'id' },
   { slug: 'suin-bundang', name: '수인분당선', color: '#f5a200', order: 'geo' },
+  {
+    slug: 'gyeongui-jungang', name: '경의중앙선', color: '#77c4a3', order: 'seg',
+    note: '임진강~지평 본선 기준입니다. 서울역 지선(가좌~신촌~서울역)은 싣지 않았습니다.',
+    // 갈라지는 구간을 따로 보여주지 않는 노선은 구간 하나에 제목을 비워 둔다(역 순서만 정해 주는 용도)
+    segments: [{ title: '', names: ['임진강','운천','문산','파주','월롱','금촌','금릉','운정','야당','탄현','일산','풍산','백마','곡산','대곡','능곡','행신','강매','한국항공대','수색','디지털미디어시티','가좌','홍대입구','서강대','공덕','효창공원앞','용산','이촌','서빙고','한남','옥수','응봉','왕십리','청량리','회기','중랑','상봉','망우','양원','구리','도농','양정','덕소','도심','팔당','운길산','양수','신원','국수','아신','오빈','양평','원덕','용문','지평'] }],
+  },
   { slug: 'incheon-1', name: '인천 1호선', color: '#7ca8d5', order: 'id' },
   { slug: 'incheon-2', name: '인천 2호선', color: '#ed8b00', order: 'id' },
 ];
