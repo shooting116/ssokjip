@@ -11,7 +11,7 @@ const CAPITAL = new Set(['서울', '경기', '인천']);
 /** 모든 노선의 공통 기준 지역(2026-11-08 결정: 노선끼리 비교되도록 하나로 통일) */
 export const REF = { lawd: '11650', sido: '서울', sigungu: '서초구', label: '서초구' };
 
-export const LINES: { slug: string; name: string; color: string; order: 'id' | 'geo' | 'rule' | 'seg'; note?: string; segments?: { title: string; names: string[] }[] }[] = [
+export const LINES: { slug: string; name: string; color: string; order: 'id' | 'geo' | 'rule' | 'seg'; note?: string; segments?: { title: string; names: string[] }[]; labels?: Record<string, string> }[] = [
   {
     slug: '1', name: '1호선', color: '#0052a4', order: 'seg',
     note: '서울·경기·인천 구간만 담았습니다(천안·아산 방면 제외). 구로에서 인천행과 수원·평택행으로 갈라집니다.',
@@ -36,9 +36,11 @@ export const LINES: { slug: string; name: string; color: string; order: 'id' | '
   { slug: 'suin-bundang', name: '수인분당선', color: '#f5a200', order: 'geo' },
   {
     slug: 'gyeongui-jungang', name: '경의중앙선', color: '#77c4a3', order: 'seg',
-    note: '임진강~지평 본선 기준입니다. 서울역 지선(가좌~신촌~서울역)은 싣지 않았습니다.',
-    // 갈라지는 구간을 따로 보여주지 않는 노선은 구간 하나에 제목을 비워 둔다(역 순서만 정해 주는 용도)
-    segments: [{ title: '', names: ['임진강','운천','문산','파주','월롱','금촌','금릉','운정','야당','탄현','일산','풍산','백마','곡산','대곡','능곡','행신','강매','한국항공대','수색','디지털미디어시티','가좌','홍대입구','서강대','공덕','효창공원앞','용산','이촌','서빙고','한남','옥수','응봉','왕십리','청량리','회기','중랑','상봉','망우','양원','구리','도농','양정','덕소','도심','팔당','운길산','양수','신원','국수','아신','오빈','양평','원덕','용문','지평'] }],
+    note: '임진강~지평 본선에, 가좌에서 갈라지는 서울역 지선의 두 역을 (지선)으로 표시해 함께 담았습니다.',
+    // 갈라지는 구간을 따로 보여주지 않는 노선은 구간 하나에 제목을 비워 둔다(역 순서만 정해 주는 용도).
+    // 서울역 지선(가좌→신촌→서울역)은 가좌 바로 뒤에 놓고 역 이름에 (지선)을 붙인다. 속한 시·구는 다른 역처럼 역 주소 기준
+    labels: { 신촌: '신촌(지선)', 서울: '서울역(지선)' },
+    segments: [{ title: '', names: ['임진강','운천','문산','파주','월롱','금촌','금릉','운정','야당','탄현','일산','풍산','백마','곡산','대곡','능곡','행신','강매','한국항공대','수색','디지털미디어시티','가좌','신촌','서울','홍대입구','서강대','공덕','효창공원앞','용산','이촌','서빙고','한남','옥수','응봉','왕십리','청량리','회기','중랑','상봉','망우','양원','구리','도농','양정','덕소','도심','팔당','운길산','양수','신원','국수','아신','오빈','양평','원덕','용문','지평'] }],
   },
   { slug: 'incheon-1', name: '인천 1호선', color: '#7ca8d5', order: 'id' },
   { slug: 'incheon-2', name: '인천 2호선', color: '#ed8b00', order: 'id' },
@@ -154,7 +156,7 @@ export function loadLine(slug: string): LineData | null {
     const key = curSeg ? `${curSeg}|${c.lawd}` : c.lawd;   // 구간이 다르면 같은 구도 따로 놓는다
     const first = curSeg && !segShown.has(curSeg) ? (segShown.add(curSeg), curSeg) : null;
     const r = byLawd.get(key) ?? { lawd: c.lawd, sido: c.sido, sigungu: c.sigungu, stations: [], seg: first };
-    const nm = s.st && s.st !== '운행중' ? `${s.n}(${s.st})` : s.n;
+    const nm = def.labels?.[s.n] ?? (s.st && s.st !== '운행중' ? `${s.n}(${s.st})` : s.n);
     if (!r.stations.includes(nm)) r.stations.push(nm);
     byLawd.set(key, r);
   }
@@ -216,6 +218,6 @@ export function linesOfLawd(lawd: string) {
     }
   }
   // 이 시·구의 역이 모두 개통 전인 노선(공사 중 GTX 등)은 뒤로
-  const pending = (x: { stations: string[] }) => Number(x.stations.every((n) => n.includes('(')));
+  const pending = (x: { stations: string[] }) => Number(x.stations.every((n) => /\((?!지선\))/.test(n)));   // (공사중)·(예정) 등. (지선)은 운행 중인 역이므로 제외
   return [...(lawdLines.get(lawd) ?? [])].sort((a, b) => pending(a) - pending(b));
 }
