@@ -1,4 +1,7 @@
 // 화면 표시용 포맷 (만 원 단위 입력)
+/** 역 이름 표시: '수원' → '수원역', 이미 '역'으로 끝나는 '서울역'은 그대로 */
+export const yeok = (n: string): string => (n.endsWith('역') ? n : `${n}역`);
+
 export function eok(man: number | null | undefined, digits = 2): string {
   if (man == null) return '—';
   if (man < 10000) return `${Math.round(man).toLocaleString()}만`;

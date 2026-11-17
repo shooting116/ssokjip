@@ -3,6 +3,8 @@
 // 기준: 예산 이하 단지 전부, 예산의 85~100%가 "쏙 들어오는 구간". 마커는 대표 평형 시세.
 
 declare const kakao: any;
+/** 역 이름 표시: '수원' → '수원역', 이미 '역'으로 끝나는 '서울역'은 그대로 */
+const yeok = (n: string) => (n.endsWith('역') ? n : `${n}역`);
 /** 기능 사용 기록(GA). 고른 방식·정렬·필터 이름만 보내고 예산·지역 입력값은 보내지 않는다 */
 const track = (name: string, label?: string) => { try { (window as any).ssTrack?.(name, label); } catch { /* 기록 실패는 무시 */ } };
 
@@ -153,7 +155,7 @@ function stationsFor(): Station[] {
   for (const r of regs) for (const st of r.s ?? []) { const e = m.get(st.k); if (e) e.c += st.c; else m.set(st.k, { ...st }); }
   return [...m.values()].sort((a, b) => b.c - a.c || a.n.localeCompare(b.n, 'ko'));
 }
-const stationLabel = (x: Station) => `${x.n}역 · ${x.l} ${x.st === '운행중' ? '개통' : x.open ? `${x.open} 예정` : '예정'}`;
+const stationLabel = (x: Station) => `${yeok(x.n)} · ${x.l} ${x.st === '운행중' ? '개통' : x.open ? `${x.open} 예정` : '예정'}`;
 
 // ---------- 데이터 ----------
 async function fetchJson<T>(url: string): Promise<T> { const r = await fetch(url); if (!r.ok) throw new Error(`${url} ${r.status}`); return r.json(); }
@@ -249,7 +251,7 @@ function compute() {
   funnel = [{ label: s.lawd === 'all' ? s.sido + ' 전체' : '지역', n: rows.length }];
   if (s.built !== 'all') funnel.push({ label: '준공', n: cnt.built, key: 'built' });
   if (s.units !== 'all') funnel.push({ label: '세대수', n: cnt.units, key: 'units' });
-  if (s.station) funnel.push({ label: `${s.station.split('·')[0]}역 1.5km 안`, n: cnt.station, key: 'station' });
+  if (s.station) funnel.push({ label: `${yeok(s.station.split('·')[0])} 1.5km 안`, n: cnt.station, key: 'station' });
   if (s.school !== 'all') funnel.push({ label: `초등학교 ${s.school}m 안`, n: cnt.school, key: 'school' });
   if (s.subway !== 'all') funnel.push({ label: `지하철 ${s.subway === 1000 ? '1km' : '500m'} 안`, n: cnt.subway, key: 'subway' });
   if (s.park !== 'all') funnel.push({ label: `세대당 주차 ${s.park}대+`, n: cnt.park, key: 'park' });
@@ -345,7 +347,7 @@ function activeFilters(): string[] {
   const out: string[] = [];
   if (s.built !== 'all') out.push(s.built === 'old' ? '20년 초과' : `${s.built}년 이내`);
   if (s.units !== 'all') out.push(`${s.units.toLocaleString()}세대+`);
-  if (s.station) out.push(`${s.station.split('·')[0]}역 1.5km`);
+  if (s.station) out.push(`${yeok(s.station.split('·')[0])} 1.5km`);
   if (s.fitOnly && s.budgetMan) out.push('쏙 구간만');
   if (s.hotOnly) out.push('거래 활발만');
   if (s.noReg) out.push('규제지역 제외');

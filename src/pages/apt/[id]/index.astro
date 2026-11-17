@@ -3,7 +3,7 @@ import Base from '../../../layouts/Base.astro';
 import Sparkline from '../../../components/Sparkline.astro';
 import { allSigungu, loadSigungu, type Complex } from '../../../lib/data/index.ts';
 import { tradesOf } from '../../../lib/data/trades.ts';
-import { eok, eokMan, ymd, basisLabel, pct, perPyeong } from '../../../lib/ui/format.ts';
+import { eok, eokMan, ymd, basisLabel, pct, perPyeong, yeok } from '../../../lib/ui/format.ts';
 import { reportMailto } from '../../../lib/ui/report.ts';
 
 export async function getStaticPaths() {
@@ -189,7 +189,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
         <div class="badges">
           {c.transit.map((t) => (
             <span class={`tb ${t.status === '운행중' ? 'on' : ''}`}>
-              <b>{t.line}</b> {t.station}역 · {t.dist >= 1000 ? `${(t.dist / 1000).toFixed(1)}km` : `${t.dist}m`}{t.approx ? ' (위치 추정)' : ''}
+              <b>{t.line}</b> {yeok(t.station)} · {t.dist >= 1000 ? `${(t.dist / 1000).toFixed(1)}km` : `${t.dist}m`}{t.approx ? ' (위치 추정)' : ''}
               <em>{t.status === '운행중' ? '개통' : t.open ? `${t.open} 개통 예정` : '예정 · 시기 미정'}</em>
             </span>
           ))}
@@ -380,6 +380,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
   if (mapWrap && mapEl && mapWrap.dataset.key) {
     const d = JSON.parse(mapWrap.dataset.amap!) as { la: number; lo: number; n: string; st: { n: string; l: string; s: string; d: number; la: number; lo: number }[]; sim: { id: string; n: string; la: number; lo: number; p: number | null; r: number | null }[] };
     const esc = (v: unknown) => String(v ?? '').replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch]!);
+    const yeok = (n: string) => (n.endsWith('역') ? n : `${n}역`);   // '서울역'처럼 이미 '역'으로 끝나면 덧붙이지 않는다
     const eok = (man: number | null) => man == null ? '—' : man < 10000 ? `${Math.round(man).toLocaleString()}만` : `${(man / 10000).toFixed(man >= 1000000 ? 0 : 1).replace(/\.0$/, '')}억`;
     const draw = () => {
       const center = new kakao.maps.LatLng(d.la, d.lo);
@@ -398,7 +399,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
         o.setMap(map);
       }
       for (const s of d.st) {
-        const o = new kakao.maps.CustomOverlay({ position: new kakao.maps.LatLng(s.la, s.lo), yAnchor: 0.5, xAnchor: 0.1, zIndex: 2, content: `<div class="am-st"><i></i>${esc(s.n)}역 <span>${esc(s.l)} · ${s.d >= 1000 ? `${(s.d / 1000).toFixed(1)}km` : `${s.d}m`}</span></div>` });
+        const o = new kakao.maps.CustomOverlay({ position: new kakao.maps.LatLng(s.la, s.lo), yAnchor: 0.5, xAnchor: 0.1, zIndex: 2, content: `<div class="am-st"><i></i>${esc(yeok(s.n))} <span>${esc(s.l)} · ${s.d >= 1000 ? `${(s.d / 1000).toFixed(1)}km` : `${s.d}m`}</span></div>` });
         o.setMap(map);
       }
       new kakao.maps.Marker({ position: center, map, title: d.n });

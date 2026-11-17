@@ -1,7 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import { loadSummary, loadSigungu, type Complex } from '../../../lib/data/index.ts';
-import { eok, pct } from '../../../lib/ui/format.ts';
+import { eok, pct, yeok } from '../../../lib/ui/format.ts';
 
 export function getStaticPaths() {
   const sm = loadSummary();
@@ -66,7 +66,7 @@ const desc = `${sido} ${all.length.toLocaleString()}개 단지의 84㎡ 시세 �
   {transit.length > 0 && (
     <section class="card sec" id="transit">
       <h2>철도 호재 1.5km 안 단지 <span class="sub">거래 많은 순 {transit.length}</span></h2>
-      <ol class="rank">{transit.map((c) => { const t = c.transit.find((x) => x.status !== '운행중')!; return <li><a href={`/apt/${c.id}/`}><span class="nm">{c.name} <span class="sub">{c.sigungu} · {t.line} {t.station}역 {t.dist}m · {t.open ? `${t.open} 예정` : '예정'}</span></span><b>{eok(c.price)}</b></a></li>; })}</ol>
+      <ol class="rank">{transit.map((c) => { const t = c.transit.find((x) => x.status !== '운행중')!; return <li><a href={`/apt/${c.id}/`}><span class="nm">{c.name} <span class="sub">{c.sigungu} · {t.line} {yeok(t.station)} {t.dist}m · {t.open ? `${t.open} 예정` : '예정'}</span></span><b>{eok(c.price)}</b></a></li>; })}</ol>
       <p class="src">규칙표(GTX·광역철도·경전철·연장선 11개 노선, 2026-10 조사) 기준. 개통 시기는 정부 발표에 따라 바뀝니다.</p>
     </section>
   )}
