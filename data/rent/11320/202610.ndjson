@@ -219,6 +219,7 @@
 {"lawd":"11320","umdNm":"쌍문동","jibun":"56","apt":"삼익세라믹","area":42.93,"floor":15,"built":1988,"date":"2026-10-16","deposit":4000,"rent":69,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":4000,"preRent":65}
 {"lawd":"11320","umdNm":"쌍문동","jibun":"53","apt":"성원","area":84.98,"floor":5,"built":1989,"date":"2026-10-16","deposit":42000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11320","umdNm":"방학동","jibun":"271-1","apt":"신동아아파트1","area":43.35,"floor":2,"built":1986,"date":"2026-10-16","deposit":3000,"rent":60,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":2000,"preRent":50}
+{"lawd":"11320","umdNm":"창동","jibun":"27","apt":"주공19단지(창동리버타운)","area":60.5,"floor":11,"built":1988,"date":"2026-10-16","deposit":2000,"rent":115,"term":"26.10~27.06","type":"갱신","rrr":null,"preDeposit":2000,"preRent":110}
 {"lawd":"11320","umdNm":"창동","jibun":"30","apt":"창동주공18단지","area":45.55,"floor":3,"built":1988,"date":"2026-10-16","deposit":18900,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":18000,"preRent":0}
 {"lawd":"11320","umdNm":"도봉동","jibun":"30-1","apt":"한신","area":84.94,"floor":13,"built":1995,"date":"2026-10-16","deposit":5000,"rent":145,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":140}
 {"lawd":"11320","umdNm":"쌍문동","jibun":"59","apt":"한양2","area":28.71,"floor":9,"built":1988,"date":"2026-10-16","deposit":1000,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
