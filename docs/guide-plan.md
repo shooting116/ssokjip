@@ -37,7 +37,7 @@
 | 2026-11-16 | 51 | 청약 가점 계산 — 무주택 기간·부양가족·통장 가입기간 | subscription-points | situation | none | 완료(subscription-points) |
 | 2026-11-17 | 52 | 특별공급 종류 — 신혼·생애최초·다자녀·노부모, 소득 기준 | special-supply | situation | calc | 완료(special-supply) |
 | 2026-11-18 | 53 | 전세사기 예방 체크리스트 — 깡통전세·선순위·확정일자 | jeonse-fraud-check | situation | find | 완료(jeonse-fraud-check) |
-| 2026-11-19 | 54 | 스트레스 DSR — 가산금리가 한도를 얼마나 줄이나 | stress-dsr | loan | calc | |
+| 2026-11-19 | 54 | 스트레스 DSR — 가산금리가 한도를 얼마나 줄이나 | stress-dsr | loan | calc | 완료(stress-dsr) |
 | 2026-11-20 | 55 | 전월세 전환율 — 전세를 월세로 바꾸면 얼마인가, 반전세 | rent-conversion | price | none | |
 | 2026-11-21 | 56 | 상속받은 집 — 취득세·양도세 기준일, 비과세 특례 | inherited-home | tax | none | |
 | 2026-11-22 | 57 | 분양가 상한제와 실거주 의무·전매제한 | price-cap-rules | future | none | |
