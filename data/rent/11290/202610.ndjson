@@ -263,6 +263,7 @@
 {"lawd":"11290","umdNm":"하월곡동","jibun":"222","apt":"월곡두산위브","area":84.84,"floor":4,"built":2003,"date":"2026-10-17","deposit":54600,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":52000,"preRent":0}
 {"lawd":"11290","umdNm":"장위동","jibun":"322-22","apt":"장위지웰에스테이트","area":39.65,"floor":11,"built":2022,"date":"2026-10-17","deposit":32000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":27300,"preRent":0}
 {"lawd":"11290","umdNm":"정릉동","jibun":"1031","apt":"정릉힐스테이트3차","area":84.97,"floor":2,"built":2008,"date":"2026-10-17","deposit":30000,"rent":80,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11290","umdNm":"정릉동","jibun":"1031","apt":"정릉힐스테이트3차","area":114.78,"floor":6,"built":2008,"date":"2026-10-17","deposit":60000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":60000,"preRent":0}
 {"lawd":"11290","umdNm":"종암동","jibun":"104-1","apt":"종암에스케이","area":84.72,"floor":17,"built":1999,"date":"2026-10-17","deposit":47250,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":45000,"preRent":0}
 {"lawd":"11290","umdNm":"돈암동","jibun":"609-1","apt":"한진(609-1)","area":59.58,"floor":12,"built":1998,"date":"2026-10-17","deposit":5000,"rent":180,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11290","umdNm":"보문동3가","jibun":"2","apt":"현대I-PARK","area":59.65,"floor":10,"built":2003,"date":"2026-10-17","deposit":60000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -273,6 +274,7 @@
 {"lawd":"11290","umdNm":"정릉동","jibun":"1029","apt":"정릉한일유앤아이","area":82.37,"floor":7,"built":2006,"date":"2026-10-18","deposit":10000,"rent":140,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11290","umdNm":"정릉동","jibun":"1029","apt":"정릉한일유앤아이","area":82.37,"floor":7,"built":2006,"date":"2026-10-18","deposit":10000,"rent":120,"term":"26.11~26.12","type":"갱신","rrr":null,"preDeposit":10000,"preRent":120}
 {"lawd":"11290","umdNm":"종암동","jibun":"128","apt":"극동","area":84.96,"floor":11,"built":2000,"date":"2026-10-19","deposit":43000,"rent":60,"term":"26.11~29.03","type":"갱신","rrr":null,"preDeposit":35000,"preRent":60}
+{"lawd":"11290","umdNm":"길음동","jibun":"1284","apt":"길음뉴타운8단지(래미안)","area":59.99,"floor":7,"built":2010,"date":"2026-10-19","deposit":35000,"rent":60,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":30000,"preRent":60}
 {"lawd":"11290","umdNm":"정릉동","jibun":"1018","apt":"길음뉴타운데시앙","area":84.44,"floor":1,"built":1999,"date":"2026-10-19","deposit":48000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11290","umdNm":"장위동","jibun":"323","apt":"꿈의숲아이파크","area":59.1,"floor":20,"built":2022,"date":"2026-10-19","deposit":10000,"rent":180,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":170}
 {"lawd":"11290","umdNm":"하월곡동","jibun":"228","apt":"꿈의숲푸르지오","area":59.65,"floor":6,"built":2010,"date":"2026-10-19","deposit":41319,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":39359,"preRent":0}
@@ -303,6 +305,7 @@
 {"lawd":"11290","umdNm":"정릉동","jibun":"239","apt":"정릉풍림아이원","area":84.09,"floor":6,"built":2005,"date":"2026-10-20","deposit":5000,"rent":180,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11290","umdNm":"돈암동","jibun":"609-1","apt":"한신","area":132.96,"floor":16,"built":1998,"date":"2026-10-20","deposit":61200,"rent":12,"term":"26.10~27.07","type":"갱신","rrr":"사용","preDeposit":61200,"preRent":0}
 {"lawd":"11290","umdNm":"돈암동","jibun":"609-1","apt":"한진(609-1)","area":84.87,"floor":12,"built":1998,"date":"2026-10-20","deposit":10000,"rent":210,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11290","umdNm":"돈암동","jibun":"609-1","apt":"한진(609-1)","area":84.87,"floor":18,"built":1998,"date":"2026-10-20","deposit":10000,"rent":200,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":10000,"preRent":165}
 {"lawd":"11290","umdNm":"종암동","jibun":"128","apt":"극동","area":84.96,"floor":8,"built":2000,"date":"2026-10-21","deposit":53000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":32000,"preRent":26}
 {"lawd":"11290","umdNm":"길음동","jibun":"1280","apt":"길음뉴타운2단지푸르지오","area":84.97,"floor":7,"built":2005,"date":"2026-10-21","deposit":30000,"rent":180,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11290","umdNm":"길음동","jibun":"1284","apt":"길음뉴타운8단지(래미안)","area":59.99,"floor":8,"built":2010,"date":"2026-10-21","deposit":59500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":54500,"preRent":0}
@@ -338,6 +341,7 @@
 {"lawd":"11290","umdNm":"돈암동","jibun":"609-1","apt":"한진(609-1)","area":59.58,"floor":17,"built":1998,"date":"2026-10-22","deposit":10000,"rent":140,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11290","umdNm":"안암동3가","jibun":"138","apt":"해링턴플레이스안암","area":84.83,"floor":7,"built":2024,"date":"2026-10-22","deposit":70350,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":67000,"preRent":0}
 {"lawd":"11290","umdNm":"길음동","jibun":"1279","apt":"길음뉴타운1단지(래미안길음1차)","area":84.96,"floor":2,"built":2003,"date":"2026-10-23","deposit":25000,"rent":200,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":5000,"preRent":190}
+{"lawd":"11290","umdNm":"길음동","jibun":"1283","apt":"길음뉴타운6단지(래미안)","area":59.37,"floor":15,"built":2007,"date":"2026-10-23","deposit":53550,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":51000,"preRent":0}
 {"lawd":"11290","umdNm":"길음동","jibun":"1285","apt":"길음뉴타운7단지(두산위브)","area":84.96,"floor":6,"built":2010,"date":"2026-10-23","deposit":70000,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":67000,"preRent":0}
 {"lawd":"11290","umdNm":"정릉동","jibun":"1018","apt":"길음뉴타운데시앙","area":114.76,"floor":6,"built":1999,"date":"2026-10-23","deposit":50000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":48000,"preRent":0}
 {"lawd":"11290","umdNm":"장위동","jibun":"317","apt":"꿈의숲대명루첸아파트","area":122.02,"floor":2,"built":2008,"date":"2026-10-23","deposit":57000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":55100,"preRent":0}

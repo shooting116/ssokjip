@@ -703,6 +703,7 @@
 {"lawd":"41281","umdNm":"덕은동","jibun":"658","apt":"DMC한강숲중흥S-CLASS","area":59.99,"floor":8,"built":2022,"date":"2026-10-21","deposit":46020,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":46020,"preRent":0}
 {"lawd":"41281","umdNm":"덕은동","jibun":"658","apt":"DMC한강숲중흥S-CLASS","area":59.99,"floor":12,"built":2022,"date":"2026-10-21","deposit":46020,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":46020,"preRent":0}
 {"lawd":"41281","umdNm":"덕은동","jibun":"658","apt":"DMC한강숲중흥S-CLASS","area":59.99,"floor":16,"built":2022,"date":"2026-10-21","deposit":46020,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":46020,"preRent":0}
+{"lawd":"41281","umdNm":"덕은동","jibun":"658","apt":"DMC한강숲중흥S-CLASS","area":59.99,"floor":22,"built":2022,"date":"2026-10-21","deposit":45550,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":45550,"preRent":0}
 {"lawd":"41281","umdNm":"덕은동","jibun":"679","apt":"DMC한강자이더헤리티지","area":99.67,"floor":14,"built":2022,"date":"2026-10-21","deposit":10000,"rent":350,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41281","umdNm":"향동동","jibun":"571","apt":"DMC호반베르디움더포레2단지","area":84.93,"floor":11,"built":2019,"date":"2026-10-21","deposit":10000,"rent":200,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":190}
 {"lawd":"41281","umdNm":"신원동","jibun":"595","apt":"고양삼송동일스위트파크뷰7(1차)","area":76.04,"floor":12,"built":2017,"date":"2026-10-22","deposit":45000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -898,6 +899,7 @@
 {"lawd":"41281","umdNm":"행신동","jibun":"953","apt":"햇빛주공23","area":59.93,"floor":11,"built":1996,"date":"2026-10-28","deposit":24675,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":23500,"preRent":0}
 {"lawd":"41281","umdNm":"행신동","jibun":"653-38","apt":"행신벽산","area":84.86,"floor":13,"built":2000,"date":"2026-10-28","deposit":28350,"rent":0,"term":"26.10~27.10","type":"갱신","rrr":"사용","preDeposit":27000,"preRent":0}
 {"lawd":"41281","umdNm":"행신동","jibun":"1131","apt":"행신파밀리에트라이하이","area":84.91,"floor":4,"built":2022,"date":"2026-10-28","deposit":10000,"rent":140,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":10000,"preRent":140}
+{"lawd":"41281","umdNm":"향동동","jibun":"406","apt":"향동마을4단지(임대)","area":36.07,"floor":13,"built":2020,"date":"2026-10-28","deposit":1026,"rent":39,"term":"26.10~28.12","type":"갱신","rrr":null,"preDeposit":5926,"preRent":25}
 {"lawd":"41281","umdNm":"고양동","jibun":"240-6","apt":"현대1","area":84.36,"floor":8,"built":1997,"date":"2026-10-28","deposit":22000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41281","umdNm":"향동동","jibun":"405","apt":"DMC두산위브더퍼스트","area":59.94,"floor":15,"built":2020,"date":"2026-10-28","deposit":5000,"rent":185,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41281","umdNm":"덕은동","jibun":"683","apt":"DMC디에트르한강","area":84.97,"floor":8,"built":2022,"date":"2026-10-28","deposit":55650,"rent":0,"term":"26.11~27.11","type":"갱신","rrr":null,"preDeposit":55650,"preRent":0}
@@ -947,6 +949,7 @@
 {"lawd":"41281","umdNm":"원흥동","jibun":"600","apt":"고양삼송엘에이치13단지아파트","area":46.69,"floor":2,"built":2022,"date":"2026-10-30","deposit":1242,"rent":34,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":5579,"preRent":25}
 {"lawd":"41281","umdNm":"도내동","jibun":"1107","apt":"고양원흥동일스위트","area":85,"floor":16,"built":2018,"date":"2026-10-30","deposit":30000,"rent":100,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41281","umdNm":"토당동","jibun":"860","apt":"능곡대림","area":59.89,"floor":12,"built":1996,"date":"2026-10-30","deposit":28000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41281","umdNm":"토당동","jibun":"53-44","apt":"능곡현대홈타운2","area":84.45,"floor":14,"built":2002,"date":"2026-10-30","deposit":45000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41281","umdNm":"화정동","jibun":"851","apt":"달빛마을(부영)2","area":50,"floor":9,"built":1996,"date":"2026-10-30","deposit":21500,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41281","umdNm":"화정동","jibun":"952","apt":"별빛마을(부영)8(좋은집)","area":50,"floor":3,"built":1995,"date":"2026-10-30","deposit":3000,"rent":110,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41281","umdNm":"삼송동","jibun":"311","apt":"삼송2차아이파크","area":84.74,"floor":1,"built":2015,"date":"2026-10-30","deposit":55500,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":47000,"preRent":0}

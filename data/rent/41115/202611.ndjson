@@ -35,6 +35,7 @@
 {"lawd":"41115","umdNm":"인계동","jibun":"1023-16","apt":"RAUM1","area":17.39,"floor":7,"built":2021,"date":"2026-11-04","deposit":3000,"rent":62,"term":"26.12~27.12","type":"갱신","rrr":null,"preDeposit":3000,"preRent":62}
 {"lawd":"41115","umdNm":"화서동","jibun":"730","apt":"꽃뫼마을코오롱","area":84.73,"floor":20,"built":2002,"date":"2026-11-05","deposit":10000,"rent":150,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41115","umdNm":"우만동","jibun":"533-1","apt":"동도센트리움","area":84.92,"floor":2,"built":2007,"date":"2026-11-05","deposit":10000,"rent":130,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41115","umdNm":"인계동","jibun":"371-1","apt":"삼성","area":84.88,"floor":15,"built":1996,"date":"2026-11-05","deposit":30500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41115","umdNm":"고등동","jibun":"321","apt":"수원역푸르지오더스마트","area":79.99,"floor":4,"built":2022,"date":"2026-11-05","deposit":17500,"rent":52,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41115","umdNm":"우만동","jibun":"28","apt":"우만주공1단지","area":38.52,"floor":2,"built":1988,"date":"2026-11-05","deposit":1500,"rent":70,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41115","umdNm":"우만동","jibun":"28","apt":"우만주공2단지","area":61.52,"floor":3,"built":1989,"date":"2026-11-05","deposit":19000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":18100,"preRent":0}
@@ -104,6 +105,7 @@
 {"lawd":"41115","umdNm":"우만동","jibun":"300","apt":"우만주공4단지","area":36.16,"floor":11,"built":1992,"date":"2026-11-13","deposit":15000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41115","umdNm":"화서동","jibun":"650","apt":"화서주공4단지","area":59.98,"floor":11,"built":1997,"date":"2026-11-13","deposit":500,"rent":150,"term":"27.01~27.04","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41115","umdNm":"매교동","jibun":"292","apt":"힐스테이트푸르지오수원","area":39.74,"floor":13,"built":2023,"date":"2026-11-13","deposit":26265,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":25500,"preRent":0}
+{"lawd":"41115","umdNm":"지동","jibun":"138-24","apt":"삼호","area":59.9,"floor":9,"built":1995,"date":"2026-11-14","deposit":3000,"rent":75,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41115","umdNm":"고등동","jibun":"310","apt":"수원역푸르지오자이","area":74.98,"floor":6,"built":2021,"date":"2026-11-14","deposit":50000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41115","umdNm":"인계동","jibun":"1171","apt":"수원인계동동문굿모닝힐아파트","area":79.68,"floor":2,"built":2020,"date":"2026-11-14","deposit":50000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41115","umdNm":"인계동","jibun":"1024-10","apt":"에코원","area":16.09,"floor":3,"built":2011,"date":"2026-11-14","deposit":2000,"rent":21,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -111,4 +113,11 @@
 {"lawd":"41115","umdNm":"매교동","jibun":"292","apt":"힐스테이트푸르지오수원","area":59.95,"floor":14,"built":2023,"date":"2026-11-14","deposit":45000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41115","umdNm":"우만동","jibun":"300","apt":"우만주공4단지","area":36.34,"floor":1,"built":1992,"date":"2026-11-15","deposit":14000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41115","umdNm":"매교동","jibun":"292","apt":"힐스테이트푸르지오수원","area":74.96,"floor":7,"built":2023,"date":"2026-11-15","deposit":49000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41115","umdNm":"우만동","jibun":"533-1","apt":"동도센트리움","area":84.86,"floor":13,"built":2007,"date":"2026-11-16","deposit":41000,"rent":0,"term":"27.02~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41115","umdNm":"인계동","jibun":"1173","apt":"수원센트럴아이파크자이","area":39.77,"floor":14,"built":2024,"date":"2026-11-16","deposit":3000,"rent":130,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41115","umdNm":"인계동","jibun":"1171","apt":"수원인계동동문굿모닝힐아파트","area":63.52,"floor":25,"built":2020,"date":"2026-11-16","deposit":38850,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":37000,"preRent":0}
+{"lawd":"41115","umdNm":"매교동","jibun":"292","apt":"힐스테이트푸르지오수원","area":59.95,"floor":14,"built":2023,"date":"2026-11-16","deposit":45000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41115","umdNm":"매산로2가","jibun":"90","apt":"대한대우","area":59.95,"floor":9,"built":1999,"date":"2026-11-17","deposit":3000,"rent":100,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41115","umdNm":"고등동","jibun":"305-10","apt":"루체스타","area":14.89,"floor":12,"built":2020,"date":"2026-11-17","deposit":8700,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41115","umdNm":"우만동","jibun":"28","apt":"우만주공2단지","area":49.94,"floor":4,"built":1989,"date":"2026-11-17","deposit":20000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":18500,"preRent":0}
+{"lawd":"41115","umdNm":"인계동","jibun":"1170","apt":"인계한양수자인","area":59.98,"floor":19,"built":2019,"date":"2026-11-17","deposit":5000,"rent":155,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
