@@ -3,7 +3,7 @@ import Base from '../../../layouts/Base.astro';
 import Sparkline from '../../../components/Sparkline.astro';
 import { allSigungu, loadSigungu, type Complex } from '../../../lib/data/index.ts';
 import { tradesOf } from '../../../lib/data/trades.ts';
-import { eok, eokMan, ymd, basisLabel, pct, perPyeong, yeok } from '../../../lib/ui/format.ts';
+import { eok, eokMan, ymd, basisLabel, pct, perPyeong, yeok, dongLabel } from '../../../lib/ui/format.ts';
 import { reportMailto } from '../../../lib/ui/report.ts';
 
 export async function getStaticPaths() {
@@ -54,7 +54,7 @@ const rowsHtml = all.map((t, i) => {
   const tag = floorTag(t.floor);
   return `<tr${t.cancel ? ' class="cancel"' : ''}${i >= SHOW ? ' hidden' : ''} data-k="${typeKeyOf(t.area)}"${isLow(t.floor) ? ' data-low="1"' : ''}>` +
     `<td>${ymd(t.date)}${t.rgst ? '<span class="sub"> 등기</span>' : ''}</td>` +
-    `<td>${typeKeyOf(t.area)}㎡ <span class="sub">${t.area}</span>${t.dong ? `<span class="sub"> ${esc(t.dong)}동</span>` : ''}</td>` +
+    `<td>${typeKeyOf(t.area)}㎡ <span class="sub">${t.area}</span>${t.dong ? `<span class="sub"> ${esc(dongLabel(t.dong))}</span>` : ''}</td>` +
     `<td>${t.floor ?? '-'}${tag ? `<span class="ft">${tag}</span>` : ''}</td>` +
     `<td class="r"><b>${eokMan(t.amt)}</b>${newHigh.has(i) ? '<span class="ft hi">신고가</span>' : ''}${t.cancel ? '<span class="pill p-bad">해제</span>' : ''}${t.direct ? '<span class="pill p-soft">직거래</span>' : ''}</td></tr>`;
 }).join('');

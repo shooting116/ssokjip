@@ -2,6 +2,10 @@
 /** 역 이름 표시: '수원' → '수원역', 이미 '역'으로 끝나는 '서울역'은 그대로 */
 export const yeok = (n: string): string => (n.endsWith('역') ? n : `${n}역`);
 
+/** 실거래의 동 표시. 원자료(국토부 aptDong)는 '102', '102동', '가', '한신아파트 101동', '킹덤시티'처럼 제각각이다.
+ *  숫자나 한 글자(가·A)일 때만 '동'을 붙이고, 이미 '동'이 들어 있거나 이름 형태면 그대로 둔다. */
+export const dongLabel = (g: string): string => (g.includes('동') ? g : /^(\d+(-\d+)?|[A-Za-z]|[가-힣])$/.test(g) ? `${g}동` : g);
+
 export function eok(man: number | null | undefined, digits = 2): string {
   if (man == null) return '—';
   if (man < 10000) return `${Math.round(man).toLocaleString()}만`;
