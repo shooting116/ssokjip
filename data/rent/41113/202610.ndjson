@@ -373,6 +373,7 @@
 {"lawd":"41113","umdNm":"세류동","jibun":"817-72","apt":"매교역팰루시드","area":59.98,"floor":11,"built":2026,"date":"2026-10-22","deposit":48000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"세류동","jibun":"817-72","apt":"매교역팰루시드","area":84.14,"floor":8,"built":2026,"date":"2026-10-22","deposit":54000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"호매실동","jibun":"1380","apt":"벨섬시티","area":84.94,"floor":3,"built":2017,"date":"2026-10-22","deposit":17267,"rent":30,"term":"26.11~28.02","type":"갱신","rrr":null,"preDeposit":8826,"preRent":67}
+{"lawd":"41113","umdNm":"호매실동","jibun":"82-5","apt":"삼익2차","area":59.4,"floor":10,"built":1998,"date":"2026-10-22","deposit":19000,"rent":20,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"권선동","jibun":"1188-1","apt":"성지","area":49.4,"floor":13,"built":1994,"date":"2026-10-22","deposit":20000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":20000,"preRent":0}
 {"lawd":"41113","umdNm":"권선동","jibun":"1337","apt":"수원아이파크시티7단지","area":59.88,"floor":5,"built":2016,"date":"2026-10-22","deposit":38100,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":37000,"preRent":0}
 {"lawd":"41113","umdNm":"세류동","jibun":"1280","apt":"수원역센트럴어반시티아파트(수원센트럴타운3단지)","area":84.98,"floor":15,"built":2015,"date":"2026-10-22","deposit":45000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -500,6 +501,7 @@
 {"lawd":"41113","umdNm":"권선동","jibun":"1011-15","apt":"DK-ECO권선","area":19.66,"floor":6,"built":2021,"date":"2026-10-29","deposit":200,"rent":31,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"금곡동","jibun":"861","apt":"LH수원당수2단지","area":44.49,"floor":6,"built":2024,"date":"2026-10-29","deposit":8524,"rent":28,"term":"26.10~26.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"금곡동","jibun":"66","apt":"강남","area":84.65,"floor":11,"built":1996,"date":"2026-10-30","deposit":27300,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":26000,"preRent":0}
+{"lawd":"41113","umdNm":"곡반정동","jibun":"548","apt":"권선신일유토빌","area":60,"floor":3,"built":2013,"date":"2026-10-30","deposit":28875,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":27500,"preRent":0}
 {"lawd":"41113","umdNm":"권선동","jibun":"1330","apt":"권선자이e편한세상","area":59.96,"floor":15,"built":2011,"date":"2026-10-30","deposit":10000,"rent":165,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"세류동","jibun":"817-72","apt":"매교역팰루시드","area":59.98,"floor":11,"built":2026,"date":"2026-10-30","deposit":30000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"호매실동","jibun":"1380","apt":"벨섬시티","area":84.85,"floor":23,"built":2017,"date":"2026-10-30","deposit":17267,"rent":30,"term":"26.11~28.02","type":"갱신","rrr":null,"preDeposit":16826,"preRent":27}

@@ -114,6 +114,7 @@
 {"lawd":"11410","umdNm":"남가좌동","jibun":"385","apt":"DMC파크뷰자이5단지","area":59.98,"floor":2,"built":2015,"date":"2026-11-11","deposit":65000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"북아현동","jibun":"1013","apt":"e편한세상신촌1단지","area":84.93,"floor":2,"built":2018,"date":"2026-11-11","deposit":70000,"rent":80,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"북아현동","jibun":"1013","apt":"e편한세상신촌3단지","area":59.97,"floor":11,"built":2018,"date":"2026-11-11","deposit":45000,"rent":165,"term":"27.02~29.02","type":"갱신","rrr":null,"preDeposit":40290,"preRent":85}
+{"lawd":"11410","umdNm":"남가좌동","jibun":"376","apt":"남가좌동현대","area":114.9,"floor":1,"built":1999,"date":"2026-11-12","deposit":51850,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":49350,"preRent":0}
 {"lawd":"11410","umdNm":"천연동","jibun":"145","apt":"천연뜨란채","area":55.82,"floor":4,"built":2006,"date":"2026-11-12","deposit":6000,"rent":130,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":6000,"preRent":123}
 {"lawd":"11410","umdNm":"홍은동","jibun":"470","apt":"힐스테이트홍은포레스트","area":59.84,"floor":2,"built":2023,"date":"2026-11-12","deposit":52500,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":50000,"preRent":0}
 {"lawd":"11410","umdNm":"남가좌동","jibun":"385","apt":"DMC파크뷰자이2단지","area":84.97,"floor":17,"built":2015,"date":"2026-11-12","deposit":73500,"rent":0,"term":"27.03~29.03","type":"갱신","rrr":"사용","preDeposit":70000,"preRent":0}
@@ -133,6 +134,7 @@
 {"lawd":"11410","umdNm":"홍은동","jibun":"469","apt":"e편한세상서대문","area":59.99,"floor":12,"built":2023,"date":"2026-11-13","deposit":65000,"rent":0,"term":"27.02~29.02","type":"갱신","rrr":null,"preDeposit":49350,"preRent":0}
 {"lawd":"11410","umdNm":"북아현동","jibun":"1013","apt":"e편한세상신촌1단지","area":32.74,"floor":3,"built":2018,"date":"2026-11-13","deposit":11271,"rent":44,"term":"26.12~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"북아현동","jibun":"1013","apt":"e편한세상신촌1단지","area":32.74,"floor":7,"built":2018,"date":"2026-11-13","deposit":11271,"rent":44,"term":"26.12~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11410","umdNm":"남가좌동","jibun":"376","apt":"남가좌동현대","area":84.78,"floor":2,"built":1999,"date":"2026-11-14","deposit":52500,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":50000,"preRent":0}
 {"lawd":"11410","umdNm":"북가좌동","jibun":"488","apt":"대경아르체","area":48.48,"floor":7,"built":2018,"date":"2026-11-14","deposit":5000,"rent":140,"term":"27.03~29.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"북아현동","jibun":"1009","apt":"두산","area":59.96,"floor":16,"built":1999,"date":"2026-11-14","deposit":60000,"rent":0,"term":"27.03~29.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"남가좌동","jibun":"390","apt":"래미안루센티아","area":84.84,"floor":2,"built":2020,"date":"2026-11-14","deposit":75000,"rent":0,"term":"27.02~27.08","type":"갱신","rrr":"사용","preDeposit":75000,"preRent":0}
@@ -142,6 +144,7 @@
 {"lawd":"11410","umdNm":"북아현동","jibun":"1011","apt":"신촌푸르지오","area":84.96,"floor":5,"built":2015,"date":"2026-11-14","deposit":87100,"rent":0,"term":"27.02~29.02","type":"갱신","rrr":"사용","preDeposit":83000,"preRent":0}
 {"lawd":"11410","umdNm":"홍제동","jibun":"473","apt":"홍제센트럴IPARK","area":34.89,"floor":12,"built":2020,"date":"2026-11-14","deposit":10546,"rent":40,"term":"26.12~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"홍제동","jibun":"459","apt":"홍제원현대(459-0)","area":84.9,"floor":12,"built":2000,"date":"2026-11-14","deposit":55000,"rent":0,"term":"27.01~29.02","type":"갱신","rrr":null,"preDeposit":50000,"preRent":0}
+{"lawd":"11410","umdNm":"홍제동","jibun":"82","apt":"홍제한양","area":60,"floor":3,"built":1993,"date":"2026-11-14","deposit":41000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"홍제동","jibun":"82","apt":"홍제한양","area":60.06,"floor":3,"built":1993,"date":"2026-11-14","deposit":41000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"홍제동","jibun":"82","apt":"홍제한양","area":60.06,"floor":8,"built":1993,"date":"2026-11-14","deposit":22000,"rent":100,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"홍제동","jibun":"331","apt":"홍제현대","area":106.18,"floor":15,"built":1992,"date":"2026-11-14","deposit":70000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":63000,"preRent":0}
@@ -181,7 +184,17 @@
 {"lawd":"11410","umdNm":"북가좌동","jibun":"481","apt":"DMC래미안e편한세상","area":84.95,"floor":15,"built":2012,"date":"2026-11-17","deposit":75000,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":75000,"preRent":0}
 {"lawd":"11410","umdNm":"남가좌동","jibun":"385","apt":"DMC파크뷰자이2단지","area":84.91,"floor":19,"built":2015,"date":"2026-11-17","deposit":20000,"rent":275,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"북아현동","jibun":"1013","apt":"e편한세상신촌3단지","area":59.97,"floor":8,"built":2018,"date":"2026-11-17","deposit":90000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11410","umdNm":"남가좌동","jibun":"269-1","apt":"스타타워","area":17.18,"floor":8,"built":2022,"date":"2026-11-18","deposit":8600,"rent":44,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"남가좌동","jibun":"269-1","apt":"스타타워","area":22.28,"floor":12,"built":2022,"date":"2026-11-18","deposit":9940,"rent":53,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":9940,"preRent":50}
 {"lawd":"11410","umdNm":"홍제동","jibun":"453","apt":"청구1차","area":84.78,"floor":2,"built":1994,"date":"2026-11-18","deposit":35000,"rent":90,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11410","umdNm":"북가좌동","jibun":"481","apt":"DMC래미안e편한세상","area":84.92,"floor":11,"built":2012,"date":"2026-11-18","deposit":67200,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":64000,"preRent":0}
+{"lawd":"11410","umdNm":"남가좌동","jibun":"385","apt":"DMC파크뷰자이1단지","area":84.98,"floor":15,"built":2015,"date":"2026-11-18","deposit":79000,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":72000,"preRent":0}
 {"lawd":"11410","umdNm":"북아현동","jibun":"1013","apt":"e편한세상신촌2단지","area":84.98,"floor":12,"built":2018,"date":"2026-11-18","deposit":10000,"rent":350,"term":"27.02~29.02","type":"갱신","rrr":null,"preDeposit":10000,"preRent":285}
+{"lawd":"11410","umdNm":"홍은동","jibun":"464","apt":"북한산더샵","area":59.87,"floor":19,"built":2017,"date":"2026-11-19","deposit":56500,"rent":33,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":55000,"preRent":20}
+{"lawd":"11410","umdNm":"홍은동","jibun":"467","apt":"북한산두산위브","area":84.98,"floor":6,"built":2020,"date":"2026-11-19","deposit":65000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11410","umdNm":"홍은동","jibun":"468","apt":"북한산두산위브2차","area":59.75,"floor":7,"built":2021,"date":"2026-11-19","deposit":51000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11410","umdNm":"남가좌동","jibun":"269-1","apt":"스타타워","area":17.18,"floor":10,"built":2022,"date":"2026-11-19","deposit":8600,"rent":44,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":8600,"preRent":42}
+{"lawd":"11410","umdNm":"남가좌동","jibun":"269-1","apt":"스타타워","area":17.18,"floor":13,"built":2022,"date":"2026-11-19","deposit":8600,"rent":44,"term":"26.12~27.12","type":"갱신","rrr":null,"preDeposit":8600,"preRent":43}
+{"lawd":"11410","umdNm":"대현동","jibun":"144","apt":"신촌럭키","area":59.7,"floor":7,"built":1999,"date":"2026-11-19","deposit":52000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11410","umdNm":"북아현동","jibun":"998","apt":"신촌헤리센트","area":29.86,"floor":8,"built":2022,"date":"2026-11-19","deposit":3000,"rent":170,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11410","umdNm":"남가좌동","jibun":"389","apt":"DMC에코자이","area":59.79,"floor":7,"built":2019,"date":"2026-11-19","deposit":60000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
