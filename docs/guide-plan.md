@@ -39,7 +39,7 @@
 | 2026-11-18 | 53 | 전세사기 예방 체크리스트 — 깡통전세·선순위·확정일자 | jeonse-fraud-check | situation | find | 완료(jeonse-fraud-check) |
 | 2026-11-19 | 54 | 스트레스 DSR — 가산금리가 한도를 얼마나 줄이나 | stress-dsr | loan | calc | 완료(stress-dsr) |
 | 2026-11-20 | 55 | 전월세 전환율 — 전세를 월세로 바꾸면 얼마인가, 반전세 | rent-conversion | price | none | 완료(rent-conversion) |
-| 2026-11-21 | 56 | 상속받은 집 — 취득세·양도세 기준일, 비과세 특례 | inherited-home | tax | none | |
+| 2026-11-21 | 56 | 상속받은 집 — 취득세·양도세 기준일, 비과세 특례 | inherited-home | tax | none | 완료(inherited-home) |
 | 2026-11-22 | 57 | 분양가 상한제와 실거주 의무·전매제한 | price-cap-rules | future | none | |
 | 2026-11-23 | 58 | 전세보증금 반환보증(HUG·HF·SGI) — 가입 조건과 90% 기준 | deposit-guarantee | situation | find | |
 | 2026-11-24 | 59 | 전세대출 기초 — 버팀목·일반 전세대출, DSR에 들어가나 | jeonse-loans | loan | calc | |
