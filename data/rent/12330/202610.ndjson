@@ -490,12 +490,14 @@
 {"lawd":"12330","umdNm":"월곡동","jibun":"538-2","apt":"하남부영","area":60,"floor":9,"built":1992,"date":"2026-10-23","deposit":7119,"rent":0,"term":"26.11~27.11","type":"갱신","rrr":null,"preDeposit":6987,"preRent":0}
 {"lawd":"12330","umdNm":"쌍암동","jibun":"694-116","apt":"한양에드가303동","area":24.87,"floor":8,"built":2013,"date":"2026-10-23","deposit":300,"rent":40,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"도산동","jibun":"840-1","apt":"호반청암빌라트","area":59.79,"floor":3,"built":1993,"date":"2026-10-23","deposit":1000,"rent":45,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"12330","umdNm":"선암동","jibun":"549","apt":"광주선운지구이지더원3단지","area":72.68,"floor":11,"built":2016,"date":"2026-10-24","deposit":3000,"rent":100,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"선암동","jibun":"549","apt":"광주선운지구이지더원3단지","area":72.68,"floor":17,"built":2016,"date":"2026-10-24","deposit":26000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"송정동","jibun":"238","apt":"금강3차","area":59.94,"floor":10,"built":2000,"date":"2026-10-24","deposit":4000,"rent":25,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":4000,"preRent":25}
 {"lawd":"12330","umdNm":"월계동","jibun":"764-2","apt":"서라","area":59.93,"floor":2,"built":1995,"date":"2026-10-24","deposit":13000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"선암동","jibun":"782","apt":"선운지구진아리채","area":78.09,"floor":14,"built":2014,"date":"2026-10-24","deposit":2000,"rent":100,"term":"26.11~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"송정동","jibun":"840-33","apt":"송정역센트럴시티","area":39.66,"floor":8,"built":2016,"date":"2026-10-24","deposit":500,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"운남동","jibun":"800","apt":"우방아이유쉘","area":59.77,"floor":2,"built":2015,"date":"2026-10-24","deposit":3000,"rent":70,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":23000,"preRent":0}
+{"lawd":"12330","umdNm":"우산동","jibun":"1608-1","apt":"우산동AM-City스카이하이","area":20.19,"floor":11,"built":2014,"date":"2026-10-24","deposit":300,"rent":35,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"운남동","jibun":"776-1","apt":"운남주공1,2단지","area":59.76,"floor":11,"built":1997,"date":"2026-10-24","deposit":11000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"운남동","jibun":"777-1","apt":"운남주공3단지","area":59.76,"floor":20,"built":1996,"date":"2026-10-24","deposit":10800,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"운남동","jibun":"771-1","apt":"운남주공4단지","area":37.67,"floor":15,"built":1996,"date":"2026-10-24","deposit":500,"rent":45,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -643,6 +645,7 @@
 {"lawd":"12330","umdNm":"우산동","jibun":"1571-1","apt":"하남주공(2단지)","area":44.52,"floor":15,"built":1991,"date":"2026-10-30","deposit":300,"rent":47,"term":"26.10~28.08","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"월곡동","jibun":"614-1","apt":"한성1차","area":49.32,"floor":2,"built":1988,"date":"2026-10-30","deposit":300,"rent":48,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"월계동","jibun":"764-3","apt":"호반1차","area":59.95,"floor":4,"built":1995,"date":"2026-10-30","deposit":13500,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":13500,"preRent":0}
+{"lawd":"12330","umdNm":"소촌동","jibun":"880","apt":"힐스테이트광산","area":84.92,"floor":3,"built":2022,"date":"2026-10-30","deposit":2000,"rent":120,"term":"26.11~27.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"우산동","jibun":"1594-2","apt":"MaruHiII","area":20.75,"floor":6,"built":2014,"date":"2026-10-30","deposit":300,"rent":35,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"선암동","jibun":"549","apt":"광주선운지구이지더원3단지","area":72,"floor":17,"built":2016,"date":"2026-10-31","deposit":25000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"신가동","jibun":"1336","apt":"모아엘가더수완","area":84.98,"floor":7,"built":2022,"date":"2026-10-31","deposit":4000,"rent":115,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
