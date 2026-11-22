@@ -556,6 +556,7 @@
 {"lawd":"41135","umdNm":"서현동","jibun":"91","apt":"시범한양","area":35.1,"floor":8,"built":1991,"date":"2026-10-15","deposit":2000,"rent":83,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":2000,"preRent":78}
 {"lawd":"41135","umdNm":"수내동","jibun":"36","apt":"양지마을(2단지)(청구)","area":134.8,"floor":15,"built":1992,"date":"2026-10-15","deposit":30000,"rent":260,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41135","umdNm":"이매동","jibun":"100","apt":"이매촌(삼성)","area":73.25,"floor":4,"built":1994,"date":"2026-10-15","deposit":35000,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41135","umdNm":"이매동","jibun":"124","apt":"이매촌(한신)","area":50,"floor":7,"built":1992,"date":"2026-10-15","deposit":10000,"rent":215,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41135","umdNm":"분당동","jibun":"66","apt":"장안타운(건영)","area":131.55,"floor":3,"built":1993,"date":"2026-10-15","deposit":69600,"rent":0,"term":"26.10~28.08","type":"갱신","rrr":"사용","preDeposit":69500,"preRent":0}
 {"lawd":"41135","umdNm":"정자동","jibun":"200","apt":"정든마을(1단지)(동아)","area":101.99,"floor":7,"built":1995,"date":"2026-10-15","deposit":70000,"rent":60,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41135","umdNm":"정자동","jibun":"198","apt":"정든마을(6단지)(우성)","area":48,"floor":6,"built":1994,"date":"2026-10-15","deposit":46000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
