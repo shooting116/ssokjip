@@ -42,7 +42,7 @@
 | 2026-11-21 | 56 | 상속받은 집 — 취득세·양도세 기준일, 비과세 특례 | inherited-home | tax | none | 완료(inherited-home) |
 | 2026-11-22 | 57 | 분양가 상한제와 실거주 의무·전매제한 | price-cap-rules | future | none | 완료(price-cap-rules) |
 | 2026-11-23 | 58 | 전세보증금 반환보증(HUG·HF·SGI) — 가입 조건과 90% 기준 | deposit-guarantee | situation | find | 완료(deposit-guarantee) |
-| 2026-11-24 | 59 | 전세대출 기초 — 버팀목·일반 전세대출, DSR에 들어가나 | jeonse-loans | loan | calc | |
+| 2026-11-24 | 59 | 전세대출 기초 — 버팀목·일반 전세대출, DSR에 들어가나 | jeonse-loans | loan | calc | 완료(jeonse-loans) |
 | 2026-11-25 | 60 | 지역별 변동률 읽는 법 — 부동산원 주간지수와 쏙집 지역별 페이지 | weekly-index-reading | price | ref | |
 | 2026-11-26 | 61 | 부부 공동명의 — 취득·보유·양도세가 어떻게 달라지나 | joint-ownership | tax | none | |
 | 2026-11-27 | 62 | 무순위 청약 — 자격, 규제지역과 비규제지역 차이 | unranked-subscription | situation | none | |
