@@ -54,6 +54,7 @@ export interface RegionRow {
   ratio: number | null;                                          // med ÷ 기준 지역 med (%)
   yoy: number | null;                                            // 실거래 1년 변동률(지역별 페이지와 같은 값)
   rone: number | null;                                           // 부동산원 지수 52주 변동률
+  m3: number | null;                                             // 부동산원 지수 13주 변동률(최근 3개월)
   rel: number | null;                                            // 그래프 시작 주 대비 기준 지역보다 더 오른 폭(%p) = 상대지수 − 100
   series: (number | null)[] | null;                              // 기준 지역 대비 상대지수(시작 주 = 100)
   isRef: boolean;
@@ -184,7 +185,7 @@ export function loadLine(slug: string): LineData | null {
     return {
       lawd: r.lawd, sido: r.sido, sigungu: r.sigungu, label: shortName(r.sido, r.sigungu), stations: r.stations,
       med: r.med, n84: r.n, ratio: refRow?.med && r.med ? Math.round((r.med / refRow.med) * 100) : null,
-      yoy: meta?.chg?.yoy ?? null, rone: roneSigungu(r.sido, r.sigungu)?.yoy ?? null,
+      yoy: meta?.chg?.yoy ?? null, rone: roneSigungu(r.sido, r.sigungu)?.yoy ?? null, m3: roneSigungu(r.sido, r.sigungu)?.m3 ?? null,
       rel, series, isRef: r.lawd === refRow?.lawd, seg: r.seg,
     };
   });
