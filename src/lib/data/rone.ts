@@ -6,6 +6,7 @@ import { join } from 'node:path';
 interface Weekly { source: string; updated: string; periods: string[]; labels: Record<string, string>; series: Record<string, Record<string, number>> }
 export interface RoneStat {
   yoy: number | null;        // 최근 주 지수 ÷ 52주 전 지수 − 1 (%)
+  m3: number | null;         // 최근 주 지수 ÷ 13주 전 지수 − 1 (%) — '최근 3개월'
   streak: number;            // 전주 대비 연속 상승 주 수(양수) 또는 연속 하락 주 수(음수). 0이면 보합·방향 바뀜
   latest: number; asOf: string; asOfLabel: string; key: string;
 }
@@ -29,6 +30,8 @@ function statOf(key: string): RoneStat | null {
   const last = s[P[P.length - 1]]; if (last == null) return null;
   const prev = P.length >= 53 ? s[P[P.length - 53]] : undefined;
   const yoy = prev ? +(((last - prev) / prev) * 100).toFixed(1) : null;
+  const q = P.length >= 14 ? s[P[P.length - 14]] : undefined;
+  const m3 = q ? +(((last - q) / q) * 100).toFixed(1) : null;
   let streak = 0;
   for (let i = P.length - 1; i > 0; i--) {
     const a = s[P[i]], b = s[P[i - 1]];
@@ -37,7 +40,7 @@ function statOf(key: string): RoneStat | null {
     if (d === 0) break;
     if (streak === 0) streak = d; else if (Math.sign(streak) !== d) break; else streak += d;
   }
-  return { yoy, streak, latest: last, asOf: P[P.length - 1], asOfLabel: w.labels[P[P.length - 1]] ?? P[P.length - 1], key };
+  return { yoy, m3, streak, latest: last, asOf: P[P.length - 1], asOfLabel: w.labels[P[P.length - 1]] ?? P[P.length - 1], key };
 }
 const keys = () => Object.keys(load()?.series ?? {});
 
@@ -64,11 +67,12 @@ export function roneCity(sido: string, city: string): RoneStat | null {
   const k = keys().find((x) => x.startsWith(sido + '>') && x.endsWith('>' + city) && x.split('>').length <= 4);
   return k ? statOf(k) : null;
 }
-/** 표시용: "1년 +11.2% · 최근 89주째 ↑" — 1년(52주 전 대비)과 최근(전주 대비 연속)을 글자로 구분 */
+/** 표시용: "1년 +11.2% · 3개월 +2.1% · 최근 89주째 ↑" — 1년(52주 전 대비)·3개월(13주 전 대비)·최근(전주 대비 연속)을 글자로 구분 */
 export function roneText(r: RoneStat | null): string {
   if (!r || r.yoy == null) return '';
+  const sg = (v: number) => `${v > 0 ? '+' : ''}${v.toFixed(1)}%`;
   const s = r.streak >= 2 ? ` · 최근 ${r.streak}주째 ↑` : r.streak <= -2 ? ` · 최근 ${-r.streak}주째 ↓` : '';
-  return `1년 ${r.yoy > 0 ? '+' : ''}${r.yoy.toFixed(1)}%${s}`;
+  return `1년 ${sg(r.yoy)}${r.m3 != null ? ` · 3개월 ${sg(r.m3)}` : ''}${s}`;
 }
 
 /** 시군구 주간 지수 시계열(노선별 지역 비교 그래프용). 이름 규칙은 roneSigungu와 같다 */

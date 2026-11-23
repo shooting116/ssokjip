@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import { loadSummary } from '../lib/data/index.ts';
 import { pct } from '../lib/ui/format.ts';
-import { roneSido, roneText } from '../lib/data/rone.ts';
+import { roneSido, roneAsOf } from '../lib/data/rone.ts';
 import { LINES } from '../lib/data/lines.ts';
 import { getCollection } from 'astro:content';
 import { CAT_SHORT, isLive, fmtDate } from '../lib/ui/guide.ts';
@@ -14,7 +14,12 @@ const chgList = Object.entries(sm.sido).map(([sido, v]) => ({ sido, chg: v.chg }
 const cap = sm.groups?.수도권?.chg ?? null;
 const rCap = roneSido('수도권'), rAll = roneSido('전국');
 const streakPill = (r: ReturnType<typeof roneSido>) => (r && Math.abs(r.streak) >= 2 ? `<span class="pill ${r.streak > 0 ? 'p-bad' : 'p-blue'}">최근 ${Math.abs(r.streak)}주째 ${r.streak > 0 ? '↑' : '↓'}</span>` : '');
-const roneYoy = (r: ReturnType<typeof roneSido>) => (r && r.yoy != null ? `1년 ${r.yoy > 0 ? '+' : ''}${r.yoy.toFixed(1)}%` : '');
+// 최근 3개월 = 부동산원 주간 지수의 13주 전 대비
+type Rone = ReturnType<typeof roneSido>;
+const rAsOf = roneAsOf();
+const sgn = (v: number) => `${v > 0 ? '+' : ''}${v.toFixed(1)}%`;
+const m3Text = (r: Rone) => (r && r.m3 != null ? sgn(r.m3) : '—');
+const y1Text = (r: Rone) => (r && r.yoy != null ? sgn(r.yoy) : '—');
 const cls = (y: number | null | undefined) => (y == null ? 'na' : y > 0 ? 'up' : y < 0 ? 'down' : '');
 
 // 내 상황 5개 → 계산기 진입. 계산기는 1단계에서 채워진다.
@@ -60,20 +65,20 @@ const situations = [
 
   {chgList.length > 0 && (
     <section class="card chg fold" data-fold="chg" data-fold-default="closed" aria-labelledby="chg-h">
-      <button type="button" class="fold-t" data-fold-t aria-expanded="true" aria-label="지역별 1년 변동률 접기·펼치기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></button>
-      <h2 id="chg-h" class="h">지역별 1년 변동률 <span class="sub">실거래 {sm.asOf} 기준</span></h2>
+      <button type="button" class="fold-t" data-fold-t aria-expanded="true" aria-label="지역별 변동률 접기·펼치기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></button>
+      <h2 id="chg-h" class="h">지역별 변동률 <span class="sub">1년 · 최근 3개월</span></h2>
       <div class="cgrid">
         {(cap || rAll) && (
           <a class="wide" href="/area/">
-            <span class="half"><span class="nm">수도권 <span class="sub">서울·인천·경기</span></span><b class={cls(cap?.yoy)}><i>실거래</i>{cap?.yoy == null ? '표본 부족' : pct(cap.yoy)}</b>{rCap && <span class="rone"><span class="org">부동산원 </span><span class="short">지수</span><span class="long">매매가격지수:</span> {roneYoy(rCap)}</span>}{rCap && streakPill(rCap) && <span class="rone"><Fragment set:html={streakPill(rCap)} /></span>}</span>
-            <span class="half"><span class="nm">전국 <span class="sub short">지수</span><span class="sub long">부동산원 매매가격지수</span></span><b class={cls(rAll?.yoy)}><i>지수 1년</i>{rAll && rAll.yoy != null ? `${rAll.yoy > 0 ? '+' : ''}${rAll.yoy.toFixed(1)}%` : '—'}</b><span class="rone"><Fragment set:html={streakPill(rAll)} /></span></span>
+            <span class="half"><span class="nm">수도권 <span class="sub">서울·인천·경기</span></span><span class="pr"><span class="k"><b>1년</b> 실거래</span><b class={`v ${cls(cap?.yoy)}`}>{cap?.yoy == null ? '표본 부족' : pct(cap.yoy)}</b></span><span class="pr"><span class="k"><b>3개월</b> 지수</span><b class={`v ${cls(rCap?.m3)}`}>{m3Text(rCap)}</b></span>{streakPill(rCap) && <span class="rone"><Fragment set:html={streakPill(rCap)} /></span>}</span>
+            <span class="half"><span class="nm">전국 <span class="sub">부동산원 지수</span></span><span class="pr"><span class="k"><b>1년</b> 지수</span><b class={`v ${cls(rAll?.yoy)}`}>{y1Text(rAll)}</b></span><span class="pr"><span class="k"><b>3개월</b> 지수</span><b class={`v ${cls(rAll?.m3)}`}>{m3Text(rAll)}</b></span>{streakPill(rAll) && <span class="rone"><Fragment set:html={streakPill(rAll)} /></span>}</span>
           </a>
         )}
         {chgList.map(({ sido, chg }) => { const r = roneSido(sido); return (
-          <a class="ccell" href={`/area/#s-${sido}`}><span class="nm">{sido}</span><b class={cls(chg!.yoy)}><i>실거래</i>{chg!.yoy == null ? '표본 부족' : pct(chg!.yoy)}</b>{roneYoy(r) && <span class="rone"><span class="org">부동산원 </span>지수<span class="long">:</span> {roneYoy(r)}</span>}{streakPill(r) && <span class="rone"><Fragment set:html={streakPill(r)} /></span>}</a>
+          <a class="ccell" href={`/area/#s-${sido}`}><span class="nm">{sido}</span><span class="pr"><span class="k"><b>1년</b> 실거래</span><b class={`v ${cls(chg!.yoy)}`}>{chg!.yoy == null ? '표본 부족' : pct(chg!.yoy)}</b></span><span class="pr"><span class="k"><b>3개월</b> 지수</span><b class={`v ${cls(r?.m3)}`}>{m3Text(r)}</b></span>{streakPill(r) && <span class="rone"><Fragment set:html={streakPill(r)} /></span>}</a>
         ); })}
       </div>
-      <p class="src"><b>실거래</b> = 쏙집이 국토부 실거래로 계산한 1년 변동률(평균이 아니라 같은 단지·같은 평형끼리 비교한 중앙값). <b>부동산원 지수</b> = 한국부동산원 주간 아파트 매매가격지수의 52주 전 대비(1년)와 전주 대비 연속 상승·하락 주 수(최근). 시·구 단위는 <a href="/area/">지역별 페이지</a>에서. 가격 전망이 아닙니다.</p>
+      <p class="src"><b>1년 실거래</b> = 쏙집이 국토부 실거래({sm.asOf} 기준)로 계산한 1년 변동률(평균이 아니라 같은 단지·같은 평형끼리 비교한 중앙값). <b>3개월 지수</b> = 한국부동산원 주간 아파트 매매가격지수{rAsOf && `(${rAsOf.label} 기준 주)`}의 13주 전 대비 변동률, "최근 N주째 ↑·↓"는 전주 대비 연속 상승·하락 주 수입니다. 전국은 1년도 지수(52주 전 대비)입니다. 두 숫자는 출처와 계산 방식이 달라 서로 더하거나 빼는 값이 아닙니다. 시·구 단위는 <a href="/area/">지역별 페이지</a>에서. 가격 전망이 아닙니다.</p>
     </section>
   )}
 
@@ -190,20 +195,19 @@ const situations = [
   @media (min-width: 600px) { .cgrid { grid-template-columns: repeat(3, 1fr); } }
   .ccell { display: flex; flex-direction: column; gap: 1px; padding: 10px 12px; border-radius: 12px; background: var(--soft); color: inherit; }
   .ccell .nm { font-size: 13px; color: var(--fg2); font-weight: 600; }
-  .ccell b { font-size: 19px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
-  .ccell b i, .cgrid .half b i { display: block; font-style: normal; font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0; line-height: 1.2; margin: 2px 0 0; white-space: nowrap; }
   .ccell, .cgrid .half { word-break: keep-all; overflow-wrap: anywhere; }
-  .cgrid .long { display: none; } .cgrid .short { display: inline; } .cgrid .org { display: none; }
-  @media (min-width: 375px) { .cgrid .org { display: inline; } }
-  @media (min-width: 600px) { .cgrid .long { display: inline; } .cgrid .short { display: none !important; } }
-
-  .ccell b.na { font-size: 13px; color: var(--muted); font-weight: 500; }
+  /* 1년·3개월 두 줄: 왼쪽에 기간·출처, 오른쪽에 숫자. 두 숫자를 같은 크기로 */
+  .cgrid .pr { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0 6px; }
+  .cgrid .pr .k { font-size: 11.5px; color: var(--muted); font-weight: 500; white-space: nowrap; }
+  .cgrid .pr .k b { font-size: 12.5px; color: var(--fg2); font-weight: 700; }
+  .cgrid .pr .v { font-size: 17px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .cgrid .pr .v.na { font-size: 12px; color: var(--muted); font-weight: 500; letter-spacing: 0; }
+  .cgrid .nm { margin-bottom: 2px; } .cgrid .rone { margin-top: 3px; }
   .ccell .up { color: var(--red); } .ccell .down { color: var(--blue); }
   .ccell { min-width: 0; }
   .cgrid .wide { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; color: inherit; }
   .cgrid .half { display: flex; flex-direction: column; gap: 1px; padding: 12px 14px; border-radius: 12px; background: var(--card); box-shadow: inset 0 0 0 1.5px var(--line); min-width: 0; }
   .cgrid .half .nm { font-size: 13px; color: var(--fg2); font-weight: 700; } .cgrid .half .nm .sub { font-weight: 500; }
-  .cgrid .half b { font-size: 21px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; } .cgrid .half b.na { font-size: 13px; color: var(--muted); font-weight: 500; }
   .cgrid .half .up { color: var(--red); } .cgrid .half .down { color: var(--blue); }
   .cgrid .rone .pill { font-size: 10.5px; padding: 2px 7px; }
   .cgrid .rone { font-size: 11px; color: var(--muted); font-weight: 500; line-height: 1.35; }

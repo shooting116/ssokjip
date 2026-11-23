@@ -9,7 +9,7 @@ import { roneSigungu, roneSeries } from './rone.ts';
 export const MIN_COMPLEX = 3;            // 84㎡ 시세 중앙값을 내는 최소 단지 수
 const CAPITAL = new Set(['서울', '경기', '인천']);
 /** 모든 노선의 공통 기준 지역(2026-11-08 결정: 노선끼리 비교되도록 하나로 통일) */
-export const REF = { lawd: '11650', sido: '서울', sigungu: '서초구', label: '서초구' };
+export const REF = { lawd: '11680', sido: '서울', sigungu: '강남구', label: '강남구' };
 
 export const LINES: { slug: string; name: string; color: string; order: 'id' | 'geo' | 'rule' | 'seg'; note?: string; segments?: { title: string; names: string[] }[]; labels?: Record<string, string> }[] = [
   {
@@ -162,7 +162,7 @@ export function loadLine(slug: string): LineData | null {
   }
   const base0 = [...byLawd.values()].map((r) => ({ ...r, ...med.get(r.lawd)! }));
 
-  // 기준: 모든 노선 공통 서초구
+  // 기준: 모든 노선 공통 (REF)
   const refRow = { lawd: REF.lawd, ...med.get(REF.lawd)! };
   const refSeries = roneSeries(REF.sido, REF.sigungu);
 
