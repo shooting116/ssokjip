@@ -91,6 +91,7 @@
 {"lawd":"41196","umdNm":"원종동","jibun":"269-2","apt":"태양","area":48.6,"floor":2,"built":1987,"date":"2026-10-24","deposit":13000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"원종동","jibun":"284-3","apt":"길성그랑프리텔","area":55.72,"floor":8,"built":2020,"date":"2026-10-26","deposit":27800,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":28000,"preRent":0}
 {"lawd":"41196","umdNm":"원종동","jibun":"70-1","apt":"동문1차","area":78.12,"floor":5,"built":1990,"date":"2026-10-26","deposit":23000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":23000,"preRent":0}
+{"lawd":"41196","umdNm":"원종동","jibun":"121","apt":"동문5차","area":58.95,"floor":4,"built":1998,"date":"2026-10-26","deposit":24500,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":21000,"preRent":0}
 {"lawd":"41196","umdNm":"오정동","jibun":"179","apt":"세종2","area":59.96,"floor":5,"built":1995,"date":"2026-10-26","deposit":24000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"원종동","jibun":"220-3","apt":"욱일7차","area":48.96,"floor":3,"built":1987,"date":"2026-10-26","deposit":1000,"rent":80,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41196","umdNm":"오정동","jibun":"415-4","apt":"효행복마을","area":16.14,"floor":4,"built":2013,"date":"2026-10-26","deposit":500,"rent":42,"term":"26.10~27.10","type":"갱신","rrr":"사용","preDeposit":500,"preRent":40}
