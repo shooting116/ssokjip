@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import { loadSummary } from '../lib/data/index.ts';
 import { pct } from '../lib/ui/format.ts';
-import { roneSido, roneAsOf } from '../lib/data/rone.ts';
+import { roneSido, roneAsOf, roneWeekHtml } from '../lib/data/rone.ts';
 import { LINES } from '../lib/data/lines.ts';
 import { getCollection } from 'astro:content';
 import { CAT_SHORT, isLive, fmtDate } from '../lib/ui/guide.ts';
@@ -13,7 +13,7 @@ const sm = loadSummary();
 const chgList = Object.entries(sm.sido).map(([sido, v]) => ({ sido, chg: v.chg })).filter((x) => x.chg);
 const cap = sm.groups?.수도권?.chg ?? null;
 const rCap = roneSido('수도권'), rAll = roneSido('전국');
-const streakPill = (r: ReturnType<typeof roneSido>) => (r && Math.abs(r.streak) >= 2 ? `<span class="pill ${r.streak > 0 ? 'p-bad' : 'p-blue'}">최근 ${Math.abs(r.streak)}주째 ${r.streak > 0 ? '↑' : '↓'}</span>` : '');
+const wkHtml = roneWeekHtml;
 // 최근 3개월 = 부동산원 주간 지수의 13주 전 대비
 type Rone = ReturnType<typeof roneSido>;
 const rAsOf = roneAsOf();
@@ -70,15 +70,15 @@ const situations = [
       <div class="cgrid">
         {(cap || rAll) && (
           <a class="wide" href="/area/">
-            <span class="half"><span class="nm">수도권 <span class="sub">서울·인천·경기</span></span><span class="pr"><span class="k"><b>1년</b> 실거래</span><b class={`v ${cls(cap?.yoy)}`}>{cap?.yoy == null ? '표본 부족' : pct(cap.yoy)}</b></span><span class="pr"><span class="k"><b>3개월</b> 지수</span><b class={`v ${cls(rCap?.m3)}`}>{m3Text(rCap)}</b></span>{streakPill(rCap) && <span class="rone"><Fragment set:html={streakPill(rCap)} /></span>}</span>
-            <span class="half"><span class="nm">전국 <span class="sub">부동산원 지수</span></span><span class="pr"><span class="k"><b>1년</b> 지수</span><b class={`v ${cls(rAll?.yoy)}`}>{y1Text(rAll)}</b></span><span class="pr"><span class="k"><b>3개월</b> 지수</span><b class={`v ${cls(rAll?.m3)}`}>{m3Text(rAll)}</b></span>{streakPill(rAll) && <span class="rone"><Fragment set:html={streakPill(rAll)} /></span>}</span>
+            <span class="half"><span class="nm">수도권 <span class="sub">서울·인천·경기</span></span><span class="pr"><span class="k"><b>1년</b> 실거래</span><b class={`v ${cls(cap?.yoy)}`}>{cap?.yoy == null ? '표본 부족' : pct(cap.yoy)}</b></span><span class="pr"><span class="k"><b>3개월</b> 지수</span><b class={`v ${cls(rCap?.m3)}`}>{m3Text(rCap)}</b></span>{wkHtml(rCap) && <Fragment set:html={wkHtml(rCap)} />}</span>
+            <span class="half"><span class="nm">전국 <span class="sub">부동산원 지수</span></span><span class="pr"><span class="k"><b>1년</b> 지수</span><b class={`v ${cls(rAll?.yoy)}`}>{y1Text(rAll)}</b></span><span class="pr"><span class="k"><b>3개월</b> 지수</span><b class={`v ${cls(rAll?.m3)}`}>{m3Text(rAll)}</b></span>{wkHtml(rAll) && <Fragment set:html={wkHtml(rAll)} />}</span>
           </a>
         )}
         {chgList.map(({ sido, chg }) => { const r = roneSido(sido); return (
-          <a class="ccell" href={`/area/#s-${sido}`}><span class="nm">{sido}</span><span class="pr"><span class="k"><b>1년</b> 실거래</span><b class={`v ${cls(chg!.yoy)}`}>{chg!.yoy == null ? '표본 부족' : pct(chg!.yoy)}</b></span><span class="pr"><span class="k"><b>3개월</b> 지수</span><b class={`v ${cls(r?.m3)}`}>{m3Text(r)}</b></span>{streakPill(r) && <span class="rone"><Fragment set:html={streakPill(r)} /></span>}</a>
+          <a class="ccell" href={`/area/#s-${sido}`}><span class="nm">{sido}</span><span class="pr"><span class="k"><b>1년</b> 실거래</span><b class={`v ${cls(chg!.yoy)}`}>{chg!.yoy == null ? '표본 부족' : pct(chg!.yoy)}</b></span><span class="pr"><span class="k"><b>3개월</b> 지수</span><b class={`v ${cls(r?.m3)}`}>{m3Text(r)}</b></span>{wkHtml(r) && <Fragment set:html={wkHtml(r)} />}</a>
         ); })}
       </div>
-      <p class="src"><b>1년 실거래</b> = 쏙집이 국토부 실거래({sm.asOf} 기준)로 계산한 1년 변동률(평균이 아니라 같은 단지·같은 평형끼리 비교한 중앙값). <b>3개월 지수</b> = 한국부동산원 주간 아파트 매매가격지수{rAsOf && `(${rAsOf.label} 기준 주)`}의 13주 전 대비 변동률, "최근 N주째 ↑·↓"는 전주 대비 연속 상승·하락 주 수입니다. 전국은 1년도 지수(52주 전 대비)입니다. 두 숫자는 출처와 계산 방식이 달라 서로 더하거나 빼는 값이 아닙니다. 시·구 단위는 <a href="/area/">지역별 페이지</a>에서. 가격 전망이 아닙니다.</p>
+      <p class="src"><b>1년 실거래</b> = 쏙집이 국토부 실거래({sm.asOf} 기준)로 계산한 1년 변동률(평균이 아니라 같은 단지·같은 평형끼리 비교한 중앙값). <b>3개월 지수</b> = 한국부동산원 주간 아파트 매매가격지수{rAsOf && `(${rAsOf.label} 기준 주)`}의 13주 전 대비 변동률입니다. <b>전주 대비</b>는 같은 지수의 한 주 전 대비 변동률이고, "N주 연속 상승·하락"은 그 변동률이 연속으로 +이거나 −인 주 수입니다(0.00% 보합이면 끊김, 부동산원 주간 아파트가격동향과 같은 방식). 전국은 1년도 지수(52주 전 대비)입니다. 두 숫자는 출처와 계산 방식이 달라 서로 더하거나 빼는 값이 아닙니다. 시·구 단위는 <a href="/area/">지역별 페이지</a>에서. 가격 전망이 아닙니다.</p>
     </section>
   )}
 
@@ -202,15 +202,13 @@ const situations = [
   .cgrid .pr .k b { font-size: 12.5px; color: var(--fg2); font-weight: 700; }
   .cgrid .pr .v { font-size: 17px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .cgrid .pr .v.na { font-size: 12px; color: var(--muted); font-weight: 500; letter-spacing: 0; }
-  .cgrid .nm { margin-bottom: 2px; } .cgrid .rone { margin-top: 3px; }
+  .cgrid .nm { margin-bottom: 2px; }
   .ccell .up { color: var(--red); } .ccell .down { color: var(--blue); }
   .ccell { min-width: 0; }
   .cgrid .wide { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; color: inherit; }
   .cgrid .half { display: flex; flex-direction: column; gap: 1px; padding: 12px 14px; border-radius: 12px; background: var(--card); box-shadow: inset 0 0 0 1.5px var(--line); min-width: 0; }
   .cgrid .half .nm { font-size: 13px; color: var(--fg2); font-weight: 700; } .cgrid .half .nm .sub { font-weight: 500; }
   .cgrid .half .up { color: var(--red); } .cgrid .half .down { color: var(--blue); }
-  .cgrid .rone .pill { font-size: 10.5px; padding: 2px 7px; }
-  .cgrid .rone { font-size: 11px; color: var(--muted); font-weight: 500; line-height: 1.35; }
   .chg .src a { color: var(--blue); }
   .qgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
   .qcell { display: flex; flex-direction: column; gap: 3px; padding: 12px 14px; border-radius: 14px; background: var(--soft); color: inherit; }

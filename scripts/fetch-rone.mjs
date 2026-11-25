@@ -4,7 +4,7 @@
 //   node scripts/fetch-rone.mjs --mode tables [--q 주간]          통계표 목록에서 이름에 q가 들어간 표 찾기 (STATBL_ID 확인용)
 //   node scripts/fetch-rone.mjs --mode probe --tbl A_2024_00045     한 표의 최근 데이터 몇 줄과 필드명 출력
 //   node scripts/fetch-rone.mjs --mode weekly --tbl <ID> [--weeks 110]   주간 지수 받아 저장 (기존 파일에 이어 붙임)
-//        [--precision 2] 저장할 소수 자릿수(기본 2). 부동산원 공표 변동률(0.01% 단위)을 그대로 다시 계산하려면 6 이상
+//        [--precision 8] 저장할 소수 자릿수(기본 8). 부동산원 공표 변동률(0.01% 단위)과 연속 주 수를 그대로 다시 계산하려면 6 이상이어야 한다
 //        [--out weekly.json] 저장 파일 이름(data/rone/ 아래)
 //
 // - 키: RONE_KEY 환경변수. 로그에 찍지 않는다.
@@ -76,7 +76,7 @@ async function weekly() {
   const tbl = args.tbl ?? 'T244183132827305'; // (주) 매매가격지수 — 2026-10 probe로 확인
   const weeks = Number(args.weeks ?? 110);
   const cycle = args.cycle ?? 'WK';
-  const precision = Math.min(10, Math.max(2, Number(args.precision ?? 2) || 2));
+  const precision = Math.min(10, Math.max(2, Number(args.precision ?? 8) || 8));
   const outName = /^[\w.-]+\.json$/.test(args.out ?? '') ? args.out : 'weekly.json';
   const SIDOS = ['전국', '서울', '인천', '경기', '부산', '대구', '대전', '광주', '전남광주', '울산', '세종']; // 2026 통합으로 광주는 '전남광주' 아래
   mkdirSync(OUT, { recursive: true });

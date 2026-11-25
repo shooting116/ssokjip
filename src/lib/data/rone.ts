@@ -7,7 +7,8 @@ interface Weekly { source: string; updated: string; periods: string[]; labels: R
 export interface RoneStat {
   yoy: number | null;        // 최근 주 지수 ÷ 52주 전 지수 − 1 (%)
   m3: number | null;         // 최근 주 지수 ÷ 13주 전 지수 − 1 (%) — '최근 3개월'
-  streak: number;            // 전주 대비 연속 상승 주 수(양수) 또는 연속 하락 주 수(음수). 0이면 보합·방향 바뀜
+  wk: number | null;         // 전주 대비 변동률(%) — 부동산원 공표와 같이 0.01% 단위로 반올림. 0이면 보합
+  streak: number;            // 주간 변동률(0.01% 단위)이 연속으로 +인 주 수(양수) 또는 −인 주 수(음수). 보합(0.00%)이 나오면 끊김
   latest: number; asOf: string; asOfLabel: string; key: string;
 }
 
@@ -32,15 +33,24 @@ function statOf(key: string): RoneStat | null {
   const yoy = prev ? +(((last - prev) / prev) * 100).toFixed(1) : null;
   const q = P.length >= 14 ? s[P[P.length - 14]] : undefined;
   const m3 = q ? +(((last - q) / q) * 100).toFixed(1) : null;
+  // 주간 변동률 = 지수 두 값을 나눠 0.01% 단위로 반올림(부동산원 주간 아파트가격동향의 공표 방식).
+  // 반올림하지 않은 지수(소수 6자리 이상)로 계산해야 공표값과 같다. 0.00%는 보합으로 보고 연속 기록을 끊는다
+  const wkAt = (i: number): number | null => {
+    const a = s[P[i]], b = s[P[i - 1]];
+    if (a == null || b == null || !b) return null;
+    const r = +((a / b - 1) * 100).toFixed(2);
+    return r === 0 ? 0 : r;   // −0 방지
+  };
+  const wk = P.length >= 2 ? wkAt(P.length - 1) : null;
   let streak = 0;
   for (let i = P.length - 1; i > 0; i--) {
-    const a = s[P[i]], b = s[P[i - 1]];
-    if (a == null || b == null) break;
-    const d = Math.sign(+(a - b).toFixed(4));
+    const r = wkAt(i);
+    if (r == null) break;
+    const d = Math.sign(r);
     if (d === 0) break;
     if (streak === 0) streak = d; else if (Math.sign(streak) !== d) break; else streak += d;
   }
-  return { yoy, m3, streak, latest: last, asOf: P[P.length - 1], asOfLabel: w.labels[P[P.length - 1]] ?? P[P.length - 1], key };
+  return { yoy, m3, wk, streak, latest: last, asOf: P[P.length - 1], asOfLabel: w.labels[P[P.length - 1]] ?? P[P.length - 1], key };
 }
 const keys = () => Object.keys(load()?.series ?? {});
 
@@ -67,12 +77,25 @@ export function roneCity(sido: string, city: string): RoneStat | null {
   const k = keys().find((x) => x.startsWith(sido + '>') && x.endsWith('>' + city) && x.split('>').length <= 4);
   return k ? statOf(k) : null;
 }
-/** 표시용: "1년 +11.2% · 3개월 +2.1% · 최근 89주째 ↑" — 1년(52주 전 대비)·3개월(13주 전 대비)·최근(전주 대비 연속)을 글자로 구분 */
+const wkRate = (v: number) => `${v > 0 ? '+' : ''}${v.toFixed(2)}%`;
+/** 연속 주 수 문구: "93주 연속 상승" / "15주 연속 하락" / (이번 주 0.00%) "보합". 2주 미만이면 빈 문자열 */
+export function roneStreakText(r: RoneStat | null): string {
+  if (!r) return '';
+  return r.streak >= 2 ? `${r.streak}주 연속 상승` : r.streak <= -2 ? `${-r.streak}주 연속 하락` : r.wk === 0 ? '보합' : '';
+}
+/** 표시용: "1년 +10.2% · 3개월 +1.8% · 전주 대비 +0.03% · 93주 연속 상승" — 1년(52주 전 대비)·3개월(13주 전 대비)·전주 대비를 글자로 구분 */
 export function roneText(r: RoneStat | null): string {
   if (!r || r.yoy == null) return '';
   const sg = (v: number) => `${v > 0 ? '+' : ''}${v.toFixed(1)}%`;
-  const s = r.streak >= 2 ? ` · 최근 ${r.streak}주째 ↑` : r.streak <= -2 ? ` · 최근 ${-r.streak}주째 ↓` : '';
-  return `1년 ${sg(r.yoy)}${r.m3 != null ? ` · 3개월 ${sg(r.m3)}` : ''}${s}`;
+  const st = roneStreakText(r);
+  return `1년 ${sg(r.yoy)}${r.m3 != null ? ` · 3개월 ${sg(r.m3)}` : ''}${r.wk != null ? ` · 전주 대비 ${wkRate(r.wk)}` : ''}${st ? ` · ${st}` : ''}`;
+}
+/** 카드용 한 줄(HTML): 전주 대비 −0.30% · 15주 연속 하락. 스타일은 global.css의 .wk */
+export function roneWeekHtml(r: RoneStat | null): string {
+  if (!r || r.wk == null) return '';
+  const c = r.wk > 0 ? 'up' : r.wk < 0 ? 'down' : 'flat';
+  const st = roneStreakText(r);
+  return `<span class="wk ${c}"><span class="in"><span><i>전주 대비</i> <b>${wkRate(r.wk)}</b></span>${st ? `<span class="st">${st}</span>` : ''}</span></span>`;
 }
 
 /** 시군구 주간 지수 시계열(노선별 지역 비교 그래프용). 이름 규칙은 roneSigungu와 같다 */
