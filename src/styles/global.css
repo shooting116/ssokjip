@@ -70,6 +70,9 @@ img { max-width: 100%; display: block; }
 .wk .in { display: flex; flex-wrap: wrap; margin-left: -11px; }
 .wk .in > span { position: relative; padding-left: 11px; white-space: nowrap; }
 .wk .in > span::before { content: '·'; position: absolute; left: 3px; color: var(--muted); font-weight: 700; }
+/* 작은 카드는 항상 두 줄(전주 대비 / N주 연속)로 맞춘다. 줄 맨 앞의 가운뎃점은 잘려서 안 보인다 */
+.wk.stack .in { flex-direction: column; }
+@media (max-width: 599px) { .wk.stack-sm .in { flex-direction: column; } }
 .wk i { font-style: normal; font-weight: 500; color: var(--muted); }
 .wk b { font-weight: 700; font-variant-numeric: tabular-nums; }
 .wk.up b, .wk.up .st { color: var(--red); } .wk.down b, .wk.down .st { color: var(--blue); } .wk.flat .st { color: var(--muted); }

@@ -78,10 +78,14 @@ export function roneCity(sido: string, city: string): RoneStat | null {
   return k ? statOf(k) : null;
 }
 const wkRate = (v: number) => `${v > 0 ? '+' : ''}${v.toFixed(2)}%`;
-/** 연속 주 수 문구: "93주 연속 상승" / "15주 연속 하락" / (이번 주 0.00%) "보합". 2주 미만이면 빈 문자열 */
+/** 방향 문구: "93주 연속 상승" / "15주 연속 하락" / 방향이 이번 주에 바뀌었으면 "상승 전환"·"하락 전환" / 이번 주 0.00%면 "보합" */
 export function roneStreakText(r: RoneStat | null): string {
   if (!r) return '';
-  return r.streak >= 2 ? `${r.streak}주 연속 상승` : r.streak <= -2 ? `${-r.streak}주 연속 하락` : r.wk === 0 ? '보합' : '';
+  if (r.streak >= 2) return `${r.streak}주 연속 상승`;
+  if (r.streak <= -2) return `${-r.streak}주 연속 하락`;
+  if (r.streak === 1) return '상승 전환';   // 지난주는 보합이거나 하락
+  if (r.streak === -1) return '하락 전환';  // 지난주는 보합이거나 상승
+  return r.wk === 0 ? '보합' : '';
 }
 /** 표시용: "1년 +10.2% · 3개월 +1.8% · 전주 대비 +0.03% · 93주 연속 상승" — 1년(52주 전 대비)·3개월(13주 전 대비)·전주 대비를 글자로 구분 */
 export function roneText(r: RoneStat | null): string {
@@ -90,12 +94,15 @@ export function roneText(r: RoneStat | null): string {
   const st = roneStreakText(r);
   return `1년 ${sg(r.yoy)}${r.m3 != null ? ` · 3개월 ${sg(r.m3)}` : ''}${r.wk != null ? ` · 전주 대비 ${wkRate(r.wk)}` : ''}${st ? ` · ${st}` : ''}`;
 }
-/** 카드용 한 줄(HTML): 전주 대비 −0.30% · 15주 연속 하락. 스타일은 global.css의 .wk */
-export function roneWeekHtml(r: RoneStat | null): string {
+/**
+ * 카드용(HTML): 전주 대비 −0.30% · 15주 연속 하락. 스타일은 global.css의 .wk
+ * layout: ''(폭이 되면 한 줄) · 'stack'(항상 두 줄 — 작은 카드) · 'stack-sm'(폰 폭에서만 두 줄)
+ */
+export function roneWeekHtml(r: RoneStat | null, layout: '' | 'stack' | 'stack-sm' = ''): string {
   if (!r || r.wk == null) return '';
   const c = r.wk > 0 ? 'up' : r.wk < 0 ? 'down' : 'flat';
   const st = roneStreakText(r);
-  return `<span class="wk ${c}"><span class="in"><span><i>전주 대비</i> <b>${wkRate(r.wk)}</b></span>${st ? `<span class="st">${st}</span>` : ''}</span></span>`;
+  return `<span class="wk ${c}${layout ? ` ${layout}` : ''}"><span class="in"><span><i>전주 대비</i> <b>${wkRate(r.wk)}</b></span>${st ? `<span class="st">${st}</span>` : ''}</span></span>`;
 }
 
 /** 시군구 주간 지수 시계열(노선별 지역 비교 그래프용). 이름 규칙은 roneSigungu와 같다 */

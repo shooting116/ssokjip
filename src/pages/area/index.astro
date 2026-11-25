@@ -9,6 +9,9 @@ const cap = sm.groups?.수도권?.chg ?? null;
 const rCap = roneSido('수도권'), rAll = roneSido('전국');
 // 연속 상승·하락 주 수 알약 (2주 이상일 때만)
 const wkHtml = roneWeekHtml;
+type Rn = Parameters<typeof roneWeekHtml>[0];
+const wkStack = (r: Rn) => roneWeekHtml(r, 'stack');     // 작은 카드: 항상 두 줄
+const wkHalf = (r: Rn) => roneWeekHtml(r, 'stack-sm');   // 수도권·전국 칸: 폰에서만 두 줄
 const roneYoy = (r: ReturnType<typeof roneSido>) => (r && r.yoy != null ? `1년 ${r.yoy > 0 ? '+' : ''}${r.yoy.toFixed(1)}%` : '');
 // 최근 3개월 = 부동산원 주간 지수의 13주 전 대비
 type Rone = ReturnType<typeof roneSido>;
@@ -40,14 +43,14 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
             <span class="nm">수도권 <span class="sub">서울·인천·경기</span></span>
             <span class="pr"><span class="k"><b>1년</b> 실거래</span><b class={`v ${yoyCls(cap)}`}>{yoyText(cap)}</b></span>
             <span class="pr"><span class="k"><b>3개월</b> 지수</span><b class={`v ${m3Cls(rCap)}`}>{m3Text(rCap)}</b></span>
-            {wkHtml(rCap) && <Fragment set:html={wkHtml(rCap)} />}
+            {wkHalf(rCap) && <Fragment set:html={wkHalf(rCap)} />}
             <span class="sub">{cap?.n ? `${cap.n.toLocaleString()}개 평형 비교` : ''}</span>
           </div>
           <div class="half">
             <span class="nm">전국 <span class="sub">부동산원 지수</span></span>
             <span class="pr"><span class="k"><b>1년</b> 지수</span><b class={`v ${y1Cls(rAll)}`}>{y1Text(rAll)}</b></span>
             <span class="pr"><span class="k"><b>3개월</b> 지수</span><b class={`v ${m3Cls(rAll)}`}>{m3Text(rAll)}</b></span>
-            {wkHtml(rAll) && <Fragment set:html={wkHtml(rAll)} />}
+            {wkHalf(rAll) && <Fragment set:html={wkHalf(rAll)} />}
             <span class="sub">실거래는 <span class="nw">수도권·광역시만</span></span>
           </div>
         </div>
@@ -57,12 +60,12 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
           <span class="nm">{sido}</span>
           <span class="pr"><span class="k"><b>1년</b> 실거래</span><b class={`v ${yoyCls(c)}`}>{yoyText(c)}</b></span>
           <span class="pr"><span class="k"><b>3개월</b> 지수</span><b class={`v ${m3Cls(r)}`}>{m3Text(r)}</b></span>
-          {wkHtml(r) && <Fragment set:html={wkHtml(r)} />}
+          {wkStack(r) && <Fragment set:html={wkStack(r)} />}
           <span class="sub">{c?.n ? `${c.n.toLocaleString()}개 평형` : ''}{sido === '전남광주' ? ' · 옛 광주' : ''}</span>
         </a>
       ); })}
     </div>
-    <p class="src"><b>1년 실거래</b> = 쏙집이 국토교통부 실거래({sm.asOf} 기준)로 계산한 1년 변동률. 평균이 아니라, 같은 단지·같은 평형의 최근 6개월 실거래 중앙값을 1년 전 같은 6개월과 비교한 변동률(두 기간 모두 3건 이상)의 <b>중앙값</b>입니다. 해제·직거래 제외, 비교 평형이 10개 미만이면 비웁니다. 6개월치 거래를 묶어 보기 때문에 최근 몇 달 사이 방향이 바뀌어도 늦게 반영됩니다.{rAsOf && <> <b>3개월 지수</b> = <b>한국부동산원 주간 아파트 매매가격지수</b>({rAsOf.label} 기준 주)의 13주 전 대비 변동률입니다. <b>전주 대비</b>는 같은 지수의 한 주 전 대비 변동률(0.01% 단위)이고, "N주 연속 상승·하락"은 그 변동률이 연속으로 +이거나 −인 주 수입니다. 0.00%(보합)가 나오면 끊기며, 부동산원 주간 아파트가격동향과 같은 방식으로 셉니다. "부동산원 매매가격지수 1년"은 52주 전 대비입니다(출처: R-ONE 부동산통계). 1년 실거래와 3개월 지수는 출처와 계산 방식이 달라 서로 더하거나 빼는 값이 아닙니다.</>} 전남광주는 2026-07-01 출범한 전남광주통합특별시이며, 쏙집 실거래와 부동산원 지수 모두 옛 광주광역시 5개 구 기준입니다(전남 시·군은 미수집). 어느 쪽도 가격 전망이 아닙니다.</p>
+    <p class="src"><b>1년 실거래</b> = 쏙집이 국토교통부 실거래({sm.asOf} 기준)로 계산한 1년 변동률. 평균이 아니라, 같은 단지·같은 평형의 최근 6개월 실거래 중앙값을 1년 전 같은 6개월과 비교한 변동률(두 기간 모두 3건 이상)의 <b>중앙값</b>입니다. 해제·직거래 제외, 비교 평형이 10개 미만이면 비웁니다. 6개월치 거래를 묶어 보기 때문에 최근 몇 달 사이 방향이 바뀌어도 늦게 반영됩니다.{rAsOf && <> <b>3개월 지수</b> = <b>한국부동산원 주간 아파트 매매가격지수</b>({rAsOf.label} 기준 주)의 13주 전 대비 변동률입니다. <b>전주 대비</b>는 같은 지수의 한 주 전 대비 변동률(0.01% 단위)이고, "N주 연속 상승·하락"은 그 변동률이 연속으로 +이거나 −인 주 수입니다. 방향이 이번 주에 바뀐 곳은 "상승 전환"·"하락 전환"으로 적습니다. 0.00%(보합)가 나오면 끊기며, 부동산원 주간 아파트가격동향과 같은 방식으로 셉니다. "부동산원 매매가격지수 1년"은 52주 전 대비입니다(출처: R-ONE 부동산통계). 1년 실거래와 3개월 지수는 출처와 계산 방식이 달라 서로 더하거나 빼는 값이 아닙니다.</>} 전남광주는 2026-07-01 출범한 전남광주통합특별시이며, 쏙집 실거래와 부동산원 지수 모두 옛 광주광역시 5개 구 기준입니다(전남 시·군은 미수집). 어느 쪽도 가격 전망이 아닙니다.</p>
   </section>
 
   <div class="sortbar">
@@ -97,7 +100,7 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
                 <b class="nm">{x.name}</b>
                 <span class="pr"><span class="k"><b>1년</b> 실거래</span><b class={`v ${yoyCls(x.chg)}`}>{yoyText(x.chg)}</b></span>
                 <span class="pr"><span class="k"><b>3개월</b> 지수</span><b class={`v ${m3Cls(r)}`}>{m3Text(r)}</b></span>
-                {wkHtml(r) && <Fragment set:html={wkHtml(r)} />}
+                {wkStack(r) && <Fragment set:html={wkStack(r)} />}
                 <span class="sub">{n.toLocaleString()}단지{x.chg.n ? ` · ${x.chg.n}개 평형 비교` : ''}</span>
               </a>
             ) : <span class="cell off" data-name={x.name} data-yoy=""><b>{x.name}</b><span class="sub">수집 중</span></span>;
