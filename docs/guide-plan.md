@@ -44,7 +44,7 @@
 | 2026-11-23 | 58 | 전세보증금 반환보증(HUG·HF·SGI) — 가입 조건과 90% 기준 | deposit-guarantee | situation | find | 완료(deposit-guarantee) |
 | 2026-11-24 | 59 | 전세대출 기초 — 버팀목·일반 전세대출, DSR에 들어가나 | jeonse-loans | loan | calc | 완료(jeonse-loans) |
 | 2026-11-25 | 60 | 지역별 변동률 읽는 법 — 부동산원 주간지수와 쏙집 지역별 페이지 | weekly-index-reading | price | ref | 완료(weekly-index-reading) |
-| 2026-11-26 | 61 | 부부 공동명의 — 취득·보유·양도세가 어떻게 달라지나 | joint-ownership | tax | none | |
+| 2026-11-26 | 61 | 부부 공동명의 — 취득·보유·양도세가 어떻게 달라지나 | joint-ownership | tax | none | 완료(joint-ownership) |
 | 2026-11-27 | 62 | 무순위 청약 — 자격, 규제지역과 비규제지역 차이 | unranked-subscription | situation | none | |
 | 2026-11-28 | 63 | 중도상환수수료 — 계산법과 면제되는 경우 | prepayment-fee | loan | calc | |
 | 2026-11-29 | 64 | 실거래 취소·해제 건 — 공개 시스템에서 걸러 보는 법 | cancelled-trades | price | find | |
