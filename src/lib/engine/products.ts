@@ -93,7 +93,7 @@ export function bankProfile(c: Ctx): LoanProfile {
   const dti = (kind === 'first' ? dtiTable.first : dtiTable.general)[R] ?? null;
   const stress = (b.dsr.stress as Record<string, number>)[R];
   const rate = input.bankRate ?? b.rate_default.variable;
-  notes.push(`금리 ${rate}%는 ${b.rate_default.as_of} 예금은행 주담대 평균(변동) · DSR 산정 시 스트레스 +${stress}%p`);
+  notes.push(`금리 ${rate}%는 ${b.rate_default.as_of} ${b.rate_default.label ?? '예금은행 주담대 평균(변동)'} · DSR 산정 시 스트레스 +${stress}%p`);
 
   return {
     key: 'bank', name: '시중 주담대', eligible: reasons.length === 0, reasons, notes,

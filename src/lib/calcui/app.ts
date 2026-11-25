@@ -179,7 +179,7 @@ function viewStep(): string {
         <div class="field" style="margin-top:16px">
           <div class="sub">시중 주담대 금리 (연 %)</div>
           <label class="input"><input type="text" inputmode="decimal" data-rate="bankRate" value="${s.bankRate ?? rules.bank.rate_default.variable}" aria-label="시중 주담대 금리" /><span>%</span></label>
-          <div class="sub hint">기본값 ${rules.bank.rate_default.variable}%는 ${rules.bank.rate_default.as_of} 예금은행 주담대 평균(한국은행). 받은 금리가 있으면 바꿔 넣으세요. 정책대출 금리는 상품표대로 자동 적용.</div>
+          <div class="sub hint">기본값 ${rules.bank.rate_default.variable}%는 ${rules.bank.rate_default.as_of} ${rules.bank.rate_default.label ?? '예금은행 주담대 평균'}(한국은행). 받은 금리가 있으면 바꿔 넣으세요. 정책대출 금리는 상품표대로 자동 적용.</div>
         </div>`;
       return frame(inner, { title: '만기와 금리는<br>이렇게 둘까요?', sub: '모르면 그대로 두세요.', next: '결과 보기' });
     }
@@ -338,7 +338,7 @@ function viewResult(): string {
     </div>
 
     <p class="src" style="margin-top:18px">
-      계산 기준: 규칙표 ${esc(r.rulesVersion)} (${esc(r.rulesEffective)}) · 은행 금리 ${rules.bank.rate_default.as_of} 한국은행 예금은행 주담대 평균 · 정책대출 금리는 주택도시기금·주택금융공사 공시.
+      계산 기준: 규칙표 ${esc(r.rulesVersion)} (${esc(r.rulesEffective)}) · 은행 금리 ${rules.bank.rate_default.as_of} 한국은행 ${rules.bank.rate_default.label ?? '예금은행 주담대 평균'} · 정책대출 금리는 주택도시기금·주택금융공사 공시.
       우대금리는 반영하지 않았고, 실제 한도는 금융기관 심사(소득 증빙·신용·담보 평가)에 따라 달라집니다. 참고용이며 대출 상담이 아닙니다.
     </p>`;
 }

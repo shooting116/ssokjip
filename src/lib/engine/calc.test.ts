@@ -160,6 +160,19 @@ test('규칙표 v0.2: 기본금리 4.66% (2026-10-15~), 그 전은 4.48%', () =>
   assert.equal(getRules(new Date('2026-10-15')).bank.rate_default.variable, 4.66);
 });
 
+test('규칙표 v0.2.3: 기본금리 변동 4.9%·고정 5.13% (2026-11-25~, 변동형·고정형 기준), 그 전은 4.66%·4.76%', () => {
+  const before = getRules(new Date('2026-11-24T12:00:00+09:00')).bank.rate_default;
+  assert.equal(before.variable, 4.66);
+  assert.equal(before.fixed, 4.76);
+  assert.equal(before.label ?? null, null);   // 예전 버전은 전체 평균 문구를 그대로 쓴다
+  const after = getRules(new Date('2026-11-25T00:30:00+09:00')).bank.rate_default;
+  assert.equal(after.variable, 4.9);
+  assert.equal(after.fixed, 5.13);
+  assert.equal(after.as_of, '2026-10');
+  assert.equal(after.label, '예금은행 변동형 주담대 평균');
+  assert.equal(getRules(new Date('2026-11-25T00:30:00+09:00')).meta.version, 'v0.2.3');
+});
+
 test('보금자리론 결혼페널티 완화: 신혼 5천+4천(합산 9천 > 8.5천)은 10/19부터 1인 소득 5천으로 가능', () => {
   const input = base({
     situation: 'newly', cash: 1.5 * EOK, incomeSelf: 50_000_000, incomeSpouse: 40_000_000, combineSpouse: true,
