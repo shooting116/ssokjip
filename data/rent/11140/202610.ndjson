@@ -43,6 +43,7 @@
 {"lawd":"11140","umdNm":"신당동","jibun":"432-502","apt":"인성아트빌","area":58.11,"floor":-1,"built":2001,"date":"2026-10-06","deposit":2000,"rent":60,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"충무로5가","jibun":"36-2","apt":"충무로엘크루메크로시티2차","area":22.75,"floor":7,"built":2016,"date":"2026-10-06","deposit":1000,"rent":85,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"신당동","jibun":"340-127","apt":"한스아파트","area":16.64,"floor":9,"built":2011,"date":"2026-10-06","deposit":15000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":15000,"preRent":0}
+{"lawd":"11140","umdNm":"묵정동","jibun":"35","apt":"힐스테이트남산","area":44.55,"floor":9,"built":2024,"date":"2026-10-06","deposit":1000,"rent":310,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"만리동1가","jibun":"231","apt":"LIG서울역리가","area":84.96,"floor":13,"built":2012,"date":"2026-10-06","deposit":81500,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":79500,"preRent":0}
 {"lawd":"11140","umdNm":"신당동","jibun":"844","apt":"남산타운","area":114.88,"floor":4,"built":2002,"date":"2026-10-07","deposit":90000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"황학동","jibun":"2545","apt":"롯데캐슬","area":33.62,"floor":10,"built":2008,"date":"2026-10-07","deposit":952,"rent":30,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -222,6 +223,7 @@
 {"lawd":"11140","umdNm":"묵정동","jibun":"35","apt":"힐스테이트남산","area":31.27,"floor":7,"built":2024,"date":"2026-10-30","deposit":5000,"rent":220,"term":"26.12~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"황학동","jibun":"819","apt":"DUO302","area":15.97,"floor":13,"built":2014,"date":"2026-10-30","deposit":13500,"rent":18,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"황학동","jibun":"73-1","apt":"(73-1)","area":15.45,"floor":7,"built":1999,"date":"2026-10-31","deposit":1000,"rent":48,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11140","umdNm":"신당동","jibun":"844","apt":"남산타운","area":59.94,"floor":11,"built":2002,"date":"2026-10-31","deposit":20000,"rent":170,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"신당동","jibun":"844","apt":"남산타운","area":59.94,"floor":17,"built":2002,"date":"2026-10-31","deposit":57000,"rent":0,"term":"26.10~27.06","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"신당동","jibun":"844","apt":"남산타운","area":84.88,"floor":2,"built":2002,"date":"2026-10-31","deposit":75000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":50000,"preRent":110}
 {"lawd":"11140","umdNm":"신당동","jibun":"844","apt":"남산타운","area":84.88,"floor":12,"built":2002,"date":"2026-10-31","deposit":40000,"rent":110,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

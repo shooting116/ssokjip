@@ -145,6 +145,7 @@
 {"lawd":"26470","umdNm":"연산동","jibun":"2382","apt":"힐스테이트연산","area":74.67,"floor":15,"built":2021,"date":"2026-10-19","deposit":20000,"rent":60,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26470","umdNm":"거제동","jibun":"1536","apt":"레이카운티(2단지)","area":75.94,"floor":26,"built":2023,"date":"2026-10-20","deposit":10000,"rent":200,"term":"26.12~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26470","umdNm":"거제동","jibun":"1536","apt":"레이카운티(2단지)","area":101.65,"floor":31,"built":2023,"date":"2026-10-20","deposit":70300,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":67000,"preRent":0}
+{"lawd":"26470","umdNm":"연산동","jibun":"1366-1","apt":"부산더샵시티애비뉴2차","area":84.96,"floor":3,"built":2016,"date":"2026-10-20","deposit":10500,"rent":70,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":70}
 {"lawd":"26470","umdNm":"연산동","jibun":"2322","apt":"브라운스톤연제1단지","area":84.96,"floor":12,"built":2016,"date":"2026-10-20","deposit":20000,"rent":100,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26470","umdNm":"연산동","jibun":"2362","apt":"시청역비스타동원","area":84.99,"floor":31,"built":2019,"date":"2026-10-20","deposit":30000,"rent":60,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26470","umdNm":"연산동","jibun":"2352","apt":"연산더샵","area":84.77,"floor":5,"built":2019,"date":"2026-10-20","deposit":41000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

@@ -40,6 +40,7 @@
 {"lawd":"41194","umdNm":"범박동","jibun":"327","apt":"일루미스테이트","area":84.97,"floor":22,"built":2024,"date":"2026-11-06","deposit":53000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41194","umdNm":"심곡본동","jibun":"566-1","apt":"부천극동","area":69.85,"floor":9,"built":1980,"date":"2026-11-07","deposit":2000,"rent":75,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41194","umdNm":"범박동","jibun":"152-2","apt":"부천범박힐스테이트4단지","area":99.61,"floor":25,"built":2003,"date":"2026-11-07","deposit":43000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41194","umdNm":"옥길동","jibun":"776-1","apt":"부천옥길자이","area":84.77,"floor":11,"built":2018,"date":"2026-11-07","deposit":53000,"rent":0,"term":"26.12~28.02","type":"갱신","rrr":null,"preDeposit":39900,"preRent":0}
 {"lawd":"41194","umdNm":"송내동","jibun":"580","apt":"삼익1","area":52.43,"floor":1,"built":1979,"date":"2026-11-07","deposit":10000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41194","umdNm":"괴안동","jibun":"164-6","apt":"염광","area":43.69,"floor":3,"built":1989,"date":"2026-11-07","deposit":15750,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":15000,"preRent":0}
 {"lawd":"41194","umdNm":"옥길동","jibun":"751-1","apt":"옥길브리즈힐","area":74.92,"floor":14,"built":2016,"date":"2026-11-07","deposit":40000,"rent":10,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -85,6 +86,7 @@
 {"lawd":"41194","umdNm":"범박동","jibun":"327","apt":"일루미스테이트","area":84.97,"floor":3,"built":2024,"date":"2026-11-14","deposit":10000,"rent":200,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41194","umdNm":"괴안동","jibun":"204-5","apt":"삼익세라믹","area":56.67,"floor":9,"built":1988,"date":"2026-11-15","deposit":22500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41194","umdNm":"괴안동","jibun":"171-18","apt":"복지","area":42.66,"floor":5,"built":1986,"date":"2026-11-16","deposit":13000,"rent":10,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41194","umdNm":"소사본동","jibun":"133-12","apt":"부천소사역푸르지오","area":122.86,"floor":23,"built":2012,"date":"2026-11-16","deposit":61000,"rent":0,"term":"27.02~29.02","type":"갱신","rrr":null,"preDeposit":54800,"preRent":0}
 {"lawd":"41194","umdNm":"옥길동","jibun":"786","apt":"부천옥길엘에이치8단지","area":36.14,"floor":10,"built":2019,"date":"2026-11-16","deposit":9088,"rent":12,"term":"27.01~28.12","type":"갱신","rrr":null,"preDeposit":5989,"preRent":25}
 {"lawd":"41194","umdNm":"옥길동","jibun":"786","apt":"부천옥길엘에이치8단지","area":36.14,"floor":15,"built":2019,"date":"2026-11-16","deposit":10561,"rent":18,"term":"27.01~28.12","type":"갱신","rrr":null,"preDeposit":6239,"preRent":27}
 {"lawd":"41194","umdNm":"소사본동","jibun":"403","apt":"삼성","area":134.97,"floor":1,"built":1995,"date":"2026-11-16","deposit":2500,"rent":99,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -113,5 +115,10 @@
 {"lawd":"41194","umdNm":"범박동","jibun":"327","apt":"일루미스테이트","area":59.99,"floor":18,"built":2024,"date":"2026-11-21","deposit":45000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41194","umdNm":"소사본동","jibun":"70-6","apt":"현대프라힐스소사역더프라임","area":71.64,"floor":23,"built":2024,"date":"2026-11-21","deposit":5000,"rent":178,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":170}
 {"lawd":"41194","umdNm":"괴안동","jibun":"251-1","apt":"범박휴먼시아1단지","area":46.96,"floor":1,"built":2011,"date":"2026-11-22","deposit":1310,"rent":44,"term":"26.12~28.11","type":"갱신","rrr":null,"preDeposit":4282,"preRent":34}
+{"lawd":"41194","umdNm":"옥길동","jibun":"701-1","apt":"부천옥길엘에이치1단지","area":46.91,"floor":26,"built":2016,"date":"2026-11-23","deposit":4055,"rent":30,"term":"26.11~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41194","umdNm":"옥길동","jibun":"786","apt":"부천옥길엘에이치8단지","area":36.14,"floor":12,"built":2019,"date":"2026-11-23","deposit":9251,"rent":13,"term":"27.01~28.12","type":"갱신","rrr":"사용","preDeposit":8939,"preRent":11}
+{"lawd":"41194","umdNm":"옥길동","jibun":"786","apt":"부천옥길엘에이치8단지","area":36.14,"floor":13,"built":2019,"date":"2026-11-23","deposit":6962,"rent":29,"term":"26.11~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41194","umdNm":"괴안동","jibun":"291","apt":"부천YCITY","area":55.65,"floor":16,"built":2024,"date":"2026-11-23","deposit":15940,"rent":20,"term":"27.02~29.01","type":"갱신","rrr":null,"preDeposit":10800,"preRent":45}
 {"lawd":"41194","umdNm":"괴안동","jibun":"165","apt":"성우","area":39.42,"floor":1,"built":1987,"date":"2026-11-23","deposit":4000,"rent":25,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41194","umdNm":"소사본동","jibun":"55-3","apt":"대성","area":41.81,"floor":3,"built":1987,"date":"2026-11-24","deposit":2000,"rent":70,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41194","umdNm":"괴안동","jibun":"291","apt":"부천YCITY","area":55.65,"floor":11,"built":2024,"date":"2026-11-24","deposit":15940,"rent":20,"term":"27.02~29.01","type":"갱신","rrr":null,"preDeposit":10800,"preRent":45}
