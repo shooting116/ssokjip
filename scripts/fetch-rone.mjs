@@ -4,6 +4,8 @@
 //   node scripts/fetch-rone.mjs --mode tables [--q 주간]          통계표 목록에서 이름에 q가 들어간 표 찾기 (STATBL_ID 확인용)
 //   node scripts/fetch-rone.mjs --mode probe --tbl A_2024_00045     한 표의 최근 데이터 몇 줄과 필드명 출력
 //   node scripts/fetch-rone.mjs --mode weekly --tbl <ID> [--weeks 110]   주간 지수 받아 저장 (기존 파일에 이어 붙임)
+//        [--precision 2] 저장할 소수 자릿수(기본 2). 부동산원 공표 변동률(0.01% 단위)을 그대로 다시 계산하려면 6 이상
+//        [--out weekly.json] 저장 파일 이름(data/rone/ 아래)
 //
 // - 키: RONE_KEY 환경변수. 로그에 찍지 않는다.
 // - 응답은 JSON(Type=json). 표 구조: SttsApiTblData → row[] { WRTTIME_IDTFR_ID(기간), CLS_NM(지역), ITM_NM(항목), DTA_VAL(값), CLS_FULLNM, ... }
@@ -74,6 +76,8 @@ async function weekly() {
   const tbl = args.tbl ?? 'T244183132827305'; // (주) 매매가격지수 — 2026-10 probe로 확인
   const weeks = Number(args.weeks ?? 110);
   const cycle = args.cycle ?? 'WK';
+  const precision = Math.min(10, Math.max(2, Number(args.precision ?? 2) || 2));
+  const outName = /^[\w.-]+\.json$/.test(args.out ?? '') ? args.out : 'weekly.json';
   const SIDOS = ['전국', '서울', '인천', '경기', '부산', '대구', '대전', '광주', '전남광주', '울산', '세종']; // 2026 통합으로 광주는 '전남광주' 아래
   mkdirSync(OUT, { recursive: true });
   // 행은 기간 오름차순으로 정렬돼 있어, 마지막 페이지부터 거꾸로 받아 최근 weeks주만 모은다
@@ -97,12 +101,12 @@ async function weekly() {
     if (!SIDOS.includes(full.split('>')[0]) && full.includes('>')) continue; // 대상 시도의 하위 지역 + 최상위 집계(전국·수도권·지방권·광주 등)는 모두 저장
     const val = Number(r.DTA_VAL);
     if (!full || !Number.isFinite(val)) continue;
-    (series[full] ??= {})[r.WRTTIME_IDTFR_ID] = +val.toFixed(2); n++;
+    (series[full] ??= {})[r.WRTTIME_IDTFR_ID] = +val.toFixed(precision); n++;
     if (r.WRTTIME_DESC && !labels[r.WRTTIME_IDTFR_ID]) labels[r.WRTTIME_IDTFR_ID] = String(r.WRTTIME_DESC).trim();
   }
-  const out = { source: '한국부동산원 R-ONE 주간 아파트 매매가격지수 (STATBL ' + tbl + ')', tbl, cycle, updated: new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10), periods: keepList, labels, series };
-  writeFileSync(join(OUT, 'weekly.json'), JSON.stringify(out));
-  note(`[rone weekly] 총 ${total}행 중 ${rows.length}행 받음(호출 ${calls}) · 기간 ${keepList[0]}~${keepList.at(-1)} (${keepList.length}주, 최근 라벨 "${labels[keepList.at(-1)] ?? ''}") · 지역 ${Object.keys(series).length} · 값 ${n}`);
+  const out = { source: '한국부동산원 R-ONE 주간 아파트 매매가격지수 (STATBL ' + tbl + ')', tbl, cycle, updated: new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10), precision, periods: keepList, labels, series };
+  writeFileSync(join(OUT, outName), JSON.stringify(out));
+  note(`[rone weekly] 총 ${total}행 중 ${rows.length}행 받음(호출 ${calls}) · 기간 ${keepList[0]}~${keepList.at(-1)} (${keepList.length}주, 최근 라벨 "${labels[keepList.at(-1)] ?? ''}") · 지역 ${Object.keys(series).length} · 값 ${n} · 소수 ${precision}자리 → ${outName}`);
   note(`지역 예: ${Object.keys(series).slice(0, 12).join(' / ')}`);
   if (process.env.GITHUB_OUTPUT) writeFileSync(process.env.GITHUB_OUTPUT, `latest=${keepList.at(-1)}\nregions=${Object.keys(series).length}\n`, { flag: 'a' });
 }
