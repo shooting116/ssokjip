@@ -58,7 +58,7 @@ const toLabel = chart ? chart.labels[chart.periods[n - 1]] ?? chart.periods[n - 
   )}
 
   <ol class="rl" style={`--lc:${d.color}`}>
-    {d.regions.map((r, i) => (
+    {d.regions.map((r) => (
       <li class:list={[{ ref: r.isRef }]}>
         {r.seg && <div class="seg">{r.seg}</div>}
         <span class="dot" aria-hidden="true"></span>
@@ -74,7 +74,6 @@ const toLabel = chart ? chart.labels[chart.periods[n - 1]] ?? chart.periods[n - 
             <span>지수 3개월<b class={cls(r.m3)}>{r.m3 != null ? pct(r.m3) : '-'}</b></span>
           </div>
         </a>
-        {i === 3 && <Ad pos="mid" />}
       </li>
     ))}
   </ol>
