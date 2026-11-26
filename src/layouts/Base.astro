@@ -66,6 +66,11 @@ const nav = [
     <meta name="apple-mobile-web-app-title" content="쏙집" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <!-- 본문 틀 폭은 스타일시트보다 먼저 여기서 정한다. 애드센스 광고 스크립트는 사이트 스타일시트가 적용되기 전에 실행되어 페이지 폭을 재는데,
+         그때 본문 폭이 정해져 있지 않으면 PC에서 맨 위 광고를 1,200px로 잡아 본문 밖으로 나간다
+         (2026-11-27 실제 사이트 시험: 여기 넣으면 본문 폭, 스타일시트에만 두면 1,200px).
+         값은 global.css의 .wrap과 같게 유지하고, 반드시 광고 스크립트보다 앞에 둔다. -->
+    <style is:inline>.wrap{width:min(100% - 32px,608px)}</style>
     <!-- Google AdSense 소유권 확인·광고 스크립트 (게시자 ID는 공개값). 심사 전까지는 광고가 표시되지 않는다. -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5901585061378578" crossorigin="anonymous"></script>
     <!-- Google Analytics 4 (측정 ID는 공개값). 방문 통계용, 개인정보처리방침 4항에 고지. -->
