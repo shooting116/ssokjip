@@ -102,5 +102,15 @@ img { max-width: 100%; display: block; }
 
 .src { font-size: 11px; color: var(--muted); line-height: 1.5; }
 
+/* 광고 자리(수동 광고 단위, components/Ad.astro · lib/ads.ts).
+   광고가 채워지기 전에는 높이를 차지하지 않고, 채워지지 않으면(unfilled) 자리째 숨긴다.
+   채워졌을 때만 위아래 여백(12px)과 작은 '광고' 표시가 생긴다. 계산기는 카드 사이 간격이 이미 있어 여백을 더하지 않는다. */
+.ad-slot { min-height: 0; }
+.ad-slot ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
+.ad-slot:has(ins.adsbygoogle[data-ad-status="unfilled"]) { display: none; }
+.ad-slot:has(ins.adsbygoogle[data-ad-status="filled"]) { margin-block: var(--gap); }
+.ad-slot:has(ins.adsbygoogle[data-ad-status="filled"])::before { content: '광고'; display: block; margin: 0 0 4px 2px; font-size: 11px; line-height: 1.4; color: var(--muted); }
+.calc .ad-slot:has(ins.adsbygoogle[data-ad-status="filled"]) { margin-block: 0; }
+
 :focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 6px; }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }

@@ -5,6 +5,7 @@ import { listSido, listSigungu, classifyRegion } from '../engine/region.ts';
 import { fmtEok, fmtMonthly, fmtPct } from '../engine/money.ts';
 import type { CalcResult, ProductResult, Situation, DebtType } from '../engine/types.ts';
 import { defaultState, load, save, toInput, SITUATION_LABEL, DEBT_LABEL, type UiState, type Marital } from './state.ts';
+import { adHtml, requestAds } from '../ads.ts';
 
 const TOTAL_STEPS = 6;
 const rules = getRules();
@@ -70,8 +71,11 @@ function stepper(field: keyof UiState, label: string, min: number, max: number, 
 function render() {
   save(s);
   if (s.step === 0) root.innerHTML = viewSituation();
-  else if (s.step > TOTAL_STEPS) root.innerHTML = viewResult();
-  else root.innerHTML = viewStep();
+  else if (s.step > TOTAL_STEPS) {
+    root.innerHTML = viewResult();
+    // 결과 화면에 들어올 때 광고를 한 번 요청한다. 결과 화면 안에서는 화면을 다시 그리지 않으므로 요청도 한 번뿐이다.
+    requestAds(root);
+  } else root.innerHTML = viewStep();
   const f = root.querySelector<HTMLInputElement>('input[autofocus]');
   if (f && matchMedia('(min-width: 700px)').matches) f.focus();
   window.scrollTo({ top: 0 });
@@ -298,7 +302,7 @@ function viewResult(): string {
       </div>
     </div>`}
 
-    <div class="ad-slot" aria-hidden="true"></div>
+    ${adHtml('result')}
 
     <div class="card">
       <div class="h">받을 수 있는 대출</div>

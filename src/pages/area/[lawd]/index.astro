@@ -1,5 +1,6 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import Ad from '../../../components/Ad.astro';
 import { loadSummary, loadSigungu, type Complex } from '../../../lib/data/index.ts';
 import { eok, pct } from '../../../lib/ui/format.ts';
 import { roneSigungu, roneCity, roneSido, roneText } from '../../../lib/data/rone.ts';
@@ -77,7 +78,7 @@ const desc = `${sg.sigungu} 아파트 ${cs.length.toLocaleString()}개 단지의
     <ol class="rank">{active.map((c) => <li><a href={`/apt/${c.id}/`}><span class="nm">{c.name}{c.hot && <span class="pill p-hot hp">🔥 거래 활발</span>} <span class="sub">{c.umd} · {c.rep}㎡ {eok(c.price)}</span></span><b>{c.n6}건</b></a></li>)}</ol>
     {nHot > 0 && <p class="src">🔥 거래 활발 = 최근 6개월 거래 ÷ 세대수(회전율)가 {sg.sigungu} 안에서 상위 10%인 단지 {nHot}개 (6개월 5건 이상만 비교, 세대수 미확인 단지는 건수로 따로 비교). 건수 순위와 다를 수 있고, 가격 전망이 아닙니다.</p>}
   </section>
-  <div class="ad-slot" aria-hidden="true"></div>
+  <Ad pos="mid" />
   {up.length > 0 && (
     <section class="card sec">
       <h2>1년 상승 상위 <span class="sub">대표 평형 6개월 중앙값 비교</span></h2>
@@ -120,7 +121,6 @@ const desc = `${sg.sigungu} 아파트 ${cs.length.toLocaleString()}개 단지의
   .all { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 16px; font-size: 13.5px; }
   .all li { break-inside: avoid; padding: 5px 0; }
   .all a { color: inherit; font-weight: 600; }
-  .ad-slot { min-height: 0; margin-bottom: 12px; }
   .lnl { list-style: none; margin: 0; padding: 0; }
   .lnl li { border-bottom: 1px solid var(--soft); } .lnl li:last-child { border-bottom: 0; }
   .lnl a { display: flex; align-items: center; gap: 10px; padding: 11px 0; color: inherit; }

@@ -1,0 +1,11 @@
+---
+// 수동 광고 단위 한 칸. pos: result(결과 아래) · mid(목록·본문 중간) · bottom(하단)
+// 광고가 채워지기 전이나 채워지지 않았을 때는 높이를 차지하지 않는다(스타일은 global.css의 .ad-slot).
+import { AD_CLIENT, AD_SLOTS, type AdPos } from '../lib/ads';
+interface Props { pos: AdPos }
+const { pos } = Astro.props;
+---
+<div class="ad-slot" data-ad={pos}>
+  <ins class="adsbygoogle" style="display:block" data-ad-client={AD_CLIENT} data-ad-slot={AD_SLOTS[pos]} data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script is:inline>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>

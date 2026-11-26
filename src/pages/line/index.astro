@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Ad from '../../components/Ad.astro';
 import { LINES, REF, loadLine } from '../../lib/data/lines.ts';
 import { eok } from '../../lib/ui/format.ts';
 
@@ -23,7 +24,7 @@ const asOf = rows[0]?.asOf;
     ))}
   </ul>
   <p class="src">지역 시세는 84㎡ 타입 최근 6개월 실거래 중앙값. 출처: 국토교통부 실거래가({asOf} 기준) · 한국부동산원 R-ONE · 국가철도공단 전국도시철도역사정보. 1호선은 서울·경기·인천 구간만 담았습니다.</p>
-  <div class="ad-slot" aria-hidden="true"></div>
+  <Ad pos="bottom" />
 </Base>
 <style>
   .lines { list-style: none; margin: 0 0 12px; padding: 4px 16px; }
@@ -32,5 +33,4 @@ const asOf = rows[0]?.asOf;
   .ln { flex: none; width: 6px; align-self: stretch; border-radius: 3px; }
   .nm { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; } .nm b { font-size: 15.5px; }
   .pa { font-size: 12.5px; color: var(--fg2); word-break: keep-all; line-height: 1.5; }
-  .ad-slot { min-height: 0; }
 </style>

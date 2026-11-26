@@ -1,5 +1,6 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import Ad from '../../../components/Ad.astro';
 import { LINES, loadLine, MIN_COMPLEX } from '../../../lib/data/lines.ts';
 import { eok, pct } from '../../../lib/ui/format.ts';
 
@@ -73,7 +74,7 @@ const toLabel = chart ? chart.labels[chart.periods[n - 1]] ?? chart.periods[n - 
             <span>지수 3개월<b class={cls(r.m3)}>{r.m3 != null ? pct(r.m3) : '-'}</b></span>
           </div>
         </a>
-        {i === 3 && <div class="ad-slot" aria-hidden="true"></div>}
+        {i === 3 && <Ad pos="mid" />}
       </li>
     ))}
   </ol>
@@ -88,7 +89,7 @@ const toLabel = chart ? chart.labels[chart.periods[n - 1]] ?? chart.periods[n - 
     </ul>
   </section>
   <p class="src">출처: 국토교통부 아파트 매매 실거래가({d.asOf} 기준, 해제·직거래 제외) · 한국부동산원 R-ONE 주간 아파트 매매가격지수 · 국가철도공단 전국도시철도역사정보.</p>
-  <div class="ad-slot" aria-hidden="true"></div>
+  <Ad pos="bottom" />
 </Base>
 <style>
   .ln { display: inline-block; width: 6px; height: 22px; border-radius: 3px; }
@@ -118,5 +119,4 @@ const toLabel = chart ? chart.labels[chart.periods[n - 1]] ?? chart.periods[n - 
   .kv b { font-size: 14px; color: var(--fg, #191f28); margin-top: 2px; font-variant-numeric: tabular-nums; }
   .up { color: var(--red) !important; } .down { color: var(--blue) !important; } .na { color: var(--muted); }
   .how { margin: 0; padding-left: 18px; font-size: 13.5px; line-height: 1.6; color: var(--fg2); } .how li { margin: 4px 0; }
-  .ad-slot { min-height: 0; }
 </style>

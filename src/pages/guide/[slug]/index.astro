@@ -1,5 +1,6 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import Ad from '../../../components/Ad.astro';
 import RuleFacts from '../../../components/RuleFacts.astro';
 import { getCollection, render } from 'astro:content';
 import { CATEGORY, isLive, fmtDate } from '../../../lib/ui/guide.ts';
@@ -37,7 +38,7 @@ const jsonLd = { '@context': 'https://schema.org', '@type': 'Article', headline:
       {d.facts.length > 0 && <RuleFacts keys={d.facts} />}
     </div>
     {ctaHref && <a class="btn" href={ctaHref} style="margin-top:12px">{ctaLabel}</a>}
-    <div class="ad-slot" aria-hidden="true"></div>
+    <Ad pos="bottom" />
     {d.sources.length > 0 && (
       <section class="card" style="margin-top:12px">
         <b>출처</b>
@@ -99,5 +100,4 @@ const jsonLd = { '@context': 'https://schema.org', '@type': 'Article', headline:
   .g .body strong { font-weight: 700; }
   .g .body a { color: var(--blue); }
   .g .srcs { list-style: none; margin: 6px 0 0; padding: 0; font-size: 13.5px; } .g .srcs li { padding: 5px 0; } .g .srcs a { color: var(--fg); font-weight: 600; }
-  .g .ad-slot { min-height: 0; }
 </style>

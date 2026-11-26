@@ -1,5 +1,6 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import Ad from '../../../components/Ad.astro';
 import { loadSummary, loadSigungu, type Complex } from '../../../lib/data/index.ts';
 import { eok, pct, yeok } from '../../../lib/ui/format.ts';
 
@@ -41,7 +42,7 @@ const desc = `${sido} ${all.length.toLocaleString()}개 단지의 84㎡ 시세 �
     <h2>최근 6개월 거래 상위 {N}</h2>
     <ol class="rank">{active.map((c) => <li><a href={`/apt/${c.id}/`}><span class="nm">{c.name} <span class="sub">{c.sigungu} {c.umd}{c.kapt?.units ? ` · ${c.kapt.units.toLocaleString()}세대` : ''} · {c.rep}㎡ {eok(c.price)}</span></span><b>{c.n6}건</b></a></li>)}</ol>
   </section>
-  <div class="ad-slot" aria-hidden="true"></div>
+  <Ad pos="mid" />
   <section class="card sec" id="up">
     <h2>1년 상승 상위 {N} <span class="sub">대표 평형</span></h2>
     <ol class="rank">{up.map(({ c, t }) => <li><a href={`/apt/${c.id}/`}><span class="nm">{c.name} <span class="sub">{c.sigungu} {c.umd} · {t!.label} {eok(t!.price)}</span></span><b class="up">{pct(t!.yoy)}</b></a></li>)}</ol>
@@ -86,5 +87,4 @@ const desc = `${sido} ${all.length.toLocaleString()}개 단지의 84㎡ 시세 �
   .up { color: var(--red); } .down { color: var(--blue); }
   .nl { list-style: none; margin: 0 0 8px 32px; padding: 0; font-size: 12.5px; }
   .nl li { margin: 2px 0; } .nl a { color: var(--fg2); }
-  .ad-slot { min-height: 0; margin-bottom: 12px; }
 </style>

@@ -1,5 +1,6 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import Ad from '../../../components/Ad.astro';
 import Sparkline from '../../../components/Sparkline.astro';
 import { allSigungu, loadSigungu, type Complex } from '../../../lib/data/index.ts';
 import { tradesOf } from '../../../lib/data/trades.ts';
@@ -180,7 +181,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
     </div>
   </section>
 
-  <div class="ad-slot" aria-hidden="true"></div>
+  <Ad pos="mid" />
 
   {(c.transit.length > 0 || c.redev) && (
     <section class="card">
@@ -282,7 +283,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
       </div>
     </section>
   )}
-  <div class="ad-slot" aria-hidden="true"></div>
+  <Ad pos="bottom" />
 </Base>
 
 <style>
@@ -335,7 +336,6 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
   .list .tr { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--soft); color: inherit; }
   .list .tr:last-child { border-bottom: 0; }
   .list .tr .v { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .ad-slot { min-height: 0; margin-bottom: 12px; }
   .hero .actions { display: flex; flex-direction: column; gap: 8px; }
   .btn.ghost { background: var(--soft); color: var(--blue); }
   .btn.ghost.on { background: var(--blue-soft); }
