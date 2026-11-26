@@ -1,7 +1,13 @@
 {
- "lastDecision": "2026-10-22",
- "rate": 3,
- "rateDate": "2026-08-27",
+ "lastDecision": "2026-11-26",
+ "rate": 3.25,
+ "rateDate": "2026-11-26",
  "fails": 0,
- "checked": "2026-11-26"
+ "checked": "2026-11-26",
+ "lastEvent": {
+  "date": "2026-11-26",
+  "kind": "인상",
+  "rate": 3.25,
+  "prev": 3
+ }
 }
