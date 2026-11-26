@@ -15,6 +15,13 @@ export const AD_SLOTS = {
 export type AdPos = keyof typeof AD_SLOTS;
 
 /**
+ * 상단 띠 광고(제목 바로 아래, 높이 고정)에 쓰는 광고 단위.
+ * 전용 단위를 만들기 전까지 '리스트 중간' 단위를 같이 쓴다 — 애드센스 보고서에서는 상단 수익이 '리스트 중간'에 합쳐져 보인다.
+ * '상단' 단위를 따로 만들면 이 줄의 번호만 바꾼다.
+ */
+export const AD_TOP_SLOT: string = AD_SLOTS.mid;
+
+/**
  * 광고 단위 마크업. 자바스크립트로 그리는 화면(계산기)에서 쓴다. Astro 페이지는 components/Ad.astro를 쓴다.
  * 애드센스가 준 코드의 속성을 그대로 둔다(반응형, 폰에서는 화면 폭).
  */

@@ -54,6 +54,7 @@ const desc = `${sg.sigungu} 아파트 ${cs.length.toLocaleString()}개 단지의
     {roneLine && <p class="sub" style="margin:4px 0 0">부동산원 매매가격지수(한국부동산원 주간{rone ? `, ${rone.asOfLabel} 기준 주` : ''}): {roneLine}</p>}
   </header>
   <a class="btn" href={`/find/#lawd=${lawd}`} style="margin-bottom:12px">내 예산으로 {sg.sigungu} 단지 찾기</a>
+  <Ad pos="top" />
 
   {lines.length > 0 && (
     <section class="card sec">

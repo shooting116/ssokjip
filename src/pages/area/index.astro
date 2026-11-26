@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Ad from '../../components/Ad.astro';
 import { loadSummary, type RegionChange } from '../../lib/data/index.ts';
 import { pct } from '../../lib/ui/format.ts';
 import { roneSido, roneSigungu, roneCity, roneAsOf, roneWeekHtml } from '../../lib/data/rone.ts';
@@ -33,6 +34,7 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
     <h1 class="big" style="margin:0;font-size:22px">지역별 실거래</h1>
     <p class="sub2" style="margin:4px 0 0">시도 전체와 시·구 단위의 1년 변동률과 최근 3개월 흐름. 시군구를 고르면 대장 단지·거래 활발 단지·전체 단지 목록을 볼 수 있어요.</p>
   </div>
+  <Ad pos="top" />
 
   <section class="card" aria-labelledby="sido-h">
     <h2 id="sido-h">시도별 변동률 <span class="sub">1년 · 최근 3개월</span></h2>

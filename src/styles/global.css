@@ -110,9 +110,15 @@ img { max-width: 100%; display: block; }
 .ad-slot { min-height: 0; }
 .ad-slot ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
 .ad-slot:has(ins.adsbygoogle[data-ad-status="unfilled"]) { display: none; }
-.ad-slot:has(ins.adsbygoogle[data-ad-status]:not([data-ad-status="unfilled"])) { margin-block: var(--gap); }
-.ad-slot:has(ins.adsbygoogle[data-ad-status]:not([data-ad-status="unfilled"]))::before { content: '광고'; display: block; margin: 0 0 4px 2px; font-size: 11px; line-height: 1.4; color: var(--muted); }
+.ad-slot:not([data-ad="top"]):has(ins.adsbygoogle[data-ad-status]:not([data-ad-status="unfilled"])) { margin-block: var(--gap); }
+.ad-slot:not([data-ad="top"]):has(ins.adsbygoogle[data-ad-status]:not([data-ad-status="unfilled"]))::before { content: '광고'; display: block; margin: 0 0 4px 2px; font-size: 11px; line-height: 1.4; color: var(--muted); }
 .calc .ad-slot:has(ins.adsbygoogle[data-ad-status]:not([data-ad-status="unfilled"])) { margin-block: 0; }
+/* 상단 띠 광고(제목 바로 아래): 높이가 고정이라 처음부터 자리를 차지한다 → 광고가 뜰 때 아래 내용이 밀리지 않는다.
+   그래서 여백과 '광고' 표시도 처음부터 둔다. 채워지지 않으면(unfilled) 위 규칙대로 자리째 숨는다. */
+.ad-slot[data-ad="top"] { margin: 0 0 var(--gap); text-align: center; }
+.ad-slot[data-ad="top"]::before { content: '광고'; display: block; margin: 0 0 4px 2px; font-size: 11px; line-height: 1.4; color: var(--muted); text-align: left; }
+/* 광고 스크립트를 불러오지 못했을 때(광고 차단 등)는 빈 자리가 남지 않게 광고 자리를 모두 숨긴다(Base.astro에서 표시). */
+.noads .ad-slot { display: none; }
 
 :focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 6px; }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }

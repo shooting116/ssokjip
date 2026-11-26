@@ -28,6 +28,7 @@ const jsonLd = { '@context': 'https://schema.org', '@type': 'Article', headline:
       <p class="sub2" style="margin:8px 0 0">{d.description}</p>
       <p class="sub" style="margin:8px 0 0">{fmtDate(d.publishAt)} 발행{d.updatedAt ? ` · ${fmtDate(d.updatedAt)} 수정` : ''} · 숫자 기준일 {d.asOf}</p>
     </header>
+    <Ad pos="top" />
     <div class="card basis">
       <b>이 글의 기준</b>
       <p class="sub2" style="margin:4px 0 0">아래 숫자는 {d.asOf} 기준 공개 자료(규칙표)에서 가져왔고, 계산기와 같은 값입니다. 제도가 바뀌면 글과 계산기가 함께 바뀝니다. 실제 한도·금리는 금융기관 심사에 따라 다릅니다. 쏙집은 대출 상담·중개를 하지 않습니다.</p>

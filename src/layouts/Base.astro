@@ -71,8 +71,8 @@ const nav = [
          (2026-11-27 실제 사이트 시험: 여기 넣으면 본문 폭, 스타일시트에만 두면 1,200px).
          값은 global.css의 .wrap과 같게 유지하고, 반드시 광고 스크립트보다 앞에 둔다. -->
     <style is:inline>.wrap{width:min(100% - 32px,608px)}</style>
-    <!-- Google AdSense 소유권 확인·광고 스크립트 (게시자 ID는 공개값). 심사 전까지는 광고가 표시되지 않는다. -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5901585061378578" crossorigin="anonymous"></script>
+    <!-- Google AdSense 광고 스크립트 (게시자 ID는 공개값). 불러오지 못하면(광고 차단 등) html에 noads를 붙여 빈 광고 자리를 숨긴다. -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5901585061378578" crossorigin="anonymous" onerror="document.documentElement.classList.add('noads')"></script>
     <!-- Google Analytics 4 (측정 ID는 공개값). 방문 통계용, 개인정보처리방침 4항에 고지. -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M65MP3QN4C"></script>
     <script is:inline>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-M65MP3QN4C',{anonymize_ip:true});</script>

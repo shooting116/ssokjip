@@ -42,6 +42,7 @@ const toLabel = chart ? chart.labels[chart.periods[n - 1]] ?? chart.periods[n - 
     {d.lineNote && <p class="sub" style="margin:2px 0 0">{d.lineNote}{d.slug.startsWith('gtx') && <> <a href="/guide/gtx-timeline-2026/">GTX 일정</a></>}</p>}
     {d.note && <p class="sub" style="margin:2px 0 0">참고: {d.note.label} 84㎡ 시세 중앙값 <b>{eok(d.note.med)}</b> ({d.note.n}개 단지)</p>}
   </header>
+  <Ad pos="top" />
 
   {chart && (
     <section class="card sec">
