@@ -513,6 +513,7 @@
 {"lawd":"41550","umdNm":"대덕면 신령리","jibun":"820","apt":"안성롯데캐슬","area":74.44,"floor":15,"built":2016,"date":"2026-10-31","deposit":18900,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41550","umdNm":"옥산동","jibun":"10","apt":"옥산주공","area":38.52,"floor":1,"built":1988,"date":"2026-10-31","deposit":500,"rent":50,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41550","umdNm":"공도읍 진사리","jibun":"36-1","apt":"주은청설","area":49.53,"floor":4,"built":2000,"date":"2026-10-31","deposit":9400,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41550","umdNm":"공도읍 용두리","jibun":"752","apt":"주은풍림","area":49.77,"floor":8,"built":2002,"date":"2026-10-31","deposit":500,"rent":70,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41550","umdNm":"공도읍 용두리","jibun":"752","apt":"주은풍림","area":49.77,"floor":15,"built":2002,"date":"2026-10-31","deposit":10000,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":0}
 {"lawd":"41550","umdNm":"공도읍 용두리","jibun":"683","apt":"태산1차","area":59.67,"floor":4,"built":1999,"date":"2026-10-31","deposit":1000,"rent":55,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":1000,"preRent":50}
 {"lawd":"41550","umdNm":"금광면 신양복리","jibun":"139-1","apt":"홍익","area":38.98,"floor":5,"built":2001,"date":"2026-10-31","deposit":500,"rent":50,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

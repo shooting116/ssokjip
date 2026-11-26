@@ -29,6 +29,7 @@
 {"lawd":"41593","umdNm":"봉담읍 내리","jibun":"882","apt":"힐스테이트봉담프라이드시티","area":59.65,"floor":7,"built":2024,"date":"2026-10-03","deposit":5000,"rent":130,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41593","umdNm":"기안동","jibun":"935","apt":"화성우방아이유쉘MEGACITY1단지","area":84.54,"floor":4,"built":2022,"date":"2026-10-04","deposit":30000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41593","umdNm":"기안동","jibun":"935","apt":"화성우방아이유쉘MEGACITY1단지","area":84.54,"floor":19,"built":2022,"date":"2026-10-04","deposit":5000,"rent":130,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41593","umdNm":"정남면 발산리","jibun":"490-12","apt":"동남훼미리","area":49.92,"floor":9,"built":2000,"date":"2026-10-05","deposit":500,"rent":65,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41593","umdNm":"봉담읍 동화리","jibun":"100-1","apt":"신일우남클래식타운","area":59.86,"floor":15,"built":1999,"date":"2026-10-05","deposit":2000,"rent":75,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41593","umdNm":"봉담읍 상리","jibun":"679","apt":"화성봉담2엘크루루엘리안","area":55.96,"floor":15,"built":2022,"date":"2026-10-05","deposit":30000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41593","umdNm":"봉담읍 내리","jibun":"882","apt":"힐스테이트봉담프라이드시티","area":60,"floor":23,"built":2024,"date":"2026-10-05","deposit":24000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":25200,"preRent":0}
@@ -52,6 +53,7 @@
 {"lawd":"41593","umdNm":"봉담읍 수영리","jibun":"689","apt":"힐스테이트봉담","area":72.68,"floor":20,"built":2021,"date":"2026-10-07","deposit":7760,"rent":39,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41593","umdNm":"봉담읍 수영리","jibun":"689","apt":"힐스테이트봉담","area":84.97,"floor":4,"built":2021,"date":"2026-10-07","deposit":17180,"rent":24,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41593","umdNm":"정남면 발산리","jibun":"490-12","apt":"동남훼미리","area":39.95,"floor":2,"built":2000,"date":"2026-10-08","deposit":0,"rent":50,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":0,"preRent":45}
+{"lawd":"41593","umdNm":"봉담읍 수영리","jibun":"689","apt":"힐스테이트봉담","area":72.96,"floor":2,"built":2021,"date":"2026-10-08","deposit":10400,"rent":38,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41593","umdNm":"봉담읍 수영리","jibun":"689","apt":"힐스테이트봉담","area":72.96,"floor":22,"built":2021,"date":"2026-10-08","deposit":15110,"rent":22,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41593","umdNm":"봉담읍 수영리","jibun":"689","apt":"힐스테이트봉담","area":84.97,"floor":20,"built":2021,"date":"2026-10-08","deposit":17180,"rent":24,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41593","umdNm":"봉담읍 내리","jibun":"882","apt":"힐스테이트봉담프라이드시티","area":60,"floor":3,"built":2024,"date":"2026-10-08","deposit":22050,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":21000,"preRent":0}
@@ -188,6 +190,7 @@
 {"lawd":"41593","umdNm":"매송면 야목리","jibun":"1300","apt":"휴먼시아","area":36.61,"floor":5,"built":2011,"date":"2026-10-27","deposit":422,"rent":14,"term":"26.11~28.12","type":"갱신","rrr":null,"preDeposit":1322,"preRent":11}
 {"lawd":"41593","umdNm":"매송면 야목리","jibun":"1300","apt":"휴먼시아","area":46.7,"floor":8,"built":2011,"date":"2026-10-27","deposit":1137,"rent":21,"term":"26.11~28.12","type":"갱신","rrr":null,"preDeposit":2137,"preRent":18}
 {"lawd":"41593","umdNm":"봉담읍 동화리","jibun":"603","apt":"휴먼시아동화마을(4단지)","area":59.57,"floor":1,"built":2007,"date":"2026-10-27","deposit":5839,"rent":17,"term":"26.11~28.10","type":"갱신","rrr":"사용","preDeposit":5675,"preRent":15}
+{"lawd":"41593","umdNm":"기안동","jibun":"928","apt":"화성우방아이유쉘MEGACITY2단지","area":84.39,"floor":3,"built":2022,"date":"2026-10-28","deposit":5000,"rent":120,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":120}
 {"lawd":"41593","umdNm":"매송면 야목리","jibun":"1300","apt":"휴먼시아","area":36.99,"floor":12,"built":2011,"date":"2026-10-28","deposit":522,"rent":13,"term":"26.11~28.12","type":"갱신","rrr":null,"preDeposit":1322,"preRent":11}
 {"lawd":"41593","umdNm":"봉담읍 동화리","jibun":"594","apt":"휴먼시아동화마을(1단지)","area":59.57,"floor":2,"built":2007,"date":"2026-10-28","deposit":3439,"rent":29,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":3275,"preRent":27}
 {"lawd":"41593","umdNm":"봉담읍 내리","jibun":"871","apt":"봉담자이프라이드시티","area":59.65,"floor":27,"built":2024,"date":"2026-10-29","deposit":5000,"rent":85,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":80}

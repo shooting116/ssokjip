@@ -296,6 +296,7 @@
 {"lawd":"26350","umdNm":"재송동","jibun":"1324","apt":"센텀협성르네상스타운","area":84.4,"floor":29,"built":2013,"date":"2026-10-16","deposit":36000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26350","umdNm":"반여동","jibun":"1638","apt":"아시아선수촌아파트","area":59.92,"floor":7,"built":2002,"date":"2026-10-16","deposit":28000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26350","umdNm":"좌동","jibun":"1398","apt":"엘지","area":59.94,"floor":21,"built":1996,"date":"2026-10-16","deposit":19950,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":19000,"preRent":0}
+{"lawd":"26350","umdNm":"중동","jibun":"1526-1","apt":"이진캐스빌","area":75.32,"floor":4,"built":1989,"date":"2026-10-16","deposit":120,"rent":40,"term":"26.11~27.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26350","umdNm":"좌동","jibun":"1274","apt":"한일","area":58.2,"floor":6,"built":1996,"date":"2026-10-16","deposit":19000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":19000,"preRent":0}
 {"lawd":"26350","umdNm":"우동","jibun":"1565","apt":"해운대경동리인뷰2차","area":84.44,"floor":36,"built":2024,"date":"2026-10-16","deposit":5000,"rent":230,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26350","umdNm":"우동","jibun":"1407","apt":"해운대두산위브더제니스","area":157.02,"floor":54,"built":2011,"date":"2026-10-16","deposit":0,"rent":550,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

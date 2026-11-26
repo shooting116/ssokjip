@@ -288,6 +288,7 @@
 {"lawd":"28245","umdNm":"효성동","jibun":"200-1","apt":"현대4","area":59.4,"floor":18,"built":1995,"date":"2026-10-29","deposit":21500,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":20700,"preRent":0}
 {"lawd":"28245","umdNm":"효성동","jibun":"200-1","apt":"현대4","area":59.4,"floor":23,"built":1995,"date":"2026-10-29","deposit":5000,"rent":70,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28245","umdNm":"작전동","jibun":"41-1","apt":"형제","area":65.88,"floor":3,"built":1985,"date":"2026-10-29","deposit":14700,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":14000,"preRent":0}
+{"lawd":"28245","umdNm":"효성동","jibun":"28","apt":"효성동대림아파트","area":83.99,"floor":12,"built":1999,"date":"2026-10-29","deposit":3000,"rent":90,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28245","umdNm":"효성동","jibun":"24","apt":"뉴서울2","area":34.74,"floor":5,"built":1986,"date":"2026-10-30","deposit":500,"rent":40,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28245","umdNm":"동양동","jibun":"575","apt":"동양주공1단지(임대)","area":49.91,"floor":6,"built":2006,"date":"2026-10-30","deposit":2419,"rent":25,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":2304,"preRent":24}
 {"lawd":"28245","umdNm":"효성동","jibun":"33-2","apt":"두산","area":59.93,"floor":1,"built":1997,"date":"2026-10-30","deposit":13000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

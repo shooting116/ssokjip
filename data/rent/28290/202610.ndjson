@@ -260,6 +260,7 @@
 {"lawd":"28290","umdNm":"불로동","jibun":"1001","apt":"힐스테이트신검단센트럴","area":74.82,"floor":8,"built":2025,"date":"2026-10-14","deposit":37000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28290","umdNm":"원당동","jibun":"1026-1","apt":"e편한세상검단웰카운티","area":104.99,"floor":22,"built":2026,"date":"2026-10-14","deposit":5000,"rent":210,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28290","umdNm":"원당동","jibun":"1026-1","apt":"e편한세상검단웰카운티","area":104.99,"floor":24,"built":2026,"date":"2026-10-14","deposit":50000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28290","umdNm":"원당동","jibun":"1084-1","apt":"검단신도시대방디에트르리버파크","area":85,"floor":26,"built":2022,"date":"2026-10-15","deposit":5000,"rent":160,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28290","umdNm":"원당동","jibun":"987","apt":"검단신도시로제비앙라포레","area":84.81,"floor":4,"built":2022,"date":"2026-10-15","deposit":35000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":35000,"preRent":0}
 {"lawd":"28290","umdNm":"당하동","jibun":"1318-8","apt":"검단신도시모아미래도엘리트파크","area":84.66,"floor":2,"built":2022,"date":"2026-10-15","deposit":32600,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":32000,"preRent":0}
 {"lawd":"28290","umdNm":"원당동","jibun":"1020-1","apt":"검단신도시파라곤보타닉파크","area":84.99,"floor":17,"built":2022,"date":"2026-10-15","deposit":37000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -483,6 +484,7 @@
 {"lawd":"28290","umdNm":"왕길동","jibun":"133-3","apt":"왕길역로열파크씨티푸르지오","area":59.95,"floor":6,"built":2024,"date":"2026-10-26","deposit":3000,"rent":150,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28290","umdNm":"원당동","jibun":"1082-3","apt":"우미린리버포레","area":59.3,"floor":13,"built":2023,"date":"2026-10-26","deposit":16600,"rent":13,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28290","umdNm":"원당동","jibun":"1082-3","apt":"우미린리버포레","area":59.49,"floor":7,"built":2023,"date":"2026-10-26","deposit":12900,"rent":26,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28290","umdNm":"당하동","jibun":"1031","apt":"원당풍림아이원","area":74.09,"floor":3,"built":2004,"date":"2026-10-26","deposit":2000,"rent":110,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28290","umdNm":"마전동","jibun":"1136","apt":"인천마전대주파크빌","area":84.97,"floor":2,"built":2005,"date":"2026-10-26","deposit":3000,"rent":94,"term":"26.12~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28290","umdNm":"마전동","jibun":"1136","apt":"인천마전대주파크빌","area":84.97,"floor":7,"built":2005,"date":"2026-10-26","deposit":14000,"rent":30,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":14000,"preRent":19}
 {"lawd":"28290","umdNm":"당하동","jibun":"1316-2","apt":"검단신도시대성베르힐라프리미어","area":84.94,"floor":1,"built":2022,"date":"2026-10-27","deposit":5000,"rent":150,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -532,6 +534,7 @@
 {"lawd":"28290","umdNm":"불로동","jibun":"372","apt":"퀸스타운(길훈)","area":84.99,"floor":3,"built":1999,"date":"2026-10-29","deposit":20000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28290","umdNm":"당하동","jibun":"1314","apt":"검단신안인스빌어반퍼스트","area":84.73,"floor":5,"built":2022,"date":"2026-10-30","deposit":33000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28290","umdNm":"당하동","jibun":"1314","apt":"검단신안인스빌어반퍼스트","area":84.73,"floor":21,"built":2022,"date":"2026-10-30","deposit":34000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28290","umdNm":"왕길동","jibun":"661-1","apt":"대림e-편한세상(검단2지구66BL1L)","area":84.91,"floor":7,"built":2007,"date":"2026-10-30","deposit":2000,"rent":130,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28290","umdNm":"마전동","jibun":"1148-1","apt":"마전금호어울림","area":79.75,"floor":4,"built":2007,"date":"2026-10-30","deposit":18500,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":18000,"preRent":0}
 {"lawd":"28290","umdNm":"마전동","jibun":"999-5","apt":"영남탑스빌","area":84.97,"floor":3,"built":2000,"date":"2026-10-30","deposit":24500,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":23500,"preRent":0}
 {"lawd":"28290","umdNm":"불로동","jibun":"372","apt":"퀸스타운(길훈)","area":59.72,"floor":7,"built":1999,"date":"2026-10-30","deposit":16000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

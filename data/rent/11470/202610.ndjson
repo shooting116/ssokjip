@@ -715,6 +715,7 @@
 {"lawd":"11470","umdNm":"신정동","jibun":"1324","apt":"신정숲속마을","area":59.99,"floor":16,"built":2016,"date":"2026-10-29","deposit":22031,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":20982,"preRent":0}
 {"lawd":"11470","umdNm":"신정동","jibun":"1277","apt":"신트리4","area":49.08,"floor":6,"built":2000,"date":"2026-10-29","deposit":8000,"rent":100,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":8000,"preRent":50}
 {"lawd":"11470","umdNm":"신정동","jibun":"334","apt":"쌍용","area":84.63,"floor":11,"built":1992,"date":"2026-10-29","deposit":73000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11470","umdNm":"신정동","jibun":"1283","apt":"푸른마을3","area":84.9,"floor":9,"built":2001,"date":"2026-10-29","deposit":45000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11470","umdNm":"목동","jibun":"951","apt":"금호어울림","area":120.12,"floor":2,"built":2004,"date":"2026-10-30","deposit":86950,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":86950,"preRent":0}
 {"lawd":"11470","umdNm":"목동","jibun":"715-3","apt":"동구햇살아파트2차","area":61.91,"floor":4,"built":2013,"date":"2026-10-30","deposit":39500,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":38000,"preRent":0}
 {"lawd":"11470","umdNm":"신정동","jibun":"1326","apt":"래미안목동아델리체(101동~118동)","area":84.58,"floor":8,"built":2021,"date":"2026-10-30","deposit":89000,"rent":0,"term":"26.12~28.01","type":"갱신","rrr":"사용","preDeposit":85000,"preRent":0}
