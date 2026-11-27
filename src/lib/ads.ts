@@ -6,6 +6,16 @@
 //  - result: 계산기 결과 아래
 //  - mid:    목록·본문 중간(리스트 4번째, 섹션 사이)
 //  - bottom: 페이지 하단
+/**
+ * 수동 광고 켜기/끄기. 2026-11-27 13시대부터 끔(false) — 폰에서 본문 중간 광고가 한 화면 가까이 길게 나와 일단 모두 내렸다.
+ * 끄면 광고 단위가 페이지에 들어가지 않는다. 미리 잡아 둔 자리는 예전처럼 빈 칸(.ad-slot)으로만 남고,
+ * 상단 띠 자리와 가이드 본문 중간 자리는 아예 그리지 않는다.
+ * 다시 켜기 전에 할 일과 그동안 확인한 내용은 docs/ads.md에 적어 두었다.
+ */
+export const MANUAL_ADS: boolean = false;
+/** 광고를 껐을 때 남겨 두는 빈 자리(레이아웃에 미리 잡아 둔 자리 표시) */
+export const EMPTY_SLOT = '<div class="ad-slot" aria-hidden="true"></div>';
+
 export const AD_CLIENT = 'ca-pub-5901585061378578';
 export const AD_SLOTS = {
   result: '9406769963', // 쏙집(반응형 결과아래)
@@ -26,7 +36,9 @@ export const AD_TOP_SLOT: string = AD_SLOTS.mid;
  * 애드센스가 준 코드의 속성을 그대로 둔다(반응형, 폰에서는 화면 폭).
  */
 export const adHtml = (pos: AdPos) =>
-  `<div class="ad-slot" data-ad="${pos}"><ins class="adsbygoogle" style="display:block" data-ad-client="${AD_CLIENT}" data-ad-slot="${AD_SLOTS[pos]}" data-ad-format="auto" data-full-width-responsive="true"></ins></div>`;
+  !MANUAL_ADS
+    ? EMPTY_SLOT
+    : `<div class="ad-slot" data-ad="${pos}"><ins class="adsbygoogle" style="display:block" data-ad-client="${AD_CLIENT}" data-ad-slot="${AD_SLOTS[pos]}" data-ad-format="auto" data-full-width-responsive="true"></ins></div>`;
 
 /** 아직 요청하지 않은 광고 단위를 한 번씩 요청한다(자바스크립트로 그린 화면용). 광고 차단 등으로 실패해도 무시한다. */
 export function requestAds(el: ParentNode) {

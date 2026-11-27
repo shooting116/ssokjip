@@ -5,6 +5,7 @@ import RuleFacts from '../../../components/RuleFacts.astro';
 import { getCollection, render } from 'astro:content';
 import { CATEGORY, isLive, fmtDate } from '../../../lib/ui/guide.ts';
 import { splitGuideForAds } from '../../../lib/ui/guide-ads.ts';
+import { MANUAL_ADS } from '../../../lib/ads.ts';
 
 export async function getStaticPaths() {
   return (await getCollection('guide')).filter(isLive).map((e) => ({ params: { slug: e.id }, props: { entry: e } }));
@@ -18,7 +19,8 @@ const toc = headings.filter((h) => h.depth === 2);
 // 본문 중간 광고: 글 길이에 따라 1~2개를 소제목 위에 둔다(위치 계산은 lib/ui/guide-ads.ts).
 // <Content />는 통째로만 그릴 수 있어, 같은 내용인 렌더링된 HTML을 광고 자리에서 나눠서 그린다. HTML이 없으면 <Content />로 그린다.
 const bodyHtml = entry.rendered?.html;
-const bodyParts = bodyHtml ? splitGuideForAds(bodyHtml, (entry.body ?? '').replace(/\s+/g, '').length) : null;
+// 수동 광고를 껐을 때(MANUAL_ADS = false)는 나누지 않고 <Content />로 그린다.
+const bodyParts = MANUAL_ADS && bodyHtml ? splitGuideForAds(bodyHtml, (entry.body ?? '').replace(/\s+/g, '').length) : null;
 const ctaHref = d.cta === 'calc' ? `/calc/${d.situation ? `?s=${d.situation}` : ''}` : d.cta === 'find' ? '/find/' : d.cta === 'ref' ? '/ref/' : null;
 const ctaLabel = d.cta === 'calc' ? '내 조건으로 계산하기' : d.cta === 'find' ? '이 예산으로 집 찾기' : '레퍼런스 보기';
 const jsonLd = { '@context': 'https://schema.org', '@type': 'Article', headline: d.title, description: d.description, datePublished: d.publishAt, dateModified: d.updatedAt ?? d.publishAt, author: { '@type': 'Organization', name: '쏙집' }, publisher: { '@type': 'Organization', name: '쏙집' } };
