@@ -152,6 +152,7 @@
 {"lawd":"41220","umdNm":"포승읍 방림리","jibun":"715","apt":"반도보라빌","area":84.96,"floor":3,"built":2005,"date":"2026-10-03","deposit":1000,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"장안동","jibun":"760","apt":"브레인시티2BL로제비앙엘가더퍼스트","area":85,"floor":35,"built":2026,"date":"2026-10-03","deposit":26000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"지산동","jibun":"1029","apt":"삼익","area":47.36,"floor":4,"built":1992,"date":"2026-10-03","deposit":8000,"rent":10,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41220","umdNm":"동삭동","jibun":"715-1","apt":"서재자이","area":59,"floor":3,"built":2014,"date":"2026-10-03","deposit":20000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"동삭동","jibun":"715-1","apt":"서재자이","area":59.53,"floor":3,"built":2014,"date":"2026-10-03","deposit":20000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"동삭동","jibun":"715-1","apt":"서재자이","area":59.53,"floor":14,"built":2014,"date":"2026-10-03","deposit":2000,"rent":100,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"서정동","jibun":"433-26","apt":"서정메트로하임","area":26.11,"floor":12,"built":2016,"date":"2026-10-03","deposit":500,"rent":65,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -870,6 +871,7 @@
 {"lawd":"41220","umdNm":"죽백동","jibun":"815","apt":"배다리마을5단지(평택소사벌A-6B행복주택)","area":26.44,"floor":17,"built":2019,"date":"2026-10-14","deposit":2484,"rent":12,"term":"26.11~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"장안동","jibun":"760","apt":"브레인시티2BL로제비앙엘가더퍼스트","area":85,"floor":4,"built":2026,"date":"2026-10-14","deposit":1000,"rent":125,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"장안동","jibun":"760","apt":"브레인시티2BL로제비앙엘가더퍼스트","area":85,"floor":23,"built":2026,"date":"2026-10-14","deposit":27000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41220","umdNm":"장안동","jibun":"760","apt":"브레인시티2BL로제비앙엘가더퍼스트","area":85,"floor":25,"built":2026,"date":"2026-10-14","deposit":2000,"rent":130,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"용이동","jibun":"639","apt":"비전아이파크평택","area":84.94,"floor":11,"built":2018,"date":"2026-10-14","deposit":3000,"rent":125,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"청북읍 옥길리","jibun":"1097","apt":"사랑으로부영5차","area":84.36,"floor":11,"built":2012,"date":"2026-10-14","deposit":13432,"rent":0,"term":"26.10~27.10","type":"갱신","rrr":null,"preDeposit":13182,"preRent":0}
 {"lawd":"41220","umdNm":"안중읍 현화리","jibun":"841","apt":"서광프리메라","area":84.57,"floor":3,"built":2005,"date":"2026-10-14","deposit":2000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -1082,6 +1084,7 @@
 {"lawd":"41220","umdNm":"이충동","jibun":"688","apt":"반지마을주공","area":59.57,"floor":4,"built":2006,"date":"2026-10-16","deposit":5994,"rent":14,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":2661,"preRent":29}
 {"lawd":"41220","umdNm":"세교동","jibun":"557","apt":"부영2","area":84.98,"floor":1,"built":2000,"date":"2026-10-16","deposit":20000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"장안동","jibun":"760","apt":"브레인시티2BL로제비앙엘가더퍼스트","area":85,"floor":7,"built":2026,"date":"2026-10-16","deposit":26000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41220","umdNm":"장안동","jibun":"760","apt":"브레인시티2BL로제비앙엘가더퍼스트","area":85,"floor":14,"built":2026,"date":"2026-10-16","deposit":2000,"rent":130,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"청북읍 옥길리","jibun":"1097","apt":"사랑으로부영5차","area":84,"floor":7,"built":2012,"date":"2026-10-16","deposit":13432,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"청북읍 옥길리","jibun":"1097","apt":"사랑으로부영5차","area":84,"floor":10,"built":2012,"date":"2026-10-16","deposit":13432,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"청북읍 옥길리","jibun":"1097","apt":"사랑으로부영5차","area":84.36,"floor":2,"built":2012,"date":"2026-10-16","deposit":13687,"rent":0,"term":"27.01~28.01","type":"갱신","rrr":null,"preDeposit":13432,"preRent":0}
@@ -1753,6 +1756,7 @@
 {"lawd":"41220","umdNm":"이충동","jibun":"589-5","apt":"이충동부영1단지","area":59.94,"floor":4,"built":1996,"date":"2026-10-28","deposit":12000,"rent":26,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":12000,"preRent":20}
 {"lawd":"41220","umdNm":"지산동","jibun":"1028","apt":"제일","area":59.37,"floor":11,"built":1991,"date":"2026-10-28","deposit":500,"rent":70,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"서정동","jibun":"909-1","apt":"주공3","area":32.4,"floor":4,"built":1988,"date":"2026-10-28","deposit":300,"rent":45,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41220","umdNm":"평택동","jibun":"294-3","apt":"퍼스트시티","area":21.14,"floor":5,"built":2018,"date":"2026-10-28","deposit":300,"rent":55,"term":"26.12~27.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"고덕동","jibun":"1894-3","apt":"평택고덕엘에이치2단지","area":26.23,"floor":7,"built":2022,"date":"2026-10-28","deposit":4468,"rent":7,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":4450,"preRent":7}
 {"lawd":"41220","umdNm":"고덕동","jibun":"1894-3","apt":"평택고덕엘에이치2단지","area":26.23,"floor":8,"built":2022,"date":"2026-10-28","deposit":4468,"rent":7,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":3150,"preRent":13}
 {"lawd":"41220","umdNm":"고덕동","jibun":"1894-3","apt":"평택고덕엘에이치2단지","area":36.26,"floor":7,"built":2022,"date":"2026-10-28","deposit":6356,"rent":9,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":6273,"preRent":8}
@@ -1763,6 +1767,8 @@
 {"lawd":"41220","umdNm":"동삭동","jibun":"852","apt":"평택센트럴자이3단지","area":59.52,"floor":12,"built":2019,"date":"2026-10-28","deposit":25000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"동삭동","jibun":"852","apt":"평택센트럴자이3단지","area":59.52,"floor":19,"built":2019,"date":"2026-10-28","deposit":26000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"동삭동","jibun":"852","apt":"평택센트럴자이3단지","area":72,"floor":27,"built":2019,"date":"2026-10-28","deposit":24000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41220","umdNm":"죽백동","jibun":"722","apt":"평택소사벌반도유보라아이비파크1단지","area":84.9,"floor":10,"built":2016,"date":"2026-10-28","deposit":1000,"rent":145,"term":"26.12~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41220","umdNm":"죽백동","jibun":"722","apt":"평택소사벌반도유보라아이비파크1단지","area":84.9,"floor":18,"built":2016,"date":"2026-10-28","deposit":1000,"rent":145,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"신장동","jibun":"243-3","apt":"평택송탄역클래시아","area":19.91,"floor":2,"built":2017,"date":"2026-10-28","deposit":300,"rent":55,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"고덕면 궁리","jibun":"520","apt":"평택영화블렌하임","area":84.97,"floor":10,"built":2008,"date":"2026-10-28","deposit":0,"rent":120,"term":"26.11~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"용이동","jibun":"581","apt":"평택용이금호어울림1단지","area":85,"floor":8,"built":2015,"date":"2026-10-28","deposit":3000,"rent":120,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -1812,6 +1818,7 @@
 {"lawd":"41220","umdNm":"고덕동","jibun":"1894-3","apt":"평택고덕엘에이치2단지","area":26.23,"floor":9,"built":2022,"date":"2026-10-29","deposit":4468,"rent":7,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":3150,"preRent":13}
 {"lawd":"41220","umdNm":"고덕동","jibun":"1894-3","apt":"평택고덕엘에이치2단지","area":26.23,"floor":12,"built":2022,"date":"2026-10-29","deposit":4785,"rent":9,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":3150,"preRent":13}
 {"lawd":"41220","umdNm":"고덕동","jibun":"1894-3","apt":"평택고덕엘에이치2단지","area":36.26,"floor":5,"built":2022,"date":"2026-10-29","deposit":6356,"rent":9,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":4273,"preRent":18}
+{"lawd":"41220","umdNm":"고덕동","jibun":"1894-3","apt":"평택고덕엘에이치2단지","area":36.26,"floor":12,"built":2022,"date":"2026-10-29","deposit":6356,"rent":9,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":6273,"preRent":8}
 {"lawd":"41220","umdNm":"군문동","jibun":"370","apt":"평택군문1단지주공","area":38.91,"floor":8,"built":1999,"date":"2026-10-29","deposit":12370,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"군문동","jibun":"370","apt":"평택군문1단지주공","area":38.91,"floor":9,"built":1999,"date":"2026-10-29","deposit":12300,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"포승읍 만호리","jibun":"575-10","apt":"평택메트로하임","area":24.31,"floor":12,"built":2015,"date":"2026-10-29","deposit":200,"rent":40,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -1852,6 +1859,7 @@
 {"lawd":"41220","umdNm":"지산동","jibun":"1029","apt":"삼익","area":51.24,"floor":2,"built":1992,"date":"2026-10-30","deposit":1000,"rent":65,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"서정동","jibun":"303-6","apt":"서정역꿈의도시두드림주상복합","area":19.01,"floor":17,"built":2018,"date":"2026-10-30","deposit":300,"rent":60,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"서정동","jibun":"303-6","apt":"서정역꿈의도시두드림주상복합","area":28.47,"floor":14,"built":2018,"date":"2026-10-30","deposit":500,"rent":70,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41220","umdNm":"서정동","jibun":"304-1","apt":"서정트인자리애2차","area":24.8,"floor":5,"built":2017,"date":"2026-10-30","deposit":500,"rent":70,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"비전동","jibun":"874","apt":"시대한우리","area":35.74,"floor":13,"built":1995,"date":"2026-10-30","deposit":10500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":10500,"preRent":0}
 {"lawd":"41220","umdNm":"비전동","jibun":"874","apt":"시대한우리","area":49.59,"floor":7,"built":1995,"date":"2026-10-30","deposit":10000,"rent":0,"term":"26.11~27.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"비전동","jibun":"874","apt":"시대한우리","area":49.59,"floor":16,"built":1995,"date":"2026-10-30","deposit":1000,"rent":90,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -1889,6 +1897,7 @@
 {"lawd":"41220","umdNm":"동삭동","jibun":"416","apt":"e편한세상지제역","area":84.05,"floor":5,"built":2022,"date":"2026-10-30","deposit":34000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"지산동","jibun":"1094","apt":"건영(지산)","area":53,"floor":3,"built":1993,"date":"2026-10-31","deposit":10300,"rent":7,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"고덕동","jibun":"2461-1","apt":"고덕국제신도시아너스","area":59.74,"floor":6,"built":2022,"date":"2026-10-31","deposit":21000,"rent":25,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":21000,"preRent":0}
+{"lawd":"41220","umdNm":"고덕동","jibun":"2461-1","apt":"고덕국제신도시아너스","area":59.74,"floor":7,"built":2022,"date":"2026-10-31","deposit":1000,"rent":150,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"고덕동","jibun":"2461-1","apt":"고덕국제신도시아너스","area":59.97,"floor":5,"built":2022,"date":"2026-10-31","deposit":27000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"고덕동","jibun":"2501-1","apt":"고덕국제신도시제일풍경채2차에듀","area":84.91,"floor":22,"built":2023,"date":"2026-10-31","deposit":2000,"rent":170,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41220","umdNm":"이충동","jibun":"460-2","apt":"고덕코아루더블루시티","area":20.99,"floor":18,"built":2021,"date":"2026-10-31","deposit":8000,"rent":0,"term":"26.12~29.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
